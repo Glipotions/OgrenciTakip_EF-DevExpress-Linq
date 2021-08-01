@@ -16,7 +16,6 @@ namespace OgrenciTakip.UI.Win.Forms.IlceForms
 		public IlceEditForm(params object[] prm)
 		{
 			InitializeComponent();
-			Business = new IlceBusiness();
 
 			_ilId = (long)prm[0];
 			_ilAdi = prm[1].ToString();

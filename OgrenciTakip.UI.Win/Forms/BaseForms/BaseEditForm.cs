@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraBars;
+﻿using DevExpress.Utils.Extensions;
+using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
 using OgrenciTakip.Business.Interfaces;
@@ -28,6 +29,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		protected BaseEntity CurrentEntity;
 		protected bool IsLoaded;
 		protected bool KayitSonrasiFormuKapat=true;
+		protected BarItem[] ShowItems;
+		protected BarItem[] HideItems;
 
 
 		public BaseEditForm()
@@ -56,6 +59,9 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
 				switch (control)
 				{
+					case FilterControl edt:
+						edt.FilterChanged += Control_EditValueChanged;
+						break;
 					case MyButtonEdit edt:
 						edt.IdChanged += Control_IdChanged;
 						edt.EnabledChanged += Control_EnabledChanged;
@@ -79,6 +85,11 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 					foreach (Control ctrl in layout.Controls)
 						ControlEvents(ctrl);
 
+		}
+
+		private void Edt_FilterChanged(object sender, FilterChangedEventArgs e)
+		{
+			throw new NotImplementedException();
 		}
 
 		private void Control_Leave(object sender, EventArgs e)
@@ -124,6 +135,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			if (!Kaydet(true))
 				e.Cancel = true;
 		}
+
+		protected virtual void FiltreUygula() { }
 
 		protected void SablonKaydet()
 		{
@@ -188,7 +201,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			IsLoaded = true;
 			GuncelNesneOlustur();
 			SablonYukle();
-			//ButtonGizle();
+			ButtonGizleGoster();
 
 			//güncelleme yapılacak
 		}
@@ -207,6 +220,11 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
 			else if (e.Item == btnKaydet)
 				Kaydet(false);
+			else if (e.Item == btnFarkliKaydet)
+			{
+				//YetkiKontrolü
+				FarkliKaydet();
+			}
 			else if (e.Item == btnGeriAl)
 				GeriAl();
 			else if (e.Item == btnSil)
@@ -220,6 +238,11 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 				EntityDelete();
 			}
 
+			else if (e.Item == btnUygula)
+			{
+				FiltreUygula();
+			}
+
 			else if (e.Item == btnCikis)
 			{
 				Close();
@@ -227,6 +250,17 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
 			Cursor.Current = DefaultCursor;
 		}
+
+		private void FarkliKaydet()
+		{
+			if (Messages.EvetSeciliEvetHayir("Bu Filtre Referans Alınarak Yeni Bir Filtre Oluşturulacaktır. Onaylıyor musunuz?", "Kayıt Onay") != DialogResult.Yes) return;
+
+			BaseIslemTuru = IslemTuru.EntityInsert;
+			Yukle();
+			if (Kaydet(true))
+				Close();
+		}
+
 		protected virtual void SecimYap(object sender) { }
 		private void EntityDelete()
 		{
@@ -244,6 +278,11 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 				Close();
 		}
 
+		private void ButtonGizleGoster()
+		{
+			ShowItems?.ForEach(x => x.Visibility = BarItemVisibility.Always);
+			HideItems?.ForEach(x => x.Visibility = BarItemVisibility.Never);
+		}
 		private bool Kaydet(bool kapanis)
 		{
 			bool KayitIslemi()

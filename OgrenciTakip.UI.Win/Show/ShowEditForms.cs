@@ -20,7 +20,7 @@ namespace OgrenciTakip.UI.Win.Show
 			}
 		}
 
-		public long ShowDialogEditForm(KartTuru kartTuru, long id, params object[] prm)
+		public static long ShowDialogEditForm(KartTuru kartTuru, long id, params object[] prm)
 		{
 			//Yetki Kontrolü
 			using (var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm))

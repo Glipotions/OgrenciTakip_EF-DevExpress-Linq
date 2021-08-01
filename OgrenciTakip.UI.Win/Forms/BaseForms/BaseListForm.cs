@@ -10,11 +10,15 @@ using OgrenciYazilim.Model.Entities.Base;
 using System;
 using System.Windows.Forms;
 using DevExpress.Utils.Extensions;
+using OgrenciTakip.UI.Win.Show;
+using OgrenciTakip.UI.Win.Forms.FiltreForms;
+using OgrenciYazilim.Model.Entities;
 
 namespace OgrenciTakip.UI.Win.Forms.BaseForms
 {
 	public partial class BaseListForm : DevExpress.XtraBars.Ribbon.RibbonForm
 	{
+		private long _filtreId;
 		private bool _formSablonKayitEdilecek;
 		private bool _tabloSablonKayitEdilecek;
 		protected IBaseFormShow FormShow;
@@ -48,6 +52,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			Tablo.ColumnWidthChanged += Tablo_ColumnWidthChanged;
 			Tablo.ColumnPositionChanged += Tablo_ColumnPositionChanged;
 			Tablo.EndSorting += Tablo_EndSorting;
+			Tablo.FilterEditorCreated += Tablo_FilterEditorCreated;
+			Tablo.ColumnFilterChanged += Tablo_ColumnFilterChanged;
 
 			//FormEvents
 			Shown += BaseListForm_Shown;
@@ -55,6 +61,18 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			FormClosing += BaseListForm_FormClosing;
 			LocationChanged += BaseListForm_LocationChanged;
 			SizeChanged += BaseListForm_SizeChanged;
+		}
+
+		private void Tablo_ColumnFilterChanged(object sender, EventArgs e)
+		{
+			if (string.IsNullOrEmpty(Tablo.ActiveFilterString))
+				_filtreId = 0;
+		}
+
+		private void Tablo_FilterEditorCreated(object sender, DevExpress.XtraGrid.Views.Base.FilterControlEventArgs e)
+		{
+			e.ShowFilterEditor = false;
+			ShowEditForms<FiltreEditForm>.ShowDialogEditForm(KartTuru.Filtre, _filtreId, BaseKartTuru, Tablo.GridControl);
 		}
 
 		private void BaseListForm_SizeChanged(object sender, EventArgs e)
@@ -208,7 +226,12 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
 		private void FiltreSec()
 		{
-			throw new NotImplementedException();
+			var entity = (Filtre)ShowListForms<FiltreListForm>.ShowDialogListForm(KartTuru.Filtre, _filtreId, BaseKartTuru, Tablo.GridControl);
+			if (entity == null) return;
+
+			_filtreId = entity.Id;
+			Tablo.ActiveFilterString = entity.FiltreMetni;
+
 		}
 		private void Yazdir()
 		{

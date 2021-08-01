@@ -29,6 +29,7 @@ namespace OgrenciYazilim.Data.Context
 		public DbSet<Il> Il { get; set; }
 		public DbSet<Ilce> Ilce { get; set; }
 		public DbSet<Okul> Okul { get; set; }
+		public DbSet<Filtre> Filtre { get; set; }
 
 	}
 }
