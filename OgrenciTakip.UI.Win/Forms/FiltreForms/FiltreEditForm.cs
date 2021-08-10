@@ -33,7 +33,7 @@ namespace OgrenciTakip.UI.Win.Forms.FiltreForms
 			EventsLoad();
 		}
 
-		public override void Yukle()
+		protected internal override void Yukle()
 		{
 			txtFiltreMetni.SourceControl = _filtreGrid;
 
@@ -77,8 +77,8 @@ namespace OgrenciTakip.UI.Win.Forms.FiltreForms
 				Id = Id,
 				Kod = txtKod.Text,
 				FiltreAdi = txtFiltreAdi.Text,
-				FiltreMetni=txtFiltreMetni.FilterString,
-				KartTuru=_filtreKartTuru
+				FiltreMetni = txtFiltreMetni.FilterString,
+				KartTuru = _filtreKartTuru
 			};
 
 			ButtonEnabledDurumu();

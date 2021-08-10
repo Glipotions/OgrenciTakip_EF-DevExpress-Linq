@@ -8,7 +8,7 @@ namespace OgrenciTakip.Business.Function
 	public static class ValidationFuction
 	{
 
-		public static List<PropertyAttribute<TAttribute>> GetPropertyAttributesFromType<TAttribute>(this Type entityType) where TAttribute: Attribute
+		public static List<PropertyAttribute<TAttribute>> GetPropertyAttributesFromType<TAttribute>(this Type entityType) where TAttribute : Attribute
 		{
 			var list = new List<PropertyAttribute<TAttribute>>();
 			var properties = entityType.GetProperties();

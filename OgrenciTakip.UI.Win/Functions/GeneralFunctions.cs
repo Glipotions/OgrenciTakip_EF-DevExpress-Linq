@@ -5,6 +5,9 @@ using OgrenciYazilim.Common.Enums;
 using OgrenciYazilim.Common.Message;
 using OgrenciYazilim.Model.Entities.Base;
 using System;
+using System.Collections.Generic;
+using System.Drawing.Printing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace OgrenciTakip.UI.Win.Functions
@@ -144,10 +147,21 @@ namespace OgrenciTakip.UI.Win.Functions
 				tablo.FocusedRowHandle = rowHandle - 1;
 		}
 
-		public static void SagTikMenuGoster(this MouseEventArgs e,PopupMenu sagTikMenu)
+		public static void SagTikMenuGoster(this MouseEventArgs e, PopupMenu sagTikMenu)
 		{
 			if (e.Button != MouseButtons.Right) return;
 			sagTikMenu.ShowPopup(Control.MousePosition);
+		}
+
+		public static List<string> YazicilariListele()
+		{
+			return PrinterSettings.InstalledPrinters.Cast<string>().ToList();
+		}
+
+		public static string DefaultYazici()
+		{
+			var settings = new PrinterSettings();
+			return settings.PrinterName;
 		}
 	}
 }

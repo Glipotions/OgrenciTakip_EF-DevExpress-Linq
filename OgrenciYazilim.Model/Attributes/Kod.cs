@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OgrenciYazilim.Model.Attributes
 {
-	public class Kod:Attribute
+	public class Kod : Attribute
 	{
 		public string Description { get; }
 		public string ControlName { get; }

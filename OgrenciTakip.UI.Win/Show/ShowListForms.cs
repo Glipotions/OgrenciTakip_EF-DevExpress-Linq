@@ -19,11 +19,11 @@ namespace OgrenciTakip.UI.Win.Show
 			frm.Show();
 		}
 
-		public static void ShowListForm(KartTuru kartTuru,params object[] prm)
+		public static void ShowListForm(KartTuru kartTuru, params object[] prm)
 		{
 			//Yetki Kontrolü
 
-			var frm = (TForm)Activator.CreateInstance(typeof(TForm),prm);
+			var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm);
 			frm.MdiParent = Form.ActiveForm;
 
 			frm.Yukle();

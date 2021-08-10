@@ -55,13 +55,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\BaseBusiness.cs" />
+    <Compile Include="Base\BaseGenelBusiness.cs" />
     <Compile Include="Function\Convert.cs" />
     <Compile Include="Function\GeneralFunctions.cs" />
     <Compile Include="Function\ValidationFuction.cs" />
+    <Compile Include="General\AileBilgiBusiness.cs" />
+    <Compile Include="General\YakinlikBusiness.cs" />
+    <Compile Include="General\TesvikBusiness.cs" />
+    <Compile Include="General\SinifGrupBusiness.cs" />
+    <Compile Include="General\RehberBusiness.cs" />
+    <Compile Include="General\MeslekBusiness.cs" />
+    <Compile Include="General\KontenjanBusiness.cs" />
+    <Compile Include="General\IsyeriBusiness.cs" />
+    <Compile Include="General\IndirimTuruBusiness.cs" />
+    <Compile Include="General\GorevBusiness.cs" />
     <Compile Include="General\FiltreBusiness.cs" />
     <Compile Include="General\IlBusiness.cs" />
     <Compile Include="General\IlceBusiness.cs" />
+    <Compile Include="General\IptalNedeniBusiness.cs" />
     <Compile Include="General\OkulBusiness.cs" />
+    <Compile Include="General\YabanciDilBusiness.cs" />
     <Compile Include="Interfaces\IBaseBusiness.cs" />
     <Compile Include="Interfaces\IBaseCommonBusiness.cs" />
     <Compile Include="Interfaces\IBaseGenelBusiness.cs" />

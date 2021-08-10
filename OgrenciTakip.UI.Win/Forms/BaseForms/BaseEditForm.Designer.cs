@@ -61,6 +61,16 @@
 			DevExpress.Utils.ToolTipItem toolTipItem8 = new DevExpress.Utils.ToolTipItem();
 			DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem6 = new DevExpress.Utils.ToolTipSeparatorItem();
 			DevExpress.Utils.ToolTipItem toolTipItem9 = new DevExpress.Utils.ToolTipItem();
+			DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
+			DevExpress.Utils.ToolTipTitleItem toolTipTitleItem12 = new DevExpress.Utils.ToolTipTitleItem();
+			DevExpress.Utils.ToolTipItem toolTipItem10 = new DevExpress.Utils.ToolTipItem();
+			DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem7 = new DevExpress.Utils.ToolTipSeparatorItem();
+			DevExpress.Utils.ToolTipItem toolTipItem11 = new DevExpress.Utils.ToolTipItem();
+			DevExpress.Utils.SuperToolTip superToolTip9 = new DevExpress.Utils.SuperToolTip();
+			DevExpress.Utils.ToolTipTitleItem toolTipTitleItem13 = new DevExpress.Utils.ToolTipTitleItem();
+			DevExpress.Utils.ToolTipItem toolTipItem12 = new DevExpress.Utils.ToolTipItem();
+			DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem8 = new DevExpress.Utils.ToolTipSeparatorItem();
+			DevExpress.Utils.ToolTipItem toolTipItem13 = new DevExpress.Utils.ToolTipItem();
 			this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
 			this.btnYeni = new DevExpress.XtraBars.BarButtonItem();
 			this.btnKaydet = new DevExpress.XtraBars.BarButtonItem();
@@ -72,6 +82,8 @@
 			this.statusBarKisayolAciklama = new DevExpress.XtraBars.BarStaticItem();
 			this.btnFarkliKaydet = new DevExpress.XtraBars.BarButtonItem();
 			this.btnUygula = new DevExpress.XtraBars.BarButtonItem();
+			this.btnYazdir = new DevExpress.XtraBars.BarButtonItem();
+			this.btnBaskiOnizleme = new DevExpress.XtraBars.BarButtonItem();
 			this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -96,9 +108,11 @@
             this.statusBarKisayol,
             this.statusBarKisayolAciklama,
             this.btnFarkliKaydet,
-            this.btnUygula});
+            this.btnUygula,
+            this.btnYazdir,
+            this.btnBaskiOnizleme});
 			this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-			this.ribbonControl.MaxItemId = 11;
+			this.ribbonControl.MaxItemId = 13;
 			this.ribbonControl.Name = "ribbonControl";
 			this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -275,6 +289,46 @@
 			this.btnUygula.SuperTip = superToolTip7;
 			this.btnUygula.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
 			// 
+			// btnYazdir
+			// 
+			this.btnYazdir.Caption = "Yazdır";
+			this.btnYazdir.Id = 11;
+			this.btnYazdir.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.print_16x16;
+			this.btnYazdir.ImageOptions.LargeImage = global::OgrenciTakip.UI.Win.Properties.Resources.print_32x32;
+			this.btnYazdir.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P));
+			this.btnYazdir.Name = "btnYazdir";
+			toolTipTitleItem12.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+			toolTipTitleItem12.Text = "( Ctrl+P )";
+			toolTipItem10.Text = "Yazdır";
+			toolTipItem11.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
+			toolTipItem11.Text = "Rapor Yazdırılmak Üzere Yazıcıya Gönderilir.";
+			superToolTip8.Items.Add(toolTipTitleItem12);
+			superToolTip8.Items.Add(toolTipItem10);
+			superToolTip8.Items.Add(toolTipSeparatorItem7);
+			superToolTip8.Items.Add(toolTipItem11);
+			this.btnYazdir.SuperTip = superToolTip8;
+			this.btnYazdir.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+			// 
+			// btnBaskiOnizleme
+			// 
+			this.btnBaskiOnizleme.Caption = "Baskı Önizleme";
+			this.btnBaskiOnizleme.Id = 12;
+			this.btnBaskiOnizleme.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.preview_16x16;
+			this.btnBaskiOnizleme.ImageOptions.LargeImage = global::OgrenciTakip.UI.Win.Properties.Resources.preview_32x32;
+			this.btnBaskiOnizleme.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B));
+			this.btnBaskiOnizleme.Name = "btnBaskiOnizleme";
+			toolTipTitleItem13.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+			toolTipTitleItem13.Text = "( Ctrl+B )";
+			toolTipItem12.Text = "Baskı Önizleme";
+			toolTipItem13.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
+			toolTipItem13.Text = "Rapor Baskı Önizleme Modunda Açılır.";
+			superToolTip9.Items.Add(toolTipTitleItem13);
+			superToolTip9.Items.Add(toolTipItem12);
+			superToolTip9.Items.Add(toolTipSeparatorItem8);
+			superToolTip9.Items.Add(toolTipItem13);
+			this.btnBaskiOnizleme.SuperTip = superToolTip9;
+			this.btnBaskiOnizleme.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+			// 
 			// ribbonPage1
 			// 
 			this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -290,6 +344,8 @@
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnGeriAl);
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnSil);
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnUygula);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnYazdir);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnBaskiOnizleme);
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnCikis);
 			this.ribbonPageGroup1.Name = "ribbonPageGroup1";
 			this.ribbonPageGroup1.Text = "ribbonPageGroup1";
@@ -344,5 +400,7 @@
 		protected DevExpress.XtraBars.BarButtonItem btnSil;
 		protected DevExpress.XtraBars.BarButtonItem btnYeni;
 		protected DevExpress.XtraBars.BarButtonItem btnFarkliKaydet;
+		protected DevExpress.XtraBars.BarButtonItem btnYazdir;
+		protected DevExpress.XtraBars.BarButtonItem btnBaskiOnizleme;
 	}
 }

@@ -1,11 +1,11 @@
-﻿using OgrenciTakip.Business.General;
+﻿using DevExpress.XtraBars;
+using OgrenciTakip.Business.General;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
+using OgrenciTakip.UI.Win.Forms.IlceForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.Show;
 using OgrenciYazilim.Common.Enums;
 using OgrenciYazilim.Model.Entities;
-using DevExpress.XtraBars;
-using OgrenciTakip.UI.Win.Forms.IlceForms;
 
 namespace OgrenciTakip.UI.Win.Forms.IlForms
 {

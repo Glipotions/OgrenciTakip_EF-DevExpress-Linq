@@ -26,7 +26,7 @@ namespace OgrenciTakip.UI.Win.Forms.IlceForms
 			EventsLoad();
 		}
 
-		public override void Yukle()
+		protected internal override void Yukle()
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ?
 				new Ilce() : ((IlceBusiness)Business).Single(FilterFunctions.Filter<Ilce>(Id));

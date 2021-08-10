@@ -5,9 +5,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OgrenciYazilim.Model.Entities
 {
-	public class Okul:BaseEntityDurum
+	public class Okul : BaseEntityDurum
 	{
-		[Index("IX_Kod", IsUnique=true)]
+		[Index("IX_Kod", IsUnique = true)]
 		public override string Kod { get; set; }
 
 		[Required, StringLength(50), ZorunluAlan("Okul Adı", "txtOkulAdi")]

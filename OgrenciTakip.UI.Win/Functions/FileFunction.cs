@@ -33,7 +33,7 @@ namespace OgrenciTakip.UI.Win.Functions
 				writer.WriteStartElement("FormSize");
 				if (windowState == FormWindowState.Maximized)
 				{
-					writer.WriteAttributeString("Widht","-1");
+					writer.WriteAttributeString("Widht", "-1");
 					writer.WriteAttributeString("Height", "-1");
 				}
 				else
@@ -191,7 +191,7 @@ namespace OgrenciTakip.UI.Win.Functions
 				case DosyaTuru.TxtDosyasi:
 					{
 						var opt = new TextExportOptions { TextExportMode = TextExportMode.Text };
-						
+
 						filePath = filePath + ".Txt";
 						tablo.ExportToText(filePath, opt);
 					}

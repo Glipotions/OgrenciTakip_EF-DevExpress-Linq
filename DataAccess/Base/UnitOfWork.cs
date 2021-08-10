@@ -85,7 +85,7 @@ namespace DataAccess.Base
 		{
 			Dispose(disposing: true);
 			GC.SuppressFinalize(this);
-		} 
+		}
 
 		#endregion
 	}

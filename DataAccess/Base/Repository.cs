@@ -85,11 +85,11 @@ namespace DataAccess.Base
 			{
 				string kod = null;
 				var kodDizi = kartTuru.ToName().Split(' ');
-				for (int i = 0; i < kodDizi.Length-1; i++)
+				for (int i = 0; i < kodDizi.Length - 1; i++)
 				{
 					kod += kodDizi[i];
 
-					if (i + 1 < i + kodDizi.Length - 1) 
+					if (i + 1 < i + kodDizi.Length - 1)
 						kod += " ";
 
 				}
@@ -100,7 +100,7 @@ namespace DataAccess.Base
 
 			string YeniKodVer(string kod)
 			{
-				var sayisalDegerler= "";
+				var sayisalDegerler = "";
 
 				foreach (var karakter in kod)
 				{

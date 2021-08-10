@@ -16,10 +16,12 @@ namespace OgrenciTakip.Business.Base
 {
 	public class BaseBusiness<T, TContext> : IBaseBusiness where T : BaseEntity where TContext : DbContext
 	{
+		#region Variables
 		private readonly Control _ctrl;
 		private IUnitOfWork<T> _uow;
+		#endregion
 
-		private bool Validation(IslemTuru islemTuru,BaseEntity oldEntity, BaseEntity currentEntity, Expression<Func<T, bool>> filter)
+		private bool Validation(IslemTuru islemTuru, BaseEntity oldEntity, BaseEntity currentEntity, Expression<Func<T, bool>> filter)
 		{
 			var errorControl = GetValidationErrorControl();
 

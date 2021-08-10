@@ -1,39 +1,41 @@
-﻿
+﻿using DevExpress.Utils.Extensions;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using OgrenciTakip.Business.Interfaces;
+using OgrenciTakip.UI.Win.Forms.FiltreForms;
 using OgrenciTakip.UI.Win.Functions;
+using OgrenciTakip.UI.Win.GeneralForms;
+using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.UI.Win.Show.Interfaces;
 using OgrenciYazilim.Common.Enums;
+using OgrenciYazilim.Model.Entities;
 using OgrenciYazilim.Model.Entities.Base;
 using System;
 using System.Windows.Forms;
-using DevExpress.Utils.Extensions;
-using OgrenciTakip.UI.Win.Show;
-using OgrenciTakip.UI.Win.Forms.FiltreForms;
-using OgrenciYazilim.Model.Entities;
 
 namespace OgrenciTakip.UI.Win.Forms.BaseForms
 {
 	public partial class BaseListForm : DevExpress.XtraBars.Ribbon.RibbonForm
 	{
+		#region Variables
 		private long _filtreId;
 		private bool _formSablonKayitEdilecek;
 		private bool _tabloSablonKayitEdilecek;
 		protected IBaseFormShow FormShow;
-		protected KartTuru BaseKartTuru;
-		protected internal GridView Tablo;
-		protected bool AktifKartlariGoster = true;
-		protected internal bool AktifPasifButonGöster = false;
-		protected internal bool MultiSelect;
-		protected internal BaseEntity SelectedEntity;
 		protected IBaseBusiness Business;
+		protected KartTuru BaseKartTuru;
 		protected ControlNavigator Navigator;
-		protected internal long? SeciliGelecekId;
 		protected BarItem[] ShowItems;
 		protected BarItem[] HideItems;
+		protected bool AktifKartlariGoster = true;
+		protected internal GridView Tablo;
+		protected internal BaseEntity SelectedEntity;
+		protected internal bool AktifPasifButonGöster = false;
+		protected internal bool MultiSelect;
+		protected internal long? SeciliGelecekId;
 
+		#endregion
 		public BaseListForm()
 		{
 			InitializeComponent();
@@ -63,72 +65,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			SizeChanged += BaseListForm_SizeChanged;
 		}
 
-		private void Tablo_ColumnFilterChanged(object sender, EventArgs e)
-		{
-			if (string.IsNullOrEmpty(Tablo.ActiveFilterString))
-				_filtreId = 0;
-		}
-
-		private void Tablo_FilterEditorCreated(object sender, DevExpress.XtraGrid.Views.Base.FilterControlEventArgs e)
-		{
-			e.ShowFilterEditor = false;
-			ShowEditForms<FiltreEditForm>.ShowDialogEditForm(KartTuru.Filtre, _filtreId, BaseKartTuru, Tablo.GridControl);
-		}
-
-		private void BaseListForm_SizeChanged(object sender, EventArgs e)
-		{
-			if(!IsMdiChild)
-				_formSablonKayitEdilecek = true;
-		}
-
-		private void BaseListForm_LocationChanged(object sender, EventArgs e)
-		{
-			if (!IsMdiChild)
-				_formSablonKayitEdilecek = true;
-		}
-
-		private void Tablo_EndSorting(object sender, EventArgs e)
-		{
-			_tabloSablonKayitEdilecek = true;
-		}
-
-		private void Tablo_ColumnPositionChanged(object sender, EventArgs e)
-		{
-			_tabloSablonKayitEdilecek = true;
-		}
-
-		private void Tablo_ColumnWidthChanged(object sender, DevExpress.XtraGrid.Views.Base.ColumnEventArgs e)
-		{
-			_tabloSablonKayitEdilecek = true;
-		}
-
-		private void BaseListForm_FormClosing(object sender, FormClosingEventArgs e)
-		{
-			SablonKaydet();
-		}
-
-		private void BaseListForm_Load(object sender, EventArgs e)
-		{
-			SablonYukle();
-		}
-
-		private void Tablo_MouseUp(object sender, MouseEventArgs e)
-		{
-			e.SagTikMenuGoster(sagTikMenu);
-		}
-
-		private void BaseListForm_Shown(object sender, EventArgs e)
-		{
-			Tablo.Focus();
-			ButtonGizleGoster();
-			//SutunGizleGoster();
-
-
-			if (IsMdiChild || !SeciliGelecekId.HasValue) return;
-			Tablo.RowFocus("Id", SeciliGelecekId);
-
-		}
-
 		private void ButtonGizleGoster()
 		{
 			btnSec.Visibility = AktifPasifButonGöster ? BarItemVisibility.Never : IsMdiChild ? BarItemVisibility.Never : BarItemVisibility.Always;
@@ -139,12 +75,10 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			ShowItems?.ForEach(x => x.Visibility = BarItemVisibility.Always);
 			HideItems?.ForEach(x => x.Visibility = BarItemVisibility.Never);
 		}
-
 		private void SutunGizleGoster()
 		{
 			throw new NotImplementedException();
 		}
-
 		private void SablonKaydet()
 		{
 			if (_formSablonKayitEdilecek)
@@ -153,7 +87,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			if (_tabloSablonKayitEdilecek)
 				Tablo.TabloSablonKaydet(IsMdiChild ? Name + " Tablosu" : Name + " TablosuMDI");
 		}
-
 		private void SablonYukle()
 		{
 			if (IsMdiChild)
@@ -164,40 +97,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 				Tablo.TabloSablonYukle(Name + " TablosuMDI");
 			}
 		}
-
-		protected internal void Yukle()
-		{
-			DegiskenleriDoldur();
-			EventsLoad();
-
-			Tablo.OptionsSelection.MultiSelect = MultiSelect;
-			Navigator.NavigatableControl = Tablo.GridControl;
-
-			Cursor.Current = Cursors.WaitCursor;
-			Listele();
-			Cursor.Current = DefaultCursor;
-
-			//Güncellenecek
-		}
-
-		protected virtual void DegiskenleriDoldur() { }
-
-		protected virtual void ShowEditForm(long id)
-		{
-			var result = FormShow.ShowDialogEditForm(BaseKartTuru, id);
-			ShowEditFormDefault(result);
-		}
-
-		protected void ShowEditFormDefault(long id)
-		{
-			if (id <= 0) return;
-			AktifKartlariGoster = true;
-			FormCaptionAyarla();
-			Tablo.RowFocus("Id", id);
-
-
-		}
-
 		private void EntityDelete()
 		{
 			var entity = Tablo.GetRow<BaseEntity>();
@@ -208,7 +107,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			Tablo.RowFocus(Tablo.FocusedRowHandle);
 
 		}
-
 		private void SelectEntity()
 		{
 			if (MultiSelect)
@@ -220,22 +118,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
 			DialogResult = DialogResult.OK;
 			Close();
-		}
-
-		protected virtual void Listele() { }
-
-		private void FiltreSec()
-		{
-			var entity = (Filtre)ShowListForms<FiltreListForm>.ShowDialogListForm(KartTuru.Filtre, _filtreId, BaseKartTuru, Tablo.GridControl);
-			if (entity == null) return;
-
-			_filtreId = entity.Id;
-			Tablo.ActiveFilterString = entity.FiltreMetni;
-
-		}
-		private void Yazdir()
-		{
-			throw new NotImplementedException();
 		}
 		private void FormCaptionAyarla()
 		{
@@ -268,12 +150,54 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			else
 				btnDuzelt.PerformClick();
 		}
+		private void FiltreSec()
+		{
+			var entity = (Filtre)ShowListForms<FiltreListForm>.ShowDialogListForm(KartTuru.Filtre, _filtreId, BaseKartTuru, Tablo.GridControl);
+			if (entity == null) return;
 
+			_filtreId = entity.Id;
+			Tablo.ActiveFilterString = entity.FiltreMetni;
+
+		}
+		protected void ShowEditFormDefault(long id)
+		{
+			if (id <= 0) return;
+			AktifKartlariGoster = true;
+			FormCaptionAyarla();
+			Tablo.RowFocus("Id", id);
+
+
+		}
+		protected virtual void DegiskenleriDoldur() { }
+		protected virtual void ShowEditForm(long id)
+		{
+			var result = FormShow.ShowDialogEditForm(BaseKartTuru, id);
+			ShowEditFormDefault(result);
+		}
+		protected virtual void Listele() { }
+		protected virtual void Yazdir()
+		{
+			TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, AnaForm.SubeAdi);
+		}
+		protected virtual void BagliKartAc() { }
+		protected internal void Yukle()
+		{
+			DegiskenleriDoldur();
+			EventsLoad();
+
+			Tablo.OptionsSelection.MultiSelect = MultiSelect;
+			Navigator.NavigatableControl = Tablo.GridControl;
+
+			Cursor.Current = Cursors.WaitCursor;
+			Listele();
+			Cursor.Current = DefaultCursor;
+
+			//Güncellenecek
+		}
 
 		private void Button_ItemClick(object sender, ItemClickEventArgs e)
 		{
 			Cursor.Current = Cursors.WaitCursor;
-
 
 			if (e.Item == btnGonder)
 			{
@@ -331,20 +255,14 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 				FormCaptionAyarla();
 			}
 
-
-
 			Cursor.Current = DefaultCursor;
 		}
-
-		protected virtual void BagliKartAc() { }
-
 		private void Tablo_DoubleClick(object sender, EventArgs e)
 		{
 			Cursor.Current = Cursors.WaitCursor;
 			IslemTuruSec();
 			Cursor.Current = DefaultCursor;
 		}
-
 		private void Tablo_KeyDown(object sender, KeyEventArgs e)
 		{
 			switch (e.KeyCode)
@@ -356,6 +274,60 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 					Close();
 					break;
 			}
+		}
+		private void Tablo_MouseUp(object sender, MouseEventArgs e)
+		{
+			e.SagTikMenuGoster(sagTikMenu);
+		}
+		private void Tablo_ColumnWidthChanged(object sender, DevExpress.XtraGrid.Views.Base.ColumnEventArgs e)
+		{
+			_tabloSablonKayitEdilecek = true;
+		}
+		private void Tablo_ColumnPositionChanged(object sender, EventArgs e)
+		{
+			_tabloSablonKayitEdilecek = true;
+		}
+		private void Tablo_EndSorting(object sender, EventArgs e)
+		{
+			_tabloSablonKayitEdilecek = true;
+		}
+		private void Tablo_FilterEditorCreated(object sender, DevExpress.XtraGrid.Views.Base.FilterControlEventArgs e)
+		{
+			e.ShowFilterEditor = false;
+			ShowEditForms<FiltreEditForm>.ShowDialogEditForm(KartTuru.Filtre, _filtreId, BaseKartTuru, Tablo.GridControl);
+		}
+		private void Tablo_ColumnFilterChanged(object sender, EventArgs e)
+		{
+			if (string.IsNullOrEmpty(Tablo.ActiveFilterString))
+				_filtreId = 0;
+		}
+		private void BaseListForm_Shown(object sender, EventArgs e)
+		{
+			Tablo.Focus();
+			ButtonGizleGoster();
+			//SutunGizleGoster();
+
+
+			if (IsMdiChild || !SeciliGelecekId.HasValue) return;
+			Tablo.RowFocus("Id", SeciliGelecekId);
+		}
+		private void BaseListForm_Load(object sender, EventArgs e)
+		{
+			SablonYukle();
+		}
+		private void BaseListForm_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			SablonKaydet();
+		}
+		private void BaseListForm_LocationChanged(object sender, EventArgs e)
+		{
+			if (!IsMdiChild)
+				_formSablonKayitEdilecek = true;
+		}
+		private void BaseListForm_SizeChanged(object sender, EventArgs e)
+		{
+			if (!IsMdiChild)
+				_formSablonKayitEdilecek = true;
 		}
 	}
 }

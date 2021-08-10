@@ -1,7 +1,6 @@
 ﻿using OgrenciTakip.Business.Base;
 using OgrenciTakip.Business.Interfaces;
 using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Data.Context;
 using OgrenciYazilim.Model.Dto;
 using OgrenciYazilim.Model.Entities;
 using OgrenciYazilim.Model.Entities.Base;
@@ -13,12 +12,12 @@ using System.Windows.Forms;
 
 namespace OgrenciTakip.Business.General
 {
-	public class OkulBusiness : BaseBusiness<Okul, OgrenciTakipContext>, IBaseGenelBusiness, IBaseCommonBusiness
+	public class OkulBusiness : BaseGenelBusiness<Okul>, IBaseGenelBusiness, IBaseCommonBusiness
 	{
-		public OkulBusiness() { }
-		public OkulBusiness(Control ctrl) : base(ctrl) { }
+		public OkulBusiness() : base(KartTuru.Okul) { }
+		public OkulBusiness(Control ctrl) : base(ctrl, KartTuru.Okul) { }
 
-		public BaseEntity Single(Expression<Func<Okul, bool>> filter)
+		public override BaseEntity Single(Expression<Func<Okul, bool>> filter)
 		{
 			return BaseSingle(filter, x => new OkulS
 			{
@@ -27,7 +26,7 @@ namespace OgrenciTakip.Business.General
 				OkulAdi = x.OkulAdi,
 				IlId = x.IlId,
 				IlAdi = x.Il.IlAdi,
-				IlceId=x.IlceId,
+				IlceId = x.IlceId,
 				IlceAdi = x.Ilce.IlceAdi,
 				Aciklama = x.Aciklama,
 				Durum = x.Durum
@@ -35,7 +34,7 @@ namespace OgrenciTakip.Business.General
 			});
 		}
 
-		public IEnumerable<BaseEntity> List(Expression<Func<Okul, bool>> filter)
+		public override IEnumerable<BaseEntity> List(Expression<Func<Okul, bool>> filter)
 		{
 			return BaseList(filter, x => new OkulL
 			{
@@ -46,26 +45,7 @@ namespace OgrenciTakip.Business.General
 				IlceAdi = x.Ilce.IlceAdi,
 				Aciklama = x.Aciklama
 			}).OrderBy(x => x.Kod).ToList();
-		}
 
-		public bool Insert(BaseEntity entity)
-		{
-			return BaseInsert(entity, x => x.Kod == entity.Kod);
-		}
-
-		public bool Update(BaseEntity oldEntity, BaseEntity currentEntity)
-		{
-			return BaseUpdate(oldEntity, currentEntity, x => x.Kod == currentEntity.Kod);
-		}
-
-		public bool Delete(BaseEntity entity)
-		{
-			return BaseDelete(entity, KartTuru.Okul);
-		}
-
-		public string YeniKodVer()
-		{
-			return BaseYeniKodVer(KartTuru.Okul, x => x.Kod);
 		}
 	}
 }
