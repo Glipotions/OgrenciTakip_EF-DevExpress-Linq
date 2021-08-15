@@ -35,7 +35,15 @@ namespace OgrenciYazilim.Common.Enums
 		[Description("Görev Kartı")]
 		Gorev = 15,
 		[Description("İndirim Türü Kartı")]
-		IndirimTuru = 16
+		IndirimTuru = 16,
+		[Description("Evrak Kartı")]
+		Evrak = 17,
+		[Description("Promosyon Kartı")]
+		Promosyon = 18,
+		[Description("Servis Kartı")]
+		Servis = 19,
+		[Description("Sınıf Kartı")]
+		Sinif = 20
 
 	}
 }

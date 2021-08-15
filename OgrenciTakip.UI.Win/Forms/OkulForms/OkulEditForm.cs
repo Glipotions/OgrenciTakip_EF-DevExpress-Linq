@@ -67,7 +67,7 @@ namespace OgrenciTakip.UI.Win.Forms.OkulForms
 		{
 			if (!(sender is ButtonEdit)) return;
 
-			using (var sec = new SelectFunction())
+			using (var sec = new SelectFunctions())
 			{
 				if (sender == txtIl)
 					sec.Sec(txtIl);

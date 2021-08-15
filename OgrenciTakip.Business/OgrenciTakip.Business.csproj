@@ -60,6 +60,10 @@
     <Compile Include="Function\GeneralFunctions.cs" />
     <Compile Include="Function\ValidationFuction.cs" />
     <Compile Include="General\AileBilgiBusiness.cs" />
+    <Compile Include="General\EvrakBusiness.cs" />
+    <Compile Include="General\PromosyonBusiness.cs" />
+    <Compile Include="General\ServisBusiness.cs" />
+    <Compile Include="General\SinifBusiness.cs" />
     <Compile Include="General\YakinlikBusiness.cs" />
     <Compile Include="General\TesvikBusiness.cs" />
     <Compile Include="General\SinifGrupBusiness.cs" />

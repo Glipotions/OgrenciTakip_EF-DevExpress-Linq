@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraBars;
 using OgrenciTakip.UI.Win.Forms.AileBilgiForms;
+using OgrenciTakip.UI.Win.Forms.EvrakForms;
 using OgrenciTakip.UI.Win.Forms.GorevForms;
 using OgrenciTakip.UI.Win.Forms.IlForms;
 using OgrenciTakip.UI.Win.Forms.IndirimTuruForms;
@@ -8,7 +9,10 @@ using OgrenciTakip.UI.Win.Forms.IsyeriForms;
 using OgrenciTakip.UI.Win.Forms.KontenjanForms;
 using OgrenciTakip.UI.Win.Forms.MeslekForms;
 using OgrenciTakip.UI.Win.Forms.OkulForms;
+using OgrenciTakip.UI.Win.Forms.PromosyonForms;
 using OgrenciTakip.UI.Win.Forms.RehberForms;
+using OgrenciTakip.UI.Win.Forms.ServisForms;
+using OgrenciTakip.UI.Win.Forms.SinifForms;
 using OgrenciTakip.UI.Win.Forms.SinifGrupForms;
 using OgrenciTakip.UI.Win.Forms.TesvikForms;
 using OgrenciTakip.UI.Win.Forms.YabanciDilForms;
@@ -22,7 +26,8 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 	{
 		public static string DonemAdi = "Dönem Bilgisi Bekleniyor...";
 		public static string SubeAdi = "Şube Bilgisi Bekleniyor...";
-
+		public static long DonemId = 1;
+		public static long SubeId = 1;
 		public AnaForm()
 		{
 			InitializeComponent();
@@ -72,6 +77,14 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 				ShowListForms<GorevListForm>.ShowListForm(KartTuru.Gorev);
 			else if (e.Item == btnIndirimTuruKartlari)
 				ShowListForms<IndirimTuruListForm>.ShowListForm(KartTuru.IndirimTuru);
+			else if (e.Item == btnEvrakKartlari)
+				ShowListForms<EvrakListForm>.ShowListForm(KartTuru.Evrak);
+			else if (e.Item == btnPromosyonKartlari)
+				ShowListForms<PromosyonListForm>.ShowListForm(KartTuru.Promosyon);
+			else if (e.Item == btnServisKartlari)
+				ShowListForms<ServisListForm>.ShowListForm(KartTuru.Servis);
+			else if (e.Item == btnSinifKartlari)
+				ShowListForms<SinifListForm>.ShowListForm(KartTuru.Sinif);
 
 
 		}

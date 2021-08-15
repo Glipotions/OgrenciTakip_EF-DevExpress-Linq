@@ -36,11 +36,6 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			this.btnAileBilgiKartlari = new DevExpress.XtraBars.BarButtonItem();
 			this.btnIptalNedeniKartlari = new DevExpress.XtraBars.BarButtonItem();
 			this.btnYabanciDilKartlari = new DevExpress.XtraBars.BarButtonItem();
-			this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-			this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-			this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-			this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-			this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
 			this.btnGorevKartlari = new DevExpress.XtraBars.BarButtonItem();
 			this.btnIndirimTuruKartlari = new DevExpress.XtraBars.BarButtonItem();
 			this.btnIsyeriKartlari = new DevExpress.XtraBars.BarButtonItem();
@@ -50,6 +45,15 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			this.btnSinifGrupKartlari = new DevExpress.XtraBars.BarButtonItem();
 			this.btnTesvikKartlari = new DevExpress.XtraBars.BarButtonItem();
 			this.btnYakinlikKartlari = new DevExpress.XtraBars.BarButtonItem();
+			this.btnEvrakKartlari = new DevExpress.XtraBars.BarButtonItem();
+			this.btnPromosyonKartlari = new DevExpress.XtraBars.BarButtonItem();
+			this.btnServisKartlari = new DevExpress.XtraBars.BarButtonItem();
+			this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+			this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+			this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+			this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+			this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+			this.btnSinifKartlari = new DevExpress.XtraBars.BarButtonItem();
 			((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
 			this.SuspendLayout();
@@ -73,9 +77,13 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             this.btnRehberKartlari,
             this.btnSinifGrupKartlari,
             this.btnTesvikKartlari,
-            this.btnYakinlikKartlari});
+            this.btnYakinlikKartlari,
+            this.btnEvrakKartlari,
+            this.btnPromosyonKartlari,
+            this.btnServisKartlari,
+            this.btnSinifKartlari});
 			this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-			this.ribbonControl.MaxItemId = 15;
+			this.ribbonControl.MaxItemId = 19;
 			this.ribbonControl.Name = "ribbonControl";
 			this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -111,47 +119,6 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			this.btnYabanciDilKartlari.Caption = "Yabancı Dil Kartları";
 			this.btnYabanciDilKartlari.Id = 5;
 			this.btnYabanciDilKartlari.Name = "btnYabanciDilKartlari";
-			// 
-			// ribbonPage1
-			// 
-			this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
-			this.ribbonPage1.Name = "ribbonPage1";
-			this.ribbonPage1.Text = "ribbonPage1";
-			// 
-			// ribbonPageGroup1
-			// 
-			this.ribbonPageGroup1.ItemLinks.Add(this.btnOkulKartlari);
-			this.ribbonPageGroup1.ItemLinks.Add(this.btnIlKartlari);
-			this.ribbonPageGroup1.ItemLinks.Add(this.btnAileBilgiKartlari);
-			this.ribbonPageGroup1.ItemLinks.Add(this.btnIptalNedeniKartlari);
-			this.ribbonPageGroup1.ItemLinks.Add(this.btnYabanciDilKartlari);
-			this.ribbonPageGroup1.ItemLinks.Add(this.btnGorevKartlari);
-			this.ribbonPageGroup1.ItemLinks.Add(this.btnIndirimTuruKartlari);
-			this.ribbonPageGroup1.ItemLinks.Add(this.btnIsyeriKartlari);
-			this.ribbonPageGroup1.ItemLinks.Add(this.btnKontenjanKartlari);
-			this.ribbonPageGroup1.ItemLinks.Add(this.btnMeslekKartlari);
-			this.ribbonPageGroup1.ItemLinks.Add(this.btnRehberKartlari);
-			this.ribbonPageGroup1.ItemLinks.Add(this.btnSinifGrupKartlari);
-			this.ribbonPageGroup1.ItemLinks.Add(this.btnTesvikKartlari);
-			this.ribbonPageGroup1.ItemLinks.Add(this.btnYakinlikKartlari);
-			this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-			// 
-			// ribbonStatusBar1
-			// 
-			this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 585);
-			this.ribbonStatusBar1.Name = "ribbonStatusBar1";
-			this.ribbonStatusBar1.Ribbon = this.ribbonControl;
-			this.ribbonStatusBar1.Size = new System.Drawing.Size(853, 24);
-			// 
-			// ribbonPage2
-			// 
-			this.ribbonPage2.Name = "ribbonPage2";
-			this.ribbonPage2.Text = "ribbonPage2";
-			// 
-			// xtraTabbedMdiManager1
-			// 
-			this.xtraTabbedMdiManager1.MdiParent = this;
 			// 
 			// btnGorevKartlari
 			// 
@@ -207,6 +174,75 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			this.btnYakinlikKartlari.Id = 14;
 			this.btnYakinlikKartlari.Name = "btnYakinlikKartlari";
 			// 
+			// btnEvrakKartlari
+			// 
+			this.btnEvrakKartlari.Caption = "Evrak Kartları";
+			this.btnEvrakKartlari.Id = 15;
+			this.btnEvrakKartlari.Name = "btnEvrakKartlari";
+			// 
+			// btnPromosyonKartlari
+			// 
+			this.btnPromosyonKartlari.Caption = "Promosyon Kartları";
+			this.btnPromosyonKartlari.Id = 16;
+			this.btnPromosyonKartlari.Name = "btnPromosyonKartlari";
+			// 
+			// btnServisKartlari
+			// 
+			this.btnServisKartlari.Caption = "Servis Kartları";
+			this.btnServisKartlari.Id = 17;
+			this.btnServisKartlari.Name = "btnServisKartlari";
+			// 
+			// ribbonPage1
+			// 
+			this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1});
+			this.ribbonPage1.Name = "ribbonPage1";
+			this.ribbonPage1.Text = "ribbonPage1";
+			// 
+			// ribbonPageGroup1
+			// 
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnOkulKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnIlKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnAileBilgiKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnIptalNedeniKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnYabanciDilKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnGorevKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnIndirimTuruKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnIsyeriKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnKontenjanKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnMeslekKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnRehberKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnSinifGrupKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnTesvikKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnYakinlikKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnEvrakKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnPromosyonKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnServisKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnSinifKartlari);
+			this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+			// 
+			// ribbonStatusBar1
+			// 
+			this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 585);
+			this.ribbonStatusBar1.Name = "ribbonStatusBar1";
+			this.ribbonStatusBar1.Ribbon = this.ribbonControl;
+			this.ribbonStatusBar1.Size = new System.Drawing.Size(853, 24);
+			// 
+			// ribbonPage2
+			// 
+			this.ribbonPage2.Name = "ribbonPage2";
+			this.ribbonPage2.Text = "ribbonPage2";
+			// 
+			// xtraTabbedMdiManager1
+			// 
+			this.xtraTabbedMdiManager1.MdiParent = this;
+			// 
+			// btnSinifKartlari
+			// 
+			this.btnSinifKartlari.Caption = "Sınıf Kartları";
+			this.btnSinifKartlari.Id = 18;
+			this.btnSinifKartlari.Name = "btnSinifKartlari";
+			// 
 			// AnaForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,5 +285,9 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 		private DevExpress.XtraBars.BarButtonItem btnSinifGrupKartlari;
 		private DevExpress.XtraBars.BarButtonItem btnTesvikKartlari;
 		private DevExpress.XtraBars.BarButtonItem btnYakinlikKartlari;
+		private DevExpress.XtraBars.BarButtonItem btnEvrakKartlari;
+		private DevExpress.XtraBars.BarButtonItem btnPromosyonKartlari;
+		private DevExpress.XtraBars.BarButtonItem btnServisKartlari;
+		private DevExpress.XtraBars.BarButtonItem btnSinifKartlari;
 	}
 }

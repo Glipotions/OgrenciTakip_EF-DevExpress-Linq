@@ -89,6 +89,18 @@
     <Compile Include="Forms\BaseForms\BaseListForm.Designer.cs">
       <DependentUpon>BaseListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EvrakForms\EvrakEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EvrakForms\EvrakEditForm.Designer.cs">
+      <DependentUpon>EvrakEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EvrakForms\EvrakListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EvrakForms\EvrakListForm.Designer.cs">
+      <DependentUpon>EvrakListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FiltreForms\FiltreEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +221,18 @@
     <Compile Include="Forms\OkulForms\OkulListForm.Designer.cs">
       <DependentUpon>OkulListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PromosyonForms\PromosyonEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PromosyonForms\PromosyonEditForm.Designer.cs">
+      <DependentUpon>PromosyonEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PromosyonForms\PromosyonListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PromosyonForms\PromosyonListForm.Designer.cs">
+      <DependentUpon>PromosyonListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RehberForms\RehberEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +244,30 @@
     </Compile>
     <Compile Include="Forms\RehberForms\RehberListForm.Designer.cs">
       <DependentUpon>RehberListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ServisForms\ServisEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ServisForms\ServisEditForm.Designer.cs">
+      <DependentUpon>ServisEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ServisForms\ServisListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ServisForms\ServisListForm.Designer.cs">
+      <DependentUpon>ServisListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SinifForms\SinifEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SinifForms\SinifEditForm.Designer.cs">
+      <DependentUpon>SinifEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SinifForms\SinifListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SinifForms\SinifListForm.Designer.cs">
+      <DependentUpon>SinifListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SinifGrupForms\SinifGrupEditForm.cs">
       <SubType>Form</SubType>
@@ -272,7 +320,7 @@
     <Compile Include="Functions\FileFunction.cs" />
     <Compile Include="Functions\FilterFunctions.cs" />
     <Compile Include="Functions\GeneralFunctions.cs" />
-    <Compile Include="Functions\SelectFunction.cs" />
+    <Compile Include="Functions\SelectFunctions.cs" />
     <Compile Include="Functions\TablePrintingFunctions.cs" />
     <Compile Include="GeneralForms\AnaForm.cs">
       <SubType>Form</SubType>
@@ -453,11 +501,17 @@
     <EmbeddedResource Include="Forms\OkulForms\OkulListForm.resx">
       <DependentUpon>OkulListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PromosyonForms\PromosyonListForm.resx">
+      <DependentUpon>PromosyonListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\RehberForms\RehberEditForm.resx">
       <DependentUpon>RehberEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RehberForms\RehberListForm.resx">
       <DependentUpon>RehberListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServisForms\ServisListForm.resx">
+      <DependentUpon>ServisListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SinifGrupForms\SinifGrupEditForm.resx">
       <DependentUpon>SinifGrupEditForm.cs</DependentUpon>

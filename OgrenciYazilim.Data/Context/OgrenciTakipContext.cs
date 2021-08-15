@@ -1,3 +1,5 @@
+using OgrenciTakip.Model;
+using OgrenciTakip.Model.Entities;
 using OgrenciYazilim.Data.OgrenciTakipMigration;
 using OgrenciYazilim.Model.Entities;
 using System.Data.Entity;
@@ -43,5 +45,11 @@ namespace OgrenciYazilim.Data.Context
 		public DbSet<Isyeri> Isyeri { get; set; }
 		public DbSet<Gorev> Gorev { get; set; }
 		public DbSet<IndirimTuru> IndirimTuru { get; set; }
+		public DbSet<Evrak> Evrak { get; set; }
+		public DbSet<Donem> Donem { get; set; }
+		public DbSet<Sube> Sube { get; set; }
+		public DbSet<Promosyon> Promosyon { get; set; }
+		public DbSet<Servis> Servis { get; set; }
+		public DbSet<Sinif> Sinif { get; set; }
 	}
 }

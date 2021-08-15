@@ -14,7 +14,10 @@ namespace OgrenciTakip.UI.Win.UserControls.Controls
 		{
 			Properties.AppearanceFocused.BackColor = Color.LightCyan;
 			Properties.AllowNullInput = DefaultBoolean.False;
+			Properties.DisplayFormat.FormatType = FormatType.Numeric;
+			Properties.DisplayFormat.FormatString = "n2";
 			Properties.EditMask = "n2";
+
 		}
 
 		public override bool EnterMoveNextControl { get; set; } = true;

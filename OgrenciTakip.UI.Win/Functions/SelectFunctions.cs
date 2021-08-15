@@ -1,5 +1,6 @@
 ﻿using OgrenciTakip.UI.Win.Forms.IlceForms;
 using OgrenciTakip.UI.Win.Forms.IlForms;
+using OgrenciTakip.UI.Win.Forms.SinifGrupForms;
 using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.UI.Win.UserControls.Controls;
 using OgrenciYazilim.Common.Enums;
@@ -8,7 +9,7 @@ using System;
 
 namespace OgrenciTakip.UI.Win.Functions
 {
-	public class SelectFunction : IDisposable
+	public class SelectFunctions : IDisposable
 	{
 		#region Variables
 		private MyButtonEdit _btnEdit;
@@ -51,6 +52,17 @@ namespace OgrenciTakip.UI.Win.Functions
 						{
 							_btnEdit.Id = entity.Id;
 							_btnEdit.EditValue = entity.IlceAdi;
+						}
+					}
+					break;
+
+				case "txtGrup":
+					{
+						var entity = (SinifGrup)ShowListForms<SinifGrupListForm>.ShowDialogListForm(_kartTuru, _btnEdit.Id);
+						if (entity != null)
+						{
+							_btnEdit.Id = entity.Id;
+							_btnEdit.EditValue = entity.GrupAdi;
 						}
 					}
 					break;
