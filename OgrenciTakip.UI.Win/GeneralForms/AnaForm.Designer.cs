@@ -48,12 +48,16 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			this.btnEvrakKartlari = new DevExpress.XtraBars.BarButtonItem();
 			this.btnPromosyonKartlari = new DevExpress.XtraBars.BarButtonItem();
 			this.btnServisKartlari = new DevExpress.XtraBars.BarButtonItem();
+			this.btnSinifKartlari = new DevExpress.XtraBars.BarButtonItem();
+			this.btnHizmetTuruKartlari = new DevExpress.XtraBars.BarButtonItem();
+			this.btnHizmetKartlari = new DevExpress.XtraBars.BarButtonItem();
 			this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
 			this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-			this.btnSinifKartlari = new DevExpress.XtraBars.BarButtonItem();
+			this.btnOzelKodKartlari = new DevExpress.XtraBars.BarButtonItem();
+			this.btnKasaKartlari = new DevExpress.XtraBars.BarButtonItem();
 			((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
 			this.SuspendLayout();
@@ -81,9 +85,13 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             this.btnEvrakKartlari,
             this.btnPromosyonKartlari,
             this.btnServisKartlari,
-            this.btnSinifKartlari});
+            this.btnSinifKartlari,
+            this.btnHizmetTuruKartlari,
+            this.btnHizmetKartlari,
+            this.btnOzelKodKartlari,
+            this.btnKasaKartlari});
 			this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-			this.ribbonControl.MaxItemId = 19;
+			this.ribbonControl.MaxItemId = 23;
 			this.ribbonControl.Name = "ribbonControl";
 			this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -192,6 +200,24 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			this.btnServisKartlari.Id = 17;
 			this.btnServisKartlari.Name = "btnServisKartlari";
 			// 
+			// btnSinifKartlari
+			// 
+			this.btnSinifKartlari.Caption = "Sınıf Kartları";
+			this.btnSinifKartlari.Id = 18;
+			this.btnSinifKartlari.Name = "btnSinifKartlari";
+			// 
+			// btnHizmetTuruKartlari
+			// 
+			this.btnHizmetTuruKartlari.Caption = "Hizmet Türü Kartları";
+			this.btnHizmetTuruKartlari.Id = 19;
+			this.btnHizmetTuruKartlari.Name = "btnHizmetTuruKartlari";
+			// 
+			// btnHizmetKartlari
+			// 
+			this.btnHizmetKartlari.Caption = "Hizmet Kartları";
+			this.btnHizmetKartlari.Id = 20;
+			this.btnHizmetKartlari.Name = "btnHizmetKartlari";
+			// 
 			// ribbonPage1
 			// 
 			this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -219,6 +245,9 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnPromosyonKartlari);
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnServisKartlari);
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnSinifKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnHizmetTuruKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnHizmetKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnKasaKartlari);
 			this.ribbonPageGroup1.Name = "ribbonPageGroup1";
 			// 
 			// ribbonStatusBar1
@@ -237,11 +266,17 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			// 
 			this.xtraTabbedMdiManager1.MdiParent = this;
 			// 
-			// btnSinifKartlari
+			// btnOzelKodKartlari
 			// 
-			this.btnSinifKartlari.Caption = "Sınıf Kartları";
-			this.btnSinifKartlari.Id = 18;
-			this.btnSinifKartlari.Name = "btnSinifKartlari";
+			this.btnOzelKodKartlari.Caption = "Özel Kod Kartları";
+			this.btnOzelKodKartlari.Id = 21;
+			this.btnOzelKodKartlari.Name = "btnOzelKodKartlari";
+			// 
+			// btnKasaKartlari
+			// 
+			this.btnKasaKartlari.Caption = "Kasa Kartları";
+			this.btnKasaKartlari.Id = 22;
+			this.btnKasaKartlari.Name = "btnKasaKartlari";
 			// 
 			// AnaForm
 			// 
@@ -289,5 +324,9 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 		private DevExpress.XtraBars.BarButtonItem btnPromosyonKartlari;
 		private DevExpress.XtraBars.BarButtonItem btnServisKartlari;
 		private DevExpress.XtraBars.BarButtonItem btnSinifKartlari;
+		private DevExpress.XtraBars.BarButtonItem btnHizmetTuruKartlari;
+		private DevExpress.XtraBars.BarButtonItem btnHizmetKartlari;
+		private DevExpress.XtraBars.BarButtonItem btnOzelKodKartlari;
+		private DevExpress.XtraBars.BarButtonItem btnKasaKartlari;
 	}
 }

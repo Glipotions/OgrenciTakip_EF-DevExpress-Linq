@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace OgrenciYazilim.Common.Functions
 {
-	public static class EnumFunction
+	public static class EnumFunctions
 	{
 		private static T GetAttribute<T>(this Enum value) where T : Attribute
 		{

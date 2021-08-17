@@ -1,17 +1,8 @@
-﻿using DevExpress.XtraEditors;
-using OgrenciTakip.Business.General;
+﻿using OgrenciTakip.Business.General;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciYazilim.Common.Enums;
 using OgrenciYazilim.Model.Entities;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace OgrenciTakip.UI.Win.Forms.AileBilgiForms
 {
@@ -21,7 +12,7 @@ namespace OgrenciTakip.UI.Win.Forms.AileBilgiForms
 		{
 			InitializeComponent();
 
-			DataLayoutControl= myDataLayoutControl;
+			DataLayoutControl = myDataLayoutControl;
 			Business = new AileBilgiBusiness(myDataLayoutControl);
 			BaseKartTuru = KartTuru.AileBilgi;
 			EventsLoad();
@@ -54,10 +45,10 @@ namespace OgrenciTakip.UI.Win.Forms.AileBilgiForms
 			CurrentEntity = new AileBilgi
 			{
 				Id = Id,
-				Kod=txtKod.Text,
-				BilgiAdi=txtBilgiAdi.Text,
-				Aciklama=txtAciklama.Text,
-				Durum=tglDurum.IsOn
+				Kod = txtKod.Text,
+				BilgiAdi = txtBilgiAdi.Text,
+				Aciklama = txtAciklama.Text,
+				Durum = tglDurum.IsOn
 			};
 
 			ButtonEnabledDurumu();

@@ -61,6 +61,10 @@
     <Compile Include="Function\ValidationFuction.cs" />
     <Compile Include="General\AileBilgiBusiness.cs" />
     <Compile Include="General\EvrakBusiness.cs" />
+    <Compile Include="General\HizmetBusiness.cs" />
+    <Compile Include="General\HizmetTuruBusiness.cs" />
+    <Compile Include="General\KasaBusiness.cs" />
+    <Compile Include="General\OzelKodBusiness.cs" />
     <Compile Include="General\PromosyonBusiness.cs" />
     <Compile Include="General\ServisBusiness.cs" />
     <Compile Include="General\SinifBusiness.cs" />

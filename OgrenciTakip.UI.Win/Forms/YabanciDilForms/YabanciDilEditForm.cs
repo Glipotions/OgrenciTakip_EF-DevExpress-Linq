@@ -1,18 +1,8 @@
-﻿using DevExpress.XtraEditors;
-using OgrenciTakip.Business.General;
+﻿using OgrenciTakip.Business.General;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciYazilim.Common.Enums;
 using OgrenciYazilim.Model.Entities;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace OgrenciTakip.UI.Win.Forms.YabanciDilForms
 {

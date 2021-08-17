@@ -43,7 +43,15 @@ namespace OgrenciYazilim.Common.Enums
 		[Description("Servis Kartı")]
 		Servis = 19,
 		[Description("Sınıf Kartı")]
-		Sinif = 20
+		Sinif = 20,
+		[Description("Hizmet Türü Kartı")]
+		HizmetTuru = 21,
+		[Description("Hizmet Kartı")]
+		Hizmet = 22,
+		[Description("Özel Kod Kartı")]
+		OzelKod = 23,
+		[Description("Kasa Kartı")]
+		Kasa = 24
 
 	}
 }

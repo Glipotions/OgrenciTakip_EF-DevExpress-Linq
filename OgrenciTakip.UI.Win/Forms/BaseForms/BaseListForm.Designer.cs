@@ -220,7 +220,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			this.btnYeni.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Insert);
 			this.btnYeni.Name = "btnYeni";
 			toolTipTitleItem1.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
-			toolTipTitleItem1.Text = " ( EKLE )";
+			toolTipTitleItem1.Text = " ( Insert )";
 			toolTipItem1.Text = "Yeni Kart Ekle";
 			toolTipItem2.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
 			toolTipItem2.Text = "Formu Yeni Kart Ekleme Modunda Açar";
@@ -599,6 +599,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			this.btnGonder.Id = 32;
 			this.btnGonder.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.export_16x16;
 			this.btnGonder.ImageOptions.LargeImage = global::OgrenciTakip.UI.Win.Properties.Resources.export_32x32;
+			this.btnGonder.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F12);
 			this.btnGonder.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnExcelDosyalari),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnWordDosyasi),

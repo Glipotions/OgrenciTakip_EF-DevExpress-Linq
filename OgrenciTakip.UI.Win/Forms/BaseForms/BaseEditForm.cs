@@ -32,7 +32,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		protected bool IsLoaded;
 		protected bool KayitSonrasiFormuKapat = true;
 		protected BarItem[] ShowItems;
-		protected BarItem[] HideItems; 
+		protected BarItem[] HideItems;
 		#endregion
 
 		public BaseEditForm()
@@ -92,7 +92,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 						ControlEvents(ctrl);
 
 		}
-
 		private void FarkliKaydet()
 		{
 			if (Messages.EvetSeciliEvetHayir("Bu Filtre Referans Alınarak Yeni Bir Filtre Oluşturulacaktır. Onaylıyor musunuz?", "Kayıt Onay") != DialogResult.Yes) return;
@@ -307,7 +306,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		{
 			var type = sender.GetType();
 
-			if (type == typeof(MyButtonEdit) || type == typeof(MyGridView) || type == typeof(MyPictureEdit) || type == typeof(MyComboBoxEdit) || type == typeof(MyDateEdit) || type== typeof(MyCalcEdit))
+			if (type == typeof(MyButtonEdit) || type == typeof(MyGridView) || type == typeof(MyPictureEdit) || type == typeof(MyComboBoxEdit) || type == typeof(MyDateEdit) || type == typeof(MyCalcEdit))
 			{
 				statusBarKisayol.Visibility = BarItemVisibility.Always;
 				statusBarKisayolAciklama.Visibility = BarItemVisibility.Always;
@@ -325,7 +324,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			statusBarKisayol.Visibility = BarItemVisibility.Never;
 			statusBarKisayolAciklama.Visibility = BarItemVisibility.Never;
 		}
-		private void Control_EditValueChanged(object sender, EventArgs e)
+		protected virtual void Control_EditValueChanged(object sender, EventArgs e)
 		{
 			if (!IsLoaded) return;
 			GuncelNesneOlustur();

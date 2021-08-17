@@ -33,12 +33,12 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 		protected internal override void Yukle()
 		{
 			txtRaporBasligi.Text = _raporBaslik;
-			txtBaslikEkle.Properties.Items.AddRange(EnumFunction.GetEnumDescriptionList<EvetHayir>());
-			txtRaporuKagidaSigdir.Properties.Items.AddRange(EnumFunction.GetEnumDescriptionList<RaporuKagidaSigdirmaTuru>());
-			txtYazdirmaYonu.Properties.Items.AddRange(EnumFunction.GetEnumDescriptionList<YazdirmaYonu>());
-			txtYatayCizgileriGoster.Properties.Items.AddRange(EnumFunction.GetEnumDescriptionList<EvetHayir>());
-			txtDikeyCizgileriGoster.Properties.Items.AddRange(EnumFunction.GetEnumDescriptionList<EvetHayir>());
-			txtSutunBasliklariniGoster.Properties.Items.AddRange(EnumFunction.GetEnumDescriptionList<EvetHayir>());
+			txtBaslikEkle.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<EvetHayir>());
+			txtRaporuKagidaSigdir.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<RaporuKagidaSigdirmaTuru>());
+			txtYazdirmaYonu.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<YazdirmaYonu>());
+			txtYatayCizgileriGoster.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<EvetHayir>());
+			txtDikeyCizgileriGoster.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<EvetHayir>());
+			txtSutunBasliklariniGoster.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<EvetHayir>());
 			txtYaziciAdi.Properties.Items.AddRange(GeneralFunctions.YazicilariListele());
 
 			txtBaslikEkle.SelectedItem = EvetHayir.Evet.ToName();

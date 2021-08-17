@@ -6,25 +6,25 @@ using OgrenciYazilim.Common.Enums;
 
 namespace OgrenciTakip.UI.Win.Forms.ServisForms
 {
-    public partial class ServisListForm : BaseListForm
-    {
-        public ServisListForm()
-        {
-            InitializeComponent();
-            Business = new ServisBusiness();
-        }
+	public partial class ServisListForm : BaseListForm
+	{
+		public ServisListForm()
+		{
+			InitializeComponent();
+			Business = new ServisBusiness();
+		}
 
-        protected override void DegiskenleriDoldur()
-        {
-            Tablo = tablo;
-            BaseKartTuru = KartTuru.Servis;
-            FormShow = new ShowEditForms<ServisEditForm>();
-            Navigator = longNavigator.Navigator;
-        }
+		protected override void DegiskenleriDoldur()
+		{
+			Tablo = tablo;
+			BaseKartTuru = KartTuru.Servis;
+			FormShow = new ShowEditForms<ServisEditForm>();
+			Navigator = longNavigator.Navigator;
+		}
 
-        protected override void Listele()
-        {
-            Tablo.GridControl.DataSource = ((ServisBusiness)Business).List(x => x.Durum == AktifKartlariGoster && x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
-        }
-    }
+		protected override void Listele()
+		{
+			Tablo.GridControl.DataSource = ((ServisBusiness)Business).List(x => x.Durum == AktifKartlariGoster && x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
+		}
+	}
 }
