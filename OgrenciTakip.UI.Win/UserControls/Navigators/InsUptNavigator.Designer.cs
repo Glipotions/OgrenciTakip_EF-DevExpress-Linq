@@ -1,7 +1,7 @@
 ﻿
 namespace OgrenciTakip.UI.Win.UserControls.Navigators
 {
-	partial class Navigator
+	partial class InsUptNavigator
 	{
 		/// <summary> 
 		///Gerekli tasarımcı değişkeni.
@@ -30,32 +30,32 @@ namespace OgrenciTakip.UI.Win.UserControls.Navigators
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Navigator));
-			this.controlNavigator1 = new DevExpress.XtraEditors.ControlNavigator();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InsUptNavigator));
+			this.Navigator = new DevExpress.XtraEditors.ControlNavigator();
 			this.imageCollection = new DevExpress.Utils.ImageCollection(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.imageCollection)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// controlNavigator1
+			// Navigator
 			// 
-			this.controlNavigator1.Buttons.Append.ImageIndex = 6;
-			this.controlNavigator1.Buttons.CancelEdit.Visible = false;
-			this.controlNavigator1.Buttons.Edit.Visible = false;
-			this.controlNavigator1.Buttons.EndEdit.Visible = false;
-			this.controlNavigator1.Buttons.First.ImageIndex = 0;
-			this.controlNavigator1.Buttons.ImageList = this.imageCollection;
-			this.controlNavigator1.Buttons.Last.ImageIndex = 5;
-			this.controlNavigator1.Buttons.Next.ImageIndex = 3;
-			this.controlNavigator1.Buttons.NextPage.Visible = false;
-			this.controlNavigator1.Buttons.Prev.ImageIndex = 2;
-			this.controlNavigator1.Buttons.PrevPage.Visible = false;
-			this.controlNavigator1.Buttons.Remove.ImageIndex = 7;
-			this.controlNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.controlNavigator1.Location = new System.Drawing.Point(0, 0);
-			this.controlNavigator1.Name = "controlNavigator1";
-			this.controlNavigator1.Size = new System.Drawing.Size(618, 24);
-			this.controlNavigator1.TabIndex = 0;
-			this.controlNavigator1.Text = "controlNavigator1";
+			this.Navigator.Buttons.Append.ImageIndex = 6;
+			this.Navigator.Buttons.CancelEdit.Visible = false;
+			this.Navigator.Buttons.Edit.Visible = false;
+			this.Navigator.Buttons.EndEdit.Visible = false;
+			this.Navigator.Buttons.First.ImageIndex = 0;
+			this.Navigator.Buttons.ImageList = this.imageCollection;
+			this.Navigator.Buttons.Last.ImageIndex = 5;
+			this.Navigator.Buttons.Next.ImageIndex = 3;
+			this.Navigator.Buttons.NextPage.Visible = false;
+			this.Navigator.Buttons.Prev.ImageIndex = 2;
+			this.Navigator.Buttons.PrevPage.Visible = false;
+			this.Navigator.Buttons.Remove.ImageIndex = 7;
+			this.Navigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.Navigator.Location = new System.Drawing.Point(0, 0);
+			this.Navigator.Name = "Navigator";
+			this.Navigator.Size = new System.Drawing.Size(618, 24);
+			this.Navigator.TabIndex = 0;
+			this.Navigator.Text = "controlNavigator1";
 			// 
 			// imageCollection
 			// 
@@ -71,12 +71,12 @@ namespace OgrenciTakip.UI.Win.UserControls.Navigators
 			this.imageCollection.InsertImage(global::OgrenciTakip.UI.Win.Properties.Resources.deletelist_16x16, "deletelist_16x16", typeof(global::OgrenciTakip.UI.Win.Properties.Resources), 7);
 			this.imageCollection.Images.SetKeyName(7, "deletelist_16x16");
 			// 
-			// Navigator
+			// controlNavigator1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.controlNavigator1);
-			this.Name = "Navigator";
+			this.Controls.Add(this.Navigator);
+			this.Name = "controlNavigator1";
 			this.Size = new System.Drawing.Size(618, 24);
 			((System.ComponentModel.ISupportInitialize)(this.imageCollection)).EndInit();
 			this.ResumeLayout(false);
@@ -84,8 +84,7 @@ namespace OgrenciTakip.UI.Win.UserControls.Navigators
 		}
 
 		#endregion
-
-		private DevExpress.XtraEditors.ControlNavigator controlNavigator1;
 		private DevExpress.Utils.ImageCollection imageCollection;
+		protected internal DevExpress.XtraEditors.ControlNavigator Navigator;
 	}
 }

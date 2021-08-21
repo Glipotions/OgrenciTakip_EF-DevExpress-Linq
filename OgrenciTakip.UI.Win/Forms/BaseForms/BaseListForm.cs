@@ -12,6 +12,7 @@ using OgrenciYazilim.Common.Enums;
 using OgrenciYazilim.Model.Entities;
 using OgrenciYazilim.Model.Entities.Base;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace OgrenciTakip.UI.Win.Forms.BaseForms
@@ -31,9 +32,13 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		protected bool AktifKartlariGoster = true;
 		protected internal GridView Tablo;
 		protected internal BaseEntity SelectedEntity;
-		protected internal bool AktifPasifButonGöster = false;
+		protected internal bool AktifPasifButonGoster = false;
 		protected internal bool MultiSelect;
 		protected internal long? SeciliGelecekId;
+		protected internal IList<long> ListeDisiTutulacakKayitlar;
+		protected internal SelectRowFunctions RowSelect;
+		protected internal bool EklenebilecekEntityVar = false;
+		protected internal IList<BaseEntity> SelectedEntities;
 
 		#endregion
 		public BaseListForm()
@@ -68,10 +73,10 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
 		private void ButtonGizleGoster()
 		{
-			btnSec.Visibility = AktifPasifButonGöster ? BarItemVisibility.Never : IsMdiChild ? BarItemVisibility.Never : BarItemVisibility.Always;
+			btnSec.Visibility = AktifPasifButonGoster ? BarItemVisibility.Never : IsMdiChild ? BarItemVisibility.Never : BarItemVisibility.Always;
 			barEnter.Visibility = IsMdiChild ? BarItemVisibility.Never : BarItemVisibility.Always;
 			barEnterAciklama.Visibility = IsMdiChild ? BarItemVisibility.Never : BarItemVisibility.Always;
-			btnAktifPasifKartlar.Visibility = AktifPasifButonGöster ? BarItemVisibility.Always : !IsMdiChild ? BarItemVisibility.Never : BarItemVisibility.Always;
+			btnAktifPasifKartlar.Visibility = AktifPasifButonGoster ? BarItemVisibility.Always : !IsMdiChild ? BarItemVisibility.Never : BarItemVisibility.Always;
 
 			ShowItems?.ForEach(x => x.Visibility = BarItemVisibility.Always);
 			HideItems?.ForEach(x => x.Visibility = BarItemVisibility.Never);

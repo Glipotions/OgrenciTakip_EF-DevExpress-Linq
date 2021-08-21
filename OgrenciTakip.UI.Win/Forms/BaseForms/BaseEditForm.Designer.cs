@@ -390,9 +390,6 @@
 		private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
 		private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
 		private DevExpress.XtraBars.BarButtonItem btnCikis;
-		private DevExpress.XtraBars.BarStaticItem statusBarAciklama;
-		private DevExpress.XtraBars.BarStaticItem statusBarKisayol;
-		private DevExpress.XtraBars.BarStaticItem statusBarKisayolAciklama;
 		protected DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
 		protected DevExpress.XtraBars.BarButtonItem btnKaydet;
 		protected DevExpress.XtraBars.BarButtonItem btnUygula;
@@ -402,5 +399,8 @@
 		protected DevExpress.XtraBars.BarButtonItem btnFarkliKaydet;
 		protected DevExpress.XtraBars.BarButtonItem btnYazdir;
 		protected DevExpress.XtraBars.BarButtonItem btnBaskiOnizleme;
+		protected internal DevExpress.XtraBars.BarStaticItem statusBarAciklama;
+		protected internal DevExpress.XtraBars.BarStaticItem statusBarKisayol;
+		protected internal DevExpress.XtraBars.BarStaticItem statusBarKisayolAciklama;
 	}
 }

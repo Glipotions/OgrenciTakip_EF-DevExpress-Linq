@@ -55,6 +55,17 @@ namespace OgrenciYazilim.Data.Context
 		public DbSet<Hizmet> Hizmet { get; set; }
 		public DbSet<OzelKod> OzelKod { get; set; }
 		public DbSet<Kasa> Kasa { get; set; }
+		public DbSet<Banka> Banka { get; set; }
+		public DbSet<BankaSube> BankaSube { get; set; }
+		public DbSet<Avukat> Avukat { get; set; }
+		public DbSet<Cari> Cari { get; set; }
+		public DbSet<OdemeTuru> OdemeTuru { get; set; }
+		public DbSet<BankaHesap> BankaHesap { get; set; }
+		public DbSet<Iletisim> Iletisim { get; set; }
+		public DbSet<Ogrenci> Ogrenci { get; set; }
+		public DbSet<Indirim> Indirim { get; set; }
+
+
 
 	}
 }

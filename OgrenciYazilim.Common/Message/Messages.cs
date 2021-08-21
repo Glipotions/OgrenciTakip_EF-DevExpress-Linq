@@ -44,7 +44,7 @@ namespace OgrenciYazilim.Common.Message
 			return EvetSeciliEvetHayirIptal("Yapılan Değişiklikler Kayıt Edilsin Mi?", "Çıkış Onay");
 		}
 
-		public static void KartSecmemeUyarıMesaji()
+		public static void KartSecmemeUyariMesaji()
 		{
 			UyariMesaji("Lüfen bir Kart Seçiniz!");
 		}

@@ -1,5 +1,6 @@
 ﻿using OgrenciYazilim.Model.Entities.Base.Interfaces;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace OgrenciTakip.Business.Function
@@ -21,6 +22,11 @@ namespace OgrenciTakip.Business.Function
 					hp.SetValue(hedef, ReferenceEquals(value, "") ? null : value);
 			}
 			return hedef;
+		}
+
+		public static IEnumerable<TTarget> EntityListConvert<TTarget>(this IEnumerable<IBaseEntity> source)
+		{
+			return source?.Select(x => x.EntityConvert<TTarget>()).ToList();
 		}
 	}
 }

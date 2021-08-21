@@ -51,13 +51,21 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			this.btnSinifKartlari = new DevExpress.XtraBars.BarButtonItem();
 			this.btnHizmetTuruKartlari = new DevExpress.XtraBars.BarButtonItem();
 			this.btnHizmetKartlari = new DevExpress.XtraBars.BarButtonItem();
+			this.btnOzelKodKartlari = new DevExpress.XtraBars.BarButtonItem();
+			this.btnKasaKartlari = new DevExpress.XtraBars.BarButtonItem();
+			this.btnBankaKartlari = new DevExpress.XtraBars.BarButtonItem();
+			this.btnAvukatKartlari = new DevExpress.XtraBars.BarButtonItem();
+			this.btnCariKartlari = new DevExpress.XtraBars.BarButtonItem();
+			this.btnOdemeTuruKartlari = new DevExpress.XtraBars.BarButtonItem();
+			this.btnBankaHesapKartlari = new DevExpress.XtraBars.BarButtonItem();
+			this.btnIletisimKartlari = new DevExpress.XtraBars.BarButtonItem();
+			this.btnOgrenciKartlari = new DevExpress.XtraBars.BarButtonItem();
 			this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
 			this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-			this.btnOzelKodKartlari = new DevExpress.XtraBars.BarButtonItem();
-			this.btnKasaKartlari = new DevExpress.XtraBars.BarButtonItem();
+			this.btnIndirimKartlari = new DevExpress.XtraBars.BarButtonItem();
 			((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
 			this.SuspendLayout();
@@ -89,13 +97,21 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             this.btnHizmetTuruKartlari,
             this.btnHizmetKartlari,
             this.btnOzelKodKartlari,
-            this.btnKasaKartlari});
+            this.btnKasaKartlari,
+            this.btnBankaKartlari,
+            this.btnAvukatKartlari,
+            this.btnCariKartlari,
+            this.btnOdemeTuruKartlari,
+            this.btnBankaHesapKartlari,
+            this.btnIletisimKartlari,
+            this.btnOgrenciKartlari,
+            this.btnIndirimKartlari});
 			this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-			this.ribbonControl.MaxItemId = 23;
+			this.ribbonControl.MaxItemId = 33;
 			this.ribbonControl.Name = "ribbonControl";
 			this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-			this.ribbonControl.Size = new System.Drawing.Size(853, 158);
+			this.ribbonControl.Size = new System.Drawing.Size(1148, 158);
 			this.ribbonControl.StatusBar = this.ribbonStatusBar1;
 			// 
 			// btnOkulKartlari
@@ -218,6 +234,60 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			this.btnHizmetKartlari.Id = 20;
 			this.btnHizmetKartlari.Name = "btnHizmetKartlari";
 			// 
+			// btnOzelKodKartlari
+			// 
+			this.btnOzelKodKartlari.Caption = "Özel Kod Kartları";
+			this.btnOzelKodKartlari.Id = 21;
+			this.btnOzelKodKartlari.Name = "btnOzelKodKartlari";
+			// 
+			// btnKasaKartlari
+			// 
+			this.btnKasaKartlari.Caption = "Kasa Kartları";
+			this.btnKasaKartlari.Id = 22;
+			this.btnKasaKartlari.Name = "btnKasaKartlari";
+			// 
+			// btnBankaKartlari
+			// 
+			this.btnBankaKartlari.Caption = "Banka Kartları";
+			this.btnBankaKartlari.Id = 23;
+			this.btnBankaKartlari.Name = "btnBankaKartlari";
+			// 
+			// btnAvukatKartlari
+			// 
+			this.btnAvukatKartlari.Caption = "Avukat Kartları";
+			this.btnAvukatKartlari.Id = 24;
+			this.btnAvukatKartlari.Name = "btnAvukatKartlari";
+			// 
+			// btnCariKartlari
+			// 
+			this.btnCariKartlari.Caption = "Cari Kartları";
+			this.btnCariKartlari.Id = 25;
+			this.btnCariKartlari.Name = "btnCariKartlari";
+			// 
+			// btnOdemeTuruKartlari
+			// 
+			this.btnOdemeTuruKartlari.Caption = "Ödeme Türü Kartları";
+			this.btnOdemeTuruKartlari.Id = 28;
+			this.btnOdemeTuruKartlari.Name = "btnOdemeTuruKartlari";
+			// 
+			// btnBankaHesapKartlari
+			// 
+			this.btnBankaHesapKartlari.Caption = "Banka Hesap Kartları";
+			this.btnBankaHesapKartlari.Id = 29;
+			this.btnBankaHesapKartlari.Name = "btnBankaHesapKartlari";
+			// 
+			// btnIletisimKartlari
+			// 
+			this.btnIletisimKartlari.Caption = "İletişim Kartları";
+			this.btnIletisimKartlari.Id = 30;
+			this.btnIletisimKartlari.Name = "btnIletisimKartlari";
+			// 
+			// btnOgrenciKartlari
+			// 
+			this.btnOgrenciKartlari.Caption = "Öğrenci Kartları";
+			this.btnOgrenciKartlari.Id = 31;
+			this.btnOgrenciKartlari.Name = "btnOgrenciKartlari";
+			// 
 			// ribbonPage1
 			// 
 			this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -248,14 +318,22 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnHizmetTuruKartlari);
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnHizmetKartlari);
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnKasaKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnBankaKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnAvukatKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnCariKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnOdemeTuruKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnBankaHesapKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnIletisimKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnOgrenciKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnIndirimKartlari);
 			this.ribbonPageGroup1.Name = "ribbonPageGroup1";
 			// 
 			// ribbonStatusBar1
 			// 
-			this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 585);
+			this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 599);
 			this.ribbonStatusBar1.Name = "ribbonStatusBar1";
 			this.ribbonStatusBar1.Ribbon = this.ribbonControl;
-			this.ribbonStatusBar1.Size = new System.Drawing.Size(853, 24);
+			this.ribbonStatusBar1.Size = new System.Drawing.Size(1148, 24);
 			// 
 			// ribbonPage2
 			// 
@@ -266,23 +344,17 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			// 
 			this.xtraTabbedMdiManager1.MdiParent = this;
 			// 
-			// btnOzelKodKartlari
+			// btnIndirimKartlari
 			// 
-			this.btnOzelKodKartlari.Caption = "Özel Kod Kartları";
-			this.btnOzelKodKartlari.Id = 21;
-			this.btnOzelKodKartlari.Name = "btnOzelKodKartlari";
-			// 
-			// btnKasaKartlari
-			// 
-			this.btnKasaKartlari.Caption = "Kasa Kartları";
-			this.btnKasaKartlari.Id = 22;
-			this.btnKasaKartlari.Name = "btnKasaKartlari";
+			this.btnIndirimKartlari.Caption = "İndirim Kartları";
+			this.btnIndirimKartlari.Id = 32;
+			this.btnIndirimKartlari.Name = "btnIndirimKartlari";
 			// 
 			// AnaForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(853, 609);
+			this.ClientSize = new System.Drawing.Size(1148, 623);
 			this.Controls.Add(this.ribbonStatusBar1);
 			this.Controls.Add(this.ribbonControl);
 			this.IsMdiContainer = true;
@@ -328,5 +400,13 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 		private DevExpress.XtraBars.BarButtonItem btnHizmetKartlari;
 		private DevExpress.XtraBars.BarButtonItem btnOzelKodKartlari;
 		private DevExpress.XtraBars.BarButtonItem btnKasaKartlari;
+		private DevExpress.XtraBars.BarButtonItem btnBankaKartlari;
+		private DevExpress.XtraBars.BarButtonItem btnAvukatKartlari;
+		private DevExpress.XtraBars.BarButtonItem btnCariKartlari;
+		private DevExpress.XtraBars.BarButtonItem btnOdemeTuruKartlari;
+		private DevExpress.XtraBars.BarButtonItem btnBankaHesapKartlari;
+		private DevExpress.XtraBars.BarButtonItem btnIletisimKartlari;
+		private DevExpress.XtraBars.BarButtonItem btnOgrenciKartlari;
+		private DevExpress.XtraBars.BarButtonItem btnIndirimKartlari;
 	}
 }

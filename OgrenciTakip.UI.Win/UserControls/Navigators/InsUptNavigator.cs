@@ -1,10 +1,10 @@
-﻿using System.Windows.Forms;
+﻿using DevExpress.XtraEditors;
 
 namespace OgrenciTakip.UI.Win.UserControls.Navigators
 {
-	public partial class Navigator : UserControl
+	public partial class InsUptNavigator : XtraUserControl
 	{
-		public Navigator()
+		public InsUptNavigator()
 		{
 			InitializeComponent();
 		}

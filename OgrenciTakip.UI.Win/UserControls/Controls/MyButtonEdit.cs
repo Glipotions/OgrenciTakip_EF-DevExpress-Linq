@@ -1,9 +1,9 @@
 ﻿using DevExpress.XtraEditors;
-using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraEditors.Controls;  //1
 using OgrenciTakip.UI.Win.Interfaces;
 using System;
 using System.ComponentModel;
-using System.Drawing;
+using System.Drawing; //2
 
 namespace OgrenciTakip.UI.Win.UserControls.Controls
 {
@@ -12,18 +12,19 @@ namespace OgrenciTakip.UI.Win.UserControls.Controls
 	{
 		public MyButtonEdit()
 		{
-			Properties.TextEditStyle = TextEditStyles.DisableTextEditor;
-			Properties.AppearanceFocused.BackColor = Color.LightCyan;
+			Properties.TextEditStyle = TextEditStyles.DisableTextEditor;  //text edit kısmına yazı yazılmaz //1
+			Properties.AppearanceFocused.BackColor = Color.LightCyan; //2
 		}
 
 		public override bool EnterMoveNextControl { get; set; } = true;
 		public string StatusBarAciklama { get; set; }
-		public string StatusBarKisayol { get; set; } = "F4: ";
+		public string StatusBarKisayol { get; set; } = "F4 :";
 		public string StatusBarKisayolAciklama { get; set; }
 
 		#region Events
 
 		private long? _id;
+
 		[Browsable(false)]
 		public long? Id
 		{
@@ -32,17 +33,19 @@ namespace OgrenciTakip.UI.Win.UserControls.Controls
 			{
 				var oldValue = _id;
 				var newValue = value;
-				if (newValue == oldValue) return;
+
+				if (newValue.HasValue && oldValue.HasValue && newValue == oldValue) return;//öğrenci formları 3. bölüm(33:00)
 				_id = value;
 				IdChanged(this, new IdChangedEventArgs(oldValue, newValue));
-				EnabledChanged(this, EventArgs.Empty);
+				EnabledChange(this, EventArgs.Empty);
 			}
 		}
 
 		public event EventHandler<IdChangedEventArgs> IdChanged = delegate { };
-		public event EventHandler EnabledChanged = delegate { };
 
-		#endregion
+		public event EventHandler EnabledChange = delegate { };
+
+		#endregion Events
 	}
 
 	public class IdChangedEventArgs : EventArgs
@@ -54,7 +57,6 @@ namespace OgrenciTakip.UI.Win.UserControls.Controls
 		}
 
 		public long? OldValue { get; }
-		public long? NewValue { get; set; }
+		public long? NewValue { get; }
 	}
-
 }

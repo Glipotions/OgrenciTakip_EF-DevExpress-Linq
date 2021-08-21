@@ -57,7 +57,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 				control.KeyDown += Control_KeyDown;
 				control.GotFocus += Control_GotFocus;
 				control.Leave += Control_Leave;
-
+				control.Enter += Control_Enter;
 
 				switch (control)
 				{
@@ -92,6 +92,9 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 						ControlEvents(ctrl);
 
 		}
+
+
+
 		private void FarkliKaydet()
 		{
 			if (Messages.EvetSeciliEvetHayir("Bu Filtre Referans Alınarak Yeni Bir Filtre Oluşturulacaktır. Onaylıyor musunuz?", "Kayıt Onay") != DialogResult.Yes) return;
@@ -323,6 +326,9 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		{
 			statusBarKisayol.Visibility = BarItemVisibility.Never;
 			statusBarKisayolAciklama.Visibility = BarItemVisibility.Never;
+		}
+		protected virtual void Control_Enter(object sender, EventArgs e)
+		{
 		}
 		protected virtual void Control_EditValueChanged(object sender, EventArgs e)
 		{

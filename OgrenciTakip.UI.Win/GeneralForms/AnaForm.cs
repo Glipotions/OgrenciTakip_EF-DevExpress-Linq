@@ -1,18 +1,25 @@
 ﻿using DevExpress.XtraBars;
 using OgrenciTakip.UI.Win.Forms.AileBilgiForms;
+using OgrenciTakip.UI.Win.Forms.AvukatForms;
+using OgrenciTakip.UI.Win.Forms.BankaForms;
+using OgrenciTakip.UI.Win.Forms.BankaHesapForms;
+using OgrenciTakip.UI.Win.Forms.CariForms;
 using OgrenciTakip.UI.Win.Forms.EvrakForms;
 using OgrenciTakip.UI.Win.Forms.GorevForms;
 using OgrenciTakip.UI.Win.Forms.HizmetForms;
 using OgrenciTakip.UI.Win.Forms.HizmetTuruForms;
+using OgrenciTakip.UI.Win.Forms.IletisimForms;
 using OgrenciTakip.UI.Win.Forms.IlForms;
+using OgrenciTakip.UI.Win.Forms.IndirimForms;
 using OgrenciTakip.UI.Win.Forms.IndirimTuruForms;
 using OgrenciTakip.UI.Win.Forms.IptalNedeniForms;
 using OgrenciTakip.UI.Win.Forms.IsyeriForms;
 using OgrenciTakip.UI.Win.Forms.KasaForms;
 using OgrenciTakip.UI.Win.Forms.KontenjanForms;
 using OgrenciTakip.UI.Win.Forms.MeslekForms;
+using OgrenciTakip.UI.Win.Forms.OdemeTuruForms;
+using OgrenciTakip.UI.Win.Forms.OgrenciForms;
 using OgrenciTakip.UI.Win.Forms.OkulForms;
-using OgrenciTakip.UI.Win.Forms.OzelKodForms;
 using OgrenciTakip.UI.Win.Forms.PromosyonForms;
 using OgrenciTakip.UI.Win.Forms.RehberForms;
 using OgrenciTakip.UI.Win.Forms.ServisForms;
@@ -102,7 +109,22 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 				ShowListForms<HizmetListForm>.ShowListForm(KartTuru.Hizmet);
 			else if (e.Item == btnKasaKartlari)
 				ShowListForms<KasaListForm>.ShowListForm(KartTuru.Kasa);
-
+			else if (e.Item == btnBankaKartlari)
+				ShowListForms<BankaListForm>.ShowListForm(KartTuru.Banka);
+			else if (e.Item == btnAvukatKartlari)
+				ShowListForms<AvukatListForm>.ShowListForm(KartTuru.Avukat);
+			else if (e.Item == btnCariKartlari)
+				ShowListForms<CariListForm>.ShowListForm(KartTuru.Cari);
+			else if (e.Item == btnOdemeTuruKartlari)
+				ShowListForms<OdemeTuruListForm>.ShowListForm(KartTuru.OdemeTuru);
+			else if (e.Item == btnBankaHesapKartlari)
+				ShowListForms<BankaHesapListForm>.ShowListForm(KartTuru.BankaHesap);
+			else if (e.Item == btnIletisimKartlari)
+				ShowListForms<IletisimListForm>.ShowListForm(KartTuru.Iletisim);
+			else if (e.Item == btnOgrenciKartlari)
+				ShowListForms<OgrenciListForm>.ShowListForm(KartTuru.Ogrenci);
+			else if (e.Item == btnIndirimKartlari)
+				ShowListForms<IndirimListForm>.ShowListForm(KartTuru.Indirim);
 		}
 	}
 }

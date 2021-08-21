@@ -51,7 +51,26 @@ namespace OgrenciYazilim.Common.Enums
 		[Description("Özel Kod Kartı")]
 		OzelKod = 23,
 		[Description("Kasa Kartı")]
-		Kasa = 24
+		Kasa = 24,
+		[Description("Banka Kartı")]
+		Banka = 25,
+		[Description("Banka Şube Kartı")]
+		BankaSube = 26,
+		[Description("Avukat Kartı")]
+		Avukat = 27,
+		[Description("Cari Kartı")]
+		Cari = 28,
+		[Description("Ödeme Türü Kartı")]
+		OdemeTuru = 29,
+		[Description("Banka Hesap Kartı")]
+		BankaHesap = 30,
+		[Description("İletişim Kartı")]
+		Iletisim = 31,
+		[Description("Öğrenci Kartı")]
+		Ogrenci = 32,
+		[Description("İndirim Kartı")]
+		Indirim = 33
+
 
 	}
 }

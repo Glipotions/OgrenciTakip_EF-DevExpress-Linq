@@ -56,14 +56,25 @@
   <ItemGroup>
     <Compile Include="Base\BaseBusiness.cs" />
     <Compile Include="Base\BaseGenelBusiness.cs" />
+    <Compile Include="Base\BaseHareketBusiness.cs" />
     <Compile Include="Function\Convert.cs" />
     <Compile Include="Function\GeneralFunctions.cs" />
     <Compile Include="Function\ValidationFuction.cs" />
     <Compile Include="General\AileBilgiBusiness.cs" />
+    <Compile Include="General\AvukatBusiness.cs" />
+    <Compile Include="General\BankaBusiness.cs" />
+    <Compile Include="General\BankaHesapBusiness.cs" />
+    <Compile Include="General\BankaSubeBusiness.cs" />
+    <Compile Include="General\CariBusiness.cs" />
     <Compile Include="General\EvrakBusiness.cs" />
     <Compile Include="General\HizmetBusiness.cs" />
     <Compile Include="General\HizmetTuruBusiness.cs" />
+    <Compile Include="General\IletisimBusiness.cs" />
+    <Compile Include="General\IndirimBusiness.cs" />
+    <Compile Include="General\IndiriminUygulanacagiHizmetBilgileriBusiness.cs" />
     <Compile Include="General\KasaBusiness.cs" />
+    <Compile Include="General\OdemeTuruBusiness.cs" />
+    <Compile Include="General\OgrenciBusiness.cs" />
     <Compile Include="General\OzelKodBusiness.cs" />
     <Compile Include="General\PromosyonBusiness.cs" />
     <Compile Include="General\ServisBusiness.cs" />
@@ -86,6 +97,8 @@
     <Compile Include="Interfaces\IBaseBusiness.cs" />
     <Compile Include="Interfaces\IBaseCommonBusiness.cs" />
     <Compile Include="Interfaces\IBaseGenelBusiness.cs" />
+    <Compile Include="Interfaces\IBaseHareketGenelBusiness.cs" />
+    <Compile Include="Interfaces\IBaseHareketSelectBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

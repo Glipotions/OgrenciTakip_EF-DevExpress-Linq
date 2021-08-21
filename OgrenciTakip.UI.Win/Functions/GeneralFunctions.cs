@@ -1,12 +1,18 @@
 ﻿using DevExpress.XtraBars;
+using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using OgrenciTakip.UI.Win.UserControls.Controls;
 using OgrenciYazilim.Common.Enums;
 using OgrenciYazilim.Common.Message;
 using OgrenciYazilim.Model.Entities.Base;
+using OgrenciYazilim.Model.Entities.Base.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -17,7 +23,7 @@ namespace OgrenciTakip.UI.Win.Functions
 		public static long GetRowId(this GridView tablo)
 		{
 			if (tablo.FocusedRowHandle > -1) return (long)tablo.GetFocusedRowCellValue("Id");
-			Messages.KartSecmemeUyarıMesaji();
+			Messages.KartSecmemeUyariMesaji();
 			return -1;
 		}
 
@@ -26,8 +32,16 @@ namespace OgrenciTakip.UI.Win.Functions
 			if (tablo.FocusedRowHandle > -1) return (T)tablo.GetRow(tablo.FocusedRowHandle);
 
 			if (mesajVer)
-				Messages.KartSecmemeUyarıMesaji();
+				Messages.KartSecmemeUyariMesaji();
 
+			return default(T);
+		}
+
+		public static T GetRow<T>(this GridView tablo, int rowHandle)
+		{
+			if (tablo.FocusedRowHandle > -1) return (T)tablo.GetRow(rowHandle);
+			Messages.KartSecmemeUyariMesaji();
+			tablo.FocusedRowHandle = 0;  //seçim yapılan list formlarda filtre sekmesi yoksa silinebilir sonradan eklendi.
 			return default(T);
 		}
 
@@ -43,7 +57,7 @@ namespace OgrenciTakip.UI.Win.Functions
 				{
 					if (string.IsNullOrEmpty(oldValue.ToString()))
 						oldValue = new byte[] { };
-					if (string.IsNullOrEmpty(currentEntity.ToString()))
+					if (string.IsNullOrEmpty(currentValue.ToString()))
 						currentValue = new byte[] { };
 					if (((byte[])oldValue).Length != ((byte[])currentValue).Length)
 						return VeriDegisimYeri.Alan;
@@ -162,6 +176,61 @@ namespace OgrenciTakip.UI.Win.Functions
 		{
 			var settings = new PrinterSettings();
 			return settings.PrinterName;
+		}
+
+		public static void ShowPopupMenu(this MouseEventArgs e, PopupMenu popupMenu)
+		{
+			if (e.Button != MouseButtons.Right) return; //mouse sağ tuşu değilse return yap
+			popupMenu.ShowPopup(Control.MousePosition);  //mouse nerdeyse orda aç
+		}
+
+		public static byte[] ResimYukle()    //ÖNEMLİ
+		{
+			var dialog = new OpenFileDialog
+			{
+				Title = "Resim Seç",
+				Filter = "Resim Dosyaları (*.bmp, *.gif, *.jpg, *.png)|*.bmp; *.gif; *.jpg; *.png|Bmp Dosyaları|*.bmp|Gif Dosyaları|*.gif|Jpg Dosyları|*.jpg|Png Dosyaları|*.png",
+				InitialDirectory = @"C:\"
+			};
+
+			byte[] Resim()
+			{
+				using (var stream = new MemoryStream())
+				{
+					Image.FromFile(dialog.FileName).Save(stream, ImageFormat.Png);
+					return stream.ToArray();
+				}
+			}
+
+			return dialog.ShowDialog() != DialogResult.OK ? null : Resim();
+		}
+
+		public static void RefreshDataSource(this GridView tablo)
+		{
+			var source = tablo.DataController.ListSource.Cast<IBaseHareketEntity>().ToList();//(3/6 5. video 23:00)
+			if (!source.Any(x => x.Delete)) return;  //satırda durumu delete olarak işaretlenmiş satır yoksa return yap
+			var rowHandle = tablo.FocusedRowHandle;
+
+			tablo.CustomRowFilter += Tablo_CustomRowFilter;
+			tablo.RefreshData();
+			tablo.CustomRowFilter -= Tablo_CustomRowFilter;
+			tablo.RowFocus(rowHandle);
+
+			void Tablo_CustomRowFilter(object sender, RowFilterEventArgs e)
+			{
+				var entity = source[e.ListSourceRow];
+				if (entity == null) return;
+
+				if (!entity.Delete) return;
+
+				e.Visible = false;
+				e.Handled = true;
+			}
+		}
+
+		public static BindingList<T> ToBindingList<T>(this IEnumerable<BaseHareketEntity> list)
+		{
+			return new BindingList<T>((IList<T>)list);
 		}
 	}
 }

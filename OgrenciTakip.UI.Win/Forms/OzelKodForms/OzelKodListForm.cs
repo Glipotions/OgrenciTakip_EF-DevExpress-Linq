@@ -1,8 +1,8 @@
 ﻿using OgrenciTakip.Business.General;
-using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Common.Functions;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Show;
+using OgrenciYazilim.Common.Enums;
+using OgrenciYazilim.Common.Functions;
 
 namespace OgrenciTakip.UI.Win.Forms.OzelKodForms
 {
