@@ -70,7 +70,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.IndirimEditFormTable
 				if (entity.IndirimTutari == 0 || entity.IndirimOrani == 0) continue;
 				tablo.Focus();
 				tablo.FocusedRowHandle = i;  //focuslanacağı satır
-				Messages.HataMesaji("İndirim Tutarı veya İndirim Oranı Alanlarından Sadece Biniein Değeri Sıfırdan Büyük Olmalıdır");
+				Messages.HataMesaji("İndirim Tutarı veya İndirim Oranı Alanlarından Sadece Birinin Değeri Sıfırdan Büyük Olmalıdır!");
 				return true;
 			}
 

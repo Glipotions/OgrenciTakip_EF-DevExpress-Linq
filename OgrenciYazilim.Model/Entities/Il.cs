@@ -1,5 +1,6 @@
 ﻿using OgrenciYazilim.Model.Attributes;
 using OgrenciYazilim.Model.Entities.Base;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -15,7 +16,8 @@ namespace OgrenciYazilim.Model.Entities
 
 		[StringLength(500)]
 		public string Aciklama { get; set; }
-		//public ICollection<Ilce> Ilce { get; set; }
+		[InverseProperty("Il")]
+		public ICollection<Ilce> Ilce { get; set; }
 
 	}
 }

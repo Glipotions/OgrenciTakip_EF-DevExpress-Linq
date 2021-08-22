@@ -63,5 +63,11 @@ namespace OgrenciYazilim.Common.Message
 		{
 			return EvetSeciliEvetHayir($"İlgili Tablo, {dosyaFormati} Olarak Dışarı Aktarılacaktır Onaylıyor musunuz?", "Aktarım Onay");
 		}
+
+		public static void KartBulunamadiMesaji(string kartTuru)
+		{
+			UyariMesaji($"İşlem Yapılabilecek {kartTuru} Türü Bulunamadı!");
+		}
+
 	}
 }

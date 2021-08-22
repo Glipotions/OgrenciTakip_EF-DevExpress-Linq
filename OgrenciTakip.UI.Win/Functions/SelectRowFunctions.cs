@@ -101,6 +101,7 @@ namespace OgrenciTakip.UI.Win.Functions
 			_tablo.CustomUnboundColumnData -= Tablo_CustomUnboundColumnData;
 			_tablo.KeyDown -= Tablo_KeyDown;
 			_tablo.RowStyle -= Tablo_RowStyle;
+			
 
 			_tablo = null;
 		}
@@ -138,7 +139,7 @@ namespace OgrenciTakip.UI.Win.Functions
 		public bool IsRowSelected(int rowHandle)
 		{
 			var row = (BaseEntity)_tablo.GetRow(rowHandle);
-			// var row = (BaseEntity)_tablo.GetRow(rowHandle);      BAŞKA BİR KULLANIM
+			//var row = _tablo.GetRow<BaseEntity>(rowHandle); //BAŞKA BİR KULLANIM
 			return GetSelectedRowIndex(row) > -1;
 		}
 

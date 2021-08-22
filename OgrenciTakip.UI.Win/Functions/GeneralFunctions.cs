@@ -79,6 +79,16 @@ namespace OgrenciTakip.UI.Win.Functions
 			btnYeni.Enabled = !buttonEnableDurum;
 			btnSil.Enabled = !buttonEnableDurum;
 		}
+		public static void ButtonEnabledDurum<T>(BarButtonItem btnYeni, BarButtonItem btnKaydet, BarButtonItem btnGeriAl, BarButtonItem btnSil, T oldEntity, T currentEntity,bool tableValueChanged)
+		{
+			var veriDegisimYeri = tableValueChanged? VeriDegisimYeri.Tablo: VeriDegisimYeriGetir(oldEntity, currentEntity);
+			var buttonEnableDurum = veriDegisimYeri == VeriDegisimYeri.Alan || veriDegisimYeri==VeriDegisimYeri.Tablo;
+
+			btnKaydet.Enabled = buttonEnableDurum;
+			btnGeriAl.Enabled = buttonEnableDurum;
+			btnYeni.Enabled = !buttonEnableDurum;
+			btnSil.Enabled = !buttonEnableDurum;
+		}
 
 		public static void ButtonEnabledDurum<T>(BarButtonItem btnKaydet, BarButtonItem btnFarklıKaydet, BarButtonItem btnSil, IslemTuru islemTuru, T oldEntity, T currentEntity)
 		{

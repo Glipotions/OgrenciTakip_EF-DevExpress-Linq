@@ -48,6 +48,8 @@
   <ItemGroup>
     <Compile Include="Enums\BankaHesapTuru.cs" />
     <Compile Include="Enums\Cinsiyet.cs" />
+    <Compile Include="Enums\SonrakiDonemKayitDurumu.cs" />
+    <Compile Include="Enums\KayitSekli.cs" />
     <Compile Include="Enums\DokumSekli.cs" />
     <Compile Include="Enums\DosyaTuru.cs" />
     <Compile Include="Enums\EvetHayir.cs" />
@@ -55,6 +57,7 @@
     <Compile Include="Enums\IslemTuru.cs" />
     <Compile Include="Enums\KanGrubu.cs" />
     <Compile Include="Enums\KartTuru.cs" />
+    <Compile Include="Enums\KayitDurumu.cs" />
     <Compile Include="Enums\OdemeTipi.cs" />
     <Compile Include="Enums\OzelKodTuru.cs" />
     <Compile Include="Enums\RaporuKagidaSigdirmaTuru.cs" />

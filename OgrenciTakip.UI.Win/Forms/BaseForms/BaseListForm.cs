@@ -9,6 +9,7 @@ using OgrenciTakip.UI.Win.GeneralForms;
 using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.UI.Win.Show.Interfaces;
 using OgrenciYazilim.Common.Enums;
+using OgrenciYazilim.Common.Message;
 using OgrenciYazilim.Model.Entities;
 using OgrenciYazilim.Model.Entities.Base;
 using System;
@@ -39,6 +40,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		protected internal SelectRowFunctions RowSelect;
 		protected internal bool EklenebilecekEntityVar = false;
 		protected internal IList<BaseEntity> SelectedEntities;
+
 
 		#endregion
 		public BaseListForm()
@@ -113,18 +115,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			Tablo.RowFocus(Tablo.FocusedRowHandle);
 
 		}
-		private void SelectEntity()
-		{
-			if (MultiSelect)
-			{
-
-			}
-			else
-				SelectedEntity = Tablo.GetRow<BaseEntity>();
-
-			DialogResult = DialogResult.OK;
-			Close();
-		}
 		private void FormCaptionAyarla()
 		{
 			if (btnAktifPasifKartlar == null)
@@ -173,6 +163,25 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			Tablo.RowFocus("Id", id);
 
 
+		}
+		protected virtual void SelectEntity()
+		{
+			if (MultiSelect)
+			{
+				SelectedEntities = new List<BaseEntity>();
+				if(RowSelect.SelectedRowCount==0)
+				{
+					Messages.KartSecmemeUyariMesaji();
+					return;
+				}
+
+				SelectedEntities = RowSelect.GetSelectedRows();
+			}
+			else
+				SelectedEntity = Tablo.GetRow<BaseEntity>();
+
+			DialogResult = DialogResult.OK;
+			Close();
 		}
 		protected virtual void DegiskenleriDoldur() { }
 		protected virtual void ShowEditForm(long id)

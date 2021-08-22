@@ -1,6 +1,7 @@
 ﻿using OgrenciYazilim.Model.Attributes;
 using OgrenciYazilim.Model.Entities;
 using OgrenciYazilim.Model.Entities.Base;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -28,7 +29,7 @@ namespace OgrenciTakip.Model.Entities
 		public Sube Sube { get; set; }
 		public Donem Donem { get; set; }
 
-		//[InverseProperty("Indirim")]
-		//public ICollection<IndiriminUygulanacagiHizmetBilgileri> IndiriminUygulanacagiHizmetBilgileri { get; set; }
+		[InverseProperty("Indirim")]
+		public ICollection<IndiriminUygulanacagiHizmetBilgileri> IndiriminUygulanacagiHizmetBilgileri { get; set; }
 	}
 }

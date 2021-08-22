@@ -93,8 +93,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
 		}
 
-
-
 		private void FarkliKaydet()
 		{
 			if (Messages.EvetSeciliEvetHayir("Bu Filtre Referans Alınarak Yeni Bir Filtre Oluşturulacaktır. Onaylıyor musunuz?", "Kayıt Onay") != DialogResult.Yes) return;
@@ -202,6 +200,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		}
 		protected virtual void NesneyiKontrollereBagla() { }
 		protected virtual void GuncelNesneOlustur() { }
+		protected virtual void TabloYukle() { }
 		protected internal virtual void Yukle() { }
 		protected internal virtual IBaseEntity ReturnEntity() { return null; }
 		protected internal virtual void ButtonEnabledDurumu()

@@ -15,7 +15,6 @@ namespace OgrenciTakip.UI.Win.Forms.IndirimForms
 		public IndirimEditForm()
 		{
 			InitializeComponent();
-
 			DataLayoutControl = myDataLayoutControl;
 			Business = new IndirimBusiness(myDataLayoutControl);
 			BaseKartTuru = KartTuru.Indirim;
@@ -26,7 +25,7 @@ namespace OgrenciTakip.UI.Win.Forms.IndirimForms
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new IndirimS() : ((IndirimBusiness)Business).Single(FilterFunctions.Filter<Indirim>(Id));
 			NesneyiKontrollereBagla();
-			//TabloYukle();
+			TabloYukle();
 
 			if (BaseIslemTuru != IslemTuru.EntityInsert) return;
 			Id = BaseIslemTuru.IdOlustur(OldEntity);
@@ -63,22 +62,22 @@ namespace OgrenciTakip.UI.Win.Forms.IndirimForms
 			ButtonEnabledDurumu();
 		}
 
-		//protected internal override void ButonEnabledDurumu()
-		//{
-		//    if (!IsLoaded) return;
-		//    GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGerial, btnSil, OldEntity, CurrentEntity, HizmetTable.TableValueChanged);
-		//}
+		protected internal override void ButtonEnabledDurumu()
+		{
+			if (!IsLoaded) return;
+			GeneralFunctions.ButtonEnabledDurum(btnYeni, btnKaydet, btnGeriAl, btnSil, OldEntity, CurrentEntity, indirimTablo.TableValueChanged);
+		}
 
 		protected override bool EntityInsert()
 		{
-			//if (HizmetTable.HataliGiris()) return false;
-			return ((IndirimBusiness)Business).Insert(CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
+			if (indirimTablo.HataliGiris()) return false;
+			return ((IndirimBusiness)Business).Insert(CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId) && indirimTablo.Kaydet();
 		}
 
 		protected override bool EntityUpdate()
 		{
-			//if (HizmetTable.HataliGiris()) return false;
-			return ((IndirimBusiness)Business).Update(OldEntity, CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
+			if (indirimTablo.HataliGiris()) return false;
+			return ((IndirimBusiness)Business).Update(OldEntity, CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId) && indirimTablo.Kaydet();
 		}
 
 		protected override void SecimYap(object sender)
@@ -92,10 +91,10 @@ namespace OgrenciTakip.UI.Win.Forms.IndirimForms
 			}
 		}
 
-		//protected override void TabloYukle()
-		//{
-		//    HizmetTable.OwnerForm = this;
-		//    HizmetTable.Yukle();
-		//}
+		protected override void TabloYukle()
+		{
+			indirimTablo.OwnerForm = this;
+			indirimTablo.Yukle();
+		}
 	}
 }
