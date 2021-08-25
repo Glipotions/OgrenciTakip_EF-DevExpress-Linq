@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Attributes\Kod.cs" />
     <Compile Include="Attributes\ZorunluAlan.cs" />
+    <Compile Include="Dto\AileBilgileriDto.cs" />
     <Compile Include="Dto\AvukatDto.cs" />
     <Compile Include="Dto\BankaDto.cs" />
     <Compile Include="Dto\BankaHesapDto.cs" />
@@ -62,12 +63,15 @@
     <Compile Include="Dto\IletisimDto.cs" />
     <Compile Include="Dto\IndirimDto.cs" />
     <Compile Include="Dto\IndiriminUygulanacagiHizmetBilgileriDto.cs" />
+    <Compile Include="Dto\KardesBilgileriDto.cs" />
     <Compile Include="Dto\KasaDto.cs" />
     <Compile Include="Dto\OgrenciDto.cs" />
     <Compile Include="Dto\OkulDto.cs" />
+    <Compile Include="Dto\SinavBilgileriDto.cs" />
     <Compile Include="Dto\SınıfDto.cs" />
     <Compile Include="Dto\TahakkukDto.cs" />
     <Compile Include="Entities\AileBilgi.cs" />
+    <Compile Include="Entities\AileBilgileri.cs" />
     <Compile Include="Entities\Avukat.cs" />
     <Compile Include="Entities\Banka.cs" />
     <Compile Include="Entities\BankaHesap.cs" />
@@ -77,7 +81,8 @@
     <Compile Include="Entities\Base\BaseHareketEntity.cs" />
     <Compile Include="Entities\Base\Interfaces\IBaseEntity.cs" />
     <Compile Include="Entities\Base\Interfaces\IBaseHareketEntity.cs" />
-    <Compile Include="Entities\Base\Ogrenci.cs" />
+    <Compile Include="Entities\KardesBilgileri.cs" />
+    <Compile Include="Entities\Ogrenci.cs" />
     <Compile Include="Entities\Cari.cs" />
     <Compile Include="Entities\Donem.cs" />
     <Compile Include="Entities\Evrak.cs" />
@@ -91,6 +96,7 @@
     <Compile Include="Entities\OzelKod.cs" />
     <Compile Include="Entities\Promosyon.cs" />
     <Compile Include="Entities\Servis.cs" />
+    <Compile Include="Entities\SinavBilgileri.cs" />
     <Compile Include="Entities\Sube.cs" />
     <Compile Include="Entities\Sinif.cs" />
     <Compile Include="Entities\Tahakkuk.cs" />

@@ -1,7 +1,10 @@
 ﻿using DevExpress.XtraBars;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraLayout;
+using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.UserControls.Controls;
+using OgrenciTakip.UI.Win.UserControls.UserControl.Base;
 using OgrenciYazilim.Common.Enums;
 using OgrenciYazilim.Common.Message;
 using OgrenciYazilim.Model.Entities.Base;
@@ -79,10 +82,19 @@ namespace OgrenciTakip.UI.Win.Functions
 			btnYeni.Enabled = !buttonEnableDurum;
 			btnSil.Enabled = !buttonEnableDurum;
 		}
-		public static void ButtonEnabledDurum<T>(BarButtonItem btnYeni, BarButtonItem btnKaydet, BarButtonItem btnGeriAl, BarButtonItem btnSil, T oldEntity, T currentEntity,bool tableValueChanged)
+
+		public static void ButtonEnabledDurum(BarButtonItem btnYeni, BarButtonItem btnKaydet, BarButtonItem btnGeriAl, BarButtonItem btnSil)
 		{
-			var veriDegisimYeri = tableValueChanged? VeriDegisimYeri.Tablo: VeriDegisimYeriGetir(oldEntity, currentEntity);
-			var buttonEnableDurum = veriDegisimYeri == VeriDegisimYeri.Alan || veriDegisimYeri==VeriDegisimYeri.Tablo;
+			btnKaydet.Enabled = false;
+			btnGeriAl.Enabled = false;
+			btnYeni.Enabled = false;
+			btnSil.Enabled = false;
+		}
+
+		public static void ButtonEnabledDurum<T>(BarButtonItem btnYeni, BarButtonItem btnKaydet, BarButtonItem btnGeriAl, BarButtonItem btnSil, T oldEntity, T currentEntity, bool tableValueChanged)
+		{
+			var veriDegisimYeri = tableValueChanged ? VeriDegisimYeri.Tablo : VeriDegisimYeriGetir(oldEntity, currentEntity);
+			var buttonEnableDurum = veriDegisimYeri == VeriDegisimYeri.Alan || veriDegisimYeri == VeriDegisimYeri.Tablo;
 
 			btnKaydet.Enabled = buttonEnableDurum;
 			btnGeriAl.Enabled = buttonEnableDurum;
@@ -242,5 +254,27 @@ namespace OgrenciTakip.UI.Win.Functions
 		{
 			return new BindingList<T>((IList<T>)list);
 		}
+
+		public static BaseTablo AddTable(this BaseTablo tablo, BaseEditForm form)
+		{
+			tablo.Dock = DockStyle.Fill;
+			tablo.OwnerForm = form;
+			return tablo;
+		}
+
+		public static void LayoutControlInsert(this LayoutGroup grup, Control control, int columnIndex, int rowIndex, int columnSpan, int rowSpan)
+		{
+			var item = new LayoutControlItem
+			{
+				Control = control,
+				Parent = grup
+			};
+
+			item.OptionsTableLayoutItem.ColumnIndex = columnIndex;
+			item.OptionsTableLayoutItem.RowIndex = rowIndex;
+			item.OptionsTableLayoutItem.ColumnSpan = columnSpan;
+			item.OptionsTableLayoutItem.RowSpan = rowSpan;
+		}
+
 	}
 }

@@ -55,7 +55,6 @@ namespace OgrenciTakip.Model.Entities
 
         //vt ilişki
         public Ogrenci Ogrenci { get; set; }
-
         public Sinif Sinif { get; set; }
         public Okul GeldigiOkul { get; set; }
         public Kontenjan Kontentaj { get; set; }
@@ -72,11 +71,11 @@ namespace OgrenciTakip.Model.Entities
         public Sube Sube { get; set; }
         public Donem Donem { get; set; }
 
-        //public ICollection<IletisimBilgileri> IletisimBilgileri { get; set; }
-        //public ICollection<HizmetBilgileri> HizmetBilgileri { get; set; }
-        //public ICollection<IndirimBilgileri> IndirimBilgileri { get; set; }
-        //public ICollection<Fatura> FaturaBilgileri { get; set; }
-        //public ICollection<OdemeBilgileri> OdemeBilgileri { get; set; }
-        //public ICollection<GeriOdemeBilgileri> GeriOdemeBilgileri { get; set; }
-    }
+		//public ICollection<IletisimBilgileri> IletisimBilgileri { get; set; }
+		//public ICollection<HizmetBilgileri> HizmetBilgileri { get; set; }
+		//public ICollection<IndirimBilgileri> IndirimBilgileri { get; set; }
+		//public ICollection<Fatura> FaturaBilgileri { get; set; }
+		//public ICollection<OdemeBilgileri> OdemeBilgileri { get; set; }
+		//public ICollection<GeriOdemeBilgileri> GeriOdemeBilgileri { get; set; }
+	}
 }

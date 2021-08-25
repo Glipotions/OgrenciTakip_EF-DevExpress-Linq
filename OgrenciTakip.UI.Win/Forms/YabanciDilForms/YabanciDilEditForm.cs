@@ -36,7 +36,7 @@ namespace OgrenciTakip.UI.Win.Forms.YabanciDilForms
 			var entity = (YabanciDil)OldEntity;
 
 			txtKod.Text = entity.Kod;
-			txtYabanciDilAdi.Text = entity.YabanciDilAdi;
+			txtYabanciDilAdi.Text = entity.DilAdi;
 			txtAciklama.Text = entity.Aciklama;
 			tglDurum.IsOn = entity.Durum;
 		}
@@ -47,7 +47,7 @@ namespace OgrenciTakip.UI.Win.Forms.YabanciDilForms
 			{
 				Id = Id,
 				Kod = txtKod.Text,
-				YabanciDilAdi = txtYabanciDilAdi.Text,
+				DilAdi = txtYabanciDilAdi.Text,
 				Aciklama = txtAciklama.Text,
 				Durum = tglDurum.IsOn
 			};

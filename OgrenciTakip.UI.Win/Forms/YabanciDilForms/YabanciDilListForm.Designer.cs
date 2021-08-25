@@ -136,7 +136,7 @@ namespace OgrenciTakip.UI.Win.Forms.YabanciDilForms
 			// colYabanciDilAdi
 			// 
 			this.colYabanciDilAdi.Caption = "Yabancı Dil Adı";
-			this.colYabanciDilAdi.FieldName = "YabanciDilAdi";
+			this.colYabanciDilAdi.FieldName = "DilAdi";
 			this.colYabanciDilAdi.Name = "colYabanciDilAdi";
 			this.colYabanciDilAdi.OptionsColumn.AllowEdit = false;
 			this.colYabanciDilAdi.StatusBarAciklama = null;

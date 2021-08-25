@@ -25,6 +25,7 @@ using OgrenciTakip.UI.Win.Forms.RehberForms;
 using OgrenciTakip.UI.Win.Forms.ServisForms;
 using OgrenciTakip.UI.Win.Forms.SinifForms;
 using OgrenciTakip.UI.Win.Forms.SinifGrupForms;
+using OgrenciTakip.UI.Win.Forms.TahakkukForms;
 using OgrenciTakip.UI.Win.Forms.TesvikForms;
 using OgrenciTakip.UI.Win.Forms.YabanciDilForms;
 using OgrenciTakip.UI.Win.Forms.YakinlikForms;
@@ -125,6 +126,8 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 				ShowListForms<OgrenciListForm>.ShowListForm(KartTuru.Ogrenci);
 			else if (e.Item == btnIndirimKartlari)
 				ShowListForms<IndirimListForm>.ShowListForm(KartTuru.Indirim);
+			else if (e.Item == btnTahakukKartlari)
+				ShowListForms<TahakkukListForm>.ShowListForm(KartTuru.Tahakkuk);
 		}
 	}
 }

@@ -28,6 +28,7 @@ namespace OgrenciYazilim.Data.Context
 			modelBuilder.Entity<Il>().HasMany(x => x.Ilce).WithRequired().WillCascadeOnDelete(true);
 			modelBuilder.Entity<Banka>().HasMany(x => x.BankaSube).WithRequired().WillCascadeOnDelete(true);
 			modelBuilder.Entity<Indirim>().HasMany(x => x.IndiriminUygulanacagiHizmetBilgileri).WithRequired().WillCascadeOnDelete(true);
+
 		}
 
 		//Veritabanýndaki tablolarla Programýn baðlantý kurulduðu yer
@@ -69,7 +70,10 @@ namespace OgrenciYazilim.Data.Context
 		public DbSet<Ogrenci> Ogrenci { get; set; }
 		public DbSet<Indirim> Indirim { get; set; }
 		public DbSet<IndiriminUygulanacagiHizmetBilgileri> IndiriminUygulanacagiHizmetBilgileri { get; set; }
-
+		public DbSet<Tahakkuk> Tahakkuk { get; set; }
+		public DbSet<KardesBilgileri> KardesBilgileri { get; set; }
+		public DbSet<AileBilgileri> AileBilgileri { get; set; }
+		public DbSet<SinavBilgileri> SinavBilgileri { get; set; }
 
 	}
 }

@@ -93,6 +93,11 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			DevExpress.Utils.ToolTipItem toolTipItem15 = new DevExpress.Utils.ToolTipItem();
 			DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem12 = new DevExpress.Utils.ToolTipSeparatorItem();
 			DevExpress.Utils.ToolTipItem toolTipItem16 = new DevExpress.Utils.ToolTipItem();
+			DevExpress.Utils.SuperToolTip superToolTip14 = new DevExpress.Utils.SuperToolTip();
+			DevExpress.Utils.ToolTipTitleItem toolTipTitleItem23 = new DevExpress.Utils.ToolTipTitleItem();
+			DevExpress.Utils.ToolTipItem toolTipItem17 = new DevExpress.Utils.ToolTipItem();
+			DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem13 = new DevExpress.Utils.ToolTipSeparatorItem();
+			DevExpress.Utils.ToolTipItem toolTipItem18 = new DevExpress.Utils.ToolTipItem();
 			this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
 			this.btnYeni = new DevExpress.XtraBars.BarButtonItem();
 			this.btnSil = new DevExpress.XtraBars.BarButtonItem();
@@ -134,6 +139,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			this.btnPdfDosyasi = new DevExpress.XtraBars.BarButtonItem();
 			this.btnTxtDosyasi = new DevExpress.XtraBars.BarButtonItem();
 			this.btnBagliKartlar = new DevExpress.XtraBars.BarButtonItem();
+			this.btnTahakkukYap = new DevExpress.XtraBars.BarButtonItem();
 			this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -190,9 +196,10 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             this.btnWordDosyasi,
             this.btnPdfDosyasi,
             this.btnTxtDosyasi,
-            this.btnBagliKartlar});
+            this.btnBagliKartlar,
+            this.btnTahakkukYap});
 			this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-			this.ribbonControl.MaxItemId = 41;
+			this.ribbonControl.MaxItemId = 42;
 			this.ribbonControl.Name = "ribbonControl";
 			this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -696,6 +703,25 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			this.btnBagliKartlar.SuperTip = superToolTip13;
 			this.btnBagliKartlar.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
 			// 
+			// btnTahakkukYap
+			// 
+			this.btnTahakkukYap.Caption = "Tahakkuk Yap";
+			this.btnTahakkukYap.Id = 41;
+			this.btnTahakkukYap.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfooter_16x16;
+			this.btnTahakkukYap.ImageOptions.LargeImage = global::OgrenciTakip.UI.Win.Properties.Resources.addfooter_32x32;
+			this.btnTahakkukYap.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T));
+			this.btnTahakkukYap.Name = "btnTahakkukYap";
+			toolTipTitleItem23.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+			toolTipTitleItem23.Text = "( Ctrl+T )";
+			toolTipItem17.Text = "Tahakkuk Yap";
+			toolTipItem18.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
+			toolTipItem18.Text = "Seçilen Öğrenciye Aktif Dönem için Tahakkuk İşlemi Yapılır.";
+			superToolTip14.Items.Add(toolTipTitleItem23);
+			superToolTip14.Items.Add(toolTipItem17);
+			superToolTip14.Items.Add(toolTipSeparatorItem13);
+			superToolTip14.Items.Add(toolTipItem18);
+			this.btnTahakkukYap.SuperTip = superToolTip14;
+			// 
 			// ribbonPage1
 			// 
 			this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -714,6 +740,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnKolonlar);
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnBagliKartlar);
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnYazdir);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnTahakkukYap);
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnGonder);
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnCikis);
 			this.ribbonPageGroup1.Name = "ribbonPageGroup1";
@@ -788,7 +815,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
 		private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
 		private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
-		private DevExpress.XtraBars.BarButtonItem btnYeni;
 		private DevExpress.XtraBars.BarButtonItem btnSil;
 		private DevExpress.XtraBars.BarButtonItem btnSec;
 		private DevExpress.XtraBars.BarButtonItem btnDuzelt;
@@ -830,5 +856,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		protected DevExpress.XtraBars.BarStaticItem barGonder;
 		protected DevExpress.XtraBars.BarStaticItem barGonderAciklama;
 		protected DevExpress.XtraBars.BarSubItem btnGonder;
+		protected DevExpress.XtraBars.BarButtonItem btnYeni;
+		protected internal DevExpress.XtraBars.BarButtonItem btnTahakkukYap;
 	}
 }

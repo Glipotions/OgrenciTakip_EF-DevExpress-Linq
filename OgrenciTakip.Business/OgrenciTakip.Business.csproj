@@ -61,6 +61,7 @@
     <Compile Include="Function\GeneralFunctions.cs" />
     <Compile Include="Function\ValidationFuction.cs" />
     <Compile Include="General\AileBilgiBusiness.cs" />
+    <Compile Include="General\AileBilgileriBusiness.cs" />
     <Compile Include="General\AvukatBusiness.cs" />
     <Compile Include="General\BankaBusiness.cs" />
     <Compile Include="General\BankaHesapBusiness.cs" />
@@ -72,13 +73,16 @@
     <Compile Include="General\IletisimBusiness.cs" />
     <Compile Include="General\IndirimBusiness.cs" />
     <Compile Include="General\IndiriminUygulanacagiHizmetBilgileriBusiness.cs" />
+    <Compile Include="General\KardesBilgileriBusiness.cs" />
     <Compile Include="General\KasaBusiness.cs" />
     <Compile Include="General\OdemeTuruBusiness.cs" />
     <Compile Include="General\OgrenciBusiness.cs" />
     <Compile Include="General\OzelKodBusiness.cs" />
     <Compile Include="General\PromosyonBusiness.cs" />
     <Compile Include="General\ServisBusiness.cs" />
+    <Compile Include="General\SinavBilgileriBusiness.cs" />
     <Compile Include="General\SinifBusiness.cs" />
+    <Compile Include="General\TahakkukBusiness.cs" />
     <Compile Include="General\YakinlikBusiness.cs" />
     <Compile Include="General\TesvikBusiness.cs" />
     <Compile Include="General\SinifGrupBusiness.cs" />

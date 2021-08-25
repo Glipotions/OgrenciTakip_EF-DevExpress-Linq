@@ -195,6 +195,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, AnaForm.SubeAdi);
 		}
 		protected virtual void BagliKartAc() { }
+		protected virtual void TahakkukYap() { }
 		protected internal void Yukle()
 		{
 			DegiskenleriDoldur();
@@ -209,6 +210,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
 			//Güncellenecek
 		}
+
 
 		private void Button_ItemClick(object sender, ItemClickEventArgs e)
 		{
@@ -250,6 +252,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 				Listele();
 			else if (e.Item == btnFiltrele)
 				FiltreSec();
+			else if (e.Item == btnTahakkukYap)
+				TahakkukYap();
 			else if (e.Item == btnKolonlar)
 			{
 				if (Tablo.CustomizationForm == null)
@@ -272,6 +276,9 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
 			Cursor.Current = DefaultCursor;
 		}
+
+
+
 		private void Tablo_DoubleClick(object sender, EventArgs e)
 		{
 			Cursor.Current = Cursors.WaitCursor;

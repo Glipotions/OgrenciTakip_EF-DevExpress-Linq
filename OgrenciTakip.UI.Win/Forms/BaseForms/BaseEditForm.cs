@@ -1,5 +1,6 @@
 ﻿using DevExpress.Utils.Extensions;
 using DevExpress.XtraBars;
+using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
 using OgrenciTakip.Business.Interfaces;
@@ -33,6 +34,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		protected bool KayitSonrasiFormuKapat = true;
 		protected BarItem[] ShowItems;
 		protected BarItem[] HideItems;
+		protected internal bool RefreshYapilacakMi;
+		protected bool FarkliSubeIslemi;
 		#endregion
 
 		public BaseEditForm()
@@ -77,6 +80,10 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 					case BaseEdit edt:
 						edt.EditValueChanged += Control_EditValueChanged;
 						break;
+
+					case TabPane tab:
+						tab.SelectedPageChanged += Control_SelectedPageChanged;
+						break;
 				}
 			}
 
@@ -92,6 +99,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 						ControlEvents(ctrl);
 
 		}
+
 
 		private void FarkliKaydet()
 		{
@@ -186,6 +194,9 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 				Name.FormSablonKaydet(Left, Top, Width, Height, WindowState);
 
 		}
+		public virtual void Giris()
+		{
+		}
 		protected virtual void FiltreUygula() { }
 		protected virtual void BaskiOnizleme() { }
 		protected virtual void Yazdir() { }
@@ -208,7 +219,17 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			if (!IsLoaded) return;
 			GeneralFunctions.ButtonEnabledDurum(btnYeni, btnKaydet, btnGeriAl, btnSil, OldEntity, CurrentEntity);
 		}
-
+		protected virtual void BagliTabloYukle()
+		{
+		}
+		protected virtual bool BagliTabloKaydet()
+		{
+			return false;
+		}
+		protected virtual bool BagliTabloHataliGirisKontrol()
+		{
+			return false;
+		}
 		private void Button_ItemClick(object sender, ItemClickEventArgs e)
 		{
 			Cursor.Current = Cursors.WaitCursor;
@@ -349,6 +370,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		{
 			SecimYap(sender);
 		}
-
+		protected virtual void Control_SelectedPageChanged(object sender, SelectedPageChangedEventArgs e)
+		{
+		}
 	}
 }
