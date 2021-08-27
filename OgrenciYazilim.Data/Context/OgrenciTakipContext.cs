@@ -74,6 +74,10 @@ namespace OgrenciYazilim.Data.Context
 		public DbSet<KardesBilgileri> KardesBilgileri { get; set; }
 		public DbSet<AileBilgileri> AileBilgileri { get; set; }
 		public DbSet<SinavBilgileri> SinavBilgileri { get; set; }
-
+		public DbSet<EvrakBilgileri> EvrakBilgileri { get; set; }
+		public DbSet<PromosyonBilgileri> PromosyonBilgileri { get; set; }
+		public DbSet<IletisimBilgileri> IletisimBilgileri { get; set; }
+		public DbSet<EposBilgileri> EposBilgileri { get; set; }
+		public DbSet<BilgiNotlari> BilgiNotlari { get; set; }
 	}
 }

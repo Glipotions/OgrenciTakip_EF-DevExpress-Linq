@@ -4,7 +4,9 @@ using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.GeneralForms;
 using OgrenciTakip.UI.Win.Show;
 using OgrenciYazilim.Common.Enums;
+using OgrenciYazilim.Common.Message;
 using System;
+using System.Linq;
 using System.Linq.Expressions;
 
 namespace OgrenciTakip.UI.Win.Forms.EvrakForms
@@ -18,6 +20,12 @@ namespace OgrenciTakip.UI.Win.Forms.EvrakForms
 			InitializeComponent();
 
 			Business = new EvrakBusiness();
+			_filter = x => x.Durum == AktifKartlariGoster && x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId;
+		}
+
+		public EvrakListForm(params object[] prm) : this()
+		{
+			_filter = x => !ListeDisiTutulacakKayitlar.Contains(x.Id) && x.Durum == AktifKartlariGoster && x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId;
 		}
 
 		protected override void DegiskenleriDoldur()
@@ -30,13 +38,14 @@ namespace OgrenciTakip.UI.Win.Forms.EvrakForms
 
 		protected override void Listele()
 		{
-			Tablo.GridControl.DataSource = ((EvrakBusiness)Business).List(x => x.Durum == AktifKartlariGoster && x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
+			var list = ((EvrakBusiness)Business).List(_filter);
+			Tablo.GridControl.DataSource = list;
 
-			//if (!MultiSelect) return;
-			//if (list.Any())
-			//    EklenebilecekEntityVar = true;
-			//else
-			//    Messages.KartBulunamadiMesaji("Kart");
+			if (!MultiSelect) return;
+			if (list.Any())
+				EklenebilecekEntityVar = true;
+			else
+				Messages.KartBulunamadiMesaji("Kart");
 		}
 	}
 }

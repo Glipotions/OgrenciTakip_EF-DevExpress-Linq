@@ -1,10 +1,9 @@
 ﻿using OgrenciYazilim.Model.Attributes;
-using OgrenciYazilim.Model.Entities;
 using OgrenciYazilim.Model.Entities.Base;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace OgrenciTakip.Model.Entities
+namespace OgrenciYazilim.Model.Entities
 {
 	public class Promosyon : BaseEntityDurum
 	{

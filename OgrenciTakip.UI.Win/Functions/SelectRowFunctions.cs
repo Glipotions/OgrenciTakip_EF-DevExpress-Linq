@@ -101,7 +101,7 @@ namespace OgrenciTakip.UI.Win.Functions
 			_tablo.CustomUnboundColumnData -= Tablo_CustomUnboundColumnData;
 			_tablo.KeyDown -= Tablo_KeyDown;
 			_tablo.RowStyle -= Tablo_RowStyle;
-			
+
 
 			_tablo = null;
 		}

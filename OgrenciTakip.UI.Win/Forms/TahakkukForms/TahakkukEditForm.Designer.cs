@@ -150,6 +150,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			this.layoutControlItem32 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.DataLayoutGenel)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
 			this.DataLayoutGenel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.txtFark.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtGeriOdemelerToplami.Properties)).BeginInit();
@@ -1721,6 +1722,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			this.Controls.SetChildIndex(this.ribbonControl, 0);
 			this.Controls.SetChildIndex(this.DataLayoutGenel, 0);
 			((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.resimMenu)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.DataLayoutGenel)).EndInit();
 			this.DataLayoutGenel.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.txtFark.Properties)).EndInit();

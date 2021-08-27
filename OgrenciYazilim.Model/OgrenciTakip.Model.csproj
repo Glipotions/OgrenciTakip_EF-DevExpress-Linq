@@ -58,8 +58,12 @@
     <Compile Include="Dto\AvukatDto.cs" />
     <Compile Include="Dto\BankaDto.cs" />
     <Compile Include="Dto\BankaHesapDto.cs" />
+    <Compile Include="Dto\BilgiNotlariDto.cs" />
     <Compile Include="Dto\CariDto.cs" />
+    <Compile Include="Dto\EposBilgileriDto.cs" />
+    <Compile Include="Dto\EvrakBilgileriDto.cs" />
     <Compile Include="Dto\HizmetDto.cs" />
+    <Compile Include="Dto\IletisimBilgileriDto.cs" />
     <Compile Include="Dto\IletisimDto.cs" />
     <Compile Include="Dto\IndirimDto.cs" />
     <Compile Include="Dto\IndiriminUygulanacagiHizmetBilgileriDto.cs" />
@@ -67,6 +71,7 @@
     <Compile Include="Dto\KasaDto.cs" />
     <Compile Include="Dto\OgrenciDto.cs" />
     <Compile Include="Dto\OkulDto.cs" />
+    <Compile Include="Dto\PromosyonBilgileriDto.cs" />
     <Compile Include="Dto\SinavBilgileriDto.cs" />
     <Compile Include="Dto\SınıfDto.cs" />
     <Compile Include="Dto\TahakkukDto.cs" />
@@ -81,6 +86,10 @@
     <Compile Include="Entities\Base\BaseHareketEntity.cs" />
     <Compile Include="Entities\Base\Interfaces\IBaseEntity.cs" />
     <Compile Include="Entities\Base\Interfaces\IBaseHareketEntity.cs" />
+    <Compile Include="Entities\BilgiNotlari.cs" />
+    <Compile Include="Entities\EposBilgileri.cs" />
+    <Compile Include="Entities\EvrakBilgileri.cs" />
+    <Compile Include="Entities\IletisimBilgileri.cs" />
     <Compile Include="Entities\KardesBilgileri.cs" />
     <Compile Include="Entities\Ogrenci.cs" />
     <Compile Include="Entities\Cari.cs" />
@@ -95,6 +104,7 @@
     <Compile Include="Entities\OdemeTuru.cs" />
     <Compile Include="Entities\OzelKod.cs" />
     <Compile Include="Entities\Promosyon.cs" />
+    <Compile Include="Entities\PromosyonBilgileri.cs" />
     <Compile Include="Entities\Servis.cs" />
     <Compile Include="Entities\SinavBilgileri.cs" />
     <Compile Include="Entities\Sube.cs" />

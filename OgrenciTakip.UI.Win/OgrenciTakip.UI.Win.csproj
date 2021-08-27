@@ -485,6 +485,7 @@
     <Compile Include="Forms\YakinlikForms\YakinlikListForm.Designer.cs">
       <DependentUpon>YakinlikListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Functions\SelectRepositoryFunctions.cs" />
     <Compile Include="Functions\SelectRowFunctions.cs" />
     <Compile Include="Functions\FileFunction.cs" />
     <Compile Include="Functions\FilterFunctions.cs" />
@@ -620,11 +621,41 @@
     <Compile Include="UserControls\UserControl\TahakkukEditFormTable\AileBilgileriTable.Designer.cs">
       <DependentUpon>AileBilgileriTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\BilgiNotlariTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\BilgiNotlariTable.Designer.cs">
+      <DependentUpon>BilgiNotlariTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\EposBilgileriTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\EposBilgileriTable.Designer.cs">
+      <DependentUpon>EposBilgileriTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\EvrakBilgileriTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\EvrakBilgileriTable.Designer.cs">
+      <DependentUpon>EvrakBilgileriTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\IletisimBilgileriTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\IletisimBilgileriTable.Designer.cs">
+      <DependentUpon>IletisimBilgileriTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl\TahakkukEditFormTable\KardesBilgileriTable.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\UserControl\TahakkukEditFormTable\KardesBilgileriTable.Designer.cs">
       <DependentUpon>KardesBilgileriTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\PromosyonBilgileriTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\PromosyonBilgileriTable.Designer.cs">
+      <DependentUpon>PromosyonBilgileriTable.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControl\TahakkukEditFormTable\SinavBilgileriTable.cs">
       <SubType>UserControl</SubType>
@@ -1035,7 +1066,9 @@
   <ItemGroup>
     <None Include="Resources\addfooter_32x32.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\employeewelcome_16x16.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

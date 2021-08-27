@@ -3,7 +3,9 @@ using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Show;
 using OgrenciYazilim.Common.Enums;
+using OgrenciYazilim.Common.Message;
 using System;
+using System.Linq;
 using System.Linq.Expressions;
 
 namespace OgrenciTakip.UI.Win.Forms.IletisimForms
@@ -19,10 +21,10 @@ namespace OgrenciTakip.UI.Win.Forms.IletisimForms
 			_filter = x => x.Durum == AktifKartlariGoster;
 		}
 
-		//public IletisimListForm(params object[] prm) : this()
-		//{
-		//    _filter = x => !ListeDisiTutulacakKayitlar.Contains(x.Id) && x.Durum == AktifKartlariGoster;
-		//}
+		public IletisimListForm(params object[] prm) : this()
+		{
+			_filter = x => !ListeDisiTutulacakKayitlar.Contains(x.Id) && x.Durum == AktifKartlariGoster;
+		}
 
 		protected override void DegiskenleriDoldur()
 		{
@@ -37,11 +39,11 @@ namespace OgrenciTakip.UI.Win.Forms.IletisimForms
 			var list = ((IletisimBusiness)Business).List(_filter);
 			Tablo.GridControl.DataSource = list;
 
-			//if (!MultiSelect) return;
-			//if (list.Any())
-			//    EklenebilecekEntityVar = true;
-			//else
-			//    Messages.KartBulunamadiMesaji("Kart");
+			if (!MultiSelect) return;
+			if (list.Any())
+				EklenebilecekEntityVar = true;
+			else
+				Messages.KartBulunamadiMesaji("Kart");
 		}
 	}
 }

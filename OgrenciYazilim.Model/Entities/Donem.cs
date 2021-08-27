@@ -4,7 +4,7 @@ using OgrenciYazilim.Model.Entities.Base;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace OgrenciTakip.Model.Entities
+namespace OgrenciYazilim.Model.Entities
 {
 	public class Donem : BaseEntityDurum
 	{

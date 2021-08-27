@@ -41,7 +41,7 @@ namespace OgrenciTakip.UI.Win.Forms.IndirimForms
 			DevExpress.XtraLayout.RowDefinition rowDefinition3 = new DevExpress.XtraLayout.RowDefinition();
 			DevExpress.XtraLayout.RowDefinition rowDefinition4 = new DevExpress.XtraLayout.RowDefinition();
 			DevExpress.XtraLayout.RowDefinition rowDefinition5 = new DevExpress.XtraLayout.RowDefinition();
-			this.resimMenu = new DevExpress.XtraBars.PopupMenu(this.components);
+			//this.resimMenu = new DevExpress.XtraBars.PopupMenu(this.components);
 			this.txtKod = new OgrenciTakip.UI.Win.UserControls.Controls.MyCodeTextEdit();
 			this.myDataLayoutControl = new OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
 			this.tglDurum = new OgrenciTakip.UI.Win.UserControls.Controls.MyToggleSwitch();
@@ -89,8 +89,8 @@ namespace OgrenciTakip.UI.Win.Forms.IndirimForms
 			// 
 			// resimMenu
 			// 
-			this.resimMenu.Name = "resimMenu";
-			this.resimMenu.Ribbon = this.ribbonControl;
+			//this.resimMenu.Name = "resimMenu";
+			//this.resimMenu.Ribbon = this.ribbonControl;
 			// 
 			// txtKod
 			// 
@@ -359,8 +359,8 @@ namespace OgrenciTakip.UI.Win.Forms.IndirimForms
 
         }
 
-        #endregion
-		private DevExpress.XtraBars.PopupMenu resimMenu;
+		#endregion
+		//private DevExpress.XtraBars.PopupMenu resimMenu1;
 		private UserControls.Controls.MyCodeTextEdit txtKod;
 		private UserControls.Controls.MyDataLayoutControl myDataLayoutControl;
 		private UserControls.Controls.MyToggleSwitch tglDurum;

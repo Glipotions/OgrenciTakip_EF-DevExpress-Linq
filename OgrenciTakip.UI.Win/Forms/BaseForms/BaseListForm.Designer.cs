@@ -721,6 +721,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			superToolTip14.Items.Add(toolTipSeparatorItem13);
 			superToolTip14.Items.Add(toolTipItem18);
 			this.btnTahakkukYap.SuperTip = superToolTip14;
+			this.btnTahakkukYap.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
 			// 
 			// ribbonPage1
 			// 

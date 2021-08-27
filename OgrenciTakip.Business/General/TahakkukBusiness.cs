@@ -1,76 +1,76 @@
-﻿using System;
+﻿using OgrenciTakip.Business.Base;
+using OgrenciTakip.Business.Interfaces;
+using OgrenciTakip.Model.Dto;
+using OgrenciTakip.Model.Entities;
+using OgrenciYazilim.Common.Enums;
+using OgrenciYazilim.Model.Entities.Base;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Windows.Forms;
-using OgrenciTakip.Business.Base;
-using OgrenciTakip.Business.Interfaces;
-using OgrenciYazilim.Common.Enums;
-using OgrenciTakip.Model.Dto;
-using OgrenciTakip.Model.Entities;
-using OgrenciYazilim.Model.Entities.Base;
 
 namespace OgrenciTakip.Business.General
 {
-    public class TahakkukBusiness : BaseGenelBusiness<Tahakkuk>, IBaseCommonBusiness
-    {
-        public TahakkukBusiness() : base(KartTuru.Tahakkuk)
-        {
-        }
+	public class TahakkukBusiness : BaseGenelBusiness<Tahakkuk>, IBaseCommonBusiness
+	{
+		public TahakkukBusiness() : base(KartTuru.Tahakkuk)
+		{
+		}
 
-        public TahakkukBusiness(Control control) : base(control, KartTuru.Tahakkuk)
-        {
-        }
+		public TahakkukBusiness(Control control) : base(control, KartTuru.Tahakkuk)
+		{
+		}
 
-        public override BaseEntity Single(Expression<Func<Tahakkuk, bool>> filter)
-        {
-            return BaseSingle(filter, x => new TahakkukS
-            {
-                Id = x.Id,
-                Kod = x.Kod,
-                OgrenciId = x.OgrenciId,
+		public override BaseEntity Single(Expression<Func<Tahakkuk, bool>> filter)
+		{
+			return BaseSingle(filter, x => new TahakkukS
+			{
+				Id = x.Id,
+				Kod = x.Kod,
+				OgrenciId = x.OgrenciId,
 
-                TcKimlikNo = x.Ogrenci.TcKimlikNo,
-                Adi = x.Ogrenci.Adi,
-                Soyadi = x.Ogrenci.Soyadi,
-                BabaAdi = x.Ogrenci.BabaAdi,
-                AnaAdi = x.Ogrenci.AnaAdi,
+				TcKimlikNo = x.Ogrenci.TcKimlikNo,
+				Adi = x.Ogrenci.Adi,
+				Soyadi = x.Ogrenci.Soyadi,
+				BabaAdi = x.Ogrenci.BabaAdi,
+				AnaAdi = x.Ogrenci.AnaAdi,
 
-                OkulNo = x.OkulNo,
-                KayitTarihi = x.KayitTarihi,
-                KayitSekli = x.KayitSekli,
-                KayitDurumu = x.KayitDurumu,
-                SinifId = x.SinifId,
-                SinifAdi = x.Sinif.SinifAdi,
-                GeldigiOkulId = x.GeldigiOkulId,
-                GeldigiOkulAdi = x.GeldigiOkul.OkulAdi,
-                KontenjanId = x.KontenjanId,
-                KontenjanAdi = x.Kontentaj.KontenjanAdi,
-                YabanciDilId = x.YabanciDilId,
-                YabanciDilAdi = x.YabanciDil.DilAdi,
-                RehberId = x.RehberId,
-                RehberAdi = x.Rehber.AdiSoyadi,
-                TesvikId = x.TesvikId,
-                TesvikAdi = x.Tesvik.TesvikAdi,
-                SonrakiDonemKayitDurumu = x.SonrakiDonemKayitDurumu,
-                SonrakiDonemKayitDurumuAciklama = x.SonrakiDonemKayitDurumuAciklama,
+				OkulNo = x.OkulNo,
+				KayitTarihi = x.KayitTarihi,
+				KayitSekli = x.KayitSekli,
+				KayitDurumu = x.KayitDurumu,
+				SinifId = x.SinifId,
+				SinifAdi = x.Sinif.SinifAdi,
+				GeldigiOkulId = x.GeldigiOkulId,
+				GeldigiOkulAdi = x.GeldigiOkul.OkulAdi,
+				KontenjanId = x.KontenjanId,
+				KontenjanAdi = x.Kontentaj.KontenjanAdi,
+				YabanciDilId = x.YabanciDilId,
+				YabanciDilAdi = x.YabanciDil.DilAdi,
+				RehberId = x.RehberId,
+				RehberAdi = x.Rehber.AdiSoyadi,
+				TesvikId = x.TesvikId,
+				TesvikAdi = x.Tesvik.TesvikAdi,
+				SonrakiDonemKayitDurumu = x.SonrakiDonemKayitDurumu,
+				SonrakiDonemKayitDurumuAciklama = x.SonrakiDonemKayitDurumuAciklama,
 
-                OzelKod1Id = x.OzelKod1Id,
-                OzelKod1Adi = x.OzelKod1.OzelKodAdi,
-                OzelKod2Id = x.OzelKod2Id,
-                OzelKod2Adi = x.OzelKod2.OzelKodAdi,
-                OzelKod3Id = x.OzelKod3Id,
-                OzelKod3Adi = x.OzelKod3.OzelKodAdi,
-                OzelKod4Id = x.OzelKod4Id,
-                OzelKod4Adi = x.OzelKod4.OzelKodAdi,
-                OzelKod5Id = x.OzelKod5Id,
-                OzelKod5Adi = x.OzelKod5.OzelKodAdi,
+				OzelKod1Id = x.OzelKod1Id,
+				OzelKod1Adi = x.OzelKod1.OzelKodAdi,
+				OzelKod2Id = x.OzelKod2Id,
+				OzelKod2Adi = x.OzelKod2.OzelKodAdi,
+				OzelKod3Id = x.OzelKod3Id,
+				OzelKod3Adi = x.OzelKod3.OzelKodAdi,
+				OzelKod4Id = x.OzelKod4Id,
+				OzelKod4Adi = x.OzelKod4.OzelKodAdi,
+				OzelKod5Id = x.OzelKod5Id,
+				OzelKod5Adi = x.OzelKod5.OzelKodAdi,
 
-                SubeId = x.SubeId,
-                DonemId = x.DonemId,
-                Durum = x.Durum
-            });
-        }
+				SubeId = x.SubeId,
+				DonemId = x.DonemId,
+				Durum = x.Durum
+			});
+		}
 
 		//public OgrenciR SingleDetail(Expression<Func<Tahakkuk, bool>> filter)
 		//{

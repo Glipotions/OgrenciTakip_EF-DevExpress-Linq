@@ -169,7 +169,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			if (MultiSelect)
 			{
 				SelectedEntities = new List<BaseEntity>();
-				if(RowSelect.SelectedRowCount==0)
+				if (RowSelect.SelectedRowCount == 0)
 				{
 					Messages.KartSecmemeUyariMesaji();
 					return;
