@@ -72,6 +72,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			this.txtHizmetBilgileriToplami = new OgrenciTakip.UI.Win.UserControls.Controls.MyCalcEdit();
 			this.tabAlt = new DevExpress.XtraBars.Navigation.TabPane();
 			this.pageHizmetBilgileri = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+			this.hizmetBilgileriTable = new OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable.HizmetBilgileriTable();
 			this.pageIndirimBilgileri = new DevExpress.XtraBars.Navigation.TabNavigationPage();
 			this.pageOdemeBilgileri = new DevExpress.XtraBars.Navigation.TabNavigationPage();
 			this.pageGeriOdemeBilgileri = new DevExpress.XtraBars.Navigation.TabNavigationPage();
@@ -149,8 +150,8 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem32 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.DataLayoutGenel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.DataLayoutGenel)).BeginInit();
 			this.DataLayoutGenel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.txtFark.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtGeriOdemelerToplami.Properties)).BeginInit();
@@ -160,6 +161,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			((System.ComponentModel.ISupportInitialize)(this.txtHizmetBilgileriToplami.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.tabAlt)).BeginInit();
 			this.tabAlt.SuspendLayout();
+			this.pageHizmetBilgileri.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.tabUst)).BeginInit();
 			this.tabUst.SuspendLayout();
 			this.pageGenelBilgiler.SuspendLayout();
@@ -237,6 +239,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			// ribbonControl
 			// 
 			this.ribbonControl.ExpandCollapseItem.Id = 0;
+			this.ribbonControl.OptionsPageCategories.ShowCaptions = false;
 			// 
 			// 
 			// 
@@ -438,22 +441,34 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			// pageHizmetBilgileri
 			// 
 			this.pageHizmetBilgileri.Caption = "Hizmet Bilgileri";
+			this.pageHizmetBilgileri.Controls.Add(this.hizmetBilgileriTable);
+			this.pageHizmetBilgileri.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.employeewelcome_16x16;
 			this.pageHizmetBilgileri.ItemShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
 			this.pageHizmetBilgileri.Name = "pageHizmetBilgileri";
 			this.pageHizmetBilgileri.Properties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
 			this.pageHizmetBilgileri.Size = new System.Drawing.Size(756, 228);
 			// 
+			// hizmetBilgileriTable
+			// 
+			this.hizmetBilgileriTable.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.hizmetBilgileriTable.Location = new System.Drawing.Point(0, 0);
+			this.hizmetBilgileriTable.Name = "hizmetBilgileriTable";
+			this.hizmetBilgileriTable.Size = new System.Drawing.Size(756, 228);
+			this.hizmetBilgileriTable.TabIndex = 0;
+			// 
 			// pageIndirimBilgileri
 			// 
 			this.pageIndirimBilgileri.Caption = "İndirim Bilgileri";
+			this.pageIndirimBilgileri.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.employeethank_16x16;
 			this.pageIndirimBilgileri.ItemShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
 			this.pageIndirimBilgileri.Name = "pageIndirimBilgileri";
 			this.pageIndirimBilgileri.Properties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
-			this.pageIndirimBilgileri.Size = new System.Drawing.Size(756, 257);
+			this.pageIndirimBilgileri.Size = new System.Drawing.Size(756, 228);
 			// 
 			// pageOdemeBilgileri
 			// 
 			this.pageOdemeBilgileri.Caption = "Ödeme Bilgileri";
+			this.pageOdemeBilgileri.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.productorderdetail_16x16;
 			this.pageOdemeBilgileri.ItemShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
 			this.pageOdemeBilgileri.Name = "pageOdemeBilgileri";
 			this.pageOdemeBilgileri.Properties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
@@ -462,6 +477,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			// pageGeriOdemeBilgileri
 			// 
 			this.pageGeriOdemeBilgileri.Caption = "Geri Ödemeler";
+			this.pageGeriOdemeBilgileri.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.saledetalis_16x16;
 			this.pageGeriOdemeBilgileri.ItemShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
 			this.pageGeriOdemeBilgileri.Name = "pageGeriOdemeBilgileri";
 			this.pageGeriOdemeBilgileri.Properties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
@@ -563,7 +579,6 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
 			this.txtKayitTarihi.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.txtKayitTarihi.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
 			this.txtKayitTarihi.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
 			this.txtKayitTarihi.Properties.Padding = new System.Windows.Forms.Padding(5);
 			this.txtKayitTarihi.Size = new System.Drawing.Size(0, 30);
@@ -1733,6 +1748,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			((System.ComponentModel.ISupportInitialize)(this.txtHizmetBilgileriToplami.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.tabAlt)).EndInit();
 			this.tabAlt.ResumeLayout(false);
+			this.pageHizmetBilgileri.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.tabUst)).EndInit();
 			this.tabUst.ResumeLayout(false);
 			this.pageGenelBilgiler.ResumeLayout(false);
@@ -1902,5 +1918,6 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
         protected internal UserControls.Controls.MyCalcEdit txtFark;
 		private UserControls.Controls.MyDateEdit txtKayitTarihi;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+		private UserControls.UserControl.TahakkukEditFormTable.HizmetBilgileriTable hizmetBilgileriTable;
 	}
 }

@@ -73,5 +73,45 @@ namespace OgrenciYazilim.Common.Message
 		{
 			UyariMesaji($"{tabloAdi}'nda Eksik Bilgi Girişi Var. Lütfen Kontrol Ediniz.");
 		}
+
+		public static void IptalHareketSilinemezMesaji()
+		{
+			HataMesaji("İptal Edilen Hareketler Silinemez.");
+		}
+
+		public static DialogResult IptalMesaj(string kartAdi)
+		{
+			return HayirSeciliEvetHayir($"Seçtiğiniz {kartAdi} iptal edilecektir onaylıyor musunuz?", "İptal Onayı");
+		}
+
+		public static DialogResult IptalGeriAlMesajMesaj(string kartAdi)
+		{
+			return HayirSeciliEvetHayir($"Seçtiğiniz {kartAdi} Kartına Uygulanan İptal İşlemi Geri Alınacaktır Onaylıyor Musunuz?", "İptal Geri Al Onayı");
+		}
+
+		public static void SecimHataMesaji(string alanAdi)
+		{
+			HataMesaji($"{alanAdi} Seçimi Yapmalısınız");
+		}
+
+		public static void OdemeBelgesiSilinemezMesaji(bool dahaSonra)
+		{
+			UyariMesaji(dahaSonra ? "Ödeme Belgesinin Daha Sonra İşlem Görmüş Hareketleri Var. Ödeme Belgesi Silinemez." : "Ödeme Belgesinin İşlem Görmüş Hareketleri Var Ödeme Belgesi Silinemez.");
+		}
+
+		public static DialogResult RaporuTasarimaGonderMesaj()
+		{
+			return HayirSeciliEvetHayir("Rapor Tasarım Görünümünde Açılacaktır. Onaylıyor musunuz?", "Onay");
+		}
+
+		public static DialogResult RaporKapatmaMesaj()
+		{
+			return HayirSeciliEvetHayir("Rapor Kapatılacaktır. Onaylıyor musunuz?", "Onay");
+		}
+
+		public static DialogResult EmailGonderimOnayi()
+		{
+			return HayirSeciliEvetHayir("Kullanıcı Şifresi Sıfırlanarak, Kullanıcı Bilgilerini İçeren Yeni Bir E-Mail Gönderilecektir. Onaylıyor musunuz", "Onay");
+		}
 	}
 }

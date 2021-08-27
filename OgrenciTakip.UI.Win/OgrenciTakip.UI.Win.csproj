@@ -639,6 +639,12 @@
     <Compile Include="UserControls\UserControl\TahakkukEditFormTable\EvrakBilgileriTable.Designer.cs">
       <DependentUpon>EvrakBilgileriTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\HizmetBilgileriTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\HizmetBilgileriTable.Designer.cs">
+      <DependentUpon>HizmetBilgileriTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl\TahakkukEditFormTable\IletisimBilgileriTable.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -1068,6 +1074,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\employeewelcome_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employeethank_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productorderdetail_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saledetalis_16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

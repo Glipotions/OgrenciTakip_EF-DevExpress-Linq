@@ -72,10 +72,12 @@
     <Compile Include="General\EposBilgileriBusiness.cs" />
     <Compile Include="General\EvrakBilgileriBusiness.cs" />
     <Compile Include="General\EvrakBusiness.cs" />
+    <Compile Include="General\HizmetBilgileriBusiness.cs" />
     <Compile Include="General\HizmetBusiness.cs" />
     <Compile Include="General\HizmetTuruBusiness.cs" />
     <Compile Include="General\IletisimBilgileriBusiness.cs" />
     <Compile Include="General\IletisimBusiness.cs" />
+    <Compile Include="General\IndirimBilgileriBusiness.cs" />
     <Compile Include="General\IndirimBusiness.cs" />
     <Compile Include="General\IndiriminUygulanacagiHizmetBilgileriBusiness.cs" />
     <Compile Include="General\KardesBilgileriBusiness.cs" />

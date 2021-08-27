@@ -114,11 +114,11 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			if (_bilgiNotlariTable != null && TableValueChanged(_bilgiNotlariTable))
 				_bilgiNotlariTable.Yukle();
 
-			//if (hizmetBilgileriTable.OwnerForm == null)
-			//{
-			//    hizmetBilgileriTable.OwnerForm = this;
-			//    hizmetBilgileriTable.Yukle();
-			//}
+			if (hizmetBilgileriTable.OwnerForm == null)
+			{
+				hizmetBilgileriTable.OwnerForm = this;
+				hizmetBilgileriTable.Yukle();
+			}
 
 			//if (indirimBilgileriTable.OwnerForm == null)
 			//{
@@ -141,12 +141,12 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			//    geriOdemeBilgileriTable.Yukle();
 			//}
 
-			//if (TableValueChanged(hizmetBilgileriTable))
-			//{
-			//    var rowHandle = hizmetBilgileriTable.Tablo.FocusedRowHandle;
-			//    hizmetBilgileriTable.Yukle();
-			//    hizmetBilgileriTable.Tablo.FocusedRowHandle = rowHandle;
-			//}
+			if (TableValueChanged(hizmetBilgileriTable))
+			{
+				var rowHandle = hizmetBilgileriTable.Tablo.FocusedRowHandle;
+				hizmetBilgileriTable.Yukle();
+				hizmetBilgileriTable.Tablo.FocusedRowHandle = rowHandle;
+			}
 
 			//if (TableValueChanged(indirimBilgileriTable))
 			//{
@@ -312,12 +312,12 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 				return true;
 			}
 
-			//if (hizmetBilgileriTable.HataliGiris())
-			//{
-			//    tabAlt.SelectedPage = pageHizmetBilgileri;
-			//    hizmetBilgileriTable.Tablo.GridControl.Focus();
-			//    return true;
-			//}
+			if (hizmetBilgileriTable.HataliGiris())
+			{
+				tabAlt.SelectedPage = pageHizmetBilgileri;
+				hizmetBilgileriTable.Tablo.GridControl.Focus();
+				return true;
+			}
 
 			//if (odemeBilgileriTable.HataliGiris())
 			//{
@@ -381,7 +381,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 				if (_iletisimBilgileriTable != null && _iletisimBilgileriTable.TableValueChanged) return true;
 				if (_ePosBilgileriTable != null && _ePosBilgileriTable.TableValueChanged) return true;
 				if (_bilgiNotlariTable != null && _bilgiNotlariTable.TableValueChanged) return true;
-				//if (hizmetBilgileriTable.TableValueChanged) return true;
+				if (hizmetBilgileriTable.TableValueChanged) return true;
 				//if (indirimBilgileriTable.TableValueChanged) return true;
 				//if (odemeBilgileriTable.TableValueChanged) return true;
 				//if (geriOdemeBilgileriTable.TableValueChanged) return true;
@@ -407,7 +407,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			if (_iletisimBilgileriTable != null && !_iletisimBilgileriTable.Kaydet()) return false;
 			if (_ePosBilgileriTable != null && !_ePosBilgileriTable.Kaydet()) return false;
 			if (_bilgiNotlariTable != null && !_bilgiNotlariTable.Kaydet()) return false;
-			//if (!hizmetBilgileriTable.Kaydet()) return false;
+			if (!hizmetBilgileriTable.Kaydet()) return false;
 			//if (!indirimBilgileriTable.Kaydet()) return false;
 			//if (!odemeBilgileriTable.Kaydet()) return false;
 			//if (!geriOdemeBilgileriTable.Kaydet()) return false;
@@ -417,7 +417,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 
 		private void Toplamlar()
 		{
-			//var hizmetBilgileriToplami = hizmetBilgileriTable.Tablo.DataController.ListSource.Cast<HizmetBilgileriL>().Where(x => !x.Delete).Sum(x => x.BrutUcret - x.KistDonemDusulenUcret);
+			var hizmetBilgileriToplami = hizmetBilgileriTable.Tablo.DataController.ListSource.Cast<HizmetBilgileriL>().Where(x => !x.Delete).Sum(x => x.BrutUcret - x.KistDonemDusulenUcret);
 
 			//var indirimBilgileriToplami = indirimBilgileriTable.Tablo.DataController.ListSource.Cast<IndirimBilgileriL>().Where(x => !x.Delete).Sum(x => x.BrutIndirim - x.KistDonemDusulenIndirim);
 
@@ -445,15 +445,15 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 				return false;
 			}
 
-			//var source = hizmetBilgileriTable.Tablo.DataController.ListSource.Cast<HizmetBilgileriL>();
+			var source = hizmetBilgileriTable.Tablo.DataController.ListSource.Cast<HizmetBilgileriL>();
 
-			//if (!source.Any(x => !x.Delete && !x.IptalEdildi && x.HizmetTipi == HizmetTipi.Egitim))
-			//{
-			//    Messages.UyariMesaji("Eğitim Alınmadığı İçin Tahakkuk Pasif Duruma Alınacaktır.");
-			//    txtDurum.Text = IptalDurumu.IptalEdildi.ToName();
-			//}
-			//else
-			//    txtDurum.Text = IptalDurumu.DevamEdiyor.ToName();
+			if (!source.Any(x => !x.Delete && !x.IptalEdildi && x.HizmetTipi == HizmetTipi.Egitim))
+			{
+				Messages.UyariMesaji("Eğitim Alınmadığı İçin Tahakkuk Pasif Duruma Alınacaktır.");
+				txtDurum.Text = IptalDurumu.IptalEdildi.ToName();
+			}
+			else
+				txtDurum.Text = IptalDurumu.DevamEdiyor.ToName();
 
 			return true;
 		}
@@ -568,8 +568,8 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 
 				_bilgiNotlariTable.Tablo.GridControl.Focus();
 			}
-			//else if (e.Page == pageHizmetBilgileri)
-			//    hizmetBilgileriTable.Tablo.GridControl.Focus();
+			else if (e.Page == pageHizmetBilgileri)
+				hizmetBilgileriTable.Tablo.GridControl.Focus();
 			//else if (e.Page == pageIndirimBilgileri)
 			//    indirimBilgileriTable.Tablo.GridControl.Focus();
 			//else if (e.Page == pageOdemeBilgileri)

@@ -12,6 +12,12 @@ using OgrenciTakip.UI.Win.Forms.BankaForms;
 using OgrenciTakip.Model.Dto;
 using OgrenciTakip.UI.Win.Forms.BankaSubeForms;
 using OgrenciTakip.Model.Entities;
+using OgrenciTakip.UI.Win.Forms.IptalNedeniForms;
+using OgrenciTakip.Common.Enums;
+using OgrenciYazilim.Common.Functions;
+using OgrenciTakip.UI.Win.Forms.BankaHesapForms;
+using OgrenciTakip.UI.Win.Forms.OkulForms;
+using OgrenciYazilim.Model.Dto;
 
 namespace OgrenciTakip.UI.Win.Functions
 {
@@ -173,53 +179,53 @@ namespace OgrenciTakip.UI.Win.Functions
 					}
 					break;
 
-					//case "repositoryBankaHesap":
-					//    {
-					//        if (!_nameColumn.OptionsColumn.AllowEdit) return;
+				case "repositoryBankaHesap":
+					{
+						if (!_nameColumn.OptionsColumn.AllowEdit) return;
 
-					//        var id = _tablo.GetRowCellId(_idColumn);
-					//        var odemeTipi = _tablo.GetFocusedRowCellValue("OdemeTipi").ToString().GetEnum<OdemeTipi>();
+						var id = _tablo.GetRowCellId(_idColumn);
+						var odemeTipi = _tablo.GetFocusedRowCellValue("OdemeTipi").ToString().GetEnum<OdemeTipi>();
 
-					//        var entity = (BankaHesapL)ShowListForms<BankaHesapListForm>.ShowDialogListForm(KartTuru.BankaHesap, id, odemeTipi);
-					//        if (entity != null)
-					//        {
-					//            _tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
-					//            _tablo.SetFocusedRowCellValue(_nameColumn, entity.HesapAdi);
-					//            _tablo.SetFocusedRowCellValue("BlokeGunSayisi", entity.BlokeGunSayisi);
-					//            _navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
-					//        }
-					//    }
-					//    break;
+						var entity = (BankaHesapL)ShowListForms<BankaHesapListForm>.ShowDialogListForm(KartTuru.BankaHesap, id, odemeTipi);
+						if (entity != null)
+						{
+							_tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
+							_tablo.SetFocusedRowCellValue(_nameColumn, entity.HesapAdi);
+							_tablo.SetFocusedRowCellValue("BlokeGunSayisi", entity.BlokeGunSayisi);
+							_navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
+						}
+					}
+					break;
 
-					//case "repositoryIptalNedeni":
-					//    {
-					//        if (!_nameColumn.OptionsColumn.AllowEdit) return;
+				case "repositoryIptalNedeni":
+					{
+						if (!_nameColumn.OptionsColumn.AllowEdit) return;
 
-					//        var id = _tablo.GetRowCellId(_idColumn);
-					//        var entity = (IptalNedeni)ShowListForms<IptalNedeniListForm>.ShowDialogListForm(KartTuru.IptalNedeni, id);
-					//        if (entity != null)
-					//        {
-					//            _tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
-					//            _tablo.SetFocusedRowCellValue(_nameColumn, entity.IptalNedeniAdi);
-					//            _navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
-					//        }
-					//    }
-					//    break;
+						var id = _tablo.GetRowCellId(_idColumn);
+						var entity = (IptalNedeni)ShowListForms<IptalNedeniListForm>.ShowDialogListForm(KartTuru.IptalNedeni, id);
+						if (entity != null)
+						{
+							_tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
+							_tablo.SetFocusedRowCellValue(_nameColumn, entity.IptalNedeniAdi);
+							_navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
+						}
+					}
+					break;
 
-					//case "repositoryGittigiOkul":
-					//    {
-					//        if (!_nameColumn.OptionsColumn.AllowEdit) return;
+				case "repositoryGittigiOkul":
+					{
+						if (!_nameColumn.OptionsColumn.AllowEdit) return;
 
-					//        var id = _tablo.GetRowCellId(_idColumn);
-					//        var entity = (OkulL)ShowListForms<OkulListForm>.ShowDialogListForm(KartTuru.Okul, id);
-					//        if (entity != null)
-					//        {
-					//            _tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
-					//            _tablo.SetFocusedRowCellValue(_nameColumn, entity.OkulAdi);
-					//            _navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
-					//        }
-					//    }
-					//    break;
+						var id = _tablo.GetRowCellId(_idColumn);
+						var entity = (OkulL)ShowListForms<OkulListForm>.ShowDialogListForm(KartTuru.Okul, id);
+						if (entity != null)
+						{
+							_tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
+							_tablo.SetFocusedRowCellValue(_nameColumn, entity.OkulAdi);
+							_navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
+						}
+					}
+					break;
 
 					//case "repositoryHesap":
 					//    {

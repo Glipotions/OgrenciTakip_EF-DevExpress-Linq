@@ -343,6 +343,16 @@ namespace OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap employeethank_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("employeethank_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap employeewelcome_16x16 {
             get {
                 object obj = ResourceManager.GetObject("employeewelcome_16x16", resourceCulture);
@@ -563,6 +573,16 @@ namespace OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap productorderdetail_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("productorderdetail_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap removeitem_16x16 {
             get {
                 object obj = ResourceManager.GetObject("removeitem_16x16", resourceCulture);
@@ -586,6 +606,16 @@ namespace OgrenciTakip.UI.Win.Properties {
         internal static System.Drawing.Bitmap removeitem_32x321 {
             get {
                 object obj = ResourceManager.GetObject("removeitem_32x321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap saledetalis_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("saledetalis_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
