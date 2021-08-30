@@ -68,8 +68,8 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
 			Tablo.ColumnWidthChanged += Tablo_SablonChanged;
 			Tablo.EndSorting += Tablo_SablonChanged;
 			Tablo.DoubleClick += Tablo_DoubleClick;
-			Tablo.FocusedRowObjectChanged += Tablo_FocusedRowObjectChanged;
-			Tablo.RowCountChanged += Tablo_RowCountChanged;
+			Tablo.FocusedRowObjectChanged += Tablo_FocusedRowObjectChanged; //satırlarda veri değişikliği varsa algılıyor
+			Tablo.RowCountChanged += Tablo_RowCountChanged; 
 		}
 
 		protected internal void Yukle()

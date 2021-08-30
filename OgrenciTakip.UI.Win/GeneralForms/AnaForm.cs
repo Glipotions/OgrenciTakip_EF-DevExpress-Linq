@@ -49,7 +49,8 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 		public static bool GunTarihininOncesineIptalTarihiGirilebilir = true;
 		public static bool GunTarihininSonrasinaIptalTarihiGirilebilir = true;
 		public static bool HizmetTahakkukKurusKullan;
-
+		public static bool IndirimTahakkukKurusKullan;
+		public static bool GittigiOkulZorunlu=true;
 
 		public AnaForm()
 		{

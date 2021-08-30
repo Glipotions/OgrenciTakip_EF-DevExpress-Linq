@@ -120,11 +120,11 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 				hizmetBilgileriTable.Yukle();
 			}
 
-			//if (indirimBilgileriTable.OwnerForm == null)
-			//{
-			//    indirimBilgileriTable.OwnerForm = this;
-			//    indirimBilgileriTable.Yukle();
-			//}
+			if (indirimBilgileriTable.OwnerForm == null)
+			{
+				indirimBilgileriTable.OwnerForm = this;
+				indirimBilgileriTable.Yukle();
+			}
 
 			//if (odemeBilgileriTable.OwnerForm == null)
 			//{
@@ -148,12 +148,12 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 				hizmetBilgileriTable.Tablo.FocusedRowHandle = rowHandle;
 			}
 
-			//if (TableValueChanged(indirimBilgileriTable))
-			//{
-			//    var rowHandle = indirimBilgileriTable.Tablo.FocusedRowHandle;
-			//    indirimBilgileriTable.Yukle();
-			//    indirimBilgileriTable.Tablo.FocusedRowHandle = rowHandle;
-			//}
+			if (TableValueChanged(indirimBilgileriTable))
+			{
+				var rowHandle = indirimBilgileriTable.Tablo.FocusedRowHandle;
+				indirimBilgileriTable.Yukle();
+				indirimBilgileriTable.Tablo.FocusedRowHandle = rowHandle;
+			}
 
 			//if (TableValueChanged(odemeBilgileriTable))
 			//{
@@ -208,7 +208,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			txtRehber.Text = entity.RehberAdi;
 
 			txtSonrakiDonemKayitDurumu.SelectedItem = entity.SonrakiDonemKayitDurumu.ToName();
-			txtSonrakiDonemKayirDurumuAciklama.Text = entity.SonrakiDonemKayitDurumuAciklama;
+			txtSonrakiDonemKayitDurumuAciklama.Text = entity.SonrakiDonemKayitDurumuAciklama;
 
 			txtOzelKod1.Id = entity.OzelKod1Id;
 			txtOzelKod1.Text = entity.OzelKod1Adi;
@@ -228,7 +228,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			{
 				Id = Id,
 				Kod = txtKod.Text,
-				OgrenciId = BaseIslemTuru == IslemTuru.EntityInsert ? _ogrenci.Id : ((TahakkukS)OldEntity).OgrenciId,
+				OgrenciId = BaseIslemTuru == IslemTuru.EntityInsert ? _ogrenci.Id : ((Tahakkuk)OldEntity).OgrenciId,
 				OkulNo = txtOkulNo.Text,
 				KayitTarihi = txtKayitTarihi.DateTime.Date,
 				KayitSekli = txtKayitSekli.Text.GetEnum<KayitSekli>(),
@@ -240,8 +240,8 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 				TesvikId = txtTesvik.Id,
 				RehberId = txtRehber.Id,
 				SonrakiDonemKayitDurumu = txtSonrakiDonemKayitDurumu.Text.GetEnum<SonrakiDonemKayitDurumu>(),
-				SonrakiDonemKayitDurumuAciklama = txtSonrakiDonemKayirDurumuAciklama.Text,
-
+				SonrakiDonemKayitDurumuAciklama = txtSonrakiDonemKayitDurumuAciklama.Text,
+				
 				OzelKod1Id = txtOzelKod1.Id,
 				OzelKod2Id = txtOzelKod2.Id,
 				OzelKod3Id = txtOzelKod3.Id,
@@ -373,6 +373,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 
 			bool TableValueChanged()
 			{
+				//Tabloda yapılan değişiklikler sonrası kaydet butonunun gelmesi işlemleri
 				if (_kardesBilgileriTable != null && _kardesBilgileriTable.TableValueChanged) return true;
 				if (_aileBilgileriTable != null && _aileBilgileriTable.TableValueChanged) return true;
 				if (_sinavBilgileriTable != null && _sinavBilgileriTable.TableValueChanged) return true;
@@ -382,7 +383,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 				if (_ePosBilgileriTable != null && _ePosBilgileriTable.TableValueChanged) return true;
 				if (_bilgiNotlariTable != null && _bilgiNotlariTable.TableValueChanged) return true;
 				if (hizmetBilgileriTable.TableValueChanged) return true;
-				//if (indirimBilgileriTable.TableValueChanged) return true;
+				if (indirimBilgileriTable.TableValueChanged) return true;
 				//if (odemeBilgileriTable.TableValueChanged) return true;
 				//if (geriOdemeBilgileriTable.TableValueChanged) return true;
 
@@ -408,7 +409,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			if (_ePosBilgileriTable != null && !_ePosBilgileriTable.Kaydet()) return false;
 			if (_bilgiNotlariTable != null && !_bilgiNotlariTable.Kaydet()) return false;
 			if (!hizmetBilgileriTable.Kaydet()) return false;
-			//if (!indirimBilgileriTable.Kaydet()) return false;
+			if (!indirimBilgileriTable.Kaydet()) return false;
 			//if (!odemeBilgileriTable.Kaydet()) return false;
 			//if (!geriOdemeBilgileriTable.Kaydet()) return false;
 
@@ -419,7 +420,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 		{
 			var hizmetBilgileriToplami = hizmetBilgileriTable.Tablo.DataController.ListSource.Cast<HizmetBilgileriL>().Where(x => !x.Delete).Sum(x => x.BrutUcret - x.KistDonemDusulenUcret);
 
-			//var indirimBilgileriToplami = indirimBilgileriTable.Tablo.DataController.ListSource.Cast<IndirimBilgileriL>().Where(x => !x.Delete).Sum(x => x.BrutIndirim - x.KistDonemDusulenIndirim);
+			var indirimBilgileriToplami = indirimBilgileriTable.Tablo.DataController.ListSource.Cast<IndirimBilgileriL>().Where(x => !x.Delete).Sum(x => x.BrutIndirim - x.KistDonemDusulenIndirim);
 
 			//var odemeBilgileriToplami = odemeBilgileriTable.Tablo.DataController.ListSource.Cast<OdemeBilgileriL>().Where(x => !x.Delete).Sum(x => x.Tutar);
 
@@ -427,8 +428,8 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 
 			//var geriOdemelerToplami = geriOdemeBilgileriTable.Tablo.DataController.ListSource.Cast<GeriOdemeBilgileriL>().Where(x => !x.Delete).Sum(x => x.Tutar);
 
-			//txtHizmetBilgileriToplami.Value = hizmetBilgileriToplami;
-			//txtIndirimBilgileriToplami.Value = indirimBilgileriToplami;
+			txtHizmetBilgileriToplami.Value = hizmetBilgileriToplami;
+			txtIndirimBilgileriToplami.Value = indirimBilgileriToplami;
 			//txtOdemeBilgileriToplami.Value = odemeBilgileriToplami;
 			//txtGeriIadelerToplami.Value = iadelerToplami;
 			//txtGeriOdemelerToplami.Value = geriOdemelerToplami;
@@ -570,8 +571,8 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			}
 			else if (e.Page == pageHizmetBilgileri)
 				hizmetBilgileriTable.Tablo.GridControl.Focus();
-			//else if (e.Page == pageIndirimBilgileri)
-			//    indirimBilgileriTable.Tablo.GridControl.Focus();
+			else if (e.Page == pageIndirimBilgileri)
+				indirimBilgileriTable.Tablo.GridControl.Focus();
 			//else if (e.Page == pageOdemeBilgileri)
 			//    odemeBilgileriTable.Tablo.GridControl.Focus();
 			//else if (e.Page == pageGeriOdemeBilgileri)

@@ -74,6 +74,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			this.pageHizmetBilgileri = new DevExpress.XtraBars.Navigation.TabNavigationPage();
 			this.hizmetBilgileriTable = new OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable.HizmetBilgileriTable();
 			this.pageIndirimBilgileri = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+			this.indirimBilgileriTable = new OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable.IndirimBilgileriTable();
 			this.pageOdemeBilgileri = new DevExpress.XtraBars.Navigation.TabNavigationPage();
 			this.pageGeriOdemeBilgileri = new DevExpress.XtraBars.Navigation.TabNavigationPage();
 			this.tabUst = new DevExpress.XtraBars.Navigation.TabPane();
@@ -85,7 +86,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			this.txtOzelKod3 = new OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
 			this.txtOzelKod2 = new OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
 			this.txtOzelKod1 = new OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
-			this.txtSonrakiDonemKayirDurumuAciklama = new OgrenciTakip.UI.Win.UserControls.Controls.MyMemoEdit();
+			this.txtSonrakiDonemKayitDurumuAciklama = new OgrenciTakip.UI.Win.UserControls.Controls.MyMemoEdit();
 			this.txtSonrakiDonemKayitDurumu = new OgrenciTakip.UI.Win.UserControls.Controls.MyComboBoxEdit();
 			this.txtRehber = new OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
 			this.txtTesvik = new OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
@@ -162,6 +163,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			((System.ComponentModel.ISupportInitialize)(this.tabAlt)).BeginInit();
 			this.tabAlt.SuspendLayout();
 			this.pageHizmetBilgileri.SuspendLayout();
+			this.pageIndirimBilgileri.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.tabUst)).BeginInit();
 			this.tabUst.SuspendLayout();
 			this.pageGenelBilgiler.SuspendLayout();
@@ -174,7 +176,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			((System.ComponentModel.ISupportInitialize)(this.txtOzelKod3.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtOzelKod2.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtOzelKod1.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtSonrakiDonemKayirDurumuAciklama.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.txtSonrakiDonemKayitDurumuAciklama.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtSonrakiDonemKayitDurumu.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtRehber.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtTesvik.Properties)).BeginInit();
@@ -459,11 +461,20 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			// pageIndirimBilgileri
 			// 
 			this.pageIndirimBilgileri.Caption = "İndirim Bilgileri";
+			this.pageIndirimBilgileri.Controls.Add(this.indirimBilgileriTable);
 			this.pageIndirimBilgileri.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.employeethank_16x16;
 			this.pageIndirimBilgileri.ItemShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
 			this.pageIndirimBilgileri.Name = "pageIndirimBilgileri";
 			this.pageIndirimBilgileri.Properties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
 			this.pageIndirimBilgileri.Size = new System.Drawing.Size(756, 228);
+			// 
+			// indirimBilgileriTable
+			// 
+			this.indirimBilgileriTable.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.indirimBilgileriTable.Location = new System.Drawing.Point(0, 0);
+			this.indirimBilgileriTable.Name = "indirimBilgileriTable";
+			this.indirimBilgileriTable.Size = new System.Drawing.Size(756, 228);
+			this.indirimBilgileriTable.TabIndex = 0;
 			// 
 			// pageOdemeBilgileri
 			// 
@@ -536,7 +547,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			this.DataLayoutGenelBilgiler.Controls.Add(this.txtOzelKod3);
 			this.DataLayoutGenelBilgiler.Controls.Add(this.txtOzelKod2);
 			this.DataLayoutGenelBilgiler.Controls.Add(this.txtOzelKod1);
-			this.DataLayoutGenelBilgiler.Controls.Add(this.txtSonrakiDonemKayirDurumuAciklama);
+			this.DataLayoutGenelBilgiler.Controls.Add(this.txtSonrakiDonemKayitDurumuAciklama);
 			this.DataLayoutGenelBilgiler.Controls.Add(this.txtSonrakiDonemKayitDurumu);
 			this.DataLayoutGenelBilgiler.Controls.Add(this.txtRehber);
 			this.DataLayoutGenelBilgiler.Controls.Add(this.txtTesvik);
@@ -683,19 +694,19 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			this.txtOzelKod1.StyleController = this.DataLayoutGenelBilgiler;
 			this.txtOzelKod1.TabIndex = 12;
 			// 
-			// txtSonrakiDonemKayirDurumuAciklama
+			// txtSonrakiDonemKayitDurumuAciklama
 			// 
-			this.txtSonrakiDonemKayirDurumuAciklama.EnterMoveNextControl = true;
-			this.txtSonrakiDonemKayirDurumuAciklama.Location = new System.Drawing.Point(560, 149);
-			this.txtSonrakiDonemKayirDurumuAciklama.MenuManager = this.ribbonControl;
-			this.txtSonrakiDonemKayirDurumuAciklama.Name = "txtSonrakiDonemKayirDurumuAciklama";
-			this.txtSonrakiDonemKayirDurumuAciklama.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-			this.txtSonrakiDonemKayirDurumuAciklama.Properties.AppearanceFocused.Options.UseBackColor = true;
-			this.txtSonrakiDonemKayirDurumuAciklama.Properties.MaxLength = 500;
-			this.txtSonrakiDonemKayirDurumuAciklama.Size = new System.Drawing.Size(389, 58);
-			this.txtSonrakiDonemKayirDurumuAciklama.StatusBarAciklama = "Açıklama Giriniz";
-			this.txtSonrakiDonemKayirDurumuAciklama.StyleController = this.DataLayoutGenelBilgiler;
-			this.txtSonrakiDonemKayirDurumuAciklama.TabIndex = 11;
+			this.txtSonrakiDonemKayitDurumuAciklama.EnterMoveNextControl = true;
+			this.txtSonrakiDonemKayitDurumuAciklama.Location = new System.Drawing.Point(560, 149);
+			this.txtSonrakiDonemKayitDurumuAciklama.MenuManager = this.ribbonControl;
+			this.txtSonrakiDonemKayitDurumuAciklama.Name = "txtSonrakiDonemKayitDurumuAciklama";
+			this.txtSonrakiDonemKayitDurumuAciklama.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+			this.txtSonrakiDonemKayitDurumuAciklama.Properties.AppearanceFocused.Options.UseBackColor = true;
+			this.txtSonrakiDonemKayitDurumuAciklama.Properties.MaxLength = 500;
+			this.txtSonrakiDonemKayitDurumuAciklama.Size = new System.Drawing.Size(389, 58);
+			this.txtSonrakiDonemKayitDurumuAciklama.StatusBarAciklama = "Açıklama Giriniz";
+			this.txtSonrakiDonemKayitDurumuAciklama.StyleController = this.DataLayoutGenelBilgiler;
+			this.txtSonrakiDonemKayitDurumuAciklama.TabIndex = 11;
 			// 
 			// txtSonrakiDonemKayitDurumu
 			// 
@@ -1346,7 +1357,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			// 
 			this.layoutControlItem21.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
 			this.layoutControlItem21.AppearanceItemCaption.Options.UseForeColor = true;
-			this.layoutControlItem21.Control = this.txtSonrakiDonemKayirDurumuAciklama;
+			this.layoutControlItem21.Control = this.txtSonrakiDonemKayitDurumuAciklama;
 			this.layoutControlItem21.Location = new System.Drawing.Point(460, 144);
 			this.layoutControlItem21.Name = "layoutControlItem21";
 			this.layoutControlItem21.OptionsTableLayoutItem.ColumnIndex = 5;
@@ -1749,6 +1760,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			((System.ComponentModel.ISupportInitialize)(this.tabAlt)).EndInit();
 			this.tabAlt.ResumeLayout(false);
 			this.pageHizmetBilgileri.ResumeLayout(false);
+			this.pageIndirimBilgileri.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.tabUst)).EndInit();
 			this.tabUst.ResumeLayout(false);
 			this.pageGenelBilgiler.ResumeLayout(false);
@@ -1761,7 +1773,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			((System.ComponentModel.ISupportInitialize)(this.txtOzelKod3.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtOzelKod2.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtOzelKod1.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtSonrakiDonemKayirDurumuAciklama.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.txtSonrakiDonemKayitDurumuAciklama.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtSonrakiDonemKayitDurumu.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtRehber.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtTesvik.Properties)).EndInit();
@@ -1851,7 +1863,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
         private UserControls.Controls.MyButtonEdit txtOzelKod3;
         private UserControls.Controls.MyButtonEdit txtOzelKod2;
         private UserControls.Controls.MyButtonEdit txtOzelKod1;
-        private UserControls.Controls.MyMemoEdit txtSonrakiDonemKayirDurumuAciklama;
+        private UserControls.Controls.MyMemoEdit txtSonrakiDonemKayitDurumuAciklama;
         private UserControls.Controls.MyComboBoxEdit txtSonrakiDonemKayitDurumu;
         private UserControls.Controls.MyButtonEdit txtRehber;
         private UserControls.Controls.MyButtonEdit txtTesvik;
@@ -1918,6 +1930,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
         protected internal UserControls.Controls.MyCalcEdit txtFark;
 		private UserControls.Controls.MyDateEdit txtKayitTarihi;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
-		private UserControls.UserControl.TahakkukEditFormTable.HizmetBilgileriTable hizmetBilgileriTable;
+		protected internal UserControls.UserControl.TahakkukEditFormTable.HizmetBilgileriTable hizmetBilgileriTable;
+		protected internal UserControls.UserControl.TahakkukEditFormTable.IndirimBilgileriTable indirimBilgileriTable;
 	}
 }

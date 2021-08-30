@@ -4,7 +4,6 @@ using DevExpress.XtraGrid.Views.Base;
 using System;
 using System.Linq;
 using System.Windows.Forms;
-using OgrenciTakip.Business.Functions;
 using OgrenciTakip.Business.General;
 using OgrenciYazilim.Common.Enums;
 using OgrenciYazilim.Common.Message;
@@ -25,7 +24,7 @@ using OgrenciYazilim.Model.Entities;
 
 namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
 {
-    public partial class HizmetBilgileriTable : BaseTablo
+	public partial class HizmetBilgileriTable : BaseTablo
     {
         public HizmetBilgileriTable()
         {
@@ -97,12 +96,12 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
 
         protected internal override bool HataliGiris()
         {
-			//bool IndirimToplamiHizmetToplamindanBuyuk(long hizmetId)
-			//{
-			//	var hizmetToplami = tablo.DataController.ListSource.Cast<HizmetBilgileriL>().Where(x => x.HizmetId == hizmetId && !x.Delete).Sum(x => x.BrutUcret - x.KistDonemDusulenUcret);
-			//	var indirimToplami = ((TahakkukEditForm)OwnerForm).indirimBilgileriTable.Tablo.DataController.ListSource.Cast<IndirimBilgileriL>().Where(x => x.HizmetId == hizmetId && !x.Delete).Sum(x => x.BrutIndirim - x.KistDonemDusulenIndirim);
-			//	return indirimToplami > hizmetToplami;
-			//}
+			bool IndirimToplamiHizmetToplamindanBuyuk(long hizmetId)
+			{
+				var hizmetToplami = tablo.DataController.ListSource.Cast<HizmetBilgileriL>().Where(x => x.HizmetId == hizmetId && !x.Delete).Sum(x => x.BrutUcret - x.KistDonemDusulenUcret);
+				var indirimToplami = ((TahakkukEditForm)OwnerForm).indirimBilgileriTable.Tablo.DataController.ListSource.Cast<IndirimBilgileriL>().Where(x => x.HizmetId == hizmetId && !x.Delete).Sum(x => x.BrutIndirim - x.KistDonemDusulenIndirim);
+				return indirimToplami > hizmetToplami;
+			}
 
 			if (!TableValueChanged) return false;
             if (tablo.HasColumnErrors) tablo.ClearColumnErrors();
@@ -110,14 +109,14 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
             for (int i = 0; i < tablo.DataRowCount; i++)
             {
                 var entity = tablo.GetRow<HizmetBilgileriL>(i);
-                //if (entity.IptalEdildi && entity.HizmetTipi == HizmetTipi.Egitim && AnaForm.GittigiOkulZorunlu && entity.GittigiOkulId == null)
-                //{
-                //    tablo.FocusedRowHandle = i;
-                //    tablo.FocusedColumn = colGittigiOkulAdi;
-                //    tablo.SetColumnError(colGittigiOkulAdi, "Gittiği Okul Adı Alanına Geçerli Bir Değer Giriniz.");
-                //}
+				if (entity.IptalEdildi && entity.HizmetTipi == HizmetTipi.Egitim && AnaForm.GittigiOkulZorunlu && entity.GittigiOkulId == null)
+				{
+					tablo.FocusedRowHandle = i;
+					tablo.FocusedColumn = colGittigiOkulAdi;
+					tablo.SetColumnError(colGittigiOkulAdi, "Gittiği Okul Adı Alanına Geçerli Bir Değer Giriniz.");
+				}
 
-                if (entity.IptalEdildi && entity.IptalNedeniId == null)
+				if (entity.IptalEdildi && entity.IptalNedeniId == null)
                 {
                     tablo.FocusedRowHandle = i;
                     tablo.FocusedColumn = colIptalNedeniAdi;
@@ -130,13 +129,13 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
                     return true;
                 }
 
-                //if (IndirimToplamiHizmetToplamindanBuyuk(entity.HizmetId))
-                //{
-                //    tablo.FocusedRowHandle = i;
-                //    Messages.HataMesaji($"{entity.HizmetAdi} Kartına Uygulanan İndirimlerin Toplamı Kartın Toplam Tutarını Aşmaktadır.");
-                //    return true;
-                //}
-            }
+				if (IndirimToplamiHizmetToplamindanBuyuk(entity.HizmetId))
+				{
+					tablo.FocusedRowHandle = i;
+					Messages.HataMesaji($"{entity.HizmetAdi} Kartına Uygulanan İndirimlerin Toplamı Kartın Toplam Tutarını Aşmaktadır.");
+					return true;
+				}
+			}
 
             return false;
         }
@@ -195,12 +194,12 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
             entity.Update = true;
             UcretHesapla(entity);
 
-            //((TahakkukEditForm)OwnerForm).indirimBilgileriTable.TopluIptalEt(entity);
-            //tablo.UpdateSummary();
-            //tablo.RowCellEnabled();
-            //tablo.FocusedColumn = colIptalAcıklama;
-            //ButonEnabledDurumu(true);
-        }
+			((TahakkukEditForm)OwnerForm).indirimBilgileriTable.TopluIptalEt(entity);
+			tablo.UpdateSummary();  //Toplamları Güncelle
+			tablo.RowCellEnabled(); //hücreye yazı yazma olayını açar
+			tablo.FocusedColumn = colIptalAcıklama;
+			ButonEnabledDurumu(true);
+		}
 
         protected override void IptalGeriAl()
         {
@@ -229,11 +228,11 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
             entity.IptalAciklama = null;
             entity.Update = true;
 
-            //((TahakkukEditForm)OwnerForm).indirimBilgileriTable.TopluIptalGeriAl(entity.Id);
-            //UcretHesapla(entity);
-            //tablo.UpdateSummary();
-            //tablo.RowCellEnabled();
-            ButonEnabledDurumu(true);
+			((TahakkukEditForm)OwnerForm).indirimBilgileriTable.TopluIptalGeriAl(entity.Id);
+			UcretHesapla(entity);
+			tablo.UpdateSummary();
+			tablo.RowCellEnabled();
+			ButonEnabledDurumu(true);
         }
 
         protected override void SutunGizleGoster()
@@ -266,11 +265,11 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
 
         protected override void HareketSil()
         {
-			//bool HizmetKartinaAitIptalEdilmisHareketVarmi(long hizmetId)
-			//{
-			//	var count = tablo.DataController.ListSource.Cast<HizmetBilgileriL>().Count(x => x.HizmetId == hizmetId);
-			//	return count < 2 && ((TahakkukEditForm)OwnerForm).indirimBilgileriTable.Tablo.DataController.ListSource.Cast<IndirimBilgileriL>().Any(x => x.HizmetId == hizmetId && x.IptalEdildi);
-			//}
+			bool HizmetKartinaAitIptalEdilmisHareketVarmi(long hizmetId)
+			{
+				var count = tablo.DataController.ListSource.Cast<HizmetBilgileriL>().Count(x => x.HizmetId == hizmetId);
+				return count < 2 && ((TahakkukEditForm)OwnerForm).indirimBilgileriTable.Tablo.DataController.ListSource.Cast<IndirimBilgileriL>().Any(x => x.HizmetId == hizmetId && x.IptalEdildi);
+			}
 
 			if (tablo.DataRowCount == 0) return;
             if (Messages.SilMesaj("Hizmet Bilgisi") != DialogResult.Yes) return;
@@ -282,13 +281,13 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
                 return;
             }
 
-			//if (HizmetKartinaAitIptalEdilmisHareketVarmi(entity.HizmetId))
-			//{
-			//	Messages.HataMesaji("Bu Hizmet Kartına Ait İptal Edilmiş İndirim Hareketleri Bulunmaktadır. Hizmet Kartı Silinemez.");
-			//	return;
-			//}
+			if (HizmetKartinaAitIptalEdilmisHareketVarmi(entity.HizmetId))
+			{
+				Messages.HataMesaji("Bu Hizmet Kartına Ait İptal Edilmiş İndirim Hareketleri Bulunmaktadır. Hizmet Kartı Silinemez.");
+				return;
+			}
 
-			//((TahakkukEditForm)OwnerForm).indirimBilgileriTable.TopluHareketSil(entity.HizmetId);
+			((TahakkukEditForm)OwnerForm).indirimBilgileriTable.TopluHareketSil(entity.HizmetId);
 			entity.Delete = true;
 			tablo.RefreshDataSource();
 
@@ -325,25 +324,25 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
             }
         }
 
-        //protected override void Tablo_CellValueChanged(object sender, CellValueChangedEventArgs e)
-        //{
-        //    base.Tablo_CellValueChanged(sender, e);
+		protected override void Tablo_CellValueChanged(object sender, CellValueChangedEventArgs e)
+		{
+			base.Tablo_CellValueChanged(sender, e);
 
-        //    var entity = tablo.GetRow<HizmetBilgileriL>();
+			var entity = tablo.GetRow<HizmetBilgileriL>();
 
-        //    if (e.Column == colIptalNedeniAdi)
-        //    {
-        //        ((TahakkukEditForm)OwnerForm).indirimBilgileriTable.Tablo.DataController.ListSource.Cast<IndirimBilgileriL>().Where(x => x.IptalEdildi && x.HizmetHareketId == entity.Id).ForEach(x => x.IptalNedeniId = entity.IptalNedeniId);
-        //        ((TahakkukEditForm)OwnerForm).indirimBilgileriTable.Tablo.DataController.ListSource.Cast<IndirimBilgileriL>().Where(x => x.IptalEdildi && x.HizmetHareketId == entity.Id).ForEach(x => x.IptalNedeniAdi = entity.IptalNedeniAdi);
-        //    }
-        //    else if (e.Column == colIptalAcıklama)
-        //        ((TahakkukEditForm)OwnerForm).indirimBilgileriTable.Tablo.DataController.ListSource.Cast<IndirimBilgileriL>().Where(x => x.IptalEdildi && x.HizmetHareketId == entity.Id).ForEach(x => x.IptalAciklama = entity.IptalAciklama);
-        //    else if (e.Column == colIptalTarihi)
-        //    {
-        //        UcretHesapla(entity);
-        //        ((TahakkukEditForm)OwnerForm).indirimBilgileriTable.Tablo.DataController.ListSource.Cast<IndirimBilgileriL>().Where(x => x.IptalEdildi && x.HizmetHareketId == entity.Id).ForEach(x => x.IptalTarihi = entity.IptalTarihi);
-        //        ((TahakkukEditForm)OwnerForm).indirimBilgileriTable.TopluIndirimHesapla();
-        //    }
-        //}
-    }
+			if (e.Column == colIptalNedeniAdi)
+			{
+				((TahakkukEditForm)OwnerForm).indirimBilgileriTable.Tablo.DataController.ListSource.Cast<IndirimBilgileriL>().Where(x => x.IptalEdildi && x.HizmetHareketId == entity.Id).ForEach(x => x.IptalNedeniId = entity.IptalNedeniId);
+				((TahakkukEditForm)OwnerForm).indirimBilgileriTable.Tablo.DataController.ListSource.Cast<IndirimBilgileriL>().Where(x => x.IptalEdildi && x.HizmetHareketId == entity.Id).ForEach(x => x.IptalNedeniAdi = entity.IptalNedeniAdi);
+			}
+			else if (e.Column == colIptalAcıklama)
+				((TahakkukEditForm)OwnerForm).indirimBilgileriTable.Tablo.DataController.ListSource.Cast<IndirimBilgileriL>().Where(x => x.IptalEdildi && x.HizmetHareketId == entity.Id).ForEach(x => x.IptalAciklama = entity.IptalAciklama);
+			else if (e.Column == colIptalTarihi)
+			{
+				UcretHesapla(entity);
+				((TahakkukEditForm)OwnerForm).indirimBilgileriTable.Tablo.DataController.ListSource.Cast<IndirimBilgileriL>().Where(x => x.IptalEdildi && x.HizmetHareketId == entity.Id).ForEach(x => x.IptalTarihi = entity.IptalTarihi);
+				((TahakkukEditForm)OwnerForm).indirimBilgileriTable.TopluIndirimHesapla();
+			}
+		}
+	}
 }
