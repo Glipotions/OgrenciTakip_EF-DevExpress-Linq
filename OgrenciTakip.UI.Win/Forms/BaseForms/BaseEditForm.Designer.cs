@@ -136,7 +136,7 @@
             this.btnTaksitOlustur,
             this.btnGiris});
 			this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-			this.ribbonControl.MaxItemId = 26;
+			this.ribbonControl.MaxItemId = 27;
 			this.ribbonControl.Name = "ribbonControl";
 			this.ribbonControl.OptionsPageCategories.ShowCaptions = false;
 			this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {

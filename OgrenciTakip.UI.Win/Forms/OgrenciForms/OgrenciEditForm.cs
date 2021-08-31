@@ -157,7 +157,7 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
 			}
 		}
 
-		protected override void Control_EnabledChanged(object sender, EventArgs e)
+		protected override void Control_EnabledChange(object sender, EventArgs e)
 		{
 			if (sender != txtKimlikIl) return;
 			txtKimlikIl.ControlEnableChanged(txtKimlikIlce);

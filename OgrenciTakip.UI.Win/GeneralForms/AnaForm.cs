@@ -50,7 +50,10 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 		public static bool GunTarihininSonrasinaIptalTarihiGirilebilir = true;
 		public static bool HizmetTahakkukKurusKullan;
 		public static bool IndirimTahakkukKurusKullan;
+		public static bool OdemePlaniKurusKullan;
 		public static bool GittigiOkulZorunlu=true;
+		public static DateTime MaksimumTaksitTarihi = DateTime.Now.Date;
+		public static byte MaksimumTaksitSayisi = 12;
 
 		public AnaForm()
 		{

@@ -3,6 +3,7 @@ using OgrenciTakip.UI.Win.Show.Interfaces;
 using OgrenciYazilim.Common.Enums;
 using OgrenciYazilim.Model.Entities.Base.Interfaces;
 using System;
+using System.Windows.Forms;
 
 namespace OgrenciTakip.UI.Win.Show
 {
@@ -31,6 +32,15 @@ namespace OgrenciTakip.UI.Win.Show
 				frm.Yukle();
 				frm.ShowDialog();
 				return frm.RefreshYapilacak ? frm.Id : 0;
+			}
+		}
+
+		public static bool ShowDialogEditForm(params object[] prm)
+		{
+			using (var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm))
+			{
+				frm.Yukle();
+				return frm.DialogResult==DialogResult.OK;
 			}
 		}
 

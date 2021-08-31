@@ -191,7 +191,7 @@ namespace OgrenciTakip.UI.Win.Functions
 						{
 							_tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
 							_tablo.SetFocusedRowCellValue(_nameColumn, entity.HesapAdi);
-							_tablo.SetFocusedRowCellValue("BlokeGunSayisi", entity.BlokeGunSayisi);
+							_tablo.SetFocusedRowCellValue("BlokeGunSayisi", entity.BlokeGunSayisi); //Seçilen Banka hesabına göre bloke günü kendisi atıyor. Burası ÖNEMLİ!! .(3/6) 36. video 48.dk
 							_navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
 						}
 					}

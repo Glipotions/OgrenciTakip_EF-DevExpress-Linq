@@ -164,6 +164,12 @@ namespace OgrenciTakip.UI.Win.Functions
 					edt.Id = null;
 					edt.EditValue = null;
 					break;
+
+				//case PropertyGridControl propertyGridControl:
+				//	propertyGridControl.Enabled = baseEdit.Id.HasValue && baseEdit.Id > 0;
+				//	if (!propertyGridControl.Enabled)
+				//		propertyGridControl.SelectedObject = null;
+				//	break;
 			}
 		}
 

@@ -71,8 +71,8 @@ namespace OgrenciYazilim.Common.Enums
 		[Description("İndirim Kartı")]
 		Indirim = 33,
 		[Description("Tahakkuk Kartı")]
-		Tahakkuk = 34
-
-
+		Tahakkuk = 34,
+		[Description("Belge Hareketleri Kartı")]
+		BelgeHareketleri = 35
 	}
 }

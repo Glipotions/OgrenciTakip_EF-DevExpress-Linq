@@ -13,14 +13,14 @@ namespace OgrenciYazilim.Model.Entities
 		[Required, StringLength(50), ZorunluAlan("Şube Adı", "txtSubeAdi")]
 		public string SubeAdi { get; set; }
 
-		//[StringLength(255)]
-		//public string Adres { get; set; }
+		[StringLength(255)]
+		public string Adres { get; set; }
 
-		//[ZorunluAlan("İl Adı", "txtAdresIl")]
-		//public long AdresIlId { get; set; }
+		[ZorunluAlan("İl Adı", "txtAdresIl")]
+		public long? AdresIlId { get; set; }
 
-		//[ZorunluAlan("İlçe Adı", "txtAdresIlce")]
-		//public long AdresIlceId { get; set; }
+		[ZorunluAlan("İlçe Adı", "txtAdresIlce")]
+		public long? AdresIlceId { get; set; }
 
 		//[StringLength(17)]
 		//public string Telefon { get; set; }
@@ -39,9 +39,9 @@ namespace OgrenciYazilim.Model.Entities
 
 		//public int? SiraNo { get; set; }
 
-		////vt ilişki
-		//public Il AdresIl { get; set; }
+		//vt ilişki
+		public Il AdresIl { get; set; }
 
-		//public Ilce AdresIlce { get; set; }
+		public Ilce AdresIlce { get; set; }
 	}
 }

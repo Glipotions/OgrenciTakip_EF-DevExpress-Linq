@@ -73,7 +73,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 						break;
 					case MyButtonEdit edt:
 						edt.IdChanged += Control_IdChanged;
-						edt.EnabledChanged += Control_EnabledChanged;
+						edt.EnabledChange += Control_EnabledChange;
 						edt.ButtonClick += Control_ButtonClick;
 						edt.DoubleClick += Control_DoubleClick;
 						break;
@@ -198,6 +198,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		{
 		}
 		protected virtual void FiltreUygula() { }
+		protected virtual void TaksitOlustur() {}
 		protected virtual void BaskiOnizleme() { }
 		protected virtual void Yazdir() { }
 		protected virtual void SecimYap(object sender) { }
@@ -264,6 +265,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
 			else if (e.Item == btnUygula)
 				FiltreUygula();
+			else if (e.Item == btnTaksitOlustur)
+				TaksitOlustur();
 
 			else if (e.Item == btnYazdir)
 				Yazdir();
@@ -278,6 +281,9 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
 			Cursor.Current = DefaultCursor;
 		}
+
+
+
 		private void BaseEditForm_LocationChanged(object sender, EventArgs e)
 		{
 			_formSablonKayitEdilecek = true;
@@ -294,15 +300,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			ButtonGizleGoster();
 
 			//güncelleme yapılacak
-		}
-		private void BaseEditForm_FormClosing(object sender, FormClosingEventArgs e)
-		{
-			SablonKaydet();
-
-			if (btnKaydet.Visibility == BarItemVisibility.Never || !btnKaydet.Enabled) return;
-
-			if (!Kaydet(true))
-				e.Cancel = true;
 		}
 		private void Control_KeyDown(object sender, KeyEventArgs e)
 		{
@@ -347,6 +344,19 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			statusBarKisayol.Visibility = BarItemVisibility.Never;
 			statusBarKisayolAciklama.Visibility = BarItemVisibility.Never;
 		}
+		private void Control_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+		{
+			SecimYap(sender);
+		}
+		private void Control_DoubleClick(object sender, EventArgs e)
+		{
+			SecimYap(sender);
+		}
+		protected virtual void Control_IdChanged(object sender, IdChangedEventArgs e)
+		{
+			if (!IsLoaded) return;
+			GuncelNesneOlustur();
+		}
 		protected virtual void Control_Enter(object sender, EventArgs e)
 		{
 		}
@@ -356,20 +366,16 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			GuncelNesneOlustur();
 		}
 		protected virtual void Control_SelectedValueChanged(object sender, EventArgs e) { }
-		private void Control_IdChanged(object sender, IdChangedEventArgs e)
+		protected virtual void BaseEditForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
-			if (!IsLoaded) return;
-			GuncelNesneOlustur();
+			SablonKaydet();
+
+			if (btnKaydet.Visibility == BarItemVisibility.Never || !btnKaydet.Enabled) return;
+
+			if (!Kaydet(true))
+				e.Cancel = true;
 		}
-		protected virtual void Control_EnabledChanged(object sender, EventArgs e) { }
-		private void Control_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-		{
-			SecimYap(sender);
-		}
-		private void Control_DoubleClick(object sender, EventArgs e)
-		{
-			SecimYap(sender);
-		}
+		protected virtual void Control_EnabledChange(object sender, EventArgs e) { }
 		protected virtual void Control_SelectedPageChanged(object sender, SelectedPageChangedEventArgs e)
 		{
 		}

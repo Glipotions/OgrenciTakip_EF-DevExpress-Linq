@@ -1,6 +1,8 @@
-﻿using OgrenciTakip.Model.Dto;
+﻿using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Model.Dto;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BankaForms;
+using OgrenciTakip.UI.Win.Forms.BankaHesapForms;
 using OgrenciTakip.UI.Win.Forms.BankaSubeForms;
 using OgrenciTakip.UI.Win.Forms.GorevForms;
 using OgrenciTakip.UI.Win.Forms.HizmetTuruForms;
@@ -10,6 +12,7 @@ using OgrenciTakip.UI.Win.Forms.IndirimTuruForms;
 using OgrenciTakip.UI.Win.Forms.IsyeriForms;
 using OgrenciTakip.UI.Win.Forms.KontenjanForms;
 using OgrenciTakip.UI.Win.Forms.MeslekForms;
+using OgrenciTakip.UI.Win.Forms.OdemeTuruForms;
 using OgrenciTakip.UI.Win.Forms.OkulForms;
 using OgrenciTakip.UI.Win.Forms.OzelKodForms;
 using OgrenciTakip.UI.Win.Forms.RehberForms;
@@ -32,6 +35,7 @@ namespace OgrenciTakip.UI.Win.Functions
 		private MyButtonEdit _btnEdit;
 		private MyButtonEdit _prmEdit;
 		private KartTuru _kartTuru;
+		private OdemeTipi _odemeTipi;
 		#endregion
 
 		public void Sec(MyButtonEdit btnEdit)
@@ -44,6 +48,13 @@ namespace OgrenciTakip.UI.Win.Functions
 		{
 			_btnEdit = btnEdit;
 			_kartTuru = kartTuru;
+			SecimYap();
+		}
+
+		public void Sec(MyButtonEdit btnEdit, OdemeTipi odemeTipi)
+		{
+			_btnEdit = btnEdit;
+			_odemeTipi = odemeTipi;
 			SecimYap();
 		}
 
@@ -295,6 +306,136 @@ namespace OgrenciTakip.UI.Win.Functions
 						}
 					}
 					break;
+				case "txtBankaHesap":
+				case "txtVarsayilanBankaHesap":
+					{
+						var entity = (BankaHesapL)ShowListForms<BankaHesapListForm>.ShowDialogListForm(KartTuru.BankaHesap, _btnEdit.Id, _odemeTipi);
+						if (entity != null)
+						{
+							_btnEdit.Tag = entity.BlokeGunSayisi;
+							_btnEdit.Id = entity.Id;
+							_btnEdit.EditValue = entity.HesapAdi;
+						}
+					}
+					break;
+
+				case "txtOdemeTuru":
+					{
+						var entity = (OdemeTuru)ShowListForms<OdemeTuruListForm>.ShowDialogListForm(KartTuru.OdemeTuru, _btnEdit.Id);
+						if (entity != null)
+						{
+							_btnEdit.Tag = entity.OdemeTipi;
+							_btnEdit.Id = entity.Id;
+							_btnEdit.EditValue = entity.OdemeTuruAdi;
+						}
+					}
+					break;
+
+				//case "txtVarsayilanAvukatHesap":
+				//	{
+				//		var entity = (AvukatL)ShowListForms<AvukatListForm>.ShowDialogListForm(KartTuru.Avukat, _btnEdit.Id);
+				//		if (entity != null)
+				//		{
+				//			_btnEdit.Id = entity.Id;
+				//			_btnEdit.EditValue = entity.AdiSoyadi;
+				//		}
+				//	}
+				//	break;
+
+				//case "txtVarsayilanKasaHesap":
+				//	{
+				//		var entity = (KasaL)ShowListForms<KasaListForm>.ShowDialogListForm(KartTuru.Kasa, _btnEdit.Id);
+				//		if (entity != null)
+				//		{
+				//			_btnEdit.Id = entity.Id;
+				//			_btnEdit.EditValue = entity.KasaAdi;
+				//		}
+				//	}
+				//	break;
+
+				//case "txtSube":
+				//	{
+				//		var entity = (SubeL)ShowListForms<SubeListForm>.ShowDialogListForm(KartTuru.Sube, _btnEdit.Id);
+				//		if (entity != null)
+				//		{
+				//			_btnEdit.Id = entity.Id;
+				//			_btnEdit.EditValue = entity.SubeAdi;
+				//		}
+				//	}
+				//	break;
+
+				//case "txtRol":
+				//	{
+				//		var entity = (Rol)ShowListForms<RolListForm>.ShowDialogListForm(KartTuru.Rol, _btnEdit.Id);
+				//		if (entity != null)
+				//		{
+				//			_btnEdit.Id = entity.Id;
+				//			_btnEdit.EditValue = entity.RolAdi;
+				//		}
+				//	}
+				//	break;
+
+				//case "txtHesap":
+				//	{
+				//		switch (_kartTuru)
+				//		{
+				//			case KartTuru.Avukat:
+				//				{
+				//					var entity = (AvukatL)ShowListForms<AvukatListForm>.ShowDialogListForm(KartTuru.Avukat, _btnEdit.Id);
+				//					if (entity != null)
+				//					{
+				//						_btnEdit.Id = entity.Id;
+				//						_btnEdit.EditValue = entity.AdiSoyadi;
+				//					}
+				//					break;
+				//				}
+
+				//			case KartTuru.Kasa:
+				//				{
+				//					var entity = (KasaL)ShowListForms<KasaListForm>.ShowDialogListForm(KartTuru.Kasa, _btnEdit.Id);
+				//					if (entity != null)
+				//					{
+				//						_btnEdit.Id = entity.Id;
+				//						_btnEdit.EditValue = entity.KasaAdi;
+				//					}
+				//					break;
+				//				}
+
+				//			case KartTuru.BankaHesap:
+				//				{
+				//					var entity = (BankaHesapL)ShowListForms<BankaHesapListForm>.ShowDialogListForm(KartTuru.BankaHesap, _btnEdit.Id, _hesapTuru);
+				//					if (entity != null)
+				//					{
+				//						_btnEdit.Id = entity.Id;
+				//						_btnEdit.EditValue = entity.HesapAdi;
+				//					}
+				//					break;
+				//				}
+
+				//			case KartTuru.Cari:
+				//				{
+				//					var entity = (CariL)ShowListForms<CariListForm>.ShowDialogListForm(KartTuru.Cari, _btnEdit.Id);
+				//					if (entity != null)
+				//					{
+				//						_btnEdit.Id = entity.Id;
+				//						_btnEdit.EditValue = entity.CariAdi;
+				//					}
+				//					break;
+				//				}
+
+				//			case KartTuru.Sube:
+				//				{
+				//					var entity = (SubeL)ShowListForms<SubeListForm>.ShowDialogListForm(KartTuru.Sube, _btnEdit.Id, true);
+				//					if (entity != null)
+				//					{
+				//						_btnEdit.Id = entity.Id;
+				//						_btnEdit.EditValue = entity.SubeAdi;
+				//					}
+				//					break;
+				//				}
+					//	}
+					//}
+					//break;
 			}
 		}
 

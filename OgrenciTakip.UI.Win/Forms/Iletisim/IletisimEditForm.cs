@@ -194,7 +194,7 @@ namespace OgrenciTakip.UI.Win.Forms.IletisimForms
 		}
 
 		//ili silince ilçeninde silinmesi için event
-		protected override void Control_EnabledChanged(object sender, EventArgs e)
+		protected override void Control_EnabledChange(object sender, EventArgs e)
 		{
 			if (sender != txtEvAdresIl && sender != txtIsAdresIl && sender != txtKimlikIl) return;
 

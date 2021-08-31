@@ -76,6 +76,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			this.pageIndirimBilgileri = new DevExpress.XtraBars.Navigation.TabNavigationPage();
 			this.indirimBilgileriTable = new OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable.IndirimBilgileriTable();
 			this.pageOdemeBilgileri = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+			this.odemeBilgileriTable = new OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable.OdemeBilgileriTable();
 			this.pageGeriOdemeBilgileri = new DevExpress.XtraBars.Navigation.TabNavigationPage();
 			this.tabUst = new DevExpress.XtraBars.Navigation.TabPane();
 			this.pageGenelBilgiler = new DevExpress.XtraBars.Navigation.TabNavigationPage();
@@ -164,6 +165,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			this.tabAlt.SuspendLayout();
 			this.pageHizmetBilgileri.SuspendLayout();
 			this.pageIndirimBilgileri.SuspendLayout();
+			this.pageOdemeBilgileri.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.tabUst)).BeginInit();
 			this.tabUst.SuspendLayout();
 			this.pageGenelBilgiler.SuspendLayout();
@@ -479,11 +481,20 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			// pageOdemeBilgileri
 			// 
 			this.pageOdemeBilgileri.Caption = "Ödeme Bilgileri";
+			this.pageOdemeBilgileri.Controls.Add(this.odemeBilgileriTable);
 			this.pageOdemeBilgileri.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.productorderdetail_16x16;
 			this.pageOdemeBilgileri.ItemShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
 			this.pageOdemeBilgileri.Name = "pageOdemeBilgileri";
 			this.pageOdemeBilgileri.Properties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
-			this.pageOdemeBilgileri.Size = new System.Drawing.Size(756, 257);
+			this.pageOdemeBilgileri.Size = new System.Drawing.Size(756, 228);
+			// 
+			// odemeBilgileriTable
+			// 
+			this.odemeBilgileriTable.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.odemeBilgileriTable.Location = new System.Drawing.Point(0, 0);
+			this.odemeBilgileriTable.Name = "odemeBilgileriTable";
+			this.odemeBilgileriTable.Size = new System.Drawing.Size(756, 228);
+			this.odemeBilgileriTable.TabIndex = 0;
 			// 
 			// pageGeriOdemeBilgileri
 			// 
@@ -590,14 +601,14 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
 			this.txtKayitTarihi.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.txtKayitTarihi.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
 			this.txtKayitTarihi.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
-			this.txtKayitTarihi.Properties.Padding = new System.Windows.Forms.Padding(5);
-			this.txtKayitTarihi.Size = new System.Drawing.Size(0, 30);
+			this.txtKayitTarihi.Size = new System.Drawing.Size(40, 20);
 			this.txtKayitTarihi.StatusBarAciklama = null;
 			this.txtKayitTarihi.StatusBarKisayol = "F4: ";
 			this.txtKayitTarihi.StatusBarKisayolAciklama = "Tarih Seç";
 			this.txtKayitTarihi.StyleController = this.DataLayoutGenelBilgiler;
-			this.txtKayitTarihi.TabIndex = 18;
+			this.txtKayitTarihi.TabIndex = 1;
 			// 
 			// txtOzelKod5
 			// 
@@ -1452,8 +1463,9 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			this.layoutControlItem11.Location = new System.Drawing.Point(206, 48);
 			this.layoutControlItem11.Name = "layoutControlItem11";
 			this.layoutControlItem11.OptionsTableLayoutItem.ColumnIndex = 2;
+			this.layoutControlItem11.OptionsTableLayoutItem.ColumnSpan = 2;
 			this.layoutControlItem11.OptionsTableLayoutItem.RowIndex = 2;
-			this.layoutControlItem11.Size = new System.Drawing.Size(169, 24);
+			this.layoutControlItem11.Size = new System.Drawing.Size(224, 24);
 			this.layoutControlItem11.Text = "Kayıt Tarihi";
 			this.layoutControlItem11.TextSize = new System.Drawing.Size(168, 13);
 			// 
@@ -1761,6 +1773,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			this.tabAlt.ResumeLayout(false);
 			this.pageHizmetBilgileri.ResumeLayout(false);
 			this.pageIndirimBilgileri.ResumeLayout(false);
+			this.pageOdemeBilgileri.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.tabUst)).EndInit();
 			this.tabUst.ResumeLayout(false);
 			this.pageGenelBilgiler.ResumeLayout(false);
@@ -1928,9 +1941,10 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem31;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem32;
         protected internal UserControls.Controls.MyCalcEdit txtFark;
-		private UserControls.Controls.MyDateEdit txtKayitTarihi;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
 		protected internal UserControls.UserControl.TahakkukEditFormTable.HizmetBilgileriTable hizmetBilgileriTable;
 		protected internal UserControls.UserControl.TahakkukEditFormTable.IndirimBilgileriTable indirimBilgileriTable;
+		private UserControls.UserControl.TahakkukEditFormTable.OdemeBilgileriTable odemeBilgileriTable;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+		protected internal UserControls.Controls.MyDateEdit txtKayitTarihi;
 	}
 }
