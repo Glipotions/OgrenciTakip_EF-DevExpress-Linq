@@ -12,6 +12,7 @@ using OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable;
 using OgrenciYazilim.Common.Enums;
 using OgrenciYazilim.Common.Functions;
 using OgrenciYazilim.Common.Message;
+using OgrenciYazilim.Model.Dto;
 using OgrenciYazilim.Model.Entities.Base.Interfaces;
 using System;
 using System.Drawing;
@@ -135,11 +136,11 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 				odemeBilgileriTable.insUptNavigator.Navigator.Appearance.ForeColor = SystemColors.HotTrack; //renk ataması
 			}
 
-			//if (geriOdemeBilgileriTable.OwnerForm == null)
-			//{
-			//    geriOdemeBilgileriTable.OwnerForm = this;
-			//    geriOdemeBilgileriTable.Yukle();
-			//}
+			if (geriOdemeBilgileriTable.OwnerForm == null)
+			{
+				geriOdemeBilgileriTable.OwnerForm = this;
+				geriOdemeBilgileriTable.Yukle();
+			}
 
 			if (TableValueChanged(hizmetBilgileriTable))
 			{
@@ -162,12 +163,12 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 				odemeBilgileriTable.Tablo.FocusedRowHandle = rowHandle;
 			}
 
-			//if (TableValueChanged(geriOdemeBilgileriTable))
-			//{
-			//    var rowHandle = geriOdemeBilgileriTable.Tablo.FocusedRowHandle;
-			//    geriOdemeBilgileriTable.Yukle();
-			//    geriOdemeBilgileriTable.Tablo.FocusedRowHandle = rowHandle;
-			//}
+			if (TableValueChanged(geriOdemeBilgileriTable))
+			{
+				var rowHandle = geriOdemeBilgileriTable.Tablo.FocusedRowHandle;
+				geriOdemeBilgileriTable.Yukle();
+				geriOdemeBilgileriTable.Tablo.FocusedRowHandle = rowHandle;
+			}
 
 			Toplamlar();
 		}
@@ -326,12 +327,12 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 				return true;
 			}
 
-			//if (geriOdemeBilgileriTable.HataliGiris())
-			//{
-			//    tabAlt.SelectedPage = pageGeriOdemeBilgileri;
-			//    geriOdemeBilgileriTable.Tablo.GridControl.Focus();
-			//    return true;
-			//}
+			if (geriOdemeBilgileriTable.HataliGiris())
+			{
+				tabAlt.SelectedPage = pageGeriOdemeBilgileri;
+				geriOdemeBilgileriTable.Tablo.GridControl.Focus();
+				return true;
+			}
 
 			return false;
 		}
@@ -385,12 +386,12 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 				if (hizmetBilgileriTable.TableValueChanged) return true;
 				if (indirimBilgileriTable.TableValueChanged) return true;
 				if (odemeBilgileriTable.TableValueChanged) return true;
-				//if (geriOdemeBilgileriTable.TableValueChanged) return true;
+				if (geriOdemeBilgileriTable.TableValueChanged) return true;
 
 				return false;
 			}
 
-			//if (hizmetBilgileriTable.TableValueChanged || indirimBilgileriTable.TableValueChanged ||odemeBilgileriTable.TableValueChanged || geriOdemeBilgileriTable.TableValueChanged) Toplamlar();
+			if (hizmetBilgileriTable.TableValueChanged || indirimBilgileriTable.TableValueChanged || odemeBilgileriTable.TableValueChanged || geriOdemeBilgileriTable.TableValueChanged) Toplamlar();
 
 			if (FarkliSubeIslemi)
 				Functions.GeneralFunctions.ButtonEnabledDurum(btnYeni, btnKaydet, btnGeriAl, btnSil);
@@ -411,7 +412,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			if (!hizmetBilgileriTable.Kaydet()) return false;
 			if (!indirimBilgileriTable.Kaydet()) return false;
 			if (!odemeBilgileriTable.Kaydet()) return false;
-			//if (!geriOdemeBilgileriTable.Kaydet()) return false;
+			if (!geriOdemeBilgileriTable.Kaydet()) return false;
 
 			return true;
 		}
@@ -422,24 +423,25 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 
 			var indirimBilgileriToplami = indirimBilgileriTable.Tablo.DataController.ListSource.Cast<IndirimBilgileriL>().Where(x => !x.Delete).Sum(x => x.BrutIndirim - x.KistDonemDusulenIndirim);
 
-			//var odemeBilgileriToplami = odemeBilgileriTable.Tablo.DataController.ListSource.Cast<OdemeBilgileriL>().Where(x => !x.Delete).Sum(x => x.Tutar);
+			var odemeBilgileriToplami = odemeBilgileriTable.Tablo.DataController.ListSource.Cast<OdemeBilgileriL>().Where(x => !x.Delete).Sum(x => x.Tutar);
 
-			//var iadelerToplami = odemeBilgileriTable.Tablo.DataController.ListSource.Cast<OdemeBilgileriL>().Where(x => !x.Delete).Sum(x => x.Iade);
+			var iadelerToplami = odemeBilgileriTable.Tablo.DataController.ListSource.Cast<OdemeBilgileriL>().Where(x => !x.Delete).Sum(x => x.Iade);
 
-			//var geriOdemelerToplami = geriOdemeBilgileriTable.Tablo.DataController.ListSource.Cast<GeriOdemeBilgileriL>().Where(x => !x.Delete).Sum(x => x.Tutar);
+			var geriOdemelerToplami = geriOdemeBilgileriTable.Tablo.DataController.ListSource.Cast<GeriOdemeBilgileriL>().Where(x => !x.Delete).Sum(x => x.Tutar);
 
 			txtHizmetBilgileriToplami.Value = hizmetBilgileriToplami;
 			txtIndirimBilgileriToplami.Value = indirimBilgileriToplami;
-			//txtOdemeBilgileriToplami.Value = odemeBilgileriToplami;
-			//txtGeriIadelerToplami.Value = iadelerToplami;
-			//txtGeriOdemelerToplami.Value = geriOdemelerToplami;
+			txtOdemeBilgileriToplami.Value = odemeBilgileriToplami;
+			txtGeriIadelerToplami.Value = iadelerToplami;
+			txtGeriOdemelerToplami.Value = geriOdemelerToplami;
 
-			//txtFark.Value = hizmetBilgileriToplami - indirimBilgileriToplami - (odemeBilgileriToplami - (iadelerToplami + geriOdemelerToplami));
+			txtFark.Value = hizmetBilgileriToplami - indirimBilgileriToplami - (odemeBilgileriToplami - (iadelerToplami + geriOdemelerToplami));
 			txtFark.Properties.Appearance.BackColor = txtFark.Value != 0 ? Color.IndianRed : Color.GreenYellow;
 		}
 
 		private bool DurumKontrol()
 		{
+			
 			if (txtFark.Value != 0)
 			{
 				Messages.HataMesaji("Ücret Toplamları Farkı Sıfır ( 0 ) Olmalıdır");
@@ -575,8 +577,8 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 				indirimBilgileriTable.Tablo.GridControl.Focus();
 			else if (e.Page == pageOdemeBilgileri)
 				odemeBilgileriTable.Tablo.GridControl.Focus();
-			//else if (e.Page == pageGeriOdemeBilgileri)
-			//    geriOdemeBilgileriTable.Tablo.GridControl.Focus();
+			else if (e.Page == pageGeriOdemeBilgileri)
+				geriOdemeBilgileriTable.Tablo.GridControl.Focus();
 		}
 	}
 }

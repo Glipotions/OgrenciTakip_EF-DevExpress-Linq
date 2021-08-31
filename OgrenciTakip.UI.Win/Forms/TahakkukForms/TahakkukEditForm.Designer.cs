@@ -151,6 +151,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem32 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.geriOdemeBilgileriTable = new OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable.GeriOdemeBilgileriTable();
 			((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.DataLayoutGenel)).BeginInit();
@@ -166,6 +167,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			this.pageHizmetBilgileri.SuspendLayout();
 			this.pageIndirimBilgileri.SuspendLayout();
 			this.pageOdemeBilgileri.SuspendLayout();
+			this.pageGeriOdemeBilgileri.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.tabUst)).BeginInit();
 			this.tabUst.SuspendLayout();
 			this.pageGenelBilgiler.SuspendLayout();
@@ -499,11 +501,12 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			// pageGeriOdemeBilgileri
 			// 
 			this.pageGeriOdemeBilgileri.Caption = "Geri Ödemeler";
+			this.pageGeriOdemeBilgileri.Controls.Add(this.geriOdemeBilgileriTable);
 			this.pageGeriOdemeBilgileri.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.saledetalis_16x16;
 			this.pageGeriOdemeBilgileri.ItemShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
 			this.pageGeriOdemeBilgileri.Name = "pageGeriOdemeBilgileri";
 			this.pageGeriOdemeBilgileri.Properties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
-			this.pageGeriOdemeBilgileri.Size = new System.Drawing.Size(756, 257);
+			this.pageGeriOdemeBilgileri.Size = new System.Drawing.Size(756, 228);
 			// 
 			// tabUst
 			// 
@@ -601,7 +604,6 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
 			this.txtKayitTarihi.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.txtKayitTarihi.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
 			this.txtKayitTarihi.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
 			this.txtKayitTarihi.Size = new System.Drawing.Size(40, 20);
 			this.txtKayitTarihi.StatusBarAciklama = null;
@@ -1747,6 +1749,14 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			this.layoutControlItem32.Text = "Fark";
 			this.layoutControlItem32.TextSize = new System.Drawing.Size(69, 13);
 			// 
+			// geriOdemeBilgileriTable
+			// 
+			this.geriOdemeBilgileriTable.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.geriOdemeBilgileriTable.Location = new System.Drawing.Point(0, 0);
+			this.geriOdemeBilgileriTable.Name = "geriOdemeBilgileriTable";
+			this.geriOdemeBilgileriTable.Size = new System.Drawing.Size(756, 228);
+			this.geriOdemeBilgileriTable.TabIndex = 0;
+			// 
 			// TahakkukEditForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1774,6 +1784,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			this.pageHizmetBilgileri.ResumeLayout(false);
 			this.pageIndirimBilgileri.ResumeLayout(false);
 			this.pageOdemeBilgileri.ResumeLayout(false);
+			this.pageGeriOdemeBilgileri.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.tabUst)).EndInit();
 			this.tabUst.ResumeLayout(false);
 			this.pageGenelBilgiler.ResumeLayout(false);
@@ -1946,5 +1957,6 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 		private UserControls.UserControl.TahakkukEditFormTable.OdemeBilgileriTable odemeBilgileriTable;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
 		protected internal UserControls.Controls.MyDateEdit txtKayitTarihi;
+		private UserControls.UserControl.TahakkukEditFormTable.GeriOdemeBilgileriTable geriOdemeBilgileriTable;
 	}
 }

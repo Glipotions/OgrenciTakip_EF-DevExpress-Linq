@@ -82,5 +82,6 @@ namespace OgrenciYazilim.Data.Context
 		public DbSet<HizmetBilgileri> HizmetBilgileri { get; set; }
 		public DbSet<IndirimBilgileri> IndirimBilgileri { get; set; }
 		public DbSet<OdemeBilgileri> OdemeBilgileri { get; set; }
+		public DbSet<GeriOdemeBilgileri> GeriOdemeBilgileri { get; set; }
 	}
 }

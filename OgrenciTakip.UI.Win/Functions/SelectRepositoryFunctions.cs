@@ -18,6 +18,7 @@ using OgrenciYazilim.Common.Functions;
 using OgrenciTakip.UI.Win.Forms.BankaHesapForms;
 using OgrenciTakip.UI.Win.Forms.OkulForms;
 using OgrenciYazilim.Model.Dto;
+using OgrenciTakip.UI.Win.Forms.KasaForms;
 
 namespace OgrenciTakip.UI.Win.Functions
 {
@@ -227,36 +228,36 @@ namespace OgrenciTakip.UI.Win.Functions
 					}
 					break;
 
-					//case "repositoryHesap":
-					//    {
-					//        var id = _tablo.GetRowCellId(_idColumn);
+				case "repositoryHesap":
+					{
+						var id = _tablo.GetRowCellId(_idColumn);
 
-					//        switch (_tablo.GetRow<GeriOdemeBilgileriL>().HesapTuru)
-					//        {
-					//            case GeriOdemeHesapTuru.BankaHesap:
-					//                {
-					//                    var entity = (BankaHesapL)ShowListForms<BankaHesapListForm>.ShowDialogListForm(KartTuru.Banka, id, OdemeTipi.Elden);
-					//                    if (entity == null) return;
+						switch (_tablo.GetRow<GeriOdemeBilgileriL>().HesapTuru)
+						{
+							case GeriOdemeHesapTuru.BankaHesap:
+								{
+									var entity = (BankaHesapL)ShowListForms<BankaHesapListForm>.ShowDialogListForm(KartTuru.Banka, id, OdemeTipi.Elden);
+									if (entity == null) return;
 
-					//                    _tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
-					//                    _tablo.SetFocusedRowCellValue(_nameColumn, entity.HesapAdi);
-					//                    _navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
-					//                    break;
-					//                }
+									_tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
+									_tablo.SetFocusedRowCellValue(_nameColumn, entity.HesapAdi);
+									_navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
+									break;
+								}
 
-					//            case GeriOdemeHesapTuru.Kasa:
-					//                {
-					//                    var entity = (KasaL)ShowListForms<KasaListForm>.ShowDialogListForm(KartTuru.Kasa, id);
-					//                    if (entity == null) return;
+							case GeriOdemeHesapTuru.Kasa:
+								{
+									var entity = (KasaL)ShowListForms<KasaListForm>.ShowDialogListForm(KartTuru.Kasa, id);
+									if (entity == null) return;
 
-					//                    _tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
-					//                    _tablo.SetFocusedRowCellValue(_nameColumn, entity.KasaAdi);
-					//                    _navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
-					//                    break;
-					//                }
-					//        }
-					//    }
-					//    break;
+									_tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
+									_tablo.SetFocusedRowCellValue(_nameColumn, entity.KasaAdi);
+									_navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
+									break;
+								}
+						}
+					}
+					break;
 			}
         }
     }
