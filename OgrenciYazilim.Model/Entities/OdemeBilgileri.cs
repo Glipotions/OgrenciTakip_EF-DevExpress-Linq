@@ -64,7 +64,7 @@ namespace OgrenciYazilim.Model.Entities
         public Banka Banka { get; set; }
         public BankaSube BankaSube { get; set; }
 
-        //1'e çok ilişki
-        //public ICollection<MakbuzHareketleri> MakbuzHareketleri { get; set; }
-    }
+		//1'e çok ilişki
+		public ICollection<MakbuzHareketleri> MakbuzHareketleri { get; set; }
+	}
 }

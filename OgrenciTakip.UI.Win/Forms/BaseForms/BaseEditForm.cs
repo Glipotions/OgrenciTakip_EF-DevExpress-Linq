@@ -54,6 +54,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			SizeChanged += BaseEditForm_SizeChanged;
 			Load += BaseEditForm_Load;
 			FormClosing += BaseEditForm_FormClosing;
+			Shown += BaseEditForm_Shown;
+
 
 			void ControlEvents(Control control)
 			{
@@ -101,6 +103,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		}
 
 
+
 		private void FarkliKaydet()
 		{
 			if (Messages.EvetSeciliEvetHayir("Bu Filtre Referans Alınarak Yeni Bir Filtre Oluşturulacaktır. Onaylıyor musunuz?", "Kayıt Onay") != DialogResult.Yes) return;
@@ -113,12 +116,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		private void SablonYukle()
 		{
 			Name.FormSablonYukle(this);
-		}
-		private void EntityDelete()
-		{
-			if (!((IBaseCommonBusiness)Business).Delete(OldEntity)) return;
-			RefreshYapilacak = true;
-			Close();
 		}
 		private void GeriAl()
 		{
@@ -209,6 +206,12 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		protected virtual bool EntityUpdate()
 		{
 			return ((IBaseGenelBusiness)Business).Update(OldEntity, CurrentEntity);
+		}
+		protected virtual void EntityDelete()
+		{
+			if (!((IBaseCommonBusiness)Business).Delete(OldEntity)) return;
+			RefreshYapilacak = true;
+			Close();
 		}
 		protected virtual void NesneyiKontrollereBagla() { }
 		protected virtual void GuncelNesneOlustur() { }
@@ -374,6 +377,10 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
 			if (!Kaydet(true))
 				e.Cancel = true;
+		}
+		protected virtual void BaseEditForm_Shown(object sender, EventArgs e)
+		{
+			throw new NotImplementedException();
 		}
 		protected virtual void Control_EnabledChange(object sender, EventArgs e) { }
 		protected virtual void Control_SelectedPageChanged(object sender, SelectedPageChangedEventArgs e)

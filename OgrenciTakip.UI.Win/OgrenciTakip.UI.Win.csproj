@@ -320,6 +320,18 @@
     <Compile Include="Forms\KontenjanForms\KontenjanListForm.Designer.cs">
       <DependentUpon>KontenjanListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MakbuzForms\MakbuzEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MakbuzForms\MakbuzEditForm.Designer.cs">
+      <DependentUpon>MakbuzEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MakbuzForms\MakbuzListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MakbuzForms\MakbuzListForm.Designer.cs">
+      <DependentUpon>MakbuzListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MeslekForms\MeslekEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -618,6 +630,12 @@
     </Compile>
     <Compile Include="UserControls\UserControl\Base\BaseTablo.Designer.cs">
       <DependentUpon>BaseTablo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl\GenelEditFormTable\MakbuzHareketleriTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\GenelEditFormTable\MakbuzHareketleriTable.Designer.cs">
+      <DependentUpon>MakbuzHareketleriTable.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControl\IndirimEditFormTable\IndiriminUygulanacagiHizmetlerTable.cs">
       <SubType>UserControl</SubType>

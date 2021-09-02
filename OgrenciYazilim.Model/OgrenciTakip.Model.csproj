@@ -72,6 +72,8 @@
     <Compile Include="Dto\IndiriminUygulanacagiHizmetBilgileriDto.cs" />
     <Compile Include="Dto\KardesBilgileriDto.cs" />
     <Compile Include="Dto\KasaDto.cs" />
+    <Compile Include="Dto\MakbuzDto.cs" />
+    <Compile Include="Dto\MakbuzHareketDto.cs" />
     <Compile Include="Dto\OdemeBilgileriDto.cs" />
     <Compile Include="Dto\OgrenciDto.cs" />
     <Compile Include="Dto\OkulDto.cs" />
@@ -98,6 +100,8 @@
     <Compile Include="Entities\IletisimBilgileri.cs" />
     <Compile Include="Entities\IndirimBilgileri.cs" />
     <Compile Include="Entities\KardesBilgileri.cs" />
+    <Compile Include="Entities\Makbuz.cs" />
+    <Compile Include="Entities\MakbuzHareketleri.cs" />
     <Compile Include="Entities\OdemeBilgileri.cs" />
     <Compile Include="Entities\Ogrenci.cs" />
     <Compile Include="Entities\Cari.cs" />

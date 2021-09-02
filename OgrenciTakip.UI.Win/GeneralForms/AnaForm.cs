@@ -43,17 +43,30 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 		public static string SubeAdi = "Şube Bilgisi Bekleniyor...";
 
 		public static DateTime EgitimBaslamaTarihi = new DateTime(2017, 09, 15);
+		public static DateTime DonemBaslamaTarihi = new DateTime(2018, 01, 15);
 		public static DateTime DonemBitisTarihi = new DateTime(2018, 6, 30);
 		public static bool GunTarihininOncesineHizmetBaslamaTarihiGirilebilir = true;
 		public static bool GunTarihininSonrasinaHizmetBaslamaTarihiGirilebilir = true;
 		public static bool GunTarihininOncesineIptalTarihiGirilebilir = true;
 		public static bool GunTarihininSonrasinaIptalTarihiGirilebilir = true;
+		public static bool GunTarihininOncesineMakbuzTarihiGirilebilir = true;
+		public static bool GunTarihininSonrasinaMakbuzTarihiGirilebilir = true;
 		public static bool HizmetTahakkukKurusKullan;
 		public static bool IndirimTahakkukKurusKullan;
 		public static bool OdemePlaniKurusKullan;
 		public static bool GittigiOkulZorunlu=true;
 		public static DateTime MaksimumTaksitTarihi = DateTime.Now.Date;
 		public static byte MaksimumTaksitSayisi = 12;
+		public static long? DefaultKasaHesapId;
+		public static long? DefaultBankaHesapId;
+		public static long? DefaultAvukatHesapId;
+		public static string DefaultKasaHesapAdi;
+		public static string DefaultBankaHesapAdi;
+		public static string DefaultAvukatHesapAdi;
+
+
+
+
 
 		public AnaForm()
 		{
