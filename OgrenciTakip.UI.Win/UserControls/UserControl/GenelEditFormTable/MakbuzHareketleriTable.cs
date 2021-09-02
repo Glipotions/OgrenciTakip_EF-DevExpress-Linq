@@ -15,6 +15,7 @@ using OgrenciTakip.UI.Win.GeneralForms;
 using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.UI.Win.UserControls.UserControl.Base;
 using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Business.Function;
 
 namespace OgrenciTakip.UI.Win.UserControls.UserControl.GenelEditFormTable
 {
@@ -75,8 +76,8 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.GenelEditFormTable
                     AsilBorclu = entity.AsilBorclu,
                     Ciranta = entity.Ciranta,
                     BelgeDurumu = ((MakbuzEditForm)OwnerForm).MakbuzTuru == MakbuzTuru.BaskaSubeyeGonderme ? BelgeDurumu.OnayBekliyor : ((MakbuzEditForm)OwnerForm).MakbuzTuru == MakbuzTuru.GelenBelgeyiOnaylama ? BelgeDurumu.Portfoyde : ((MakbuzEditForm)OwnerForm).MakbuzTuru.ToName().GetEnum<BelgeDurumu>(),
-                    KullaniciId = AnaForm.KullaniciId,
-                    EskiSubeId = AnaForm.SubeId,
+					KullaniciId = AnaForm.KullaniciId,
+					EskiSubeId = AnaForm.SubeId,
                     YeniSubeId = ((MakbuzEditForm)OwnerForm).MakbuzTuru == MakbuzTuru.BaskaSubeyeGonderme ? ((MakbuzEditForm)OwnerForm).txtHesap.Id : null,
                     Insert = true
                 };
@@ -235,6 +236,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.GenelEditFormTable
 
         protected override void Tablo_RowCountChanged(object sender, EventArgs e)
         {
+            //Makbuz Türünün kapatılmasını sağlıyor, yeni bir ek yapıldığında kapatılması gerkeiyor yoksa karışıklık olur
             ((MakbuzEditForm)OwnerForm).MakbuzTuruEnabled();
         }
     }

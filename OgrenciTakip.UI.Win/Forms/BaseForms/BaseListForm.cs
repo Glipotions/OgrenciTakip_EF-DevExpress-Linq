@@ -64,6 +64,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			Tablo.FilterEditorCreated += Tablo_FilterEditorCreated;
 			Tablo.ColumnFilterChanged += Tablo_ColumnFilterChanged;
 			Tablo.CustomDrawFooterCell += Tablo_CustomDrawFooterCell;
+			Tablo.FocusedRowObjectChanged += Tablo_FocusedRowObjectChanged;
+			Tablo.RowDeleted += Tablo_RowDeleted;
 
 			//FormEvents
 			Shown += BaseListForm_Shown;
@@ -72,6 +74,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			LocationChanged += BaseListForm_LocationChanged;
 			SizeChanged += BaseListForm_SizeChanged;
 		}
+
+
 
 		private void ButtonGizleGoster()
 		{
@@ -82,10 +86,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
 			ShowItems?.ForEach(x => x.Visibility = BarItemVisibility.Always);
 			HideItems?.ForEach(x => x.Visibility = BarItemVisibility.Never);
-		}
-		private void SutunGizleGoster()
-		{
-			throw new NotImplementedException();
 		}
 		private void SablonKaydet()
 		{
@@ -163,6 +163,12 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			Tablo.RowFocus("Id", id);
 
 
+		}
+		protected virtual void SutunGizleGoster()
+		{
+		}
+		protected virtual void BelgeHareketleri()
+		{
 		}
 		protected virtual void SelectEntity()
 		{
@@ -273,6 +279,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 				AktifKartlariGoster = !AktifKartlariGoster;
 				FormCaptionAyarla();
 			}
+			else if (e.Item == btnBelgeHareketleri)
+				BelgeHareketleri();
 
 			Cursor.Current = DefaultCursor;
 		}
@@ -329,11 +337,19 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			if (e.Column.Summary.Count > 0)
 				e.Appearance.TextOptions.HAlignment = e.Column.ColumnEdit.Appearance.HAlignment;
 		}
+		private void Tablo_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+		{
+			SutunGizleGoster();
+		}
+		private void Tablo_RowDeleted(object sender, DevExpress.Data.RowDeletedEventArgs e)
+		{
+			SutunGizleGoster();
+		}
 		private void BaseListForm_Shown(object sender, EventArgs e)
 		{
 			Tablo.Focus();
 			ButtonGizleGoster();
-			//SutunGizleGoster();
+			SutunGizleGoster();
 
 
 			if (IsMdiChild || !SeciliGelecekId.HasValue) return;

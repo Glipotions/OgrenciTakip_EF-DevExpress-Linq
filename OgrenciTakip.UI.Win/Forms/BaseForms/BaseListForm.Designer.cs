@@ -164,6 +164,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			this.btnTahsilEtmeKasa = new DevExpress.XtraBars.BarButtonItem();
 			this.btnKarsiliksizOlarakİsaretleme = new DevExpress.XtraBars.BarButtonItem();
 			this.btnTahsiliImkansizHaleGelme = new DevExpress.XtraBars.BarButtonItem();
+			this.btnBelgeHareketleri = new DevExpress.XtraBars.BarButtonItem();
 			this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -179,78 +180,79 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			this.ribbonControl.DrawGroupsBorderMode = DevExpress.Utils.DefaultBoolean.False;
 			this.ribbonControl.ExpandCollapseItem.Id = 0;
 			this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.ribbonControl.ExpandCollapseItem,
-            this.ribbonControl.SearchEditItem,
-            this.btnYeni,
-            this.btnSil,
-            this.btnSec,
-            this.btnDuzelt,
-            this.btnYenile,
-            this.btnFiltrele,
-            this.btnKolonlar,
-            this.btnYazdir,
-            this.btnGonder1,
-            this.btnCikis,
-            this.barInsert,
-            this.barInsertAciklama,
-            this.barDelete,
-            this.barDeleteAciklama,
-            this.barEnter,
-            this.barEnterAciklama,
-            this.barDuzelt,
-            this.barDuzeltAciklama,
-            this.barYenile,
-            this.barYenileAciklama,
-            this.barFiltrele,
-            this.barFiltreleAciklama,
-            this.barKolonlar,
-            this.barKolonlarAciklama,
-            this.barYazdir,
-            this.barYazdirAciklama,
-            this.barGonder,
-            this.barGonderAciklama,
-            this.barCikis,
-            this.barCikisAciklama,
-            this.btnAktifPasifKartlar,
-            this.btnGonder,
-            this.btnExcelDosyalari,
-            this.btnExcelStandart,
-            this.btnExcelFormatli,
-            this.btnExcelFormatsiz,
-            this.btnWordDosyasi,
-            this.btnPdfDosyasi,
-            this.btnTxtDosyasi,
-            this.btnBagliKartlar,
-            this.btnTahakkukYap,
-            this.btnYeniMakbuz,
-            this.barSubItem1,
-            this.barSubItem2,
-            this.barSubItem3,
-            this.barSubItem4,
-            this.barSubItem5,
-            this.btnAvukataGonderme,
-            this.btnAvukatYoluylaTahsilEtme,
-            this.btnTahsilEtmeBanka,
-            this.btnBankayaTahsileGonderme,
-            this.btnBankaYoluylaTahsilEtme,
-            this.btnBlokeyeAlma,
-            this.btnBlokeCozumu,
-            this.btnCiroEtme,
-            this.btnMahsupEtme,
-            this.btnOdenmisOlarakIsaretleme,
-            this.btnMusteriyeGeriIade,
-            this.btnPortfoyeGeriIade,
-            this.btnPortfoyeKarsiliksizIade,
-            this.btnBaskaSubeyeGonderme,
-            this.btnGelenBelgeyiOnaylama,
-            this.btnTahsilEtmeKasa,
-            this.btnKarsiliksizOlarakİsaretleme,
-            this.btnTahsiliImkansizHaleGelme});
+			this.ribbonControl.ExpandCollapseItem,
+			this.ribbonControl.SearchEditItem,
+			this.btnYeni,
+			this.btnSil,
+			this.btnSec,
+			this.btnDuzelt,
+			this.btnYenile,
+			this.btnFiltrele,
+			this.btnKolonlar,
+			this.btnYazdir,
+			this.btnGonder1,
+			this.btnCikis,
+			this.barInsert,
+			this.barInsertAciklama,
+			this.barDelete,
+			this.barDeleteAciklama,
+			this.barEnter,
+			this.barEnterAciklama,
+			this.barDuzelt,
+			this.barDuzeltAciklama,
+			this.barYenile,
+			this.barYenileAciklama,
+			this.barFiltrele,
+			this.barFiltreleAciklama,
+			this.barKolonlar,
+			this.barKolonlarAciklama,
+			this.barYazdir,
+			this.barYazdirAciklama,
+			this.barGonder,
+			this.barGonderAciklama,
+			this.barCikis,
+			this.barCikisAciklama,
+			this.btnAktifPasifKartlar,
+			this.btnGonder,
+			this.btnExcelDosyalari,
+			this.btnExcelStandart,
+			this.btnExcelFormatli,
+			this.btnExcelFormatsiz,
+			this.btnWordDosyasi,
+			this.btnPdfDosyasi,
+			this.btnTxtDosyasi,
+			this.btnBagliKartlar,
+			this.btnTahakkukYap,
+			this.btnYeniMakbuz,
+			this.barSubItem1,
+			this.barSubItem2,
+			this.barSubItem3,
+			this.barSubItem4,
+			this.barSubItem5,
+			this.btnAvukataGonderme,
+			this.btnAvukatYoluylaTahsilEtme,
+			this.btnTahsilEtmeBanka,
+			this.btnBankayaTahsileGonderme,
+			this.btnBankaYoluylaTahsilEtme,
+			this.btnBlokeyeAlma,
+			this.btnBlokeCozumu,
+			this.btnCiroEtme,
+			this.btnMahsupEtme,
+			this.btnOdenmisOlarakIsaretleme,
+			this.btnMusteriyeGeriIade,
+			this.btnPortfoyeGeriIade,
+			this.btnPortfoyeKarsiliksizIade,
+			this.btnBaskaSubeyeGonderme,
+			this.btnGelenBelgeyiOnaylama,
+			this.btnTahsilEtmeKasa,
+			this.btnKarsiliksizOlarakİsaretleme,
+			this.btnTahsiliImkansizHaleGelme,
+			this.btnBelgeHareketleri});
 			this.ribbonControl.Location = new System.Drawing.Point(0, 0);
 			this.ribbonControl.MaxItemId = 67;
 			this.ribbonControl.Name = "ribbonControl";
 			this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1});
+			this.ribbonPage1});
 			this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
 			this.ribbonControl.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.False;
 			this.ribbonControl.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
@@ -654,10 +656,10 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			this.btnGonder.ImageOptions.LargeImage = global::OgrenciTakip.UI.Win.Properties.Resources.export_32x32;
 			this.btnGonder.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F12);
 			this.btnGonder.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnExcelDosyalari),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnWordDosyasi),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnPdfDosyasi),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnTxtDosyasi)});
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnExcelDosyalari),
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnWordDosyasi),
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnPdfDosyasi),
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnTxtDosyasi)});
 			this.btnGonder.Name = "btnGonder";
 			toolTipTitleItem20.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
 			toolTipTitleItem20.Text = "( F12 )";
@@ -676,9 +678,9 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			this.btnExcelDosyalari.Id = 33;
 			this.btnExcelDosyalari.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.exporttoxlsx_32x32;
 			this.btnExcelDosyalari.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnExcelFormatsiz),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnExcelStandart),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnExcelFormatli)});
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnExcelFormatsiz),
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnExcelStandart),
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnExcelFormatli)});
 			this.btnExcelDosyalari.Name = "btnExcelDosyalari";
 			// 
 			// btnExcelFormatsiz
@@ -776,14 +778,14 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			this.btnYeniMakbuz.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
 			this.btnYeniMakbuz.ImageOptions.LargeImage = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_32x32;
 			this.btnYeniMakbuz.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem2),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem3),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem4),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem5),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnTahsilEtmeKasa),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnKarsiliksizOlarakİsaretleme),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnTahsiliImkansizHaleGelme)});
+			new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem1),
+			new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem2),
+			new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem3),
+			new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem4),
+			new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem5),
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnTahsilEtmeKasa),
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnKarsiliksizOlarakİsaretleme),
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnTahsiliImkansizHaleGelme)});
 			this.btnYeniMakbuz.Name = "btnYeniMakbuz";
 			this.btnYeniMakbuz.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
 			// 
@@ -793,8 +795,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			this.barSubItem1.Id = 44;
 			this.barSubItem1.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
 			this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnAvukataGonderme),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnAvukatYoluylaTahsilEtme)});
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnAvukataGonderme),
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnAvukatYoluylaTahsilEtme)});
 			this.barSubItem1.Name = "barSubItem1";
 			// 
 			// btnAvukataGonderme
@@ -817,11 +819,11 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			this.barSubItem2.Id = 45;
 			this.barSubItem2.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
 			this.barSubItem2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnTahsilEtmeBanka),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnBankayaTahsileGonderme),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnBankaYoluylaTahsilEtme),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnBlokeyeAlma),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnBlokeCozumu)});
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnTahsilEtmeBanka),
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnBankayaTahsileGonderme),
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnBankaYoluylaTahsilEtme),
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnBlokeyeAlma),
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnBlokeCozumu)});
 			this.barSubItem2.Name = "barSubItem2";
 			// 
 			// btnTahsilEtmeBanka
@@ -866,9 +868,9 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			this.barSubItem3.Id = 46;
 			this.barSubItem3.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
 			this.barSubItem3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnCiroEtme),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnMahsupEtme),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnOdenmisOlarakIsaretleme)});
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnCiroEtme),
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnMahsupEtme),
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnOdenmisOlarakIsaretleme)});
 			this.barSubItem3.Name = "barSubItem3";
 			// 
 			// btnCiroEtme
@@ -898,9 +900,9 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			this.barSubItem4.Id = 47;
 			this.barSubItem4.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
 			this.barSubItem4.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnMusteriyeGeriIade),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnPortfoyeGeriIade),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnPortfoyeKarsiliksizIade)});
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnMusteriyeGeriIade),
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnPortfoyeGeriIade),
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnPortfoyeKarsiliksizIade)});
 			this.barSubItem4.Name = "barSubItem4";
 			// 
 			// btnMusteriyeGeriIade
@@ -930,8 +932,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			this.barSubItem5.Id = 48;
 			this.barSubItem5.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
 			this.barSubItem5.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnBaskaSubeyeGonderme),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnGelenBelgeyiOnaylama)});
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnBaskaSubeyeGonderme),
+			new DevExpress.XtraBars.LinkPersistInfo(this.btnGelenBelgeyiOnaylama)});
 			this.barSubItem5.Name = "barSubItem5";
 			// 
 			// btnBaskaSubeyeGonderme
@@ -971,11 +973,20 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			this.btnTahsiliImkansizHaleGelme.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
 			this.btnTahsiliImkansizHaleGelme.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z));
 			this.btnTahsiliImkansizHaleGelme.Name = "btnTahsiliImkansizHaleGelme";
+			//
+			//// btnBelgeHareketleri
+			// 
+			this.btnBelgeHareketleri.Caption = "Belge Hareketleri";
+			this.btnBelgeHareketleri.Id = 70;
+			this.btnBelgeHareketleri.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.documentmap_16x16;
+			this.btnBelgeHareketleri.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F6);
+			this.btnBelgeHareketleri.Name = "btnBelgeHareketleri";
+			this.btnBelgeHareketleri.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
 			// 
 			// ribbonPage1
 			// 
 			this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
+			this.ribbonPageGroup1});
 			this.ribbonPage1.Name = "ribbonPage1";
 			this.ribbonPage1.Text = "ribbonPage1";
 			// 
@@ -1038,6 +1049,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			this.sagTikMenu.ItemLinks.Add(this.btnDuzelt);
 			this.sagTikMenu.ItemLinks.Add(this.btnYenile);
 			this.sagTikMenu.ItemLinks.Add(this.btnGonder1);
+			this.sagTikMenu.ItemLinks.Add(this.btnBelgeHareketleri);
 			this.sagTikMenu.Name = "sagTikMenu";
 			this.sagTikMenu.Ribbon = this.ribbonControl;
 			// 
@@ -1106,6 +1118,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		protected DevExpress.XtraBars.BarStaticItem barYazdirAciklama;
 		protected DevExpress.XtraBars.BarStaticItem barGonder;
 		protected DevExpress.XtraBars.BarStaticItem barGonderAciklama;
+		protected DevExpress.XtraBars.BarButtonItem btnBelgeHareketleri;
 		protected DevExpress.XtraBars.BarSubItem btnGonder;
 		protected DevExpress.XtraBars.BarButtonItem btnYeni;
 		protected internal DevExpress.XtraBars.BarButtonItem btnTahakkukYap;

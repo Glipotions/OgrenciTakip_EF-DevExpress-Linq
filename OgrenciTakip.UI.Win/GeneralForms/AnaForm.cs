@@ -16,6 +16,7 @@ using OgrenciTakip.UI.Win.Forms.IptalNedeniForms;
 using OgrenciTakip.UI.Win.Forms.IsyeriForms;
 using OgrenciTakip.UI.Win.Forms.KasaForms;
 using OgrenciTakip.UI.Win.Forms.KontenjanForms;
+using OgrenciTakip.UI.Win.Forms.MakbuzForms;
 using OgrenciTakip.UI.Win.Forms.MeslekForms;
 using OgrenciTakip.UI.Win.Forms.OdemeTuruForms;
 using OgrenciTakip.UI.Win.Forms.OgrenciForms;
@@ -54,7 +55,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 		public static bool HizmetTahakkukKurusKullan;
 		public static bool IndirimTahakkukKurusKullan;
 		public static bool OdemePlaniKurusKullan;
-		public static bool GittigiOkulZorunlu=true;
+		public static bool GittigiOkulZorunlu = true;
 		public static DateTime MaksimumTaksitTarihi = DateTime.Now.Date;
 		public static byte MaksimumTaksitSayisi = 12;
 		public static long? DefaultKasaHesapId;
@@ -63,6 +64,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 		public static string DefaultKasaHesapAdi;
 		public static string DefaultBankaHesapAdi;
 		public static string DefaultAvukatHesapAdi;
+		public static long KullaniciId = 1;
 
 
 
@@ -149,6 +151,11 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 				ShowListForms<IndirimListForm>.ShowListForm(KartTuru.Indirim);
 			else if (e.Item == btnTahakukKartlari)
 				ShowListForms<TahakkukListForm>.ShowListForm(KartTuru.Tahakkuk);
+			else if (e.Item == btnMakbuzKartlari)
+				ShowListForms<MakbuzListForm>.ShowListForm(KartTuru.Makbuz);
+
+
+
 		}
 	}
 }

@@ -67,6 +67,8 @@
     <Compile Include="General\BankaBusiness.cs" />
     <Compile Include="General\BankaHesapBusiness.cs" />
     <Compile Include="General\BankaSubeBusiness.cs" />
+    <Compile Include="General\BelgeHareketleriBusiness.cs" />
+    <Compile Include="General\BelgeSecimBusiness.cs" />
     <Compile Include="General\BilgiNotlariBusiness.cs" />
     <Compile Include="General\CariBusiness.cs" />
     <Compile Include="General\EposBilgileriBusiness.cs" />
