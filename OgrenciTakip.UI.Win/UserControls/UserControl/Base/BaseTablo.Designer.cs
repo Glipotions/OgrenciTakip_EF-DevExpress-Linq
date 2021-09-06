@@ -122,7 +122,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
 			this.btnBelgeHareketleri.Id = 5;
 			this.btnBelgeHareketleri.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.documentmap_16x16;
 			this.btnBelgeHareketleri.Name = "btnBelgeHareketleri";
-			this.btnBelgeHareketleri.ShortcutKeyDisplayString = "F4";
+			this.btnBelgeHareketleri.ShortcutKeyDisplayString = "F6";
 			this.btnBelgeHareketleri.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
 			// 
 			// btnTumunuSec

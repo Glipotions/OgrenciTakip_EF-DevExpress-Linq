@@ -19,23 +19,23 @@ namespace OgrenciTakip.Business.General
             return List(filter, x => new
             {
                 OdemeBelgesi = x,
-                //Toplamlar = x.MakbuzHareketleri.GroupBy(p => p.OdemeBilgileriId).DefaultIfEmpty().Select(p => new
-                //{
-                //    Tahsil = p.Where(z => z.BelgeDurumu == BelgeDurumu.AvukatYoluylaTahsilEtme || z.BelgeDurumu == BelgeDurumu.BankaYoluylaTahsilEtme || z.BelgeDurumu == BelgeDurumu.BlokeCozumu || z.BelgeDurumu == BelgeDurumu.KismiAvukatYoluylaTahsilEtme || z.BelgeDurumu == BelgeDurumu.KismiTahsilEdildi || z.BelgeDurumu == BelgeDurumu.MahsupEtme || z.BelgeDurumu == BelgeDurumu.OdenmisOlarakIsaretleme || z.BelgeDurumu == BelgeDurumu.TahsilEtmeBanka || z.BelgeDurumu == BelgeDurumu.TahsilEtmeKasa).Select(z => z.IslemTutari).DefaultIfEmpty(0).Sum(),
+				Toplamlar = x.MakbuzHareketleri.GroupBy(p => p.OdemeBilgileriId).DefaultIfEmpty().Select(p => new
+				{
+					Tahsil = p.Where(z => z.BelgeDurumu == BelgeDurumu.AvukatYoluylaTahsilEtme || z.BelgeDurumu == BelgeDurumu.BankaYoluylaTahsilEtme || z.BelgeDurumu == BelgeDurumu.BlokeCozumu || z.BelgeDurumu == BelgeDurumu.KismiAvukatYoluylaTahsilEtme || z.BelgeDurumu == BelgeDurumu.KismiTahsilEdildi || z.BelgeDurumu == BelgeDurumu.MahsupEtme || z.BelgeDurumu == BelgeDurumu.OdenmisOlarakIsaretleme || z.BelgeDurumu == BelgeDurumu.TahsilEtmeBanka || z.BelgeDurumu == BelgeDurumu.TahsilEtmeKasa).Select(z => z.IslemTutari).DefaultIfEmpty(0).Sum(),
 
-                //    Iade = p.Where(z => z.BelgeDurumu == BelgeDurumu.MusteriyeGeriIade).Select(z => z.IslemTutari).DefaultIfEmpty(0).Sum(),
+					Iade = p.Where(z => z.BelgeDurumu == BelgeDurumu.MusteriyeGeriIade).Select(z => z.IslemTutari).DefaultIfEmpty(0).Sum(),
 
-                //    Tahsilde = p.Where(z => z.BelgeDurumu == BelgeDurumu.AvukataGonderme || z.BelgeDurumu == BelgeDurumu.BankayaTahsileGonderme || z.BelgeDurumu == BelgeDurumu.CiroEtme || z.BelgeDurumu == BelgeDurumu.BlokeyeAlma).Select(z => z.IslemTutari).DefaultIfEmpty(0).Sum() - p.Where(z => z.BelgeDurumu == BelgeDurumu.AvukatYoluylaTahsilEtme || z.BelgeDurumu == BelgeDurumu.BankaYoluylaTahsilEtme || z.BelgeDurumu == BelgeDurumu.BlokeCozumu || z.BelgeDurumu == BelgeDurumu.KismiAvukatYoluylaTahsilEtme || z.BelgeDurumu == BelgeDurumu.OdenmisOlarakIsaretleme || z.BelgeDurumu == BelgeDurumu.PortfoyeGeriIade || z.BelgeDurumu == BelgeDurumu.PortfoyeKarsiliksizIade).Select(z => z.IslemTutari).DefaultIfEmpty(0).Sum(),
+					Tahsilde = p.Where(z => z.BelgeDurumu == BelgeDurumu.AvukataGonderme || z.BelgeDurumu == BelgeDurumu.BankayaTahsileGonderme || z.BelgeDurumu == BelgeDurumu.CiroEtme || z.BelgeDurumu == BelgeDurumu.BlokeyeAlma).Select(z => z.IslemTutari).DefaultIfEmpty(0).Sum() - p.Where(z => z.BelgeDurumu == BelgeDurumu.AvukatYoluylaTahsilEtme || z.BelgeDurumu == BelgeDurumu.BankaYoluylaTahsilEtme || z.BelgeDurumu == BelgeDurumu.BlokeCozumu || z.BelgeDurumu == BelgeDurumu.KismiAvukatYoluylaTahsilEtme || z.BelgeDurumu == BelgeDurumu.OdenmisOlarakIsaretleme || z.BelgeDurumu == BelgeDurumu.PortfoyeGeriIade || z.BelgeDurumu == BelgeDurumu.PortfoyeKarsiliksizIade).Select(z => z.IslemTutari).DefaultIfEmpty(0).Sum(),
 
-                //    BelgeDurumu = p.Any() ? p.OrderByDescending(z => z.Id).FirstOrDefault().BelgeDurumu : BelgeDurumu.Portfoyde,
+					BelgeDurumu = p.Any() ? p.OrderByDescending(z => z.Id).FirstOrDefault().BelgeDurumu : BelgeDurumu.Portfoyde,
 
-                //    SonHareketId = (int?)p.Max(z => z.Id),
+					SonHareketId = (int?)p.Max(z => z.Id),
 
-                //    SonHareketTarihi = (DateTime?)p.OrderByDescending(z => z.Id).FirstOrDefault().Makbuz.Tarih,
+					SonHareketTarihi = (DateTime?)p.OrderByDescending(z => z.Id).FirstOrDefault().Makbuz.Tarih,
 
-                //    SonIslemYeri = p.OrderByDescending(z => z.Id).Select(z => z.Makbuz.AvukatHesapId != null ? z.Makbuz.AvukatHesap.AdiSoyadi : z.Makbuz.BankaHesapId != null ? z.Makbuz.BankaHesap.HesapAdi : z.Makbuz.CariHesapId != null ? z.Makbuz.CariHesap.CariAdi : z.Makbuz.KasaHesapId != null ? z.Makbuz.KasaHesap.KasaAdi : z.Makbuz.SubeHesapId != null ? z.Makbuz.SubeHesap.SubeAdi : null).FirstOrDefault()
-                //}).FirstOrDefault(),
-            }).Select(x => new OdemeBilgileriL
+					SonIslemYeri = p.OrderByDescending(z => z.Id).Select(z => z.Makbuz.AvukatHesapId != null ? z.Makbuz.AvukatHesap.AdiSoyadi : z.Makbuz.BankaHesapId != null ? z.Makbuz.BankaHesap.HesapAdi : z.Makbuz.CariHesapId != null ? z.Makbuz.CariHesap.CariAdi : z.Makbuz.KasaHesapId != null ? z.Makbuz.KasaHesap.KasaAdi : z.Makbuz.SubeHesapId != null ? z.Makbuz.SubeHesap.SubeAdi : null).FirstOrDefault()
+				}).FirstOrDefault(),
+			}).Select(x => new OdemeBilgileriL
             {
                 Id = x.OdemeBelgesi.Id,
                 TahakkukId = x.OdemeBelgesi.TahakkukId,
@@ -64,15 +64,15 @@ namespace OgrenciTakip.Business.General
                 SubeAdi = x.OdemeBelgesi.Tahakkuk.Sube.SubeAdi,
                 SubeIlAdi = x.OdemeBelgesi.Tahakkuk.Sube.AdresIl.IlAdi,
 
-                //Tahsil = x.Toplamlar.Tahsil,
-                //Tahsilde = x.Toplamlar.Tahsilde,
-                //Iade = x.Toplamlar.Iade,
-                //Kalan = x.OdemeBelgesi.Tutar - (x.Toplamlar.Tahsil + x.Toplamlar.Iade),
-                //BelgeDurumu = x.Toplamlar.BelgeDurumu,
-                //SonHareketId = x.Toplamlar.SonHareketId,
-                //SonHareketTarihi = x.Toplamlar.SonHareketTarihi,
-                //SonIslemYeri = x.Toplamlar.SonIslemYeri
-            }).ToList();
+				Tahsil = x.Toplamlar.Tahsil,
+				Tahsilde = x.Toplamlar.Tahsilde,
+				Iade = x.Toplamlar.Iade,
+				Kalan = x.OdemeBelgesi.Tutar - (x.Toplamlar.Tahsil + x.Toplamlar.Iade),
+				BelgeDurumu = x.Toplamlar.BelgeDurumu,
+				SonHareketId = x.Toplamlar.SonHareketId,
+				SonHareketTarihi = x.Toplamlar.SonHareketTarihi,
+				SonIslemYeri = x.Toplamlar.SonIslemYeri
+			}).ToList();
 
             //{} ile bir anonim type oluşturduk
         }

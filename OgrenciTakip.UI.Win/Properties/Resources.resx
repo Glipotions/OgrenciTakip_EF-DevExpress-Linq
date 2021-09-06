@@ -238,6 +238,9 @@
   <data name="historyitem_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\historyitem_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="crossdatasourcefiltering _16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\crossdatasourcefiltering _16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="addfile_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\addfile_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -249,6 +252,9 @@
   </data>
   <data name="removeitem_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\removeitem_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="today_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\today_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="textbox_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\textbox_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -268,8 +274,8 @@
   <data name="exporttotxt_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exporttotxt_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="weekend_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\weekend_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="today_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\today_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="exporttodocx_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exporttodocx_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -285,6 +291,9 @@
   </data>
   <data name="saveall_32x321" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\saveall_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="weekend_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\weekend_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="documentmap_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\documentmap_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -319,6 +328,9 @@
   <data name="doctor_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\doctor_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="saledetalis_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\saledetalis_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="print_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\print_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -331,7 +343,7 @@
   <data name="task_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\task_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="saledetalis_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\saledetalis_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="crossdatasourcefiltering_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\crossdatasourcefiltering_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -12,6 +12,8 @@ using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.UI.Win.UserControls.UserControl.Base;
 using OgrenciTakip.Common.Enums;
 using OgrenciYazilim.Model.Dto;
+using OgrenciTakip.UI.Win.Forms.MakbuzForms;
+using OgrenciYazilim.Common.Enums;
 
 namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
 {
@@ -198,8 +200,8 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
             var entity = tablo.GetRow<OdemeBilgileriL>();
             if (entity == null) return;
 
-            //ShowListForms<BelgeHareketleriListForm>.ShowDialogListForm(KartTuru.BelgeHareketleri, null, entity.Id);
-        }
+			ShowListForms<BelgeHareketleriListForm>.ShowDialogListForm(KartTuru.BelgeHareketleri, null, entity.Id);
+		}
 
         protected override void Tablo_CellValueChanged(object sender, CellValueChangedEventArgs e)
         {

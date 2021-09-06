@@ -80,6 +80,7 @@
     <Compile Include="Dto\OgrenciDto.cs" />
     <Compile Include="Dto\OkulDto.cs" />
     <Compile Include="Dto\PromosyonBilgileriDto.cs" />
+    <Compile Include="Dto\RaporDto.cs" />
     <Compile Include="Dto\SinavBilgileriDto.cs" />
     <Compile Include="Dto\SınıfDto.cs" />
     <Compile Include="Dto\TahakkukDto.cs" />
@@ -119,6 +120,7 @@
     <Compile Include="Entities\OzelKod.cs" />
     <Compile Include="Entities\Promosyon.cs" />
     <Compile Include="Entities\PromosyonBilgileri.cs" />
+    <Compile Include="Entities\Rapor.cs" />
     <Compile Include="Entities\Servis.cs" />
     <Compile Include="Entities\SinavBilgileri.cs" />
     <Compile Include="Entities\Sube.cs" />

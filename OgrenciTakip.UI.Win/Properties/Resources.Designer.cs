@@ -253,6 +253,26 @@ namespace OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap crossdatasourcefiltering__16x16 {
+            get {
+                object obj = ResourceManager.GetObject("crossdatasourcefiltering _16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap crossdatasourcefiltering_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("crossdatasourcefiltering_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap currency_16x16 {
             get {
                 object obj = ResourceManager.GetObject("currency_16x16", resourceCulture);
@@ -736,6 +756,26 @@ namespace OgrenciTakip.UI.Win.Properties {
         internal static System.Drawing.Bitmap textbox_16x16 {
             get {
                 object obj = ResourceManager.GetObject("textbox_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap today_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("today_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap today_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("today_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

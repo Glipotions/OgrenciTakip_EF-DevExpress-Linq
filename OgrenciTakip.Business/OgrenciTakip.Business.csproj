@@ -93,6 +93,7 @@
     <Compile Include="General\OzelKodBusiness.cs" />
     <Compile Include="General\PromosyonBilgileriBusiness.cs" />
     <Compile Include="General\PromosyonBusiness.cs" />
+    <Compile Include="General\RaporBusiness.cs" />
     <Compile Include="General\ServisBusiness.cs" />
     <Compile Include="General\SinavBilgileriBusiness.cs" />
     <Compile Include="General\SinifBusiness.cs" />

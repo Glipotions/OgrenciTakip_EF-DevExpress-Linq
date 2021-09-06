@@ -36,15 +36,38 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.Desktop.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v20.2.UI, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Export, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.2.UI, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.2.Extensions, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.2.Wizard, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGrid.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v20.2.Extensions, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -53,7 +76,11 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
     </Reference>
@@ -416,6 +443,18 @@
     <Compile Include="Forms\PromosyonForms\PromosyonListForm.Designer.cs">
       <DependentUpon>PromosyonListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\RaporForms\RaporEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RaporForms\RaporEditForm.Designer.cs">
+      <DependentUpon>RaporEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RaporForms\RaporListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RaporForms\RaporListForm.Designer.cs">
+      <DependentUpon>RaporListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RehberForms\RehberEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -539,6 +578,18 @@
     <Compile Include="GeneralForms\RaporOnizleme.Designer.cs">
       <DependentUpon>RaporOnizleme.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeneralForms\RaporSecim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralForms\RaporSecim.Designer.cs">
+      <DependentUpon>RaporSecim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForms\RaporTasarim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralForms\RaporTasarim.Designer.cs">
+      <DependentUpon>RaporTasarim.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeneralForms\TabloDokumParametreleri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -549,6 +600,12 @@
     <Compile Include="Interfaces\IStatusBarKisayol.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\XtraReports\Taahakkuk\OgrenciKartiRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Taahakkuk\OgrenciKartiRaporu.Designer.cs">
+      <DependentUpon>OgrenciKartiRaporu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Show\Interfaces\IBaseFormShow.cs" />
     <Compile Include="Show\ShowEditForms.cs" />
     <Compile Include="Show\ShowListForms.cs" />
@@ -612,6 +669,12 @@
     </Compile>
     <Compile Include="UserControls\Controls\MyToggleSwitch.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\MyXtraReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\MyXtraReport.Designer.cs">
+      <DependentUpon>MyXtraReport.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Grid\MyBandedGridControl.cs">
       <SubType>Component</SubType>
@@ -823,6 +886,9 @@
     <EmbeddedResource Include="Forms\PromosyonForms\PromosyonListForm.resx">
       <DependentUpon>PromosyonListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RaporForms\RaporEditForm.resx">
+      <DependentUpon>RaporEditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\RehberForms\RehberEditForm.resx">
       <DependentUpon>RehberEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -868,6 +934,12 @@
     <EmbeddedResource Include="GeneralForms\RaporOnizleme.resx">
       <DependentUpon>RaporOnizleme.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GeneralForms\RaporSecim.resx">
+      <DependentUpon>RaporSecim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralForms\RaporTasarim.resx">
+      <DependentUpon>RaporTasarim.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GeneralForms\TabloDokumParametreleri.resx">
       <DependentUpon>TabloDokumParametreleri.cs</DependentUpon>
     </EmbeddedResource>
@@ -882,6 +954,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\XtraReports\Taahakkuk\OgrenciKartiRaporu.resx">
+      <DependentUpon>OgrenciKartiRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Controls\MyXtraReport.resx">
+      <DependentUpon>MyXtraReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Navigators\InsUptNavigator.resx">
       <DependentUpon>InsUptNavigator.cs</DependentUpon>
     </EmbeddedResource>
@@ -1147,6 +1225,23 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\saledetalis_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\today_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\today_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crossdatasourcefiltering _16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crossdatasourcefiltering_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reports\FormReports\" />
+    <Folder Include="Reports\XtraReports\Fatura\" />
+    <Folder Include="Reports\XtraReports\Makbuz\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

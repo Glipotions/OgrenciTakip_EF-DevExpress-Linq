@@ -1,8 +1,10 @@
-﻿using DevExpress.XtraBars;
+﻿using DevExpress.Utils.Extensions;
+using DevExpress.XtraBars;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraLayout;
+using DevExpress.XtraReports.UI;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.UserControls.Controls;
 using OgrenciTakip.UI.Win.UserControls.UserControl.Base;
@@ -298,5 +300,33 @@ namespace OgrenciTakip.UI.Win.Functions
 
 			tablo.FocusedRowHandle = rowHandle;
 		}
+
+		public static void CreateDropDownMenu(this BarButtonItem baseButton, BarItem[] buttonItems)
+		{
+			baseButton.ButtonStyle = BarButtonStyle.CheckDropDown;
+			var popupMenu = new PopupMenu();
+			buttonItems.ForEach(x => x.Visibility = BarItemVisibility.Always);
+			popupMenu.ItemLinks.AddRange(buttonItems);
+			baseButton.DropDownControl = popupMenu;
+		}
+
+		public static MyXtraReport StreamToReport(this MemoryStream stream)
+		{
+			return (MyXtraReport)XtraReport.FromStream(stream, true);
+		}
+
+		public static MemoryStream ByteToStream(this byte[] report)
+		{
+			return new MemoryStream(report);
+		}
+
+		public static MemoryStream ReportToStream(this XtraReport rapor)
+		{
+			var stream = new MemoryStream();
+			rapor.SaveLayout(stream);  //rapor dizaynı kayıt edilir
+			return stream;
+		}
+
+
 	}
 }

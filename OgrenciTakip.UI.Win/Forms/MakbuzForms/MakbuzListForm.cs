@@ -80,7 +80,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
                 id = ShowEditForms<MakbuzEditForm>.ShowDialogEditForm(KartTuru.Makbuz, -1, MakbuzTuru.GelenBelgeyiOnaylama, MakbuzHesapTuru.Transfer);
             else if (e.Item == btnTahsilEtmeKasa)
                 id = ShowEditForms<MakbuzEditForm>.ShowDialogEditForm(KartTuru.Makbuz, -1, MakbuzTuru.TahsilEtmeKasa, MakbuzHesapTuru.Kasa);
-            else if (e.Item == btnKarsiliksizOlarakİsaretleme)
+            else if (e.Item == btnKarsiliksizOlarakIsaretleme)
                 id = ShowEditForms<MakbuzEditForm>.ShowDialogEditForm(KartTuru.Makbuz, -1, MakbuzTuru.KarsiliksizOlarakIsaretleme, MakbuzHesapTuru.Supheli);
             else if (e.Item == btnTahsiliImkansizHaleGelme)
                 id = ShowEditForms<MakbuzEditForm>.ShowDialogEditForm(KartTuru.Makbuz, -1, MakbuzTuru.TahsiliImkansizHaleGelme, MakbuzHesapTuru.Supheli);

@@ -216,7 +216,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
 			//Güncellenecek
 		}
-
+		protected virtual void Duzelt() { }
+		protected virtual void BaskiOnizleme() { }
 
 		protected virtual void Button_ItemClick(object sender, ItemClickEventArgs e)
 		{
@@ -271,6 +272,10 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 				BagliKartAc();
 			else if (e.Item == btnYazdir)
 				Yazdir();
+			else if (e.Item == btnBaskiOnizleme)
+				BaskiOnizleme();
+			else if (e.Item == btnTasarimDegistir)
+				Duzelt();
 			else if (e.Item == btnCikis)
 				Close();
 
@@ -284,8 +289,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
 			Cursor.Current = DefaultCursor;
 		}
-
-
 
 		private void Tablo_DoubleClick(object sender, EventArgs e)
 		{

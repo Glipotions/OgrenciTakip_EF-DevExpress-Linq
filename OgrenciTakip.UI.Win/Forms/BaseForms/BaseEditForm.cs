@@ -379,9 +379,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 				e.Cancel = true;
 		}
 		protected virtual void BaseEditForm_Shown(object sender, EventArgs e)
-		{
-			throw new NotImplementedException();
-		}
+		{}
 		protected virtual void Control_EnabledChange(object sender, EventArgs e) { }
 		protected virtual void Control_SelectedPageChanged(object sender, SelectedPageChangedEventArgs e)
 		{

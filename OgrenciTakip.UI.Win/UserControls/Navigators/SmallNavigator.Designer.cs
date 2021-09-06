@@ -82,8 +82,7 @@ namespace OgrenciTakip.UI.Win.UserControls.Navigators
 		}
 
 		#endregion
-
-		private DevExpress.XtraEditors.ControlNavigator Navigator;
 		private DevExpress.Utils.ImageCollection imageCollection;
+		protected internal DevExpress.XtraEditors.ControlNavigator Navigator;
 	}
 }

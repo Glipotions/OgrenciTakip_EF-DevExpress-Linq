@@ -55,6 +55,7 @@
     <Compile Include="Enums\IptalDurumu.cs" />
     <Compile Include="Enums\MakbuzHesapTuru.cs" />
     <Compile Include="Enums\MakbuzTuru.cs" />
+    <Compile Include="Enums\RaporBolumTuru.cs" />
     <Compile Include="Enums\SonrakiDonemKayitDurumu.cs" />
     <Compile Include="Enums\KayitSekli.cs" />
     <Compile Include="Enums\DokumSekli.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Enums\OzelKodTuru.cs" />
     <Compile Include="Enums\RaporuKagidaSigdirmaTuru.cs" />
     <Compile Include="Enums\VeriDegisimYeri.cs" />
+    <Compile Include="Enums\YazdirmaSekli.cs" />
     <Compile Include="Enums\YazdirmaYonu.cs" />
     <Compile Include="Functions\EnumFunctions.cs" />
     <Compile Include="Message\Messages.cs" />

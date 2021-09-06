@@ -77,6 +77,12 @@ namespace OgrenciYazilim.Common.Enums
 		[Description("Makbuz Kartı")]
 		Makbuz = 36,
 		[Description("Belge Seçim Kartı")]
-		BelgeSecim = 37
+		BelgeSecim = 37,
+		[Description("Rapor Kartı")]
+		Rapor = 38,
+		[Description("Rapor Tasarım Kartı")]
+		RaporTasarim = 39,
+		[Description("Öğrenci Kartı Raporu")]
+		OgrenciKartiRaporu = 40
 	}
 }
