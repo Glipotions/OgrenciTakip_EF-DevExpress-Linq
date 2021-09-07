@@ -1,8 +1,8 @@
 ﻿using OgrenciTakip.Business.General;
+using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.Dto;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.UserControls.UserControl.Base;
-using OgrenciYazilim.Common.Message;
 using System;
 
 namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace OgrenciYazilim.Common.Enums
+namespace OgrenciTakip.Common.Enums
 {
 	public enum KartTuru : byte
 	{
@@ -83,6 +83,22 @@ namespace OgrenciYazilim.Common.Enums
 		[Description("Rapor Tasarım Kartı")]
 		RaporTasarim = 39,
 		[Description("Öğrenci Kartı Raporu")]
-		OgrenciKartiRaporu = 40
+		OgrenciKartiRaporu = 40,
+		[Description("Banka Ödeme Planı Raporu")]
+		BankaOdemePlaniRaporu = 41,
+		[Description("Meb Kayıt Sözlesmesi Raporu")]
+		MebKayitSozlesmesiRaporu = 42,
+		[Description("İndirim Dilekçesi Raporu")]
+		IndirimDilekcesiRaporu = 43,
+		[Description("Kayıt Sözleşmesi Raporu")]
+		KayitSozlesmesiRaporu = 44,
+		[Description("Kredi Kartlı Ödeme Talimatı Raporu")]
+		KrediKartliOdemeTalimatiRaporu = 45,
+		[Description("Ödeme Senedi Raporu")]
+		OdemeSenediRaporu = 46,
+		[Description("Kullanıcı Tanimlı Rapor")]
+		KullaniciTanimliRapor = 47,
+		[Description("Tahsilat Makbuzu")]
+		TahsilatMakbuzu = 48
 	}
 }

@@ -1,7 +1,7 @@
 ﻿using DevExpress.XtraEditors;
 using System.Windows.Forms;
 
-namespace OgrenciYazilim.Common.Message
+namespace OgrenciTakip.Common.Message
 {
 	public class Messages
 	{

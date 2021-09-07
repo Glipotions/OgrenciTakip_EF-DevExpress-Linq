@@ -1,6 +1,6 @@
 ﻿using DataAccess.Interfaces;
-using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Common.Functions;
+using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Common.Functions;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;

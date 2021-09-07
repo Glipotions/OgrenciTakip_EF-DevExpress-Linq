@@ -1,12 +1,12 @@
 ﻿using DevExpress.Utils.Extensions;
 using OgrenciTakip.Business.General;
+using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.Dto;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.GeneralForms;
 using OgrenciTakip.UI.Win.Show;
-using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Common.Message;
 using System;
 using System.Linq;
 using System.Linq.Expressions;

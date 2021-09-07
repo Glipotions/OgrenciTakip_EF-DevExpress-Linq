@@ -1,6 +1,6 @@
-﻿using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Data.Context;
-using OgrenciYazilim.Model.Entities.Base;
+﻿using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Data.Context;
+using OgrenciTakip.Model.Entities.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;

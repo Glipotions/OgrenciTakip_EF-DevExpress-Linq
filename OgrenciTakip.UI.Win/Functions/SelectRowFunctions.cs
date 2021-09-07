@@ -8,7 +8,7 @@ using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.BandedGrid;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
-using OgrenciYazilim.Model.Entities.Base;
+using OgrenciTakip.Model.Entities.Base;
 using System;
 using System.Collections.Generic;
 using System.Drawing;

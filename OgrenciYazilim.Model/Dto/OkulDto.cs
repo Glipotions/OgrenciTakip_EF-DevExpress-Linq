@@ -1,8 +1,8 @@
-﻿using OgrenciYazilim.Model.Entities;
-using OgrenciYazilim.Model.Entities.Base;
+﻿using OgrenciTakip.Model.Entities;
+using OgrenciTakip.Model.Entities.Base;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace OgrenciYazilim.Model.Dto
+namespace OgrenciTakip.Model.Dto
 {
 	[NotMapped]
 	public class OkulS : Okul

@@ -4,7 +4,6 @@ using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.GeneralForms;
 using OgrenciTakip.UI.Win.Show;
-using OgrenciYazilim.Common.Enums;
 using System;
 using System.Linq.Expressions;
 

@@ -600,6 +600,54 @@
     <Compile Include="Interfaces\IStatusBarKisayol.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\XtraReports\Makbuz\TahsilatMakbuzuRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Makbuz\TahsilatMakbuzuRaporu.Designer.cs">
+      <DependentUpon>TahsilatMakbuzuRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Taahakkuk\BankaOdemePlaniRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Taahakkuk\BankaOdemePlaniRaporu.Designer.cs">
+      <DependentUpon>BankaOdemePlaniRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Taahakkuk\IndirimDilekcesiRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Taahakkuk\IndirimDilekcesiRaporu.Designer.cs">
+      <DependentUpon>IndirimDilekcesiRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Taahakkuk\KayitSozlesmesiRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Taahakkuk\KayitSozlesmesiRaporu.Designer.cs">
+      <DependentUpon>KayitSozlesmesiRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Taahakkuk\KrediKartliOdemeTalimatiRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Taahakkuk\KrediKartliOdemeTalimatiRaporu.Designer.cs">
+      <DependentUpon>KrediKartliOdemeTalimatiRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Taahakkuk\KullaniciTanimliRapor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Taahakkuk\KullaniciTanimliRapor.Designer.cs">
+      <DependentUpon>KullaniciTanimliRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Taahakkuk\MebKayitSozlesmesiRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Taahakkuk\MebKayitSozlesmesiRaporu.Designer.cs">
+      <DependentUpon>MebKayitSozlesmesiRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Taahakkuk\OdemeSenediRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Taahakkuk\OdemeSenediRaporu.Designer.cs">
+      <DependentUpon>OdemeSenediRaporu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\XtraReports\Taahakkuk\OgrenciKartiRaporu.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -954,6 +1002,30 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\XtraReports\Makbuz\TahsilatMakbuzuRaporu.resx">
+      <DependentUpon>TahsilatMakbuzuRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReports\Taahakkuk\BankaOdemePlaniRaporu.resx">
+      <DependentUpon>BankaOdemePlaniRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReports\Taahakkuk\IndirimDilekcesiRaporu.resx">
+      <DependentUpon>IndirimDilekcesiRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReports\Taahakkuk\KayitSozlesmesiRaporu.resx">
+      <DependentUpon>KayitSozlesmesiRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReports\Taahakkuk\KrediKartliOdemeTalimatiRaporu.resx">
+      <DependentUpon>KrediKartliOdemeTalimatiRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReports\Taahakkuk\KullaniciTanimliRapor.resx">
+      <DependentUpon>KullaniciTanimliRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReports\Taahakkuk\MebKayitSozlesmesiRaporu.resx">
+      <DependentUpon>MebKayitSozlesmesiRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReports\Taahakkuk\OdemeSenediRaporu.resx">
+      <DependentUpon>OdemeSenediRaporu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\XtraReports\Taahakkuk\OgrenciKartiRaporu.resx">
       <DependentUpon>OgrenciKartiRaporu.cs</DependentUpon>
     </EmbeddedResource>
@@ -1241,7 +1313,6 @@
   <ItemGroup>
     <Folder Include="Reports\FormReports\" />
     <Folder Include="Reports\XtraReports\Fatura\" />
-    <Folder Include="Reports\XtraReports\Makbuz\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

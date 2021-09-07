@@ -1,4 +1,4 @@
-﻿namespace OgrenciYazilim.Common.Enums
+﻿namespace OgrenciTakip.Common.Enums
 {
 	public enum VeriDegisimYeri
 	{

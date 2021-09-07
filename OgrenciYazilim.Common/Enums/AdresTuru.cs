@@ -1,13 +1,13 @@
 ﻿using System.ComponentModel;
 
-namespace OgrenciYazilim.Common.Enums
+namespace OgrenciTakip.Common.Enums
 {
-    public enum AdresTuru : byte
-    {
-        [Description("Ev Adresi")]
-        EvAdresi = 1,
+	public enum AdresTuru : byte
+	{
+		[Description("Ev Adresi")]
+		EvAdresi = 1,
 
-        [Description("İş Adresi")]
-        IsAdresi = 2
-    }
+		[Description("İş Adresi")]
+		IsAdresi = 2
+	}
 }

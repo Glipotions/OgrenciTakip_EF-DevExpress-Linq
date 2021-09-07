@@ -1,9 +1,9 @@
 ﻿using OgrenciTakip.Business.Base;
 using OgrenciTakip.Business.Interfaces;
-using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Model.Dto;
-using OgrenciYazilim.Model.Entities;
-using OgrenciYazilim.Model.Entities.Base;
+using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Model.Dto;
+using OgrenciTakip.Model.Entities;
+using OgrenciTakip.Model.Entities.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;

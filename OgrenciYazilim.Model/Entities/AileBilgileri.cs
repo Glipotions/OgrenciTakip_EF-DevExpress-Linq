@@ -1,7 +1,7 @@
-﻿using OgrenciYazilim.Model.Entities.Base;
+﻿using OgrenciTakip.Model.Entities.Base;
 using System.ComponentModel.DataAnnotations;
 
-namespace OgrenciYazilim.Model.Entities
+namespace OgrenciTakip.Model.Entities
 {
 	public class AileBilgileri : BaseHareketEntity
 	{

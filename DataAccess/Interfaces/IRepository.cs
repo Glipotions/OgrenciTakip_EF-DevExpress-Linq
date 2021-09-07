@@ -1,4 +1,4 @@
-﻿using OgrenciYazilim.Common.Enums;
+﻿using OgrenciTakip.Common.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;

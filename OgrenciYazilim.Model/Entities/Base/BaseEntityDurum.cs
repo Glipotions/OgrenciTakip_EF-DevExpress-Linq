@@ -1,4 +1,4 @@
-﻿namespace OgrenciYazilim.Model.Entities.Base
+﻿namespace OgrenciTakip.Model.Entities.Base
 {
 	public class BaseEntityDurum : BaseEntity
 	{

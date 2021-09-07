@@ -1,10 +1,10 @@
 ﻿
-using OgrenciYazilim.Model.Attributes;
-using OgrenciYazilim.Model.Entities.Base;
+using OgrenciTakip.Model.Attributes;
+using OgrenciTakip.Model.Entities.Base;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace OgrenciYazilim.Model.Entities
+namespace OgrenciTakip.Model.Entities
 {
 	public class Donem : BaseEntityDurum
 	{

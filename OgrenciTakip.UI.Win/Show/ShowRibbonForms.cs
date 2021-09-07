@@ -1,5 +1,5 @@
 ﻿using DevExpress.XtraBars.Ribbon;
-using OgrenciYazilim.Common.Enums;
+using OgrenciTakip.Common.Enums;
 using System;
 using System.Windows.Forms;
 

@@ -1,7 +1,7 @@
-﻿using OgrenciTakip.UI.Win.Forms.BaseForms;
+﻿using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Model.Entities.Base.Interfaces;
+using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Show.Interfaces;
-using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Model.Entities.Base.Interfaces;
 using System;
 using System.Windows.Forms;
 
@@ -40,7 +40,7 @@ namespace OgrenciTakip.UI.Win.Show
 			using (var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm))
 			{
 				frm.Yukle();
-				return frm.DialogResult==DialogResult.OK;
+				return frm.DialogResult == DialogResult.OK;
 			}
 		}
 

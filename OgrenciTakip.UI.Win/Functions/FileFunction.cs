@@ -1,8 +1,8 @@
 ﻿using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraPrinting;
-using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Common.Message;
+using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Common.Message;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

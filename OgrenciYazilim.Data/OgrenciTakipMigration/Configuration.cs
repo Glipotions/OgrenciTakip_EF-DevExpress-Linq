@@ -1,7 +1,7 @@
-﻿using OgrenciYazilim.Data.Context;
+﻿using OgrenciTakip.Data.Context;
 using System.Data.Entity.Migrations;
 
-namespace OgrenciYazilim.Data.OgrenciTakipMigration
+namespace OgrenciTakip.Data.OgrenciTakipMigration
 {
 	public class Configuration : DbMigrationsConfiguration<OgrenciTakipContext>
 	{
@@ -9,6 +9,7 @@ namespace OgrenciYazilim.Data.OgrenciTakipMigration
 		{
 			AutomaticMigrationsEnabled = true;
 			AutomaticMigrationDataLossAllowed = true; //Veri kaybı durumu olsun mu?
+			
 		}
 	}
 }

@@ -1,4 +1,4 @@
-﻿using OgrenciYazilim.Model.Entities.Base;
+﻿using OgrenciTakip.Model.Entities.Base;
 
 namespace OgrenciTakip.Business.Interfaces
 {

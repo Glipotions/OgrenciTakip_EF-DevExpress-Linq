@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace OgrenciYazilim.Common.Enums
+namespace OgrenciTakip.Common.Enums
 {
 	public enum HizmetTipi : Byte
 	{

@@ -1,7 +1,7 @@
 ﻿using DataAccess.Interfaces;
 using OgrenciTakip.Business.Function;
 using OgrenciTakip.Business.Interfaces;
-using OgrenciYazilim.Model.Entities.Base;
+using OgrenciTakip.Model.Entities.Base;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;

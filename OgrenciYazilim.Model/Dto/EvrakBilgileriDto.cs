@@ -1,5 +1,5 @@
-﻿using OgrenciYazilim.Model.Entities;
-using OgrenciYazilim.Model.Entities.Base.Interfaces;
+﻿using OgrenciTakip.Model.Entities;
+using OgrenciTakip.Model.Entities.Base.Interfaces;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OgrenciTakip.Model.Dto

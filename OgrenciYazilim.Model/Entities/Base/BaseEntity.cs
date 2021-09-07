@@ -1,9 +1,9 @@
-﻿using OgrenciYazilim.Model.Attributes;
-using OgrenciYazilim.Model.Entities.Base.Interfaces;
+﻿using OgrenciTakip.Model.Attributes;
+using OgrenciTakip.Model.Entities.Base.Interfaces;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace OgrenciYazilim.Model.Entities.Base
+namespace OgrenciTakip.Model.Entities.Base
 {
 	public class BaseEntity : IBaseEntity
 	{

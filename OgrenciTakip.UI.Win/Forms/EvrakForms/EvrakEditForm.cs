@@ -1,9 +1,9 @@
 ﻿using OgrenciTakip.Business.General;
+using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Model;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.GeneralForms;
-using OgrenciYazilim.Common.Enums;
 
 namespace OgrenciTakip.UI.Win.Forms.EvrakForms
 {

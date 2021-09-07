@@ -1,33 +1,31 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using OgrenciTakip.Common.Enums;
-using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Model.Entities;
-using OgrenciYazilim.Model.Entities.Base;
+﻿using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Model.Entities.Base;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OgrenciTakip.Model.Entities
 {
-    public class MakbuzHareketleri : BaseHareketEntity
-    {
-        public long MakbuzId { get; set; }
-        public int OdemeBilgileriId { get; set; }
+	public class MakbuzHareketleri : BaseHareketEntity
+	{
+		public long MakbuzId { get; set; }
+		public int OdemeBilgileriId { get; set; }
 
-        [Column(TypeName = "money")]
-        public decimal IslemOncesiTutar { get; set; }
+		[Column(TypeName = "money")]
+		public decimal IslemOncesiTutar { get; set; }
 
-        [Column(TypeName = "money")]
-        public decimal IslemTutari { get; set; }
+		[Column(TypeName = "money")]
+		public decimal IslemTutari { get; set; }
 
-        public BelgeDurumu BelgeDurumu { get; set; }
-        public long KullaniciId { get; set; }
-        public long EskiSubeId { get; set; }
-        public long? YeniSubeId { get; set; }
+		public BelgeDurumu BelgeDurumu { get; set; }
+		public long KullaniciId { get; set; }
+		public long EskiSubeId { get; set; }
+		public long? YeniSubeId { get; set; }
 
-        //vt ilişki
-        public Makbuz Makbuz { get; set; }
+		//vt ilişki
+		public Makbuz Makbuz { get; set; }
 
-        public OdemeBilgileri OdemeBilgileri { get; set; }
-        //public Kullanici Kullanici { get; set; }
-        public Sube EskiSube { get; set; }
-        public Sube YeniSube { get; set; }
-    }
+		public OdemeBilgileri OdemeBilgileri { get; set; }
+		//public Kullanici Kullanici { get; set; }
+		public Sube EskiSube { get; set; }
+		public Sube YeniSube { get; set; }
+	}
 }

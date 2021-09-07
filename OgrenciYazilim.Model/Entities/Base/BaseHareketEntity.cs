@@ -1,6 +1,6 @@
-﻿using OgrenciYazilim.Model.Entities.Base.Interfaces;
+﻿using OgrenciTakip.Model.Entities.Base.Interfaces;
 
-namespace OgrenciYazilim.Model.Entities.Base
+namespace OgrenciTakip.Model.Entities.Base
 {
 	public class BaseHareketEntity : IBaseEntity
 	{

@@ -1,22 +1,24 @@
 ﻿using DevExpress.XtraBars;
 using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraEditors;
+using OgrenciTakip.Business.Function;
 using OgrenciTakip.Business.General;
+using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Common.Functions;
+using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.Dto;
 using OgrenciTakip.Model.Entities;
+using OgrenciTakip.Model.Entities.Base.Interfaces;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.GeneralForms;
+using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.UI.Win.UserControls.UserControl.Base;
 using OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable;
-using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Common.Functions;
-using OgrenciYazilim.Common.Message;
-using OgrenciYazilim.Model.Dto;
-using OgrenciYazilim.Model.Entities.Base.Interfaces;
 using System;
 using System.Drawing;
 using System.Linq;
+using Convert = System.Convert;
 //using OgrenciTakip.UI.Win.UserControls.UserControl.KardesTahakkukEditFormTable;
 //using OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable;
 
@@ -242,7 +244,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 				RehberId = txtRehber.Id,
 				SonrakiDonemKayitDurumu = txtSonrakiDonemKayitDurumu.Text.GetEnum<SonrakiDonemKayitDurumu>(),
 				SonrakiDonemKayitDurumuAciklama = txtSonrakiDonemKayitDurumuAciklama.Text,
-				
+
 				OzelKod1Id = txtOzelKod1.Id,
 				OzelKod2Id = txtOzelKod2.Id,
 				OzelKod3Id = txtOzelKod3.Id,
@@ -441,7 +443,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 
 		private bool DurumKontrol()
 		{
-			
+
 			if (txtFark.Value != 0)
 			{
 				Messages.HataMesaji("Ücret Toplamları Farkı Sıfır ( 0 ) Olmalıdır");
@@ -477,16 +479,16 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 				_ePosBilgileriTable.Yukle();
 			}
 
-			//var ogrenciBilgileri = ((TahakkukBusiness)Business).SingleDetail(x => x.Id == Id);
-			//var iletisimBilgileri = _iletisimBilgileriTable.Tablo.DataController.ListSource.Cast<IBaseEntity>().EntityListConvert<IletisimBilgileriR>();
-			////(4/6) 20.video 41:00  EntityListConvert IBaseEntity türündeki verilerden convert yapabiliyor o yüzden Cast ediyoruz
-			//var hizmetBilgileri = hizmetBilgileriTable.Tablo.DataController.ListSource.Cast<IBaseEntity>().EntityListConvert<HizmetBilgileriR>();
-			//var indirimBilgileri = indirimBilgileriTable.Tablo.DataController.ListSource.Cast<IBaseEntity>().EntityListConvert<IndirimBilgileriR>();
-			//var odemeBilgileri = odemeBilgileriTable.Tablo.DataController.ListSource.Cast<IBaseEntity>().EntityListConvert<OdemeBilgileriR>();
-			//var geriOdemeBilgileri = geriOdemeBilgileriTable.Tablo.DataController.ListSource.Cast<IBaseEntity>().EntityListConvert<GeriOdemeBilgileriR>();
-			//var ePosBilgileri = _ePosBilgileriTable.Tablo.DataController.ListSource.Cast<IBaseEntity>().EntityListConvert<EposBilgileriR>();
+			var ogrenciBilgileri = ((TahakkukBusiness)Business).SingleDetail(x => x.Id == Id);
+			var iletisimBilgileri = _iletisimBilgileriTable.Tablo.DataController.ListSource.Cast<IBaseEntity>().EntityListConvert<IletisimBilgileriR>();
+			//(4/6) 20.video 41:00  EntityListConvert IBaseEntity türündeki verilerden convert yapabiliyor o yüzden Cast ediyoruz
+			var hizmetBilgileri = hizmetBilgileriTable.Tablo.DataController.ListSource.Cast<IBaseEntity>().EntityListConvert<HizmetBilgileriR>();
+			var indirimBilgileri = indirimBilgileriTable.Tablo.DataController.ListSource.Cast<IBaseEntity>().EntityListConvert<IndirimBilgileriR>();
+			var odemeBilgileri = odemeBilgileriTable.Tablo.DataController.ListSource.Cast<IBaseEntity>().EntityListConvert<OdemeBilgileriR>();
+			var geriOdemeBilgileri = geriOdemeBilgileriTable.Tablo.DataController.ListSource.Cast<IBaseEntity>().EntityListConvert<GeriOdemeBilgileriR>();
+			var ePosBilgileri = _ePosBilgileriTable.Tablo.DataController.ListSource.Cast<IBaseEntity>().EntityListConvert<EposBilgileriR>();
 
-			//ShowListForms<RaporSecim>.ShowDialogListForm(KartTuru.Rapor, false, RaporBolumTuru.TahakkukRaporlari, ogrenciBilgileri, iletisimBilgileri, hizmetBilgileri, indirimBilgileri, odemeBilgileri, geriOdemeBilgileri, ePosBilgileri);
+			ShowListForms<RaporSecim>.ShowDialogListForm(KartTuru.Rapor, false, RaporBolumTuru.TahakkukRaporlari, ogrenciBilgileri, iletisimBilgileri, hizmetBilgileri, indirimBilgileri, odemeBilgileri, geriOdemeBilgileri, ePosBilgileri);
 		}
 
 		protected override void Control_SelectedPageChanged(object sender, SelectedPageChangedEventArgs e)

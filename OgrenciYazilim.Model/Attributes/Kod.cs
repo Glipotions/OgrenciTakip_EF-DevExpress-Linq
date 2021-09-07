@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace OgrenciYazilim.Model.Attributes
+namespace OgrenciTakip.Model.Attributes
 {
 	public class Kod : Attribute
 	{

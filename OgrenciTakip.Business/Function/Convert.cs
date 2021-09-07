@@ -1,4 +1,4 @@
-﻿using OgrenciYazilim.Model.Entities.Base.Interfaces;
+﻿using OgrenciTakip.Model.Entities.Base.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;

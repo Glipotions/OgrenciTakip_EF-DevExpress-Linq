@@ -1,8 +1,8 @@
-﻿using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Model.Attributes;
-using OgrenciYazilim.Model.Entities;
-using OgrenciYazilim.Model.Entities.Base;
+﻿using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Model.Attributes;
+using OgrenciTakip.Model.Entities.Base;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -70,11 +70,11 @@ namespace OgrenciTakip.Model.Entities
 		public Sube Sube { get; set; }
 		public Donem Donem { get; set; }
 
-		//public ICollection<IletisimBilgileri> IletisimBilgileri { get; set; }
-		//public ICollection<HizmetBilgileri> HizmetBilgileri { get; set; }
-		//public ICollection<IndirimBilgileri> IndirimBilgileri { get; set; }
+		public ICollection<IletisimBilgileri> IletisimBilgileri { get; set; }
+		public ICollection<HizmetBilgileri> HizmetBilgileri { get; set; }
+		public ICollection<IndirimBilgileri> IndirimBilgileri { get; set; }
 		//public ICollection<Fatura> FaturaBilgileri { get; set; }
-		//public ICollection<OdemeBilgileri> OdemeBilgileri { get; set; }
-		//public ICollection<GeriOdemeBilgileri> GeriOdemeBilgileri { get; set; }
+		public ICollection<OdemeBilgileri> OdemeBilgileri { get; set; }
+		public ICollection<GeriOdemeBilgileri> GeriOdemeBilgileri { get; set; }
 	}
 }

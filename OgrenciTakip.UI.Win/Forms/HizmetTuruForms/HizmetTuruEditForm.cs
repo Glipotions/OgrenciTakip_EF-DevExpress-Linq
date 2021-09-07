@@ -1,9 +1,9 @@
 ﻿using OgrenciTakip.Business.General;
+using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Common.Functions;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Functions;
-using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Common.Functions;
 
 namespace OgrenciTakip.UI.Win.Forms.HizmetTuruForms
 {

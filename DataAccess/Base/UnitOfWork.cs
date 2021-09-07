@@ -1,5 +1,5 @@
 ﻿using DataAccess.Interfaces;
-using OgrenciYazilim.Common.Message;
+using OgrenciTakip.Common.Message;
 using System;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;

@@ -2,36 +2,35 @@
 using DevExpress.XtraBars;
 using DevExpress.XtraReports;
 using DevExpress.XtraReports.UI;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Forms;
 using OgrenciTakip.Business.General;
-using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Common.Functions;
-using OgrenciYazilim.Common.Message;
+using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Common.Functions;
+using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.Dto;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
-
+using OgrenciTakip.UI.Win.Forms.RaporForms;
+using OgrenciTakip.UI.Win.Functions;
+using OgrenciTakip.UI.Win.Reports.XtraReports.Makbuz;
+using OgrenciTakip.UI.Win.Reports.XtraReports.Taahakkuk;
 using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.UI.Win.UserControls.Controls;
-using OgrenciTakip.UI.Win.Functions;
-using OgrenciYazilim.Model.Dto;
-using OgrenciTakip.UI.Win.Forms.RaporForms;
-using OgrenciTakip.Common.Enums;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
 {
 	public partial class RaporSecim : BaseListForm
 	{
-		//private readonly OgrenciR _ogrenciBilgileri;
-		//private readonly IEnumerable<IletisimBilgileriR> _iletisimBilgileri;
-		//private readonly IEnumerable<HizmetBilgileriR> _hizmetBilgileri;
-		//private readonly IEnumerable<IndirimBilgileriR> _indirimBilgileri;
-		//private readonly IEnumerable<OdemeBilgileriR> _odemeBilgileri;
-		//private readonly IEnumerable<GeriOdemeBilgileriR> _geriOdemeBilgileri;
-		//private readonly IEnumerable<EposBilgileriR> _ePosBilgileri;
-		//private readonly IEnumerable<MakbuzHareketleriR> _makbuzBilgileri;
+		private readonly OgrenciR _ogrenciBilgileri;
+		private readonly IEnumerable<IletisimBilgileriR> _iletisimBilgileri;
+		private readonly IEnumerable<HizmetBilgileriR> _hizmetBilgileri;
+		private readonly IEnumerable<IndirimBilgileriR> _indirimBilgileri;
+		private readonly IEnumerable<OdemeBilgileriR> _odemeBilgileri;
+		private readonly IEnumerable<GeriOdemeBilgileriR> _geriOdemeBilgileri;
+		private readonly IEnumerable<EposBilgileriR> _ePosBilgileri;
+		private readonly IEnumerable<MakbuzHareketleriR> _makbuzBilgileri;
 		//private readonly IEnumerable<FaturaR> _faturaBilgileri;
 		private readonly RaporBolumTuru _raporBolumTuru;
 
@@ -51,20 +50,20 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			txtYazdirmaSekli.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<YazdirmaSekli>());
 			txtYazdirmaSekli.SelectedItem = YazdirmaSekli.TekTekYazdir.ToName();
 
-			//_raporBolumTuru = (RaporBolumTuru)prm[0];
+			_raporBolumTuru = (RaporBolumTuru)prm[0];
 
-			//if (_raporBolumTuru == RaporBolumTuru.TahakkukRaporlari)
-			//{
-			//    _ogrenciBilgileri = (OgrenciR)prm[1];
-			//    _iletisimBilgileri = (IEnumerable<IletisimBilgileriR>)prm[2];
-			//    _hizmetBilgileri = (IEnumerable<HizmetBilgileriR>)prm[3];
-			//    _indirimBilgileri = (IEnumerable<IndirimBilgileriR>)prm[4];
-			//    _odemeBilgileri = (IEnumerable<OdemeBilgileriR>)prm[5];
-			//    _geriOdemeBilgileri = (IEnumerable<GeriOdemeBilgileriR>)prm[6];
-			//    _ePosBilgileri = (IEnumerable<EposBilgileriR>)prm[7];
-			//}
-			//else if (_raporBolumTuru == RaporBolumTuru.MakbuzRaporlari)
-			//    _makbuzBilgileri = (List<MakbuzHareketleriR>)prm[1];
+			if (_raporBolumTuru == RaporBolumTuru.TahakkukRaporlari)
+			{
+				_ogrenciBilgileri = (OgrenciR)prm[1];
+				_iletisimBilgileri = (IEnumerable<IletisimBilgileriR>)prm[2];
+				_hizmetBilgileri = (IEnumerable<HizmetBilgileriR>)prm[3];
+				_indirimBilgileri = (IEnumerable<IndirimBilgileriR>)prm[4];
+				_odemeBilgileri = (IEnumerable<OdemeBilgileriR>)prm[5];
+				_geriOdemeBilgileri = (IEnumerable<GeriOdemeBilgileriR>)prm[6];
+				_ePosBilgileri = (IEnumerable<EposBilgileriR>)prm[7];
+			}
+			else if (_raporBolumTuru == RaporBolumTuru.MakbuzRaporlari)
+				_makbuzBilgileri = (List<MakbuzHareketleriR>)prm[1];
 			//else if (_raporBolumTuru == RaporBolumTuru.FaturaDonemRaporlari || _raporBolumTuru == RaporBolumTuru.FaturaGenelRaporlar)
 			//_faturaBilgileri = (List<FaturaR>)prm[1];
 		}
@@ -75,39 +74,39 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			BaseKartTuru = KartTuru.Rapor;
 			Navigator = smallNavigator.Navigator;
 
-			//if (_raporBolumTuru == RaporBolumTuru.FaturaDonemRaporlari || _raporBolumTuru == RaporBolumTuru.FaturaGenelRaporlar || _raporBolumTuru == RaporBolumTuru.MakbuzRaporlari)
-			//{
-			//	switch (_raporBolumTuru)
-			//	{
-			//		case RaporBolumTuru.MakbuzRaporlari:
-			//			{
-			//				var showItems = new BarItem[] { btnGenelMakbuz, btnTahsilatMakbuzu, btnTeslimatMakbuzu, btnGeriIadeMakbuzu };
-			//				ShowItems = ShowItems.Concat(showItems).ToArray();    //basedeki show ıtems metoduna ekleme yaptık
-			//			}
-			//			break;
+			if (_raporBolumTuru == RaporBolumTuru.FaturaDonemRaporlari || _raporBolumTuru == RaporBolumTuru.FaturaGenelRaporlar || _raporBolumTuru == RaporBolumTuru.MakbuzRaporlari)
+			{
+				switch (_raporBolumTuru)
+				{
+					case RaporBolumTuru.MakbuzRaporlari:
+						{
+							var showItems = new BarItem[] { btnGenelMakbuz, btnTahsilatMakbuzu, btnTeslimatMakbuzu, btnGeriIadeMakbuzu };
+							ShowItems = ShowItems.Concat(showItems).ToArray();    //basedeki show ıtems metoduna ekleme yaptık
+						}
+						break;
 
-			//		case RaporBolumTuru.FaturaDonemRaporlari:
-			//			{
-			//				var showItems = new BarItem[] { btnFatura, btnDonemIcmalRaporu };
-			//				ShowItems = ShowItems.Concat(showItems).ToArray();
-			//			}
-			//			break;
+					case RaporBolumTuru.FaturaDonemRaporlari:
+						{
+							var showItems = new BarItem[] { btnFatura, btnDonemIcmalRaporu };
+							ShowItems = ShowItems.Concat(showItems).ToArray();
+						}
+						break;
 
-			//		case RaporBolumTuru.FaturaGenelRaporlar:
-			//			{
-			//				var showItems = new BarItem[] { btnOgrenciIcmalRaporu };
-			//				ShowItems = ShowItems.Concat(showItems).ToArray();
-			//			}
-			//			break;
-			//	}
+					case RaporBolumTuru.FaturaGenelRaporlar:
+						{
+							var showItems = new BarItem[] { btnOgrenciIcmalRaporu };
+							ShowItems = ShowItems.Concat(showItems).ToArray();
+						}
+						break;
+				}
 
-			//	var hideItems = new BarItem[]
-			//	{
-			//		btnBosRapor, btnOgrenciKarti, btnBankaOdemePlani, btnIndirimTalepDilekcesi, btnMebKayitSozlesmesi, btnKayitSozlesmesi, btnKrediKartliOdemeTalimati, btnOdemeSenedi
-			//	};
+				var hideItems = new BarItem[]
+				{
+					btnBosRapor, btnOgrenciKarti, btnBankaOdemePlani, btnIndirimTalepDilekcesi, btnMebKayitSozlesmesi, btnKayitSozlesmesi, btnKrediKartliOdemeTalimati, btnOdemeSenedi
+				};
 
-			//	HideItems = HideItems.Concat(hideItems).ToArray(); //hide ıtemsa ek yapıldı
-			//}
+				HideItems = HideItems.Concat(hideItems).ToArray(); //hide ıtemsa ek yapıldı
+			}
 		}
 
 		protected override void Listele()
@@ -183,88 +182,84 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			{
 				default:
 					break;
-					//        case OgrenciKartiRaporu rpr:
-					//            rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
-					//            rpr.Iletisim_Bilgileri.DataSource = _iletisimBilgileri;
-					//            rpr.Hizmet_Bilgileri.DataSource = _hizmetBilgileri;
-					//            rpr.Indirim_Bilgileri.DataSource = _indirimBilgileri.GroupBy(x => new { x.IndirimAdi, x.IptalTarihi, x.IslemTarihi })
-					//                .Select(x => new
-					//                {
-					//                    x.Key.IndirimAdi,
-					//                    x.Key.IptalTarihi,
-					//                    x.Key.IslemTarihi,
-					//                    BrutIndirim = x.Sum(y => y.BrutIndirim),
-					//                    KistDonemDusulenIndirim = x.Sum(y => y.KistDonemDusulenIndirim),
-					//                    NetIndirim = x.Sum(y => y.NetIndirim)
-					//                });  //gruplama yapmak  (4/6) 20. video 6:00
-					//            rpr.Odeme_Bilgileri.DataSource = _odemeBilgileri;
-					//            rpr.Geri_Odeme_Bilgileri.DataSource = _geriOdemeBilgileri;
-					//            break;
+				case OgrenciKartiRaporu rpr:
+					rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
+					rpr.Iletisim_Bilgileri.DataSource = _iletisimBilgileri;
+					rpr.Hizmet_Bilgileri.DataSource = _hizmetBilgileri;
+					rpr.Indirim_Bilgileri.DataSource = _indirimBilgileri.GroupBy(x => new { x.IndirimAdi, x.IptalTarihi, x.IslemTarihi })
+						.Select(x => new
+						{
+							x.Key.IndirimAdi,
+							x.Key.IptalTarihi,
+							x.Key.IslemTarihi,
+							BrutIndirim = x.Sum(y => y.BrutIndirim),
+							KistDonemDusulenIndirim = x.Sum(y => y.KistDonemDusulenIndirim),
+							NetIndirim = x.Sum(y => y.NetIndirim)
+						});  //gruplama yapmak  (4/6) 20. video 6:00
+					rpr.Odeme_Bilgileri.DataSource = _odemeBilgileri;
+					rpr.Geri_Odeme_Bilgileri.DataSource = _geriOdemeBilgileri;
+					break;
 
-					//        case BankaOdemePlaniRaporu rpr:
-					//            rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
-					//            var secilenOdemeler = _odemeBilgileri.Where(x => x.OdemeTipi == OdemeTipi.Ots);
-					//            rpr.toplamTutarYazi.Text = secilenOdemeler.Sum(x => x.Tutar).YaziIleTutar();
-					//            rpr.Odeme_Bilgileri.DataSource = secilenOdemeler;
-					//            break;
+				case BankaOdemePlaniRaporu rpr:
+					rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
+					var secilenOdemeler = _odemeBilgileri.Where(x => x.OdemeTipi == OdemeTipi.Ots);
+					rpr.toplamTutarYazi.Text = secilenOdemeler.Sum(x => x.Tutar).YaziIleTutar();
+					rpr.Odeme_Bilgileri.DataSource = secilenOdemeler;
+					break;
 
-					//        case MebKayitSozlesmesiRaporu rpr:
-					//            rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
-					//            break;
+				case MebKayitSozlesmesiRaporu rpr:
+					rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
+					break;
 
-					//        case IndirimDilekcesiRaporu rpr:
-					//            rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
-					//            rpr.IndirimBilgileri.DataSource = _indirimBilgileri.GroupBy(x => x.IndirimAdi)
-					//                .Select(x => new
-					//                {
-					//                    IndirimAdi = x.Key,
-					//                    BrutIndirim = x.Sum(y => y.BrutIndirim),
-					//                    KistDonemDusulunIndirim = x.Sum(y => y.KistDonemDusulenIndirim),
-					//                    NetIndirim = x.Sum(y => y.NetIndirim)
-					//                });
-					//            break;
+				case IndirimDilekcesiRaporu rpr:
+					rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
+					rpr.Indirim_Bilgileri.DataSource = _indirimBilgileri.GroupBy(x => x.IndirimAdi)
+						.Select(x => new
+						{
+							IndirimAdi = x.Key,
+							BrutIndirim = x.Sum(y => y.BrutIndirim),
+							KistDonemDusulunIndirim = x.Sum(y => y.KistDonemDusulenIndirim),
+							NetIndirim = x.Sum(y => y.NetIndirim)
+						});
+					break;
 
-					//        case KayitSozlesmesiRaporu rpr:
-					//            rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
-					//            break;
+				case KayitSozlesmesiRaporu rpr:
+					rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
+					break;
 
-					//        case KrediKartliOdemeTalimatiRaporu rpr:
-					//            rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
-					//            rpr.ePos_Bilgileri.DataSource = _ePosBilgileri;
-					//            rpr.Odeme_Bilgileri.DataSource = _odemeBilgileri.Where(x => x.OdemeTipi == OdemeTipi.Epos).OrderBy(x => x.Vade);
-					//            break;
+				case KrediKartliOdemeTalimatiRaporu rpr:
+					rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
+					rpr.Epos_Bilgileri.DataSource = _ePosBilgileri;
+					rpr.Odeme_Bilgileri.DataSource = _odemeBilgileri.Where(x => x.OdemeTipi == OdemeTipi.Epos).OrderBy(x => x.Vade);
+					break;
 
-					//        case OdemeSenediRaporu rpr:
-					//            rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
-					//            rpr.Odeme_Bilgileri.DataSource = _odemeBilgileri.Where(x => x.OdemeTipi == OdemeTipi.Senet).OrderBy(x => x.Vade);
-					//            break;
+				case OdemeSenediRaporu rpr:
+					rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
+					rpr.Odeme_Bilgileri.DataSource = _odemeBilgileri.Where(x => x.OdemeTipi == OdemeTipi.Senet).OrderBy(x => x.Vade);
+					break;
 
-					//        case KullaniciTanimliRapor rpr:
-					//            rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
-					//            rpr.Iletisim_Bilgileri.DataSource = _iletisimBilgileri;
-					//            rpr.Hizmet_Bilgileri.DataSource = _hizmetBilgileri;
-					//            rpr.Indirim_Bilgileri.DataSource = _indirimBilgileri.GroupBy(x => new { x.IndirimAdi, x.IptalTarihi, x.IslemTarihi })
-					//                .Select(x => new
-					//                {
-					//                    x.Key.IndirimAdi,
-					//                    x.Key.IptalTarihi,
-					//                    x.Key.IslemTarihi,
-					//                    BrutIndirim = x.Sum(y => y.BrutIndirim),
-					//                    KistDonemDusulenIndirim = x.Sum(y => y.KistDonemDusulenIndirim),
-					//                    NetIndirim = x.Sum(y => y.NetIndirim)
-					//                });  //gruplama yapmak  (4/6) 20. video 6:00
-					//            rpr.Odeme_Bilgileri.DataSource = _odemeBilgileri;
-					//            rpr.Geri_Odeme_Bilgileri.DataSource = _geriOdemeBilgileri;
-					//            rpr.Epos_Bilgileri.DataSource = _ePosBilgileri;
-					//            break;
+				case KullaniciTanimliRapor rpr:
+					rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
+					rpr.Iletisim_Bilgileri.DataSource = _iletisimBilgileri;
+					rpr.Hizmet_Bilgileri.DataSource = _hizmetBilgileri;
+					rpr.Indirim_Bilgileri.DataSource = _indirimBilgileri.GroupBy(x => new { x.IndirimAdi, x.IptalTarihi, x.IslemTarihi })
+						.Select(x => new
+						{
+							x.Key.IndirimAdi,
+							x.Key.IptalTarihi,
+							x.Key.IslemTarihi,
+							BrutIndirim = x.Sum(y => y.BrutIndirim),
+							KistDonemDusulenIndirim = x.Sum(y => y.KistDonemDusulenIndirim),
+							NetIndirim = x.Sum(y => y.NetIndirim)
+						});  //gruplama yapmak  (4/6) 20. video 6:00
+					rpr.Odeme_Bilgileri.DataSource = _odemeBilgileri;
+					rpr.Geri_Odeme_Bilgileri.DataSource = _geriOdemeBilgileri;
+					rpr.Epos_Bilgileri.DataSource = _ePosBilgileri;
+					break;
 
-					//        case TahsilatMakbuzuRaporu rpr:
-					//            rpr.Makbuz_Bilgileri.DataSource = _makbuzBilgileri;
-					//            break;
-
-					//        case TeslimatMakbuzuRaporu rpr:
-					//            rpr.Makbuz_Bilgileri.DataSource = _makbuzBilgileri;
-					//            break;
+				case TahsilatMakbuzuRaporu rpr:
+					rpr.Makbuz_Bilgileri.DataSource = _makbuzBilgileri;
+					break;
 
 					//        case GeriIadeMakbuzuRaporu rpr:
 					//            rpr.Makbuz_Bilgileri.DataSource = _makbuzBilgileri;
@@ -338,24 +333,24 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 				link.Item.ItemLinks[0].Focus();
 			}
 
-			//else if (e.Item == btnOgrenciKarti)
-			//	RaporOlustur(KartTuru.OgrenciKartiRaporu, RaporBolumTuru.TahakkukRaporlari, new OgrenciKartiRaporu());
-			//    else if (e.Item == btnBankaOdemePlani)
-			//        RaporOlustur(KartTuru.BankaOdemePlaniRaporu, RaporBolumTuru.TahakkukRaporlari, new BankaOdemePlaniRaporu());
-			//    else if (e.Item == btnMebKayitSozlesmesi)
-			//        RaporOlustur(KartTuru.MebKayitSozlesmesiRaporu, RaporBolumTuru.TahakkukRaporlari, new MebKayitSozlesmesiRaporu());
-			//    else if (e.Item == btnIndirimTalepDilekcesi)
-			//        RaporOlustur(KartTuru.IndirimDilekcesiRaporu, RaporBolumTuru.TahakkukRaporlari, new IndirimDilekcesiRaporu());
-			//    else if (e.Item == btnKayitSozlesmesi)
-			//        RaporOlustur(KartTuru.KayitSozlesmesiRaporu, RaporBolumTuru.TahakkukRaporlari, new KayitSozlesmesiRaporu());
-			//    else if (e.Item == btnKrediKartliOdemeTalimati)
-			//        RaporOlustur(KartTuru.KrediKartliOdemeTalimatiRaporu, RaporBolumTuru.TahakkukRaporlari, new KrediKartliOdemeTalimatiRaporu());
-			//    else if (e.Item == btnOdemeSenedi)
-			//        RaporOlustur(KartTuru.OdemeSenediRaporu, RaporBolumTuru.TahakkukRaporlari, new OdemeSenediRaporu());
-			//    else if (e.Item == btnBosRapor)
-			//        RaporOlustur(KartTuru.KullaniciTanimliRapor, RaporBolumTuru.TahakkukRaporlari, new KullaniciTanimliRapor());
-			//    else if (e.Item == btnTahsilatMakbuzu)
-			//        RaporOlustur(KartTuru.TahsilatMakbuzu, RaporBolumTuru.MakbuzRaporlari, new TahsilatMakbuzuRaporu());
+			else if (e.Item == btnOgrenciKarti)
+				RaporOlustur(KartTuru.OgrenciKartiRaporu, RaporBolumTuru.TahakkukRaporlari, new OgrenciKartiRaporu());
+			else if (e.Item == btnBankaOdemePlani)
+				RaporOlustur(KartTuru.BankaOdemePlaniRaporu, RaporBolumTuru.TahakkukRaporlari, new BankaOdemePlaniRaporu());
+			else if (e.Item == btnMebKayitSozlesmesi)
+				RaporOlustur(KartTuru.MebKayitSozlesmesiRaporu, RaporBolumTuru.TahakkukRaporlari, new MebKayitSozlesmesiRaporu());
+			else if (e.Item == btnIndirimTalepDilekcesi)
+				RaporOlustur(KartTuru.IndirimDilekcesiRaporu, RaporBolumTuru.TahakkukRaporlari, new IndirimDilekcesiRaporu());
+			else if (e.Item == btnKayitSozlesmesi)
+				RaporOlustur(KartTuru.KayitSozlesmesiRaporu, RaporBolumTuru.TahakkukRaporlari, new KayitSozlesmesiRaporu());
+			else if (e.Item == btnKrediKartliOdemeTalimati)
+				RaporOlustur(KartTuru.KrediKartliOdemeTalimatiRaporu, RaporBolumTuru.TahakkukRaporlari, new KrediKartliOdemeTalimatiRaporu());
+			else if (e.Item == btnOdemeSenedi)
+				RaporOlustur(KartTuru.OdemeSenediRaporu, RaporBolumTuru.TahakkukRaporlari, new OdemeSenediRaporu());
+			else if (e.Item == btnBosRapor)
+				RaporOlustur(KartTuru.KullaniciTanimliRapor, RaporBolumTuru.TahakkukRaporlari, new KullaniciTanimliRapor());
+			else if (e.Item == btnTahsilatMakbuzu)
+				RaporOlustur(KartTuru.TahsilatMakbuzu, RaporBolumTuru.MakbuzRaporlari, new TahsilatMakbuzuRaporu());
 			//    else if (e.Item == btnTeslimatMakbuzu)
 			//        RaporOlustur(KartTuru.TeslimatMakbuzu, RaporBolumTuru.MakbuzRaporlari, new TeslimatMakbuzuRaporu());
 			//    else if (e.Item == btnGeriIadeMakbuzu)

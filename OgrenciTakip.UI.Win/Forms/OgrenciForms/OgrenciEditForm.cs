@@ -1,13 +1,12 @@
 ﻿using DevExpress.XtraEditors;
 using OgrenciTakip.Business.General;
 using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Common.Functions;
 using OgrenciTakip.Model.Dto;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.UserControls.Controls;
-using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Common.Functions;
 using System;
 
 namespace OgrenciTakip.UI.Win.Forms.OgrenciForms

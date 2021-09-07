@@ -1,15 +1,15 @@
-﻿using System;
+﻿using OgrenciTakip.Model.Entities.Base;
+using System;
 using System.ComponentModel.DataAnnotations;
-using OgrenciYazilim.Model.Entities.Base;
 
-namespace OgrenciYazilim.Model.Entities
+namespace OgrenciTakip.Model.Entities
 {
-    public class BilgiNotlari : BaseHareketEntity
-    {
-        public long TahakkukId { get; set; }
-        public DateTime Tarih { get; set; }
+	public class BilgiNotlari : BaseHareketEntity
+	{
+		public long TahakkukId { get; set; }
+		public DateTime Tarih { get; set; }
 
-        [Required, StringLength(1000)]
-        public string BilgiNotu { get; set; }
-    }
+		[Required, StringLength(1000)]
+		public string BilgiNotu { get; set; }
+	}
 }

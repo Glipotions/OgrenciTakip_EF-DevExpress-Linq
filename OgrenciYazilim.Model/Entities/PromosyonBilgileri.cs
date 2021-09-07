@@ -1,6 +1,6 @@
-﻿using OgrenciYazilim.Model.Entities.Base;
+﻿using OgrenciTakip.Model.Entities.Base;
 
-namespace OgrenciYazilim.Model.Entities
+namespace OgrenciTakip.Model.Entities
 {
 	public class PromosyonBilgileri : BaseHareketEntity
 	{

@@ -1,14 +1,13 @@
 ﻿using DevExpress.XtraBars;
 using OgrenciTakip.Business.Function;
 using OgrenciTakip.Business.General;
+using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Model.Dto;
 using OgrenciTakip.UI.Win.Forms.TahakkukForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.GeneralForms;
 using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.UI.Win.UserControls.UserControl.Base;
-using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Model.Dto;
 using System.Linq;
 
 namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable

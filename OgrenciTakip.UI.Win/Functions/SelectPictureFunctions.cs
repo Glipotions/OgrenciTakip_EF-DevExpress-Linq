@@ -1,6 +1,6 @@
 ﻿using DevExpress.XtraBars;
+using OgrenciTakip.Common.Message;
 using OgrenciTakip.UI.Win.UserControls.Controls;
-using OgrenciYazilim.Common.Message;
 using System;
 using System.Windows.Forms;
 

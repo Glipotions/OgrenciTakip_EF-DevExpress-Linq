@@ -1,9 +1,9 @@
-﻿using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Model.Entities;
-using OgrenciYazilim.Model.Entities.Base.Interfaces;
+﻿using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Model.Entities;
+using OgrenciTakip.Model.Entities.Base.Interfaces;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace OgrenciYazilim.Model.Dto
+namespace OgrenciTakip.Model.Dto
 {
 	[NotMapped]
 	public class KardesBilgileriL : KardesBilgileri, IBaseHareketEntity

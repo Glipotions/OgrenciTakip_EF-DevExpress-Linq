@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.Migrations;
 
-namespace OgrenciYazilim.Data.Context
+namespace OgrenciTakip.Data.Context
 {
 	public class BaseDbContext<TContext, TConfiguration> : DbContext where TContext : DbContext where TConfiguration : DbMigrationsConfiguration<TContext>, new()
 	{

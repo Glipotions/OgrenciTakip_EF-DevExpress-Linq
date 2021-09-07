@@ -1,5 +1,4 @@
-﻿using OgrenciYazilim.Model.Entities;
-using OgrenciYazilim.Model.Entities.Base;
+﻿using OgrenciTakip.Model.Entities.Base;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OgrenciTakip.Model.Entities

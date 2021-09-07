@@ -25,9 +25,6 @@ using OgrenciTakip.UI.Win.Forms.TesvikForms;
 using OgrenciTakip.UI.Win.Forms.YabanciDilForms;
 using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.UI.Win.UserControls.Controls;
-using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Model.Dto;
-using OgrenciYazilim.Model.Entities;
 using System;
 
 namespace OgrenciTakip.UI.Win.Functions
@@ -435,16 +432,16 @@ namespace OgrenciTakip.UI.Win.Functions
 									break;
 								}
 
-							//case KartTuru.Sube:
-							//	{
-							//		var entity = (SubeL)ShowListForms<SubeListForm>.ShowDialogListForm(KartTuru.Sube, _btnEdit.Id, true);
-							//		if (entity != null)
-							//		{
-							//			_btnEdit.Id = entity.Id;
-							//			_btnEdit.EditValue = entity.SubeAdi;
-							//		}
-							//		break;
-							//	}
+								//case KartTuru.Sube:
+								//	{
+								//		var entity = (SubeL)ShowListForms<SubeListForm>.ShowDialogListForm(KartTuru.Sube, _btnEdit.Id, true);
+								//		if (entity != null)
+								//		{
+								//			_btnEdit.Id = entity.Id;
+								//			_btnEdit.EditValue = entity.SubeAdi;
+								//		}
+								//		break;
+								//	}
 						}
 					}
 					break;

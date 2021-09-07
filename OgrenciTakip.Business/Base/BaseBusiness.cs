@@ -1,11 +1,11 @@
 ﻿using DataAccess.Interfaces;
 using OgrenciTakip.Business.Function;
 using OgrenciTakip.Business.Interfaces;
-using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Common.Functions;
-using OgrenciYazilim.Common.Message;
-using OgrenciYazilim.Model.Attributes;
-using OgrenciYazilim.Model.Entities.Base;
+using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Common.Functions;
+using OgrenciTakip.Common.Message;
+using OgrenciTakip.Model.Attributes;
+using OgrenciTakip.Model.Entities.Base;
 using System;
 using System.Data.Entity;
 using System.Linq;

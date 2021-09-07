@@ -1,6 +1,6 @@
-﻿using OgrenciTakip.Model.Entities;
-using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Model.Entities.Base;
+﻿using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Model.Entities;
+using OgrenciTakip.Model.Entities.Base;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 

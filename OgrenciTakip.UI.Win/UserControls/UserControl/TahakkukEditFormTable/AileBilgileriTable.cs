@@ -1,12 +1,12 @@
 ﻿using OgrenciTakip.Business.Function;
 using OgrenciTakip.Business.General;
+using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Model.Dto;
+using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.AileBilgiForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.UI.Win.UserControls.UserControl.Base;
-using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Model.Dto;
-using OgrenciYazilim.Model.Entities;
 using System.Linq;
 
 namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable

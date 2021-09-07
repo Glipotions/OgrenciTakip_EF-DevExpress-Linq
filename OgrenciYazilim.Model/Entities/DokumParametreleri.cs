@@ -1,7 +1,7 @@
-﻿using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Model.Entities.Base.Interfaces;
+﻿using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Model.Entities.Base.Interfaces;
 
-namespace OgrenciYazilim.Model.Entities
+namespace OgrenciTakip.Model.Entities
 {
 	public class DokumParametreleri : IBaseEntity
 	{

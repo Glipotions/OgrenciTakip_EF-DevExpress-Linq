@@ -1,9 +1,9 @@
 ﻿using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraPrinting;
+using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.GeneralForms;
 using OgrenciTakip.UI.Win.Show;
-using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Model.Entities;
 using System.Drawing;
 using System.Drawing.Printing;
 

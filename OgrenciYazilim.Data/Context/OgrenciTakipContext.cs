@@ -1,11 +1,10 @@
+using OgrenciTakip.Data.OgrenciTakipMigration;
 using OgrenciTakip.Model;
 using OgrenciTakip.Model.Entities;
-using OgrenciYazilim.Data.OgrenciTakipMigration;
-using OgrenciYazilim.Model.Entities;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
-namespace OgrenciYazilim.Data.Context
+namespace OgrenciTakip.Data.Context
 {
 	public class OgrenciTakipContext : BaseDbContext<OgrenciTakipContext, Configuration>
 	{
@@ -86,5 +85,6 @@ namespace OgrenciYazilim.Data.Context
 		public DbSet<Makbuz> Makbuz { get; set; }
 		public DbSet<MakbuzHareketleri> MakbuzHareketleri { get; set; }
 		public DbSet<Rapor> Rapor { get; set; }
+
 	}
 }

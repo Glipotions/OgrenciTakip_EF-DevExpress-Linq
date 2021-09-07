@@ -3,15 +3,15 @@ using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using OgrenciTakip.Business.Interfaces;
+using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Common.Message;
+using OgrenciTakip.Model.Entities;
+using OgrenciTakip.Model.Entities.Base;
 using OgrenciTakip.UI.Win.Forms.FiltreForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.GeneralForms;
 using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.UI.Win.Show.Interfaces;
-using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Common.Message;
-using OgrenciYazilim.Model.Entities;
-using OgrenciYazilim.Model.Entities.Base;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -272,6 +272,9 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 				BagliKartAc();
 			else if (e.Item == btnYazdir)
 				Yazdir();
+			else if (e.Item == btnTabloYazdir)
+				TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, AnaForm.SubeAdi);
+
 			else if (e.Item == btnBaskiOnizleme)
 				BaskiOnizleme();
 			else if (e.Item == btnTasarimDegistir)

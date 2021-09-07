@@ -5,13 +5,13 @@ using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraLayout;
 using DevExpress.XtraReports.UI;
+using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Common.Message;
+using OgrenciTakip.Model.Entities.Base;
+using OgrenciTakip.Model.Entities.Base.Interfaces;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.UserControls.Controls;
 using OgrenciTakip.UI.Win.UserControls.UserControl.Base;
-using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Common.Message;
-using OgrenciYazilim.Model.Entities.Base;
-using OgrenciYazilim.Model.Entities.Base.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -167,11 +167,11 @@ namespace OgrenciTakip.UI.Win.Functions
 					edt.EditValue = null;
 					break;
 
-				//case PropertyGridControl propertyGridControl:
-				//	propertyGridControl.Enabled = baseEdit.Id.HasValue && baseEdit.Id > 0;
-				//	if (!propertyGridControl.Enabled)
-				//		propertyGridControl.SelectedObject = null;
-				//	break;
+					//case PropertyGridControl propertyGridControl:
+					//	propertyGridControl.Enabled = baseEdit.Id.HasValue && baseEdit.Id > 0;
+					//	if (!propertyGridControl.Enabled)
+					//		propertyGridControl.SelectedObject = null;
+					//	break;
 			}
 		}
 

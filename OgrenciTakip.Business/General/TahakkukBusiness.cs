@@ -1,9 +1,9 @@
 ﻿using OgrenciTakip.Business.Base;
 using OgrenciTakip.Business.Interfaces;
+using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Model.Dto;
 using OgrenciTakip.Model.Entities;
-using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Model.Entities.Base;
+using OgrenciTakip.Model.Entities.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -72,133 +72,133 @@ namespace OgrenciTakip.Business.General
 			});
 		}
 
-		//public OgrenciR SingleDetail(Expression<Func<Tahakkuk, bool>> filter)
-		//{
-		//    return BaseSingle(filter, x => new OgrenciR
-		//    {
-		//        OgrenciNo = x.Kod,
-		//        OkulNo = x.OkulNo,
-		//        TcKimlikNo = x.Ogrenci.TcKimlikNo,
-		//        Adi = x.Ogrenci.Adi,
-		//        Soyadi = x.Ogrenci.Soyadi,
-		//        AdiSoyadi = x.Ogrenci.Adi + " " + x.Ogrenci.Soyadi,
-		//        Cinsiyet = x.Ogrenci.Cinsiyet,
-		//        Telefon = x.Ogrenci.Telefon,
-		//        KanGrubu = x.Ogrenci.KanGrubu,
-		//        BabaAdi = x.Ogrenci.BabaAdi,
-		//        AnaAdi = x.Ogrenci.AnaAdi,
-		//        DogumYeri = x.Ogrenci.DogumYeri,
+		public OgrenciR SingleDetail(Expression<Func<Tahakkuk, bool>> filter)
+		{
+			return BaseSingle(filter, x => new OgrenciR
+			{
+				OgrenciNo = x.Kod,
+				OkulNo = x.OkulNo,
+				TcKimlikNo = x.Ogrenci.TcKimlikNo,
+				Adi = x.Ogrenci.Adi,
+				Soyadi = x.Ogrenci.Soyadi,
+				AdiSoyadi = x.Ogrenci.Adi + " " + x.Ogrenci.Soyadi,
+				Cinsiyet = x.Ogrenci.Cinsiyet,
+				Telefon = x.Ogrenci.Telefon,
+				KanGrubu = x.Ogrenci.KanGrubu,
+				BabaAdi = x.Ogrenci.BabaAdi,
+				AnaAdi = x.Ogrenci.AnaAdi,
+				DogumYeri = x.Ogrenci.DogumYeri,
 
-		//        DogumTarihi = x.Ogrenci.DogumTarihi,
-		//        KimlikSeriNo = x.Ogrenci.KimlikSeriNo,
-		//        KimlikSiraNo = x.Ogrenci.KimlikSiraNo,
-		//        KimlikIlAdi = x.Ogrenci.KimlikIl.IlAdi,
-		//        KimlikIlceAdi = x.Ogrenci.KimlikIlce.IlceAdi,
+				DogumTarihi = x.Ogrenci.DogumTarihi,
+				KimlikSeriNo = x.Ogrenci.KimlikSeriNo,
+				KimlikSiraNo = x.Ogrenci.KimlikSiraNo,
+				KimlikIlAdi = x.Ogrenci.KimlikIl.IlAdi,
+				KimlikIlceAdi = x.Ogrenci.KimlikIlce.IlceAdi,
 
-		//        KimlikMahalleKoy = x.Ogrenci.KimlikMahalleKoy,
-		//        KimlikCiltNo = x.Ogrenci.KimlikCiltNo,
-		//        KimlikAileSiraNo = x.Ogrenci.KimlikAileSiraNo,
-		//        KimlikBireySiraNo = x.Ogrenci.KimlikBireySiraNo,
-		//        KimlikVerildigiYer = x.Ogrenci.KimlikVerildigiYer,
-		//        KimlikVerilisNedeni = x.Ogrenci.KimlikVerilisNedeni,
-		//        KimlikKayitNo = x.Ogrenci.KimlikKayitNo,
-		//        KimlikVerilisTarihi = x.Ogrenci.KimlikVerilisTarihi,
-		//        KayitTarihi = x.KayitTarihi,
-		//        KayitSekli = x.KayitSekli,
-		//        KayitDurumu = x.KayitDurumu,
-		//        Sinif = x.Sinif.SinifAdi,
-		//        GeldigiOkul = x.GeldigiOkul.OkulAdi,
-		//        Kontenjan = x.Kontentaj.KontenjanAdi,
-		//        YabanciDil = x.YabanciDil.DilAdi,
-		//        Rehber = x.Rehber.AdiSoyadi,
-		//        Tesvik = x.Tesvik.TesvikAdi,
-		//        DonemAdi = x.Donem.DonemAdi,
-		//        SubeAdi = x.Sube.SubeAdi,
-		//        SubeAdres = x.Sube.Adres,
-		//        SubeAdresiIlAdi = x.Sube.AdresIl.IlAdi,
-		//        SubeAdresIlceAdi = x.Sube.AdresIlce.IlceAdi,
-		//        SubeTelefon = x.Sube.Telefon,
-		//        SubeFax = x.Sube.Fax,
-		//        SubeIbanNo = x.Sube.IbanNo,
-		//        SubeLogo = x.Sube.Logo,
+				KimlikMahalleKoy = x.Ogrenci.KimlikMahalleKoy,
+				KimlikCiltNo = x.Ogrenci.KimlikCiltNo,
+				KimlikAileSiraNo = x.Ogrenci.KimlikAileSiraNo,
+				KimlikBireySiraNo = x.Ogrenci.KimlikBireySiraNo,
+				KimlikVerildigiYer = x.Ogrenci.KimlikVerildigiYer,
+				KimlikVerilisNedeni = x.Ogrenci.KimlikVerilisNedeni,
+				KimlikKayitNo = x.Ogrenci.KimlikKayitNo,
+				KimlikVerilisTarihi = x.Ogrenci.KimlikVerilisTarihi,
+				KayitTarihi = x.KayitTarihi,
+				KayitSekli = x.KayitSekli,
+				KayitDurumu = x.KayitDurumu,
+				Sinif = x.Sinif.SinifAdi,
+				GeldigiOkul = x.GeldigiOkul.OkulAdi,
+				Kontenjan = x.Kontentaj.KontenjanAdi,
+				YabanciDil = x.YabanciDil.DilAdi,
+				Rehber = x.Rehber.AdiSoyadi,
+				Tesvik = x.Tesvik.TesvikAdi,
+				DonemAdi = x.Donem.DonemAdi,
+				SubeAdi = x.Sube.SubeAdi,
+				SubeAdres = x.Sube.Adres,
+				SubeAdresiIlAdi = x.Sube.AdresIl.IlAdi,
+				SubeAdresIlceAdi = x.Sube.AdresIlce.IlceAdi,
+				SubeTelefon = x.Sube.Telefon,
+				SubeFax = x.Sube.Fax,
+				SubeIbanNo = x.Sube.IbanNo,
+				SubeLogo = x.Sube.Logo,
 
-		//        //veli bilgileri
-		//        VeliBilgileri = x.IletisimBilgileri.Where(y => y.Veli).Select(y => new IletisimBilgileriR
-		//        {
-		//            TcKimlikNo = y.Iletisim.TcKimlikNo,
-		//            Adi = y.Iletisim.Adi,
-		//            Soyadi = y.Iletisim.Soyadi,
-		//            AdiSoyadi = y.Iletisim.Adi + " " + y.Iletisim.Soyadi,
-		//            EvTelefonu = y.Iletisim.EvTelefonu,
-		//            IsTel1 = y.Iletisim.IsTelefonu1,
-		//            IsTel2 = y.Iletisim.IsTelefonu2,
-		//            CepTel1 = y.Iletisim.CepTelefonu1,
-		//            CepTel2 = y.Iletisim.CepTelefonu2,
-		//            EvAdres = y.Iletisim.EvAdres,
-		//            EvAdresIlAdi = y.Iletisim.EvAdresIl.IlAdi,
-		//            EvAdresIlceAdi = y.Iletisim.EvAdresIlce.IlceAdi,
-		//            EvAdresTam = y.Iletisim.EvAdres + " - " + y.Iletisim.EvAdresIlce.IlceAdi + " / " + y.Iletisim.EvAdresIl.IlAdi,
-		//            IsAdres = y.Iletisim.IsAdres,
-		//            IsAdresIlAdi = y.Iletisim.IsAdresIl.IlAdi,
-		//            IsAdresIlceAdi = y.Iletisim.IsAdresIlce.IlceAdi,
-		//            IsAdresTam = y.Iletisim.IsAdres + " - " + y.Iletisim.IsAdresIlce.IlceAdi + " / " + y.Iletisim.IsAdresIl.IlAdi,
-		//            YakinlikAdi = y.Yakinlik.YakinlikAdi,
-		//            MeslekAdi = y.Iletisim.Meslek.MeslekAdi,
-		//            IsyeriAdi = y.Iletisim.Isyeri.IsyeriAdi,
-		//            GorevAdi = y.Iletisim.Gorev.GorevAdi
-		//        }).FirstOrDefault(), //eğer .FirstOrDefault() demezsek 1 tane geleceğini bilemez (4/6) 20.video 28:00
+				//veli bilgileri
+				VeliBilgileri = x.IletisimBilgileri.Where(y => y.Veli).Select(y => new IletisimBilgileriR
+				{
+					TcKimlikNo = y.Iletisim.TcKimlikNo,
+					Adi = y.Iletisim.Adi,
+					Soyadi = y.Iletisim.Soyadi,
+					AdiSoyadi = y.Iletisim.Adi + " " + y.Iletisim.Soyadi,
+					EvTelefonu = y.Iletisim.EvTelefonu,
+					IsTel1 = y.Iletisim.IsTelefonu1,
+					IsTel2 = y.Iletisim.IsTelefonu2,
+					CepTel1 = y.Iletisim.CepTelefonu1,
+					CepTel2 = y.Iletisim.CepTelefonu2,
+					EvAdres = y.Iletisim.EvAdres,
+					EvAdresIlAdi = y.Iletisim.EvAdresIl.IlAdi,
+					EvAdresIlceAdi = y.Iletisim.EvAdresIlce.IlceAdi,
+					EvAdresTam = y.Iletisim.EvAdres + " - " + y.Iletisim.EvAdresIlce.IlceAdi + " / " + y.Iletisim.EvAdresIl.IlAdi,
+					IsAdres = y.Iletisim.IsAdres,
+					IsAdresIlAdi = y.Iletisim.IsAdresIl.IlAdi,
+					IsAdresIlceAdi = y.Iletisim.IsAdresIlce.IlceAdi,
+					IsAdresTam = y.Iletisim.IsAdres + " - " + y.Iletisim.IsAdresIlce.IlceAdi + " / " + y.Iletisim.IsAdresIl.IlAdi,
+					YakinlikAdi = y.Yakinlik.YakinlikAdi,
+					MeslekAdi = y.Iletisim.Meslek.MeslekAdi,
+					IsyeriAdi = y.Iletisim.Isyeri.IsyeriAdi,
+					GorevAdi = y.Iletisim.Gorev.GorevAdi
+				}).FirstOrDefault(), //eğer .FirstOrDefault() demezsek 1 tane geleceğini bilemez (4/6) 20.video 28:00
 
-		//        AnneBilgileri = x.IletisimBilgileri.Where(y => y.Yakinlik.YakinlikAdi == "Anne").Select(y => new IletisimBilgileriR
-		//        {
-		//            TcKimlikNo = y.Iletisim.TcKimlikNo,
-		//            Adi = y.Iletisim.Adi,
-		//            Soyadi = y.Iletisim.Soyadi,
-		//            AdiSoyadi = y.Iletisim.Adi + " " + y.Iletisim.Soyadi,
-		//            EvTelefonu = y.Iletisim.EvTelefonu,
-		//            IsTel1 = y.Iletisim.IsTelefonu1,
-		//            IsTel2 = y.Iletisim.IsTelefonu2,
-		//            CepTel1 = y.Iletisim.CepTelefonu1,
-		//            CepTel2 = y.Iletisim.CepTelefonu2,
-		//            EvAdres = y.Iletisim.EvAdres,
-		//            EvAdresIlAdi = y.Iletisim.EvAdresIl.IlAdi,
-		//            EvAdresIlceAdi = y.Iletisim.EvAdresIlce.IlceAdi,
-		//            EvAdresTam = y.Iletisim.EvAdres + " - " + y.Iletisim.EvAdresIlce.IlceAdi + " / " + y.Iletisim.EvAdresIl.IlAdi,
-		//            IsAdres = y.Iletisim.IsAdres,
-		//            IsAdresIlAdi = y.Iletisim.IsAdresIl.IlAdi,
-		//            IsAdresIlceAdi = y.Iletisim.IsAdresIlce.IlceAdi,
-		//            IsAdresTam = y.Iletisim.IsAdres + " - " + y.Iletisim.IsAdresIlce.IlceAdi + " / " + y.Iletisim.IsAdresIl.IlAdi,
-		//            YakinlikAdi = y.Yakinlik.YakinlikAdi,
-		//            MeslekAdi = y.Iletisim.Meslek.MeslekAdi,
-		//            IsyeriAdi = y.Iletisim.Isyeri.IsyeriAdi,
-		//            GorevAdi = y.Iletisim.Gorev.GorevAdi
-		//        }).FirstOrDefault(),
+				AnneBilgileri = x.IletisimBilgileri.Where(y => y.Yakinlik.YakinlikAdi == "Anne").Select(y => new IletisimBilgileriR
+				{
+					TcKimlikNo = y.Iletisim.TcKimlikNo,
+					Adi = y.Iletisim.Adi,
+					Soyadi = y.Iletisim.Soyadi,
+					AdiSoyadi = y.Iletisim.Adi + " " + y.Iletisim.Soyadi,
+					EvTelefonu = y.Iletisim.EvTelefonu,
+					IsTel1 = y.Iletisim.IsTelefonu1,
+					IsTel2 = y.Iletisim.IsTelefonu2,
+					CepTel1 = y.Iletisim.CepTelefonu1,
+					CepTel2 = y.Iletisim.CepTelefonu2,
+					EvAdres = y.Iletisim.EvAdres,
+					EvAdresIlAdi = y.Iletisim.EvAdresIl.IlAdi,
+					EvAdresIlceAdi = y.Iletisim.EvAdresIlce.IlceAdi,
+					EvAdresTam = y.Iletisim.EvAdres + " - " + y.Iletisim.EvAdresIlce.IlceAdi + " / " + y.Iletisim.EvAdresIl.IlAdi,
+					IsAdres = y.Iletisim.IsAdres,
+					IsAdresIlAdi = y.Iletisim.IsAdresIl.IlAdi,
+					IsAdresIlceAdi = y.Iletisim.IsAdresIlce.IlceAdi,
+					IsAdresTam = y.Iletisim.IsAdres + " - " + y.Iletisim.IsAdresIlce.IlceAdi + " / " + y.Iletisim.IsAdresIl.IlAdi,
+					YakinlikAdi = y.Yakinlik.YakinlikAdi,
+					MeslekAdi = y.Iletisim.Meslek.MeslekAdi,
+					IsyeriAdi = y.Iletisim.Isyeri.IsyeriAdi,
+					GorevAdi = y.Iletisim.Gorev.GorevAdi
+				}).FirstOrDefault(),
 
-		//        BabaBilgileri = x.IletisimBilgileri.Where(y => y.Yakinlik.YakinlikAdi == "Baba").Select(y => new IletisimBilgileriR
-		//        {
-		//            TcKimlikNo = y.Iletisim.TcKimlikNo,
-		//            Adi = y.Iletisim.Adi,
-		//            Soyadi = y.Iletisim.Soyadi,
-		//            AdiSoyadi = y.Iletisim.Adi + " " + y.Iletisim.Soyadi,
-		//            EvTelefonu = y.Iletisim.EvTelefonu,
-		//            IsTel1 = y.Iletisim.IsTelefonu1,
-		//            IsTel2 = y.Iletisim.IsTelefonu2,
-		//            CepTel1 = y.Iletisim.CepTelefonu1,
-		//            CepTel2 = y.Iletisim.CepTelefonu2,
-		//            EvAdres = y.Iletisim.EvAdres,
-		//            EvAdresIlAdi = y.Iletisim.EvAdresIl.IlAdi,
-		//            EvAdresIlceAdi = y.Iletisim.EvAdresIlce.IlceAdi,
-		//            EvAdresTam = y.Iletisim.EvAdres + " - " + y.Iletisim.EvAdresIlce.IlceAdi + " / " + y.Iletisim.EvAdresIl.IlAdi,
-		//            IsAdres = y.Iletisim.IsAdres,
-		//            IsAdresIlAdi = y.Iletisim.IsAdresIl.IlAdi,
-		//            IsAdresIlceAdi = y.Iletisim.IsAdresIlce.IlceAdi,
-		//            IsAdresTam = y.Iletisim.IsAdres + " - " + y.Iletisim.IsAdresIlce.IlceAdi + " / " + y.Iletisim.IsAdresIl.IlAdi,
-		//            YakinlikAdi = y.Yakinlik.YakinlikAdi,
-		//            MeslekAdi = y.Iletisim.Meslek.MeslekAdi,
-		//            IsyeriAdi = y.Iletisim.Isyeri.IsyeriAdi,
-		//            GorevAdi = y.Iletisim.Gorev.GorevAdi
-		//        }).FirstOrDefault(),
-		//    });
-		//}
+				BabaBilgileri = x.IletisimBilgileri.Where(y => y.Yakinlik.YakinlikAdi == "Baba").Select(y => new IletisimBilgileriR
+				{
+					TcKimlikNo = y.Iletisim.TcKimlikNo,
+					Adi = y.Iletisim.Adi,
+					Soyadi = y.Iletisim.Soyadi,
+					AdiSoyadi = y.Iletisim.Adi + " " + y.Iletisim.Soyadi,
+					EvTelefonu = y.Iletisim.EvTelefonu,
+					IsTel1 = y.Iletisim.IsTelefonu1,
+					IsTel2 = y.Iletisim.IsTelefonu2,
+					CepTel1 = y.Iletisim.CepTelefonu1,
+					CepTel2 = y.Iletisim.CepTelefonu2,
+					EvAdres = y.Iletisim.EvAdres,
+					EvAdresIlAdi = y.Iletisim.EvAdresIl.IlAdi,
+					EvAdresIlceAdi = y.Iletisim.EvAdresIlce.IlceAdi,
+					EvAdresTam = y.Iletisim.EvAdres + " - " + y.Iletisim.EvAdresIlce.IlceAdi + " / " + y.Iletisim.EvAdresIl.IlAdi,
+					IsAdres = y.Iletisim.IsAdres,
+					IsAdresIlAdi = y.Iletisim.IsAdresIl.IlAdi,
+					IsAdresIlceAdi = y.Iletisim.IsAdresIlce.IlceAdi,
+					IsAdresTam = y.Iletisim.IsAdres + " - " + y.Iletisim.IsAdresIlce.IlceAdi + " / " + y.Iletisim.IsAdresIl.IlAdi,
+					YakinlikAdi = y.Yakinlik.YakinlikAdi,
+					MeslekAdi = y.Iletisim.Meslek.MeslekAdi,
+					IsyeriAdi = y.Iletisim.Isyeri.IsyeriAdi,
+					GorevAdi = y.Iletisim.Gorev.GorevAdi
+				}).FirstOrDefault(),
+			});
+		}
 
 		public BaseEntity SingleSummary(Expression<Func<Tahakkuk, bool>> filter)
 		{

@@ -3,7 +3,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Linq;
 
-namespace OgrenciYazilim.Common.Functions
+namespace OgrenciTakip.Common.Functions
 {
 	public static class EnumFunctions
 	{

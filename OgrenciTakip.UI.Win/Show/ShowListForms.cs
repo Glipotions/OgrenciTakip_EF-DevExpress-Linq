@@ -1,8 +1,8 @@
-﻿using OgrenciTakip.UI.Win.Forms.BaseForms;
+﻿using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Model.Entities.Base;
+using OgrenciTakip.Model.Entities.Base.Interfaces;
+using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Functions;
-using OgrenciYazilim.Common.Enums;
-using OgrenciYazilim.Model.Entities.Base;
-using OgrenciYazilim.Model.Entities.Base.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;

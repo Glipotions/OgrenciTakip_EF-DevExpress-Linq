@@ -1,7 +1,7 @@
 ﻿using OgrenciTakip.Business.Base;
 using OgrenciTakip.Business.Interfaces;
+using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Model.Entities;
-using OgrenciYazilim.Common.Enums;
 using System.Windows.Forms;
 
 namespace OgrenciTakip.Business.General

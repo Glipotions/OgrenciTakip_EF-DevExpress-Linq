@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraBars;
+using OgrenciTakip.Common.Enums;
 using OgrenciTakip.UI.Win.Forms.AileBilgiForms;
 using OgrenciTakip.UI.Win.Forms.AvukatForms;
 using OgrenciTakip.UI.Win.Forms.BankaForms;
@@ -31,7 +32,6 @@ using OgrenciTakip.UI.Win.Forms.TesvikForms;
 using OgrenciTakip.UI.Win.Forms.YabanciDilForms;
 using OgrenciTakip.UI.Win.Forms.YakinlikForms;
 using OgrenciTakip.UI.Win.Show;
-using OgrenciYazilim.Common.Enums;
 using System;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
