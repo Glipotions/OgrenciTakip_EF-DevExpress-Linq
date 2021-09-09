@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\Aylar.cs" />
     <Compile Include="Enums\BankaHesapTuru.cs" />
     <Compile Include="Enums\BelgeDurumu.cs" />
     <Compile Include="Enums\Cinsiyet.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="Enums\EposKartTuru.cs" />
     <Compile Include="Enums\GeriOdemeHesapTuru.cs" />
     <Compile Include="Enums\IptalDurumu.cs" />
+    <Compile Include="Enums\KdvSekli.cs" />
     <Compile Include="Enums\MakbuzHesapTuru.cs" />
     <Compile Include="Enums\MakbuzTuru.cs" />
     <Compile Include="Enums\RaporBolumTuru.cs" />

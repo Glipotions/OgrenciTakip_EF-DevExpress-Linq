@@ -99,6 +99,16 @@ namespace OgrenciTakip.Common.Enums
 		[Description("Kullanıcı Tanimlı Rapor")]
 		KullaniciTanimliRapor = 47,
 		[Description("Tahsilat Makbuzu")]
-		TahsilatMakbuzu = 48
+		TahsilatMakbuzu = 48,
+		[Description("Şube Kartı")]
+		Sube = 49,
+		[Description("Teslimat Makbuzu")]
+		TeslimatMakbuzu = 50,
+		[Description("İade Makbuzu")]
+		GeriIadeMakbuzu = 51,
+		[Description("Genel Makbuzu")]
+		GenelMakbuz = 52,
+		[Description("Fatura Kartı")]
+		Fatura = 53
 	}
 }

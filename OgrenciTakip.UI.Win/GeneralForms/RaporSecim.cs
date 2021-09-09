@@ -261,13 +261,17 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 					rpr.Makbuz_Bilgileri.DataSource = _makbuzBilgileri;
 					break;
 
-					//        case GeriIadeMakbuzuRaporu rpr:
-					//            rpr.Makbuz_Bilgileri.DataSource = _makbuzBilgileri;
-					//            break;
+				case TeslimatMakbuzuRaporu rpr:
+					rpr.Makbuz_Bilgileri.DataSource = _makbuzBilgileri;
+					break;
 
-					//        case GenelMakbuzRaporu rpr:
-					//            rpr.Makbuz_Bilgileri.DataSource = _makbuzBilgileri;
-					//            break;
+				case GeriIadeMakbuzuRaporu rpr:
+					rpr.Makbuz_Bilgileri.DataSource = _makbuzBilgileri;
+					break;
+
+				case GenelMakbuzRaporu rpr:
+					rpr.Makbuz_Bilgileri.DataSource = _makbuzBilgileri;
+					break;
 
 					//        case FaturaRaporu rpr:
 					//            rpr.Fatura_Bilgileri.DataSource = _faturaBilgileri;
@@ -351,12 +355,12 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 				RaporOlustur(KartTuru.KullaniciTanimliRapor, RaporBolumTuru.TahakkukRaporlari, new KullaniciTanimliRapor());
 			else if (e.Item == btnTahsilatMakbuzu)
 				RaporOlustur(KartTuru.TahsilatMakbuzu, RaporBolumTuru.MakbuzRaporlari, new TahsilatMakbuzuRaporu());
-			//    else if (e.Item == btnTeslimatMakbuzu)
-			//        RaporOlustur(KartTuru.TeslimatMakbuzu, RaporBolumTuru.MakbuzRaporlari, new TeslimatMakbuzuRaporu());
-			//    else if (e.Item == btnGeriIadeMakbuzu)
-			//        RaporOlustur(KartTuru.GeriIadeMakbuzu, RaporBolumTuru.MakbuzRaporlari, new GeriIadeMakbuzuRaporu());
-			//    else if (e.Item == btnGenelMakbuz)
-			//        RaporOlustur(KartTuru.GenelMakbuz, RaporBolumTuru.MakbuzRaporlari, new GenelMakbuzRaporu());
+			else if (e.Item == btnTeslimatMakbuzu)
+				RaporOlustur(KartTuru.TeslimatMakbuzu, RaporBolumTuru.MakbuzRaporlari, new TeslimatMakbuzuRaporu());
+			else if (e.Item == btnGeriIadeMakbuzu)
+				RaporOlustur(KartTuru.GeriIadeMakbuzu, RaporBolumTuru.MakbuzRaporlari, new GeriIadeMakbuzuRaporu());
+			else if (e.Item == btnGenelMakbuz)
+				RaporOlustur(KartTuru.GenelMakbuz, RaporBolumTuru.MakbuzRaporlari, new GenelMakbuzRaporu());
 			//    else if (e.Item == btnFatura)
 			//        RaporOlustur(KartTuru.FaturaRaporu, RaporBolumTuru.FaturaDonemRaporlari, new FaturaRaporu());
 			//    else if (e.Item == btnDonemIcmalRaporu)

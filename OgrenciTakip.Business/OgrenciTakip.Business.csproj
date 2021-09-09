@@ -74,6 +74,7 @@
     <Compile Include="General\EposBilgileriBusiness.cs" />
     <Compile Include="General\EvrakBilgileriBusiness.cs" />
     <Compile Include="General\EvrakBusiness.cs" />
+    <Compile Include="General\FaturaBusiness.cs" />
     <Compile Include="General\GeriOdemeBilgileriBusiness.cs" />
     <Compile Include="General\HizmetBilgileriBusiness.cs" />
     <Compile Include="General\HizmetBusiness.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="General\ServisBusiness.cs" />
     <Compile Include="General\SinavBilgileriBusiness.cs" />
     <Compile Include="General\SinifBusiness.cs" />
+    <Compile Include="General\SubeBusiness.cs" />
     <Compile Include="General\TahakkukBusiness.cs" />
     <Compile Include="General\YakinlikBusiness.cs" />
     <Compile Include="General\TesvikBusiness.cs" />

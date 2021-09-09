@@ -13,6 +13,10 @@ namespace OgrenciTakip.Common.Message
 		{
 			XtraMessageBox.Show(uyariMesaji, "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
+		public static void BilgiMesaji(string bilgiMesaji)
+		{
+			XtraMessageBox.Show(bilgiMesaji, "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+		}
 
 		public static DialogResult EvetSeciliEvetHayir(string mesaj, string baslik)
 		{
@@ -113,5 +117,7 @@ namespace OgrenciTakip.Common.Message
 		{
 			return HayirSeciliEvetHayir("Kullanıcı Şifresi Sıfırlanarak, Kullanıcı Bilgilerini İçeren Yeni Bir E-Mail Gönderilecektir. Onaylıyor musunuz", "Onay");
 		}
+
+
 	}
 }

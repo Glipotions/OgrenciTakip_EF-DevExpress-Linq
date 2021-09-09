@@ -105,16 +105,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 				Tablo.TabloSablonYukle(Name + " TablosuMDI");
 			}
 		}
-		private void EntityDelete()
-		{
-			var entity = Tablo.GetRow<BaseEntity>();
-			if (entity == null) return;
-			if (!((IBaseCommonBusiness)Business).Delete(entity)) return;
-
-			Tablo.DeleteSelectedRows();
-			Tablo.RowFocus(Tablo.FocusedRowHandle);
-
-		}
 		private void FormCaptionAyarla()
 		{
 			if (btnAktifPasifKartlar == null)
@@ -188,6 +178,16 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
 			DialogResult = DialogResult.OK;
 			Close();
+		}
+		protected virtual void EntityDelete()
+		{
+			var entity = Tablo.GetRow<BaseEntity>();
+			if (entity == null) return;
+			if (!((IBaseCommonBusiness)Business).Delete(entity)) return;
+
+			Tablo.DeleteSelectedRows();
+			Tablo.RowFocus(Tablo.FocusedRowHandle);
+
 		}
 		protected virtual void DegiskenleriDoldur() { }
 		protected virtual void ShowEditForm(long id)

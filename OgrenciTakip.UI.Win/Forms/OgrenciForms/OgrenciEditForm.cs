@@ -129,8 +129,8 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
 
 		//protected override void TabloYukle()
 		//{
-		//    tahakkukBilgileriTable.OwnerForm = this;
-		//    tahakkukBilgileriTable.Yukle();
+		//	tahakkukBilgileriTable.OwnerForm = this;
+		//	tahakkukBilgileriTable.Yukle();
 		//}
 
 		protected override void SecimYap(object sender)

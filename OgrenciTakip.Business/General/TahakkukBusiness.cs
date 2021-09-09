@@ -243,99 +243,99 @@ namespace OgrenciTakip.Business.General
 			}).OrderBy(x => x.Kod).ToList();
 		}
 
-		//public IEnumerable<FaturaL> FaturaTahakkukList(Expression<Func<Tahakkuk, bool>> filter)
-		//{
-		//    return BaseList(filter, x => new
-		//    {
-		//        Tahakkuk = x,
+		public IEnumerable<FaturaL> FaturaTahakkukList(Expression<Func<Tahakkuk, bool>> filter)
+		{
+			return BaseList(filter, x => new
+			{
+				Tahakkuk = x,
 
-		//        VeliBilgileri = x.IletisimBilgileri.Where(y => y.Veli).Select(y => new
-		//        {
-		//            y.Iletisim,
-		//            y.Yakinlik,
-		//        }).FirstOrDefault(),
+				VeliBilgileri = x.IletisimBilgileri.Where(y => y.Veli).Select(y => new
+				{
+					y.Iletisim,
+					y.Yakinlik,
+				}).FirstOrDefault(),
 
-		//        HizmetBilgileri = x.HizmetBilgileri.GroupBy(p => p.TahakkukId).DefaultIfEmpty().Select(p => new
-		//        {
-		//            NetHizmet = p.Select(z => z.NetUcret).DefaultIfEmpty(0).Sum()
-		//        }).FirstOrDefault(),
+				HizmetBilgileri = x.HizmetBilgileri.GroupBy(p => p.TahakkukId).DefaultIfEmpty().Select(p => new
+				{
+					NetHizmet = p.Select(z => z.NetUcret).DefaultIfEmpty(0).Sum()
+				}).FirstOrDefault(),
 
-		//        Indirimbilgileri = x.IndirimBilgileri.GroupBy(p => p.TahakkukId).DefaultIfEmpty().Select(p => new
-		//        {
-		//            NetIndirim = p.Select(z => z.NetIndirim).DefaultIfEmpty(0).Sum()
-		//        }).FirstOrDefault(),
+				Indirimbilgileri = x.IndirimBilgileri.GroupBy(p => p.TahakkukId).DefaultIfEmpty().Select(p => new
+				{
+					NetIndirim = p.Select(z => z.NetIndirim).DefaultIfEmpty(0).Sum()
+				}).FirstOrDefault(),
 
-		//        FaturaBilgileri = x.FaturaBilgileri.GroupBy(p => p.TahakkukId).DefaultIfEmpty().Select(p => new
-		//        {
-		//            Aciklama = p.Select(z => z.Aciklama).FirstOrDefault(),
-		//            PlanTutar = p.Select(z => z.PlanTutar).DefaultIfEmpty(0).Sum(),
-		//            PlanIndirimTutar = p.Select(z => z.PlanIndirimTutar).DefaultIfEmpty(0).Sum(),
-		//            PlanNetTutar = p.Select(z => z.PlanNetTutar).DefaultIfEmpty(0).Sum()
-		//        }).FirstOrDefault()
-		//    }).Select(x => new FaturaL
-		//    {
-		//        Id = x.Tahakkuk.Id,
-		//        OgrenciNo = x.Tahakkuk.Kod,
-		//        Adi = x.Tahakkuk.Ogrenci.Adi,
-		//        Soyadi = x.Tahakkuk.Ogrenci.Soyadi,
-		//        SinifAdi = x.Tahakkuk.Sinif.SinifAdi,
-		//        KayitTarihi = x.Tahakkuk.KayitTarihi,
-		//        KayitSekli = x.Tahakkuk.KayitSekli,
-		//        KayitDurumu = x.Tahakkuk.KayitDurumu,
-		//        IptalDurumu = x.Tahakkuk.Durum ? IptalDurumu.DevamEdiyor : IptalDurumu.IptalEdildi,
-		//        VeliAdi = x.VeliBilgileri.Iletisim.Adi,
-		//        VeliSoyadi = x.VeliBilgileri.Iletisim.Soyadi,
-		//        VeliYakinlikAdi = x.VeliBilgileri.Yakinlik.YakinlikAdi,
-		//        VeliMeslekAdi = x.VeliBilgileri.Iletisim.Meslek.MeslekAdi,
-		//        HizmetTutar = x.HizmetBilgileri.NetHizmet,
-		//        HizmetIndirim = x.Indirimbilgileri.NetIndirim,
-		//        HizmetNetTutar = x.HizmetBilgileri.NetHizmet - x.Indirimbilgileri.NetIndirim,
-		//        PlanTutar = x.FaturaBilgileri.PlanTutar,
-		//        PlanIndirim = x.FaturaBilgileri.PlanIndirimTutar,
-		//        PlanNetTutar = x.FaturaBilgileri.PlanNetTutar,
-		//        OzelKod1 = x.Tahakkuk.OzelKod1.OzelKodAdi,
-		//        OzelKod2 = x.Tahakkuk.OzelKod2.OzelKodAdi,
-		//        OzelKod3 = x.Tahakkuk.OzelKod3.OzelKodAdi,
-		//        OzelKod4 = x.Tahakkuk.OzelKod4.OzelKodAdi,
-		//        OzelKod5 = x.Tahakkuk.OzelKod5.OzelKodAdi,
-		//    }).OrderBy(x => x.OgrenciNo).ToList();
-		//}
+				FaturaBilgileri = x.FaturaBilgileri.GroupBy(p => p.TahakkukId).DefaultIfEmpty().Select(p => new
+				{
+					Aciklama = p.Select(z => z.Aciklama).FirstOrDefault(),
+					PlanTutar = p.Select(z => z.PlanTutar).DefaultIfEmpty(0).Sum(),
+					PlanIndirimTutar = p.Select(z => z.PlanIndirimTutar).DefaultIfEmpty(0).Sum(),
+					PlanNetTutar = p.Select(z => z.PlanNetTutar).DefaultIfEmpty(0).Sum()
+				}).FirstOrDefault()
+			}).Select(x => new FaturaL
+			{
+				Id = x.Tahakkuk.Id,
+				OgrenciNo = x.Tahakkuk.Kod,
+				Adi = x.Tahakkuk.Ogrenci.Adi,
+				Soyadi = x.Tahakkuk.Ogrenci.Soyadi,
+				SinifAdi = x.Tahakkuk.Sinif.SinifAdi,
+				KayitTarihi = x.Tahakkuk.KayitTarihi,
+				KayitSekli = x.Tahakkuk.KayitSekli,
+				KayitDurumu = x.Tahakkuk.KayitDurumu,
+				IptalDurumu = x.Tahakkuk.Durum ? IptalDurumu.DevamEdiyor : IptalDurumu.IptalEdildi,
+				VeliAdi = x.VeliBilgileri.Iletisim.Adi,
+				VeliSoyadi = x.VeliBilgileri.Iletisim.Soyadi,
+				VeliYakinlikAdi = x.VeliBilgileri.Yakinlik.YakinlikAdi,
+				VeliMeslekAdi = x.VeliBilgileri.Iletisim.Meslek.MeslekAdi,
+				HizmetTutar = x.HizmetBilgileri.NetHizmet,
+				HizmetIndirim = x.Indirimbilgileri.NetIndirim,
+				HizmetNetTutar = x.HizmetBilgileri.NetHizmet - x.Indirimbilgileri.NetIndirim,
+				PlanTutar = x.FaturaBilgileri.PlanTutar,
+				PlanIndirim = x.FaturaBilgileri.PlanIndirimTutar,
+				PlanNetTutar = x.FaturaBilgileri.PlanNetTutar,
+				OzelKod1 = x.Tahakkuk.OzelKod1.OzelKodAdi,
+				OzelKod2 = x.Tahakkuk.OzelKod2.OzelKodAdi,
+				OzelKod3 = x.Tahakkuk.OzelKod3.OzelKodAdi,
+				OzelKod4 = x.Tahakkuk.OzelKod4.OzelKodAdi,
+				OzelKod5 = x.Tahakkuk.OzelKod5.OzelKodAdi,
+			}).OrderBy(x => x.OgrenciNo).ToList();
+		}
 
-		//public IEnumerable<OgrenciTahakkukL> OgrenciTahakkukList(Expression<Func<Tahakkuk, bool>> filter)
-		//{
-		//    return BaseList(filter, x => new
-		//    {
-		//        Tahakkuk = x,
+		public IEnumerable<OgrenciTahakkukL> OgrenciTahakkukList(Expression<Func<Tahakkuk, bool>> filter)
+		{
+			return BaseList(filter, x => new
+			{
+				Tahakkuk = x,
 
-		//        HizmetBilgileri = x.HizmetBilgileri.GroupBy(p => p.TahakkukId).DefaultIfEmpty().Select(p => new
-		//        {
-		//            BrutHizmet = p.Select(z => z.BrutUcret).DefaultIfEmpty(0).Sum(),
-		//            KistDonemDusulenHizmet = p.Select(z => z.KistDonemDusulenUcret).DefaultIfEmpty(0).Sum(),
-		//            NetHizmet = p.Select(z => z.NetUcret).DefaultIfEmpty(0).Sum(),
-		//        }).FirstOrDefault(),
+				HizmetBilgileri = x.HizmetBilgileri.GroupBy(p => p.TahakkukId).DefaultIfEmpty().Select(p => new
+				{
+					BrutHizmet = p.Select(z => z.BrutUcret).DefaultIfEmpty(0).Sum(),
+					KistDonemDusulenHizmet = p.Select(z => z.KistDonemDusulenUcret).DefaultIfEmpty(0).Sum(),
+					NetHizmet = p.Select(z => z.NetUcret).DefaultIfEmpty(0).Sum(),
+				}).FirstOrDefault(),
 
-		//        Indirimbilgileri = x.IndirimBilgileri.GroupBy(p => p.TahakkukId).DefaultIfEmpty().Select(p => new
-		//        {
-		//            BrutIndirim = p.Select(z => z.BrutIndirim).DefaultIfEmpty(0).Sum(),
-		//            KistDonemDusulunIndirim = p.Select(z => z.KistDonemDusulenIndirim).DefaultIfEmpty(0).Sum(),
-		//            NetIndirim = p.Select(z => z.NetIndirim).DefaultIfEmpty(0).Sum()
-		//        }).FirstOrDefault(),
-		//    }).Select(x => new OgrenciTahakkukL
-		//    {
-		//        TahakkukId = x.Tahakkuk.Id,
-		//        SubeId = x.Tahakkuk.SubeId,
-		//        SubeAdi = x.Tahakkuk.Sube.SubeAdi,
-		//        DonemId = x.Tahakkuk.DonemId,
-		//        DonemAdi = x.Tahakkuk.Donem.DonemAdi,
-		//        BrutHizmet = x.HizmetBilgileri.BrutHizmet,
-		//        KistDonemDusulenHizmet = x.HizmetBilgileri.KistDonemDusulenHizmet,
-		//        NetHizmet = x.HizmetBilgileri.NetHizmet,
-		//        BrutIndirim = x.Indirimbilgileri.BrutIndirim,
-		//        KistDonemDusulenIndirim = x.Indirimbilgileri.KistDonemDusulunIndirim,
-		//        NetIndirim = x.Indirimbilgileri.NetIndirim,
-		//        NetUcret = x.HizmetBilgileri.NetHizmet - x.Indirimbilgileri.NetIndirim,
-		//        IndirimOrani = x.HizmetBilgileri.NetHizmet == 0 ? 0 : x.Indirimbilgileri.NetIndirim / x.HizmetBilgileri.NetHizmet * 100,
-		//    }).OrderBy(x => x.TahakkukId).ToList();
-		//}
+				Indirimbilgileri = x.IndirimBilgileri.GroupBy(p => p.TahakkukId).DefaultIfEmpty().Select(p => new
+				{
+					BrutIndirim = p.Select(z => z.BrutIndirim).DefaultIfEmpty(0).Sum(),
+					KistDonemDusulunIndirim = p.Select(z => z.KistDonemDusulenIndirim).DefaultIfEmpty(0).Sum(),
+					NetIndirim = p.Select(z => z.NetIndirim).DefaultIfEmpty(0).Sum()
+				}).FirstOrDefault(),
+			}).Select(x => new OgrenciTahakkukL
+			{
+				TahakkukId = x.Tahakkuk.Id,
+				SubeId = x.Tahakkuk.SubeId,
+				SubeAdi = x.Tahakkuk.Sube.SubeAdi,
+				DonemId = x.Tahakkuk.DonemId,
+				DonemAdi = x.Tahakkuk.Donem.DonemAdi,
+				BrutHizmet = x.HizmetBilgileri.BrutHizmet,
+				KistDonemDusulenHizmet = x.HizmetBilgileri.KistDonemDusulenHizmet,
+				NetHizmet = x.HizmetBilgileri.NetHizmet,
+				BrutIndirim = x.Indirimbilgileri.BrutIndirim,
+				KistDonemDusulenIndirim = x.Indirimbilgileri.KistDonemDusulunIndirim,
+				NetIndirim = x.Indirimbilgileri.NetIndirim,
+				NetUcret = x.HizmetBilgileri.NetHizmet - x.Indirimbilgileri.NetIndirim,
+				IndirimOrani = x.HizmetBilgileri.NetHizmet == 0 ? 0 : x.Indirimbilgileri.NetIndirim / x.HizmetBilgileri.NetHizmet * 100,
+			}).OrderBy(x => x.TahakkukId).ToList();
+		}
 	}
 }

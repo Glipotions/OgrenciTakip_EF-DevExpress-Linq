@@ -6,6 +6,7 @@ using OgrenciTakip.UI.Win.Forms.BankaForms;
 using OgrenciTakip.UI.Win.Forms.BankaHesapForms;
 using OgrenciTakip.UI.Win.Forms.CariForms;
 using OgrenciTakip.UI.Win.Forms.EvrakForms;
+using OgrenciTakip.UI.Win.Forms.FaturaForms;
 using OgrenciTakip.UI.Win.Forms.GorevForms;
 using OgrenciTakip.UI.Win.Forms.HizmetForms;
 using OgrenciTakip.UI.Win.Forms.HizmetTuruForms;
@@ -27,6 +28,7 @@ using OgrenciTakip.UI.Win.Forms.RehberForms;
 using OgrenciTakip.UI.Win.Forms.ServisForms;
 using OgrenciTakip.UI.Win.Forms.SinifForms;
 using OgrenciTakip.UI.Win.Forms.SinifGrupForms;
+using OgrenciTakip.UI.Win.Forms.SubeForms;
 using OgrenciTakip.UI.Win.Forms.TahakkukForms;
 using OgrenciTakip.UI.Win.Forms.TesvikForms;
 using OgrenciTakip.UI.Win.Forms.YabanciDilForms;
@@ -55,6 +57,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 		public static bool HizmetTahakkukKurusKullan;
 		public static bool IndirimTahakkukKurusKullan;
 		public static bool OdemePlaniKurusKullan;
+		public static bool FaturaTahakkukKurusKullan;
 		public static bool GittigiOkulZorunlu = true;
 		public static DateTime MaksimumTaksitTarihi = DateTime.Now.Date;
 		public static byte MaksimumTaksitSayisi = 12;
@@ -153,8 +156,10 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 				ShowListForms<TahakkukListForm>.ShowListForm(KartTuru.Tahakkuk);
 			else if (e.Item == btnMakbuzKartlari)
 				ShowListForms<MakbuzListForm>.ShowListForm(KartTuru.Makbuz);
-
-
+			else if (e.Item == btnSubeKartlari)
+				ShowListForms<SubeListForm>.ShowListForm(KartTuru.Sube);
+			else if (e.Item == btnFaturaPlaniKartlari)
+				ShowListForms<FaturaPlaniListForm>.ShowListForm(KartTuru.Fatura);
 
 		}
 	}

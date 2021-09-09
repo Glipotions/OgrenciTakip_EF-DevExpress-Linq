@@ -10,6 +10,7 @@ using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.GeneralForms;
+using OgrenciTakip.UI.Win.Show;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -268,9 +269,9 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
 						sec.Sec(txtHesap, KartTuru.Kasa);
 						break;
 
-						//case MakbuzHesapTuru.Transfer:
-						//    sec.Sec(txtHesap, KartTuru.Sube);
-						//    break;
+					//case MakbuzHesapTuru.Transfer:
+					//	sec.Sec(txtHesap, KartTuru.Sube);
+					//	break;
 				}
 			}
 		}
@@ -318,7 +319,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
 				source.Add(row);
 			}
 
-			//ShowListForms<RaporSecim>.ShowDialogListForm(KartTuru.Rapor, false, RaporBolumTuru.MakbuzRaporlari, source);
+			ShowListForms<RaporSecim>.ShowDialogListForm(KartTuru.Rapor, false, RaporBolumTuru.MakbuzRaporlari, source);
 		}
 
 		protected override void Control_SelectedValueChanged(object sender, EventArgs e)

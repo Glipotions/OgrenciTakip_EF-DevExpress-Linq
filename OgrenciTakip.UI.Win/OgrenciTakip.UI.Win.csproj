@@ -191,6 +191,30 @@
     <Compile Include="Forms\EvrakForms\EvrakListForm.Designer.cs">
       <DependentUpon>EvrakListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FaturaForms\FaturaPlaniEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FaturaForms\FaturaPlaniEditForm.Designer.cs">
+      <DependentUpon>FaturaPlaniEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FaturaForms\FaturaPlaniListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FaturaForms\FaturaPlaniListForm.Designer.cs">
+      <DependentUpon>FaturaPlaniListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FaturaForms\FaturaTahakkukEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FaturaForms\FaturaTahakkukEditForm.Designer.cs">
+      <DependentUpon>FaturaTahakkukEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FaturaForms\TopluFaturaPlaniEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FaturaForms\TopluFaturaPlaniEditForm.Designer.cs">
+      <DependentUpon>TopluFaturaPlaniEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FiltreForms\FiltreEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -503,6 +527,18 @@
     <Compile Include="Forms\SinifGrupForms\SinifGrupListForm.Designer.cs">
       <DependentUpon>SinifGrupListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SubeForms\SubeEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SubeForms\SubeEditForm.Designer.cs">
+      <DependentUpon>SubeEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SubeForms\SubeListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SubeForms\SubeListForm.Designer.cs">
+      <DependentUpon>SubeListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TahakkukForms\TahakkukEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -600,11 +636,29 @@
     <Compile Include="Interfaces\IStatusBarKisayol.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\XtraReports\Makbuz\GenelMakbuzRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Makbuz\GenelMakbuzRaporu.Designer.cs">
+      <DependentUpon>GenelMakbuzRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Makbuz\GeriIadeMakbuzuRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Makbuz\GeriIadeMakbuzuRaporu.Designer.cs">
+      <DependentUpon>GeriIadeMakbuzuRaporu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\XtraReports\Makbuz\TahsilatMakbuzuRaporu.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\XtraReports\Makbuz\TahsilatMakbuzuRaporu.Designer.cs">
       <DependentUpon>TahsilatMakbuzuRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Makbuz\TeslimatMakbuzuRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Makbuz\TeslimatMakbuzuRaporu.Designer.cs">
+      <DependentUpon>TeslimatMakbuzuRaporu.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\XtraReports\Taahakkuk\BankaOdemePlaniRaporu.cs">
       <SubType>Component</SubType>
@@ -754,6 +808,18 @@
     <Compile Include="UserControls\UserControl\Base\BaseTablo.Designer.cs">
       <DependentUpon>BaseTablo.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl\FaturaEditFormTable\FaturaPlaniTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\FaturaEditFormTable\FaturaPlaniTable.Designer.cs">
+      <DependentUpon>FaturaPlaniTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl\FaturaEditFormTable\FaturaTahakkukTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\FaturaEditFormTable\FaturaTahakkukTable.Designer.cs">
+      <DependentUpon>FaturaTahakkukTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl\GenelEditFormTable\MakbuzHareketleriTable.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -849,6 +915,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BaseForms\BaseListForm.resx">
       <DependentUpon>BaseListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FaturaForms\FaturaPlaniEditForm.resx">
+      <DependentUpon>FaturaPlaniEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FaturaForms\FaturaPlaniListForm.resx">
+      <DependentUpon>FaturaPlaniListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FaturaForms\TopluFaturaPlaniEditForm.resx">
+      <DependentUpon>TopluFaturaPlaniEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FiltreForms\FiltreEditForm.resx">
       <DependentUpon>FiltreEditForm.cs</DependentUpon>
@@ -1002,8 +1077,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\XtraReports\Makbuz\GenelMakbuzRaporu.resx">
+      <DependentUpon>GenelMakbuzRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReports\Makbuz\GeriIadeMakbuzuRaporu.resx">
+      <DependentUpon>GeriIadeMakbuzuRaporu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\XtraReports\Makbuz\TahsilatMakbuzuRaporu.resx">
       <DependentUpon>TahsilatMakbuzuRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReports\Makbuz\TeslimatMakbuzuRaporu.resx">
+      <DependentUpon>TeslimatMakbuzuRaporu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\XtraReports\Taahakkuk\BankaOdemePlaniRaporu.resx">
       <DependentUpon>BankaOdemePlaniRaporu.cs</DependentUpon>

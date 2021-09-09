@@ -70,10 +70,11 @@ namespace OgrenciTakip.Model.Entities
 		public Sube Sube { get; set; }
 		public Donem Donem { get; set; }
 
+		// Bu tahakkuk a atanmış olan bilgileri görüntülemek için aşağıdaki ICollection Kodları kullanılır.
 		public ICollection<IletisimBilgileri> IletisimBilgileri { get; set; }
 		public ICollection<HizmetBilgileri> HizmetBilgileri { get; set; }
 		public ICollection<IndirimBilgileri> IndirimBilgileri { get; set; }
-		//public ICollection<Fatura> FaturaBilgileri { get; set; }
+		public ICollection<Fatura> FaturaBilgileri { get; set; }
 		public ICollection<OdemeBilgileri> OdemeBilgileri { get; set; }
 		public ICollection<GeriOdemeBilgileri> GeriOdemeBilgileri { get; set; }
 	}
