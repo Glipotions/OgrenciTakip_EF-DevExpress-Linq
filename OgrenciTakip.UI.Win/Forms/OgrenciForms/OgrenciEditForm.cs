@@ -29,7 +29,7 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new OgrenciS() : ((OgrenciBusiness)Business).Single(FilterFunctions.Filter<Ogrenci>(Id));
 			NesneyiKontrollereBagla();
-			//TabloYukle();
+			TabloYukle();
 
 			if (BaseIslemTuru != IslemTuru.EntityInsert) return;
 			Id = BaseIslemTuru.IdOlustur(OldEntity);
@@ -127,11 +127,11 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
 			ButtonEnabledDurumu();
 		}
 
-		//protected override void TabloYukle()
-		//{
-		//	tahakkukBilgileriTable.OwnerForm = this;
-		//	tahakkukBilgileriTable.Yukle();
-		//}
+		protected override void TabloYukle()
+		{
+			tahakkukBilgileriTable.OwnerForm = this;
+			tahakkukBilgileriTable.Yukle();
+		}
 
 		protected override void SecimYap(object sender)
 		{

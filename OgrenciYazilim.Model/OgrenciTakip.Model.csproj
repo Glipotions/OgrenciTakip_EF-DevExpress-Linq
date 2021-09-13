@@ -83,6 +83,7 @@
     <Compile Include="Dto\OkulDto.cs" />
     <Compile Include="Dto\PromosyonBilgileriDto.cs" />
     <Compile Include="Dto\RaporDto.cs" />
+    <Compile Include="Dto\RaporlarDto.cs" />
     <Compile Include="Dto\SinavBilgileriDto.cs" />
     <Compile Include="Dto\SubeDto.cs" />
     <Compile Include="Dto\SınıfDto.cs" />

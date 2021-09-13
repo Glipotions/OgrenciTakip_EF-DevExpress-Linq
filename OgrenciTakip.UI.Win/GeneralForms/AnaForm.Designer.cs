@@ -64,12 +64,13 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			this.btnTahakukKartlari = new DevExpress.XtraBars.BarButtonItem();
 			this.btnMakbuzKartlari = new DevExpress.XtraBars.BarButtonItem();
 			this.btnSubeKartlari = new DevExpress.XtraBars.BarButtonItem();
+			this.btnFaturaPlaniKartlari = new DevExpress.XtraBars.BarButtonItem();
 			this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
 			this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-			this.btnFaturaPlaniKartlari = new DevExpress.XtraBars.BarButtonItem();
+			this.btnFaturaTahakkukKartlari = new DevExpress.XtraBars.BarButtonItem();
 			((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
 			this.SuspendLayout();
@@ -113,13 +114,14 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             this.btnTahakukKartlari,
             this.btnMakbuzKartlari,
             this.btnSubeKartlari,
-            this.btnFaturaPlaniKartlari});
+            this.btnFaturaPlaniKartlari,
+            this.btnFaturaTahakkukKartlari});
 			this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-			this.ribbonControl.MaxItemId = 37;
+			this.ribbonControl.MaxItemId = 38;
 			this.ribbonControl.Name = "ribbonControl";
 			this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-			this.ribbonControl.Size = new System.Drawing.Size(1148, 158);
+			this.ribbonControl.Size = new System.Drawing.Size(1306, 158);
 			this.ribbonControl.StatusBar = this.ribbonStatusBar1;
 			// 
 			// btnOkulKartlari
@@ -320,6 +322,12 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			this.btnSubeKartlari.Id = 35;
 			this.btnSubeKartlari.Name = "btnSubeKartlari";
 			// 
+			// btnFaturaPlaniKartlari
+			// 
+			this.btnFaturaPlaniKartlari.Caption = "Fatura Kartları";
+			this.btnFaturaPlaniKartlari.Id = 36;
+			this.btnFaturaPlaniKartlari.Name = "btnFaturaPlaniKartlari";
+			// 
 			// ribbonPage1
 			// 
 			this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -362,14 +370,15 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnMakbuzKartlari);
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnSubeKartlari);
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnFaturaPlaniKartlari);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnFaturaTahakkukKartlari);
 			this.ribbonPageGroup1.Name = "ribbonPageGroup1";
 			// 
 			// ribbonStatusBar1
 			// 
-			this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 599);
+			this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 621);
 			this.ribbonStatusBar1.Name = "ribbonStatusBar1";
 			this.ribbonStatusBar1.Ribbon = this.ribbonControl;
-			this.ribbonStatusBar1.Size = new System.Drawing.Size(1148, 24);
+			this.ribbonStatusBar1.Size = new System.Drawing.Size(1306, 24);
 			// 
 			// ribbonPage2
 			// 
@@ -380,17 +389,17 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			// 
 			this.xtraTabbedMdiManager1.MdiParent = this;
 			// 
-			// btnFaturaPlaniKartlari
+			// btnFaturaTahakkukKartlari
 			// 
-			this.btnFaturaPlaniKartlari.Caption = "Fatura Kartları";
-			this.btnFaturaPlaniKartlari.Id = 36;
-			this.btnFaturaPlaniKartlari.Name = "btnFaturaPlaniKartlari";
+			this.btnFaturaTahakkukKartlari.Caption = "Fatura Tahakkuk Kartları";
+			this.btnFaturaTahakkukKartlari.Id = 37;
+			this.btnFaturaTahakkukKartlari.Name = "btnFaturaTahakkukKartlari";
 			// 
 			// AnaForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1148, 623);
+			this.ClientSize = new System.Drawing.Size(1306, 645);
 			this.Controls.Add(this.ribbonStatusBar1);
 			this.Controls.Add(this.ribbonControl);
 			this.IsMdiContainer = true;
@@ -448,5 +457,6 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 		private DevExpress.XtraBars.BarButtonItem btnMakbuzKartlari;
 		private DevExpress.XtraBars.BarButtonItem btnSubeKartlari;
 		private DevExpress.XtraBars.BarButtonItem btnFaturaPlaniKartlari;
+		private DevExpress.XtraBars.BarButtonItem btnFaturaTahakkukKartlari;
 	}
 }

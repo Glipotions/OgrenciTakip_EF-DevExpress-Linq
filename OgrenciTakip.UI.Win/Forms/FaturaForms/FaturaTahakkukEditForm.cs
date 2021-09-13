@@ -59,8 +59,8 @@ namespace OgrenciTakip.UI.Win.Forms.FaturaForms
 
         protected internal override void ButtonEnabledDurumu()
         {
-            //GeneralFunctions.ButtonEnabledDurum(btnKaydet, btnGeriAl, faturaTahakkukTable.TableValueChanged);
-        }
+			GeneralFunctions.ButtonEnabledDurum(btnKaydet, btnGeriAl, faturaTahakkukTable.TableValueChanged);
+		}
 
         protected override void TabloYukle()
         {
@@ -125,10 +125,11 @@ namespace OgrenciTakip.UI.Win.Forms.FaturaForms
 
         protected override void Control_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (sender != txtFaturaDonemi) return;
+            if (sender != txtFaturaDonemi) return; //yapılan değişiklik Fatura Dönemi txt sinde değilse işlem yapma
 
             faturaTahakkukTable.Listele();
             faturaTahakkukTable.Tablo.Focus();
-        }
+
+		}
     }
 }

@@ -56,6 +56,18 @@ namespace OgrenciTakip.UI.Win.Show
 			}
 		}
 
+		public static void ShowDialogEditForm(KartTuru kartTuru)
+		{
+			//Yetki Kontrolü
+
+			using (var frm = (TForm)Activator.CreateInstance(typeof(TForm)))
+			{
+				frm.BaseIslemTuru = IslemTuru.EntityUpdate;
+				frm.Yukle();
+				frm.ShowDialog();
+			}
+		}
+
 
 		public static T ShowDialogEditForm<T>(params object[] prm) where T : IBaseEntity
 		{

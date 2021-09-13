@@ -35,6 +35,7 @@ using OgrenciTakip.UI.Win.Forms.YabanciDilForms;
 using OgrenciTakip.UI.Win.Forms.YakinlikForms;
 using OgrenciTakip.UI.Win.Show;
 using System;
+using System.Collections.Generic;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
 {
@@ -59,6 +60,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 		public static bool OdemePlaniKurusKullan;
 		public static bool FaturaTahakkukKurusKullan;
 		public static bool GittigiOkulZorunlu = true;
+		public static bool RaporlariOnayAlmadanKapat = false;
 		public static DateTime MaksimumTaksitTarihi = DateTime.Now.Date;
 		public static byte MaksimumTaksitSayisi = 12;
 		public static long? DefaultKasaHesapId;
@@ -68,7 +70,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 		public static string DefaultBankaHesapAdi;
 		public static string DefaultAvukatHesapAdi;
 		public static long KullaniciId = 1;
-
+		public static List<long> YetkiliOlunanSubeler= new List<long> { 1};
 
 
 
@@ -160,7 +162,8 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 				ShowListForms<SubeListForm>.ShowListForm(KartTuru.Sube);
 			else if (e.Item == btnFaturaPlaniKartlari)
 				ShowListForms<FaturaPlaniListForm>.ShowListForm(KartTuru.Fatura);
-
+			else if (e.Item == btnFaturaTahakkukKartlari)
+				ShowEditForms<FaturaTahakkukEditForm>.ShowDialogEditForm(KartTuru.Fatura);
 		}
 	}
 }

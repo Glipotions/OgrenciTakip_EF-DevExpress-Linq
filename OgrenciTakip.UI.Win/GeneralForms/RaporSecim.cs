@@ -11,6 +11,7 @@ using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Forms.RaporForms;
 using OgrenciTakip.UI.Win.Functions;
+using OgrenciTakip.UI.Win.Reports.XtraReports.Fatura;
 using OgrenciTakip.UI.Win.Reports.XtraReports.Makbuz;
 using OgrenciTakip.UI.Win.Reports.XtraReports.Taahakkuk;
 using OgrenciTakip.UI.Win.Show;
@@ -31,7 +32,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 		private readonly IEnumerable<GeriOdemeBilgileriR> _geriOdemeBilgileri;
 		private readonly IEnumerable<EposBilgileriR> _ePosBilgileri;
 		private readonly IEnumerable<MakbuzHareketleriR> _makbuzBilgileri;
-		//private readonly IEnumerable<FaturaR> _faturaBilgileri;
+		private readonly IEnumerable<FaturaR> _faturaBilgileri;
 		private readonly RaporBolumTuru _raporBolumTuru;
 
 		public RaporSecim(params object[] prm)
@@ -64,8 +65,8 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			}
 			else if (_raporBolumTuru == RaporBolumTuru.MakbuzRaporlari)
 				_makbuzBilgileri = (List<MakbuzHareketleriR>)prm[1];
-			//else if (_raporBolumTuru == RaporBolumTuru.FaturaDonemRaporlari || _raporBolumTuru == RaporBolumTuru.FaturaGenelRaporlar)
-			//_faturaBilgileri = (List<FaturaR>)prm[1];
+			else if (_raporBolumTuru == RaporBolumTuru.FaturaDonemRaporlari || _raporBolumTuru == RaporBolumTuru.FaturaGenelRaporlar)
+				_faturaBilgileri = (List<FaturaR>)prm[1];
 		}
 
 		protected override void DegiskenleriDoldur()
@@ -273,17 +274,17 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 					rpr.Makbuz_Bilgileri.DataSource = _makbuzBilgileri;
 					break;
 
-					//        case FaturaRaporu rpr:
-					//            rpr.Fatura_Bilgileri.DataSource = _faturaBilgileri;
-					//            break;
+				case FaturaRaporu rpr:
+					rpr.Fatura_Bilgileri.DataSource = _faturaBilgileri;
+					break;
 
-					//        case FaturaDonemiIcmalRaporu rpr:
-					//            rpr.Fatura_Bilgileri.DataSource = _faturaBilgileri;
-					//            break;
+				case FaturaDonemiIcmalRaporu rpr:
+					rpr.Fatura_Bilgileri.DataSource = _faturaBilgileri;
+					break;
 
-					//        case FaturaOgrenciIcmalRaporu rpr:
-					//            rpr.Fatura_Bilgileri.DataSource = _faturaBilgileri;
-					//            break;
+				case FaturaOgrenciIcmalRaporu rpr:
+					rpr.Fatura_Bilgileri.DataSource = _faturaBilgileri;
+					break;
 			}
 		}
 
@@ -361,12 +362,12 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 				RaporOlustur(KartTuru.GeriIadeMakbuzu, RaporBolumTuru.MakbuzRaporlari, new GeriIadeMakbuzuRaporu());
 			else if (e.Item == btnGenelMakbuz)
 				RaporOlustur(KartTuru.GenelMakbuz, RaporBolumTuru.MakbuzRaporlari, new GenelMakbuzRaporu());
-			//    else if (e.Item == btnFatura)
-			//        RaporOlustur(KartTuru.FaturaRaporu, RaporBolumTuru.FaturaDonemRaporlari, new FaturaRaporu());
-			//    else if (e.Item == btnDonemIcmalRaporu)
-			//        RaporOlustur(KartTuru.FaturaDonemIcmalRaporu, RaporBolumTuru.FaturaDonemRaporlari, new FaturaDonemiIcmalRaporu());
-			//    else if (e.Item == btnOgrenciIcmalRaporu)
-			//        RaporOlustur(KartTuru.FaturaOgrenciIcmalRaporu, RaporBolumTuru.FaturaGenelRaporlar, new FaturaOgrenciIcmalRaporu());
+			else if (e.Item == btnFatura)
+				RaporOlustur(KartTuru.FaturaRaporu, RaporBolumTuru.FaturaDonemRaporlari, new FaturaRaporu());
+			else if (e.Item == btnDonemIcmalRaporu)
+				RaporOlustur(KartTuru.FaturaDonemIcmalRaporu, RaporBolumTuru.FaturaDonemRaporlari, new FaturaDonemiIcmalRaporu());
+			else if (e.Item == btnOgrenciIcmalRaporu)
+				RaporOlustur(KartTuru.FaturaOgrenciIcmalRaporu, RaporBolumTuru.FaturaGenelRaporlar, new FaturaOgrenciIcmalRaporu());
 		}
 	}
 }

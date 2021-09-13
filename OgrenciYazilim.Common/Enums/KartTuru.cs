@@ -109,6 +109,14 @@ namespace OgrenciTakip.Common.Enums
 		[Description("Genel Makbuzu")]
 		GenelMakbuz = 52,
 		[Description("Fatura Kartı")]
-		Fatura = 53
+		Fatura = 53,
+		[Description("Fatura Raporu")]
+		FaturaRaporu = 54,
+		[Description("Fatura Dönem İcmal Raporu")]
+		FaturaDonemIcmalRaporu = 55,
+		[Description("Fatura Ögrenci İcmal Raporu")]
+		FaturaOgrenciIcmalRaporu = 56,
+		[Description("Genel Amaçlı Rapor")]
+		GenelAmacliRapor = 57
 	}
 }

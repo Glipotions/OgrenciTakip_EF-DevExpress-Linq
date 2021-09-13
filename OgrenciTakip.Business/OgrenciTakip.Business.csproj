@@ -75,6 +75,7 @@
     <Compile Include="General\EvrakBilgileriBusiness.cs" />
     <Compile Include="General\EvrakBusiness.cs" />
     <Compile Include="General\FaturaBusiness.cs" />
+    <Compile Include="General\GenelAmacliRaporBusiness.cs" />
     <Compile Include="General\GeriOdemeBilgileriBusiness.cs" />
     <Compile Include="General\HizmetBilgileriBusiness.cs" />
     <Compile Include="General\HizmetBusiness.cs" />

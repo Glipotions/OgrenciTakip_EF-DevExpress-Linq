@@ -51,6 +51,7 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
 			DevExpress.XtraLayout.RowDefinition rowDefinition9 = new DevExpress.XtraLayout.RowDefinition();
 			DevExpress.XtraLayout.RowDefinition rowDefinition10 = new DevExpress.XtraLayout.RowDefinition();
 			this.myDataLayoutControl = new OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
+			this.txtKod = new OgrenciTakip.UI.Win.UserControls.Controls.MyCodeTextEdit();
 			this.tglDurum = new OgrenciTakip.UI.Win.UserControls.Controls.MyToggleSwitch();
 			this.imgResim = new OgrenciTakip.UI.Win.UserControls.Controls.MyPictureEdit();
 			this.txtOzelKod5 = new OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
@@ -110,14 +111,17 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
 			this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.btnResimEkle = new DevExpress.XtraBars.BarButtonItem();
 			this.btnResimSil = new DevExpress.XtraBars.BarButtonItem();
 			this.popupMenuResim = new DevExpress.XtraBars.PopupMenu(this.components);
-			this.txtKod = new OgrenciTakip.UI.Win.UserControls.Controls.MyCodeTextEdit();
-			this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.tahakkukBilgileriTable = new OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable.TahakkukBilgileriTable();
+			this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).BeginInit();
 			this.myDataLayoutControl.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.tglDurum.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.imgResim.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtOzelKod5.Properties)).BeginInit();
@@ -179,9 +183,9 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.popupMenuResim)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.popupMenuResim)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// ribbonControl
@@ -191,6 +195,7 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
             this.btnResimEkle,
             this.btnResimSil});
 			this.ribbonControl.MaxItemId = 15;
+			this.ribbonControl.OptionsPageCategories.ShowCaptions = false;
 			// 
 			// 
 			// 
@@ -203,6 +208,7 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
 			// 
 			// myDataLayoutControl
 			// 
+			this.myDataLayoutControl.Controls.Add(this.tahakkukBilgileriTable);
 			this.myDataLayoutControl.Controls.Add(this.txtKod);
 			this.myDataLayoutControl.Controls.Add(this.tglDurum);
 			this.myDataLayoutControl.Controls.Add(this.imgResim);
@@ -241,6 +247,23 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
 			this.myDataLayoutControl.Size = new System.Drawing.Size(885, 461);
 			this.myDataLayoutControl.TabIndex = 0;
 			this.myDataLayoutControl.Text = "myDataLayoutControl1";
+			// 
+			// txtKod
+			// 
+			this.txtKod.Location = new System.Drawing.Point(81, 12);
+			this.txtKod.MenuManager = this.ribbonControl;
+			this.txtKod.Name = "txtKod";
+			this.txtKod.Properties.Appearance.BackColor = System.Drawing.Color.PaleGoldenrod;
+			this.txtKod.Properties.Appearance.Options.UseBackColor = true;
+			this.txtKod.Properties.Appearance.Options.UseTextOptions = true;
+			this.txtKod.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.txtKod.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+			this.txtKod.Properties.AppearanceFocused.Options.UseBackColor = true;
+			this.txtKod.Properties.MaxLength = 20;
+			this.txtKod.Size = new System.Drawing.Size(117, 20);
+			this.txtKod.StatusBarAciklama = "Kod Alanı..";
+			this.txtKod.StyleController = this.myDataLayoutControl;
+			this.txtKod.TabIndex = 29;
 			// 
 			// tglDurum
 			// 
@@ -768,7 +791,8 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
             this.layoutControlItem25,
             this.layoutControlItem24,
             this.layoutControlItem23,
-            this.layoutControlItem30});
+            this.layoutControlItem30,
+            this.layoutControlItem31});
 			this.layoutControlGroup1.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
 			this.layoutControlGroup1.Name = "layoutControlGroup1";
 			columnDefinition1.SizeType = System.Windows.Forms.SizeType.Absolute;
@@ -1267,6 +1291,18 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
 			this.layoutControlItem23.TextSize = new System.Drawing.Size(70, 20);
 			this.layoutControlItem23.TextToControlDistance = 5;
 			// 
+			// layoutControlItem30
+			// 
+			this.layoutControlItem30.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+			this.layoutControlItem30.AppearanceItemCaption.Options.UseForeColor = true;
+			this.layoutControlItem30.Control = this.txtKod;
+			this.layoutControlItem30.Location = new System.Drawing.Point(0, 0);
+			this.layoutControlItem30.Name = "layoutControlItem30";
+			this.layoutControlItem30.OptionsTableLayoutItem.ColumnSpan = 2;
+			this.layoutControlItem30.Size = new System.Drawing.Size(190, 24);
+			this.layoutControlItem30.Text = "Kod             ";
+			this.layoutControlItem30.TextSize = new System.Drawing.Size(57, 13);
+			// 
 			// btnResimEkle
 			// 
 			this.btnResimEkle.Caption = "Resim Ekle";
@@ -1290,34 +1326,25 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
 			this.popupMenuResim.Name = "popupMenuResim";
 			this.popupMenuResim.Ribbon = this.ribbonControl;
 			// 
-			// txtKod
+			// tahakkukBilgileriTable
 			// 
-			this.txtKod.Location = new System.Drawing.Point(81, 12);
-			this.txtKod.MenuManager = this.ribbonControl;
-			this.txtKod.Name = "txtKod";
-			this.txtKod.Properties.Appearance.BackColor = System.Drawing.Color.PaleGoldenrod;
-			this.txtKod.Properties.Appearance.Options.UseBackColor = true;
-			this.txtKod.Properties.Appearance.Options.UseTextOptions = true;
-			this.txtKod.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.txtKod.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-			this.txtKod.Properties.AppearanceFocused.Options.UseBackColor = true;
-			this.txtKod.Properties.MaxLength = 20;
-			this.txtKod.Size = new System.Drawing.Size(117, 20);
-			this.txtKod.StatusBarAciklama = "Kod Alanı..";
-			this.txtKod.StyleController = this.myDataLayoutControl;
-			this.txtKod.TabIndex = 29;
+			this.tahakkukBilgileriTable.Location = new System.Drawing.Point(12, 228);
+			this.tahakkukBilgileriTable.Name = "tahakkukBilgileriTable";
+			this.tahakkukBilgileriTable.Size = new System.Drawing.Size(857, 221);
+			this.tahakkukBilgileriTable.TabIndex = 30;
 			// 
-			// layoutControlItem30
+			// layoutControlItem31
 			// 
-			this.layoutControlItem30.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
-			this.layoutControlItem30.AppearanceItemCaption.Options.UseForeColor = true;
-			this.layoutControlItem30.Control = this.txtKod;
-			this.layoutControlItem30.Location = new System.Drawing.Point(0, 0);
-			this.layoutControlItem30.Name = "layoutControlItem30";
-			this.layoutControlItem30.OptionsTableLayoutItem.ColumnSpan = 2;
-			this.layoutControlItem30.Size = new System.Drawing.Size(190, 24);
-			this.layoutControlItem30.Text = "Kod             ";
-			this.layoutControlItem30.TextSize = new System.Drawing.Size(57, 13);
+			this.layoutControlItem31.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+			this.layoutControlItem31.AppearanceItemCaption.Options.UseForeColor = true;
+			this.layoutControlItem31.Control = this.tahakkukBilgileriTable;
+			this.layoutControlItem31.Location = new System.Drawing.Point(0, 216);
+			this.layoutControlItem31.Name = "layoutControlItem31";
+			this.layoutControlItem31.OptionsTableLayoutItem.ColumnSpan = 9;
+			this.layoutControlItem31.OptionsTableLayoutItem.RowIndex = 9;
+			this.layoutControlItem31.Size = new System.Drawing.Size(861, 225);
+			this.layoutControlItem31.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem31.TextVisible = false;
 			// 
 			// OgrenciEditForm
 			// 
@@ -1331,8 +1358,10 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
 			this.Controls.SetChildIndex(this.ribbonControl, 0);
 			this.Controls.SetChildIndex(this.myDataLayoutControl, 0);
 			((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.resimMenu)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).EndInit();
 			this.myDataLayoutControl.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.tglDurum.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.imgResim.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtOzelKod5.Properties)).EndInit();
@@ -1394,9 +1423,9 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.popupMenuResim)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.popupMenuResim)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -1469,5 +1498,7 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
 		private DevExpress.XtraBars.PopupMenu popupMenuResim;
 		private UserControls.Controls.MyCodeTextEdit txtKod;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem30;
+		private UserControls.UserControl.TahakkukEditFormTable.TahakkukBilgileriTable tahakkukBilgileriTable;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem31;
 	}
 }

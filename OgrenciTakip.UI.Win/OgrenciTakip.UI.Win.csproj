@@ -636,6 +636,36 @@
     <Compile Include="Interfaces\IStatusBarKisayol.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\FormReports\Base\BaseRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports\Base\BaseRapor.Designer.cs">
+      <DependentUpon>BaseRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FormReports\GenelAmacliRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports\GenelAmacliRapor.Designer.cs">
+      <DependentUpon>GenelAmacliRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Fatura\FaturaDonemiIcmalRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Fatura\FaturaDonemiIcmalRaporu.Designer.cs">
+      <DependentUpon>FaturaDonemiIcmalRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Fatura\FaturaOgrenciIcmalRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Fatura\FaturaOgrenciIcmalRaporu.Designer.cs">
+      <DependentUpon>FaturaOgrenciIcmalRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Fatura\FaturaRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Fatura\FaturaRaporu.Designer.cs">
+      <DependentUpon>FaturaRaporu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\XtraReports\Makbuz\GenelMakbuzRaporu.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -904,6 +934,12 @@
     <Compile Include="UserControls\UserControl\TahakkukEditFormTable\SinavBilgileriTable.Designer.cs">
       <DependentUpon>SinavBilgileriTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\TahakkukBilgileriTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\TahakkukBilgileriTable.Designer.cs">
+      <DependentUpon>TahakkukBilgileriTable.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\AileBilgiForms\AileBilgiEditForm.resx">
       <DependentUpon>AileBilgiEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -1077,6 +1113,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\FormReports\Base\BaseRapor.resx">
+      <DependentUpon>BaseRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FormReports\GenelAmacliRapor.resx">
+      <DependentUpon>GenelAmacliRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReports\Fatura\FaturaDonemiIcmalRaporu.resx">
+      <DependentUpon>FaturaDonemiIcmalRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReports\Fatura\FaturaOgrenciIcmalRaporu.resx">
+      <DependentUpon>FaturaOgrenciIcmalRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReports\Fatura\FaturaRaporu.resx">
+      <DependentUpon>FaturaRaporu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\XtraReports\Makbuz\GenelMakbuzRaporu.resx">
       <DependentUpon>GenelMakbuzRaporu.cs</DependentUpon>
     </EmbeddedResource>
@@ -1133,6 +1184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\TahakkukEditFormTable\IndirimBilgileriTable.resx">
       <DependentUpon>IndirimBilgileriTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl\TahakkukEditFormTable\TahakkukBilgileriTable.resx">
+      <DependentUpon>TahakkukBilgileriTable.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -1395,8 +1449,46 @@
     <None Include="Resources\crossdatasourcefiltering_32x32.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Reports\FormReports\" />
-    <Folder Include="Reports\XtraReports\Fatura\" />
+    <None Include="Resources\design_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\design_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emptytablerowseparator_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emptytablerowseparator_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\separator_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\separator_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
