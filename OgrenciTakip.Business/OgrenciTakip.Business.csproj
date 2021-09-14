@@ -64,6 +64,7 @@
     <Compile Include="General\AileBilgiBusiness.cs" />
     <Compile Include="General\AileBilgileriBusiness.cs" />
     <Compile Include="General\AvukatBusiness.cs" />
+    <Compile Include="General\AylıkKayitRaporuBusiness.cs" />
     <Compile Include="General\BankaBusiness.cs" />
     <Compile Include="General\BankaHesapBusiness.cs" />
     <Compile Include="General\BankaSubeBusiness.cs" />
@@ -75,8 +76,11 @@
     <Compile Include="General\EvrakBilgileriBusiness.cs" />
     <Compile Include="General\EvrakBusiness.cs" />
     <Compile Include="General\FaturaBusiness.cs" />
+    <Compile Include="General\GecikmeAciklamalariBusiness.cs" />
+    <Compile Include="General\GelirDagilimRaporuBusiness.cs" />
     <Compile Include="General\GenelAmacliRaporBusiness.cs" />
     <Compile Include="General\GeriOdemeBilgileriBusiness.cs" />
+    <Compile Include="General\HizmetAlimRaporuBusiness.cs" />
     <Compile Include="General\HizmetBilgileriBusiness.cs" />
     <Compile Include="General\HizmetBusiness.cs" />
     <Compile Include="General\HizmetTuruBusiness.cs" />
@@ -84,12 +88,17 @@
     <Compile Include="General\IletisimBusiness.cs" />
     <Compile Include="General\IndirimBilgileriBusiness.cs" />
     <Compile Include="General\IndirimBusiness.cs" />
+    <Compile Include="General\IndirimDagilimRaporuBusiness.cs" />
     <Compile Include="General\IndiriminUygulanacagiHizmetBilgileriBusiness.cs" />
     <Compile Include="General\KardesBilgileriBusiness.cs" />
     <Compile Include="General\KasaBusiness.cs" />
     <Compile Include="General\MakbuzBusiness.cs" />
     <Compile Include="General\MakbuzHareketleriBusiness.cs" />
+    <Compile Include="General\MesleklereGoreKayitRaporuBusiness.cs" />
+    <Compile Include="General\NetUcretRaporuBusiness.cs" />
+    <Compile Include="General\OdemeBelgeleriRaporuBusiness.cs" />
     <Compile Include="General\OdemeBilgileriBll.cs" />
+    <Compile Include="General\OdemesiGecikenAlacaklarRaporuBusiness.cs" />
     <Compile Include="General\OdemeTuruBusiness.cs" />
     <Compile Include="General\OgrenciBusiness.cs" />
     <Compile Include="General\OzelKodBusiness.cs" />
@@ -101,6 +110,9 @@
     <Compile Include="General\SinifBusiness.cs" />
     <Compile Include="General\SubeBusiness.cs" />
     <Compile Include="General\TahakkukBusiness.cs" />
+    <Compile Include="General\TahsilatRaporuBusiness.cs" />
+    <Compile Include="General\UcretOrtalamalarıRaporuBusiness.cs" />
+    <Compile Include="General\UcretVeOdemeBusiness.cs" />
     <Compile Include="General\YakinlikBusiness.cs" />
     <Compile Include="General\TesvikBusiness.cs" />
     <Compile Include="General\SinifGrupBusiness.cs" />

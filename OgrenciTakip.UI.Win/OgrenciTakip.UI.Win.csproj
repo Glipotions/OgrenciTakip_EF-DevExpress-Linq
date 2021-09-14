@@ -227,6 +227,18 @@
     <Compile Include="Forms\FiltreForms\FiltreListForm.Designer.cs">
       <DependentUpon>FiltreListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\GecikmeAciklamalariForms\GecikmeAciklamalariEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GecikmeAciklamalariForms\GecikmeAciklamalariEditForm.Designer.cs">
+      <DependentUpon>GecikmeAciklamalariEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GecikmeAciklamalariForms\GecikmeAciklamalariListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GecikmeAciklamalariForms\GecikmeAciklamalariListForm.Designer.cs">
+      <DependentUpon>GecikmeAciklamalariListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\GorevForms\GorevEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -636,17 +648,89 @@
     <Compile Include="Interfaces\IStatusBarKisayol.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\FormReports\AylikKayitRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports\AylikKayitRaporu.Designer.cs">
+      <DependentUpon>AylikKayitRaporu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FormReports\Base\BaseRapor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reports\FormReports\Base\BaseRapor.Designer.cs">
       <DependentUpon>BaseRapor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FormReports\GelirDagilimRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports\GelirDagilimRaporu.Designer.cs">
+      <DependentUpon>GelirDagilimRaporu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FormReports\GenelAmacliRapor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reports\FormReports\GenelAmacliRapor.Designer.cs">
       <DependentUpon>GenelAmacliRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FormReports\HizmetAlimRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports\HizmetAlimRaporu.Designer.cs">
+      <DependentUpon>HizmetAlimRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FormReports\IndirimDagilimRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports\IndirimDagilimRaporu.Designer.cs">
+      <DependentUpon>IndirimDagilimRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FormReports\MesleklereGoreKayitRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports\MesleklereGoreKayitRaporu.Designer.cs">
+      <DependentUpon>MesleklereGoreKayitRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FormReports\NetUcretRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports\NetUcretRaporu.Designer.cs">
+      <DependentUpon>NetUcretRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FormReports\OdemeBelgeleriRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports\OdemeBelgeleriRaporu.Designer.cs">
+      <DependentUpon>OdemeBelgeleriRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FormReports\OdemesiGecikenAlacaklarRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports\OdemesiGecikenAlacaklarRaporu.Designer.cs">
+      <DependentUpon>OdemesiGecikenAlacaklarRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FormReports\SinifRaporlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports\SinifRaporlari.Designer.cs">
+      <DependentUpon>SinifRaporlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FormReports\TahsilatRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports\TahsilatRaporu.Designer.cs">
+      <DependentUpon>TahsilatRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FormReports\UcretOrtalamalariRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports\UcretOrtalamalariRaporu.Designer.cs">
+      <DependentUpon>UcretOrtalamalariRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FormReports\UcretVeOdemeRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports\UcretVeOdemeRaporu.Designer.cs">
+      <DependentUpon>UcretVeOdemeRaporu.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\XtraReports\Fatura\FaturaDonemiIcmalRaporu.cs">
       <SubType>Component</SubType>
@@ -740,6 +824,7 @@
     </Compile>
     <Compile Include="Show\Interfaces\IBaseFormShow.cs" />
     <Compile Include="Show\ShowEditForms.cs" />
+    <Compile Include="Show\ShowEditReports.cs" />
     <Compile Include="Show\ShowListForms.cs" />
     <Compile Include="Show\ShowRibbonForms.cs" />
     <Compile Include="UserControls\Controls\MyButtonEdit.cs">
@@ -1118,6 +1203,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FormReports\GenelAmacliRapor.resx">
       <DependentUpon>GenelAmacliRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FormReports\NetUcretRaporu.resx">
+      <DependentUpon>NetUcretRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FormReports\OdemeBelgeleriRaporu.resx">
+      <DependentUpon>OdemeBelgeleriRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FormReports\UcretOrtalamalariRaporu.resx">
+      <DependentUpon>UcretOrtalamalariRaporu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\XtraReports\Fatura\FaturaDonemiIcmalRaporu.resx">
       <DependentUpon>FaturaDonemiIcmalRaporu.cs</DependentUpon>

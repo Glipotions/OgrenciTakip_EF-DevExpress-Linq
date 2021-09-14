@@ -117,6 +117,32 @@ namespace OgrenciTakip.Common.Enums
 		[Description("Fatura Ögrenci İcmal Raporu")]
 		FaturaOgrenciIcmalRaporu = 56,
 		[Description("Genel Amaçlı Rapor")]
-		GenelAmacliRapor = 57
+		GenelAmacliRapor = 57,
+		[Description("Sınıf Raporu")]
+		SinifRaporu = 58,
+		[Description("Hizmet Alım Raporu")]
+		HizmetAlimRaporu = 59,
+		[Description("Net Ücret Raporu")]
+		NetUcretRaporu = 60,
+		[Description("Ücret ve Ödeme Raporu")]
+		UcretVeOdemeRaporu = 61,
+		[Description("İndirim Dağılım Raporu")]
+		IndirimDagilimRaporu = 62,
+		[Description("Mesleklere Göre Kayıt Raporu")]
+		MesleklereGoreKayitRaporu = 63,
+		[Description("Aylık Kayıt Raporu")]
+		AylikKayitRaporu = 64,
+		[Description("Gelir Dağılım Raporu")]
+		GelirDagilimRaporu = 65,
+		[Description("Ücret Ortalamaları Raporu")]
+		UcretOrtalamalariRaporu = 66,
+		[Description("Ödeme Belgeleri Raporu")]
+		OdemeBelgeleriRaporu = 67,
+		[Description("Tahsilat Raporu")]
+		TahsilatRaporu = 68,
+		[Description("Ödemesi Geciken Alacaklar Raporu")]
+		OdemesiGecikenAlacaklarRaporu = 69,
+		[Description("Gecikme Açıklamaları")]
+		GecikmeAciklamalari = 70
 	}
 }

@@ -20,7 +20,7 @@ namespace OgrenciTakip.Data.Context
 
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{
-			modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+			modelBuilder.Conventions.Remove<PluralizingTableNameConvention>(); //sonuna s eklememesini saðlar
 			modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
 			modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
 
@@ -85,6 +85,8 @@ namespace OgrenciTakip.Data.Context
 		public DbSet<Makbuz> Makbuz { get; set; }
 		public DbSet<MakbuzHareketleri> MakbuzHareketleri { get; set; }
 		public DbSet<Rapor> Rapor { get; set; }
+		public DbSet<Fatura> Fatura { get; set; }
+		public DbSet<GecikmeAciklamalari> GecikmeAciklamalari { get; set; }
 
 	}
 }

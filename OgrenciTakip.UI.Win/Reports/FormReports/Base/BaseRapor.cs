@@ -282,13 +282,9 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
 			Tablo.ExpandAllGroups(); //tüm grupları aç
 		}
 
-		protected virtual void ShowEditForm()
-		{
-		}
+		protected virtual void ShowEditForm() { }
 
-		protected virtual void BelgeHareketleri()
-		{
-		}
+		protected virtual void BelgeHareketleri() { }
 
 		private void Button_ItemClick(object sender, ItemClickEventArgs e)
 		{
@@ -324,40 +320,42 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
 				else
 					Tablo.HideCustomization();
 			}
-			else if (e.Item == btnYazdir) { }
-			//switch (RaporTuru)
-			//{
-			//	case KartTuru.GenelAmacliRapor:
-			//	case KartTuru.SinifRaporu:
-			//	case KartTuru.UcretVeOdemeRaporu:
-			//	case KartTuru.MesleklereGoreKayitRaporu:
-			//	case KartTuru.AylikKayitRaporu:
-			//	case KartTuru.UcretOrtalamalariRaporu:
-			//	case KartTuru.OdemeBelgeleriRaporu:
-			//		TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, IptalDurumlari.Text);
-			//		break;
+			else if (e.Item == btnYazdir)
+			{
+				switch (RaporTuru)
+				{
+					case KartTuru.GenelAmacliRapor:
+					case KartTuru.SinifRaporu:
+					case KartTuru.UcretVeOdemeRaporu:
+					case KartTuru.MesleklereGoreKayitRaporu:
+					case KartTuru.AylikKayitRaporu:
+					case KartTuru.UcretOrtalamalariRaporu:
+					case KartTuru.OdemeBelgeleriRaporu:
+						TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, IptalDurumlari.Text);
+						break;
 
-			//	case KartTuru.HizmetAlimRaporu:
-			//		TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, null, "Hizmet Türü", Hizmetler.Text, "Hizmet Alım Türü", HizmetAlimTuru.Text);
-			//		break;
+					case KartTuru.HizmetAlimRaporu:
+						TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, null, "Hizmet Türü", Hizmetler.Text, "Hizmet Alım Türü", HizmetAlimTuru.Text);
+						break;
 
-			//	case KartTuru.NetUcretRaporu:
-			//		TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, IptalDurumlari.Text, "Hizmet Türü", Hizmetler.Text);
-			//		break;
+					case KartTuru.NetUcretRaporu:
+						TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, IptalDurumlari.Text, "Hizmet Türü", Hizmetler.Text);
+						break;
 
-			//	case KartTuru.IndirimDagilimRaporu:
-			//		TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, IptalDurumlari.Text, "İndirim Türü", Indirimler.Text);
-			//		break;
+					case KartTuru.IndirimDagilimRaporu:
+						TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, IptalDurumlari.Text, "İndirim Türü", Indirimler.Text);
+						break;
 
-			//	case KartTuru.GelirDagilimRaporu:
-			//		TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, IptalDurumlari.Text, "Hesaplama Türü", HesaplamaSekli.Text);
-			//		break;
+					case KartTuru.GelirDagilimRaporu:
+						TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, IptalDurumlari.Text, "Hesaplama Türü", HesaplamaSekli.Text);
+						break;
 
-			//	case KartTuru.TahsilatRaporu:
-			//	case KartTuru.OdemesiGecikenAlacaklarRaporu:
-			//		TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, IptalDurumlari.Text, "Vade Aralığı", $"{IlkTarih.Text} - {SonTarih.Text}");
-			//		break;
-			//}
+					case KartTuru.TahsilatRaporu:
+					case KartTuru.OdemesiGecikenAlacaklarRaporu:
+						TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, IptalDurumlari.Text, "Vade Aralığı", $"{IlkTarih.Text} - {SonTarih.Text}");
+						break;
+				}
+			}
 			else if (e.Item == btnRaporSablonlari)
 				RaporSablonSec();
 			else if (e.Item == btnKartAc)

@@ -66,6 +66,8 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
 
 		protected override void Tablo_CustomSummaryCalculate(object sender, CustomSummaryEventArgs e)
 		{
+			//Bu alanda Groupta İndirim oranıyla alakalı Hesap işlemleri yapılır
+
 			if (e.SummaryProcess != CustomSummaryProcess.Finalize) return;
 
 			var item = (GridSummaryItem)e.Item;
@@ -76,6 +78,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
 				var hizmetlerToplami = Convert.ToDecimal(Tablo.GetGroupSummaryValue(e.GroupRowHandle, (GridGroupSummaryItem)Tablo.GroupSummary["NetHizmet"]));
 				var indirimToplami = Convert.ToDecimal(Tablo.GetGroupSummaryValue(e.GroupRowHandle, (GridGroupSummaryItem)Tablo.GroupSummary["NetIndirim"]));
 
+				// İndirim Hesaplaması yapılır. (Grouplarda)
 				e.TotalValue = hizmetlerToplami == 0 ? 0 : indirimToplami / hizmetlerToplami * 100;
 			}
 			else if (e.IsTotalSummary)
@@ -83,6 +86,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
 				var hizmetlerToplami = Convert.ToDecimal(colNetHizmet.SummaryItem.SummaryValue);
 				var indirimToplami = Convert.ToDecimal(colNetIndirim.SummaryItem.SummaryValue);
 
+				// İndirim Hesaplaması yapılır. (Tüm Tablonun)
 				e.TotalValue = hizmetlerToplami == 0 ? 0 : indirimToplami / hizmetlerToplami * 100;
 			}
 

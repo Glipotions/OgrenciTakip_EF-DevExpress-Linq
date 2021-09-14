@@ -101,7 +101,6 @@ namespace OgrenciTakip.Model.Dto
         public decimal Kalan { get; set; }
         public decimal NetOdeme { get; set; }
     }
-
     public class HizmetAlimRaporL
     {
         public long OgrenciId { get; set; }
@@ -138,7 +137,6 @@ namespace OgrenciTakip.Model.Dto
         public string VeliIsyeriAdi { get; set; }
         public string VeliGorevAdi { get; set; }
     }
-
     public class NetUcretRaporL
     {
         public long OgrenciId { get; set; }
@@ -183,7 +181,6 @@ namespace OgrenciTakip.Model.Dto
         public decimal NetUcret { get; set; }
         public decimal IndirimOrani { get; set; }
     }
-
     public class UcretVeOdemeRaporL
     {
         public long OgrenciId { get; set; }
@@ -243,7 +240,6 @@ namespace OgrenciTakip.Model.Dto
         public decimal Kalan { get; set; }
         public decimal NetOdeme { get; set; }
     }
-
     public class IndirimDagilimRaporL
     {
         public long OgrenciId { get; set; }
@@ -283,7 +279,6 @@ namespace OgrenciTakip.Model.Dto
         public decimal KistDonemDusulenIndirim { get; set; }
         public decimal NetIndirim { get; set; }
     }
-
     public class MesleklereGoreKayitRaporL
     {
         public string SubeAdi { get; set; }
@@ -311,7 +306,6 @@ namespace OgrenciTakip.Model.Dto
         public decimal Iade { get; set; }
         public decimal GeriOdenen { get; set; }
     }
-
     public class AylikKayitRaporL
     {
         public int Yil { get; set; }
@@ -341,7 +335,6 @@ namespace OgrenciTakip.Model.Dto
         public decimal Iade { get; set; }
         public decimal GeriOdenen { get; set; }
     }
-
     public class GelirDagilimRaporL
     {
         public int Yil { get; set; }
@@ -359,7 +352,6 @@ namespace OgrenciTakip.Model.Dto
         public decimal Iade { get; set; }
         public int TaksitSayisi { get; set; }
     }
-
     public class UcretOrtalamalariRaporL
     {
         public string SubeAdi { get; set; }
@@ -379,7 +371,6 @@ namespace OgrenciTakip.Model.Dto
         public decimal NetUcret { get; set; }
         public decimal IndirimOrani { get; set; }
     }
-
     public class OdemeBelgeleriRaporL
     {
         public long TahakkukId { get; set; }
@@ -426,7 +417,6 @@ namespace OgrenciTakip.Model.Dto
         public string OzelKod4 { get; set; }
         public string OzelKod5 { get; set; }
     }
-
     public class TahsilatRaporL
     {
         public long TahakkukId { get; set; }
@@ -476,7 +466,6 @@ namespace OgrenciTakip.Model.Dto
         public string OzelKod4 { get; set; }
         public string OzelKod5 { get; set; }
     }
-
     public class OdemesiGecikenAlacaklarRaporL
     {
         public long SubeId { get; set; }

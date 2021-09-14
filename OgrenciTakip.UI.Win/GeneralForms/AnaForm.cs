@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraBars;
 using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.AileBilgiForms;
 using OgrenciTakip.UI.Win.Forms.AvukatForms;
 using OgrenciTakip.UI.Win.Forms.BankaForms;
@@ -33,6 +34,7 @@ using OgrenciTakip.UI.Win.Forms.TahakkukForms;
 using OgrenciTakip.UI.Win.Forms.TesvikForms;
 using OgrenciTakip.UI.Win.Forms.YabanciDilForms;
 using OgrenciTakip.UI.Win.Forms.YakinlikForms;
+using OgrenciTakip.UI.Win.Reports.FormReports;
 using OgrenciTakip.UI.Win.Show;
 using System;
 using System.Collections.Generic;
@@ -71,6 +73,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 		public static string DefaultAvukatHesapAdi;
 		public static long KullaniciId = 1;
 		public static List<long> YetkiliOlunanSubeler= new List<long> { 1};
+		public static string KullaniciAdi="Hamza";
 
 
 
@@ -164,6 +167,31 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 				ShowListForms<FaturaPlaniListForm>.ShowListForm(KartTuru.Fatura);
 			else if (e.Item == btnFaturaTahakkukKartlari)
 				ShowEditForms<FaturaTahakkukEditForm>.ShowDialogEditForm(KartTuru.Fatura);
+			else if (e.Item == btnGenelAmacliRapor)
+				ShowEditReports<GenelAmacliRapor>.ShowEditReport(KartTuru.GenelAmacliRapor);
+			else if (e.Item == btnSinifRaporlari)
+				ShowEditReports<SinifRaporlari>.ShowEditReport(KartTuru.SinifRaporu);
+			else if (e.Item == btnHizmetAlimRaporu)
+				ShowEditReports<HizmetAlimRaporu>.ShowEditReport(KartTuru.HizmetAlimRaporu);
+			else if (e.Item == btnNetUcretRaporu)
+				ShowEditReports<NetUcretRaporu>.ShowEditReport(KartTuru.NetUcretRaporu);
+			else if (e.Item == btnUcretVeOdemeRaporu)
+				ShowEditReports<UcretVeOdemeRaporu>.ShowEditReport(KartTuru.UcretVeOdemeRaporu);
+			else if (e.Item == btnIndirimDagilimRaporu)
+				ShowEditReports<IndirimDagilimRaporu>.ShowEditReport(KartTuru.IndirimDagilimRaporu);
+			else if (e.Item == btnMesleklereGoreKayitRaporu)
+				ShowEditReports<MesleklereGoreKayitRaporu>.ShowEditReport(KartTuru.MesleklereGoreKayitRaporu);
+			else if (e.Item == btnGelirDagilimRaporu)
+				ShowEditReports<GelirDagilimRaporu>.ShowEditReport(KartTuru.GelirDagilimRaporu);
+			else if (e.Item == btnUcretOrtalamalariRaporu)
+				ShowEditReports<UcretOrtalamalariRaporu>.ShowEditReport(KartTuru.UcretOrtalamalariRaporu);
+			else if (e.Item == btnOdemeBelgeleriRaporu)
+				ShowEditReports<OdemeBelgeleriRaporu>.ShowEditReport(KartTuru.OdemeBelgeleriRaporu);
+			else if (e.Item == btnTahsilatRaporu)
+				ShowEditReports<TahsilatRaporu>.ShowEditReport(KartTuru.TahsilatRaporu);
+			else if (e.Item == btnOdemesiGecikenRaporlar)
+				ShowEditReports<OdemesiGecikenAlacaklarRaporu>.ShowEditReport(KartTuru.OdemesiGecikenAlacaklarRaporu);
+
 		}
 	}
 }

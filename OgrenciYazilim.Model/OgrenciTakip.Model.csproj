@@ -66,6 +66,7 @@
     <Compile Include="Dto\EposBilgileriDto.cs" />
     <Compile Include="Dto\EvrakBilgileriDto.cs" />
     <Compile Include="Dto\FaturaDto.cs" />
+    <Compile Include="Dto\GecikmeAciklamalariDto.cs" />
     <Compile Include="Dto\GeriOdemeBilgileriDto.cs" />
     <Compile Include="Dto\HizmetBilgileriDto.cs" />
     <Compile Include="Dto\HizmetDto.cs" />
@@ -103,11 +104,13 @@
     <Compile Include="Entities\EposBilgileri.cs" />
     <Compile Include="Entities\EvrakBilgileri.cs" />
     <Compile Include="Entities\Fatura.cs" />
+    <Compile Include="Entities\GecikmeAciklamalari.cs" />
     <Compile Include="Entities\GeriOdemeBilgileri.cs" />
     <Compile Include="Entities\HizmetBilgileri.cs" />
     <Compile Include="Entities\IletisimBilgileri.cs" />
     <Compile Include="Entities\IndirimBilgileri.cs" />
     <Compile Include="Entities\KardesBilgileri.cs" />
+    <Compile Include="Entities\Kullanici.cs" />
     <Compile Include="Entities\Makbuz.cs" />
     <Compile Include="Entities\MakbuzHareketleri.cs" />
     <Compile Include="Entities\OdemeBilgileri.cs" />
@@ -126,6 +129,7 @@
     <Compile Include="Entities\Promosyon.cs" />
     <Compile Include="Entities\PromosyonBilgileri.cs" />
     <Compile Include="Entities\Rapor.cs" />
+    <Compile Include="Entities\Rol.cs" />
     <Compile Include="Entities\Servis.cs" />
     <Compile Include="Entities\SinavBilgileri.cs" />
     <Compile Include="Entities\Sube.cs" />
