@@ -46,13 +46,13 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			ControlEnableChange(OdemeTipi.Acik);
 			txtIlkTaksitTarihi.DateTime = _kayitTarihi;
 			txtIlkTaksitTarihi.Properties.MinValue = _kayitTarihi;
-			txtIlkTaksitTarihi.Properties.MaxValue = AnaForm.MaksimumTaksitTarihi;
+			txtIlkTaksitTarihi.Properties.MaxValue = AnaForm.DonemParametre.MaksimumTaksitTarihi;
 			txtSabitTaksit.Value = 0;
 			txtBakiye.Value = _bakiye;
 			txtTaksitSayisi.Properties.MinValue = 1;
-			txtTaksitSayisi.Properties.MaxValue = AnaForm.MaksimumTaksitSayisi - _dahaOnceGirilenTaksitSayisi;
+			txtTaksitSayisi.Properties.MaxValue = AnaForm.DonemParametre.MaksimumTaksitSayisi - _dahaOnceGirilenTaksitSayisi;
 
-			if (AnaForm.MaksimumTaksitSayisi - _dahaOnceGirilenTaksitSayisi > 0)
+			if (AnaForm.DonemParametre.MaksimumTaksitSayisi - _dahaOnceGirilenTaksitSayisi > 0)
 				ShowDialog();
 			else
 				Messages.HataMesaji("Maksimum Taksit Sayısı Aşılıyor");
@@ -73,7 +73,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 
 		private bool HataliGiris()
 		{
-			if (txtIlkTaksitTarihi.DateTime.Date.AddMonths((int)txtTaksitSayisi.Value - 1) > AnaForm.MaksimumTaksitTarihi)
+			if (txtIlkTaksitTarihi.DateTime.Date.AddMonths((int)txtTaksitSayisi.Value - 1) > AnaForm.DonemParametre.MaksimumTaksitTarihi)
 			{
 				Messages.HataMesaji("Maksimum Taksit Tarihine Aşılıyor");
 				return true;
@@ -133,7 +133,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			if (HataliGiris()) return;
 			txtOdemeTuru.Focus();
 
-			var tutar = txtSabitTaksit.Value != 0 ? txtSabitTaksit.Value : Math.Round(txtBakiye.Value / txtTaksitSayisi.Value, AnaForm.OdemePlaniKurusKullan ? 2 : 0);
+			var tutar = txtSabitTaksit.Value != 0 ? txtSabitTaksit.Value : Math.Round(txtBakiye.Value / txtTaksitSayisi.Value, AnaForm.DonemParametre.OdemePlaniKurusKullan ? 2 : 0);
 			decimal toplamGirilenTutar = 0;
 
 			for (int i = 0; i < txtTaksitSayisi.Value; i++)

@@ -45,6 +45,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -77,6 +78,7 @@
     <Compile Include="Dto\IndiriminUygulanacagiHizmetBilgileriDto.cs" />
     <Compile Include="Dto\KardesBilgileriDto.cs" />
     <Compile Include="Dto\KasaDto.cs" />
+    <Compile Include="Dto\KullaniciParametreDto.cs" />
     <Compile Include="Dto\MakbuzDto.cs" />
     <Compile Include="Dto\MakbuzHareketDto.cs" />
     <Compile Include="Dto\OdemeBilgileriDto.cs" />
@@ -101,6 +103,7 @@
     <Compile Include="Entities\Base\Interfaces\IBaseEntity.cs" />
     <Compile Include="Entities\Base\Interfaces\IBaseHareketEntity.cs" />
     <Compile Include="Entities\BilgiNotlari.cs" />
+    <Compile Include="Entities\DonemParametreleri.cs" />
     <Compile Include="Entities\EposBilgileri.cs" />
     <Compile Include="Entities\EvrakBilgileri.cs" />
     <Compile Include="Entities\Fatura.cs" />
@@ -111,6 +114,7 @@
     <Compile Include="Entities\IndirimBilgileri.cs" />
     <Compile Include="Entities\KardesBilgileri.cs" />
     <Compile Include="Entities\Kullanici.cs" />
+    <Compile Include="Entities\KullaniciParametre.cs" />
     <Compile Include="Entities\Makbuz.cs" />
     <Compile Include="Entities\MakbuzHareketleri.cs" />
     <Compile Include="Entities\OdemeBilgileri.cs" />

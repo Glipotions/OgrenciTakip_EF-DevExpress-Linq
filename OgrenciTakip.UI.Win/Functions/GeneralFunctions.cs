@@ -15,6 +15,7 @@ using OgrenciTakip.UI.Win.UserControls.UserControl.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Drawing.Printing;
@@ -337,6 +338,16 @@ namespace OgrenciTakip.UI.Win.Functions
 		public static IEnumerable<T> CheckedComboBoxList<T>(this MyCheckedComboBoxEdit comboBox)
 		{
 			return comboBox.Properties.Items.Where(x => x.CheckState == CheckState.Checked).Select(x => (T)x.Value);
+		}
+
+		public static void AppSettingsWrite(string key, string value)
+		{
+			// Bu alan skin seçiminin kalıcı olması için yapılan bir fonksiyon, App.config dosyası içindeki appSettingse yazabilme işi görür.
+
+			var configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+			configuration.AppSettings.Settings[key].Value = value;	//atama işlemi
+			configuration.Save(ConfigurationSaveMode.Modified);		//kaydetme işlemi. modified diyerek değiştirmiş oluruz
+			ConfigurationManager.RefreshSection("appSettings");		//reflesh atma yani değişimi gösterme kısmı
 		}
 	}
 }

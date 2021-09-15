@@ -104,9 +104,9 @@ namespace OgrenciTakip.UI.Win.Forms.FaturaForms
             var girilenBrutTutarToplami = _faturaPlaniSource.Cast<FaturaPlaniL>().Where(x => !x.Delete).Sum(x => x.PlanTutar);
             var girilenIndirimTutarToplami = _faturaPlaniSource.Cast<FaturaPlaniL>().Where(x => !x.Delete).Sum(x => x.PlanIndirimTutar);
 
-            var girilecekBrutTutar = sabitTutar > 0 ? sabitTutar : Math.Round((hizmetlerToplami - girilenBrutTutarToplami) / faturaAdet, AnaForm.FaturaTahakkukKurusKullan ? 2 : 0);
+            var girilecekBrutTutar = sabitTutar > 0 ? sabitTutar : Math.Round((hizmetlerToplami - girilenBrutTutarToplami) / faturaAdet, AnaForm.DonemParametre.FaturaTahakkukKurusKullan ? 2 : 0);
 
-            var girilecekIndirimTutar = sabitTutar > 0 ? 0 : Math.Round((indirimlerToplami - girilenIndirimTutarToplami) / faturaAdet, AnaForm.FaturaTahakkukKurusKullan ? 2 : 0);
+            var girilecekIndirimTutar = sabitTutar > 0 ? 0 : Math.Round((indirimlerToplami - girilenIndirimTutarToplami) / faturaAdet, AnaForm.DonemParametre.FaturaTahakkukKurusKullan ? 2 : 0);
 
             var girilecekNetTutar = girilecekBrutTutar - girilecekIndirimTutar;
 
@@ -178,9 +178,9 @@ namespace OgrenciTakip.UI.Win.Forms.FaturaForms
                         var planIndirim = x.PlanIndirim;
                         var alinanHizmetler = AlinanHizmetler(hizmetBilgileriBusiness.FaturaPlaniList(y => y.TahakkukId == x.Id).Select(y => y.HizmetAdi).ToList());
 
-                        var girilecekBrutTutar = sabitTutar > 0 ? sabitTutar : Math.Round((hizmetTutar - planTutar) / faturaAdet, AnaForm.FaturaTahakkukKurusKullan ? 2 : 0);
+                        var girilecekBrutTutar = sabitTutar > 0 ? sabitTutar : Math.Round((hizmetTutar - planTutar) / faturaAdet, AnaForm.DonemParametre.FaturaTahakkukKurusKullan ? 2 : 0);
 
-                        var girilecekIndirimTutar = sabitTutar > 0 ? 0 : Math.Round((hizmetIndirim - planIndirim) / faturaAdet, AnaForm.FaturaTahakkukKurusKullan ? 2 : 0);
+                        var girilecekIndirimTutar = sabitTutar > 0 ? 0 : Math.Round((hizmetIndirim - planIndirim) / faturaAdet, AnaForm.DonemParametre.FaturaTahakkukKurusKullan ? 2 : 0);
 
                         var girilecekNetTutar = girilecekBrutTutar - girilecekIndirimTutar;
 

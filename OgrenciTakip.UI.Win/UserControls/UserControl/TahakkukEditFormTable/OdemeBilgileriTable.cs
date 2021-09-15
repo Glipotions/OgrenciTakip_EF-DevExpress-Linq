@@ -239,7 +239,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
 			else if (e.FocusedColumn == colVade)
 			{
 				repositoryVade.MinValue = ((TahakkukEditForm)OwnerForm).txtKayitTarihi.DateTime.Date;
-				repositoryVade.MaxValue = AnaForm.MaksimumTaksitTarihi;
+				repositoryVade.MaxValue = AnaForm.DonemParametre.MaksimumTaksitTarihi;
 			}
 		}
 	}

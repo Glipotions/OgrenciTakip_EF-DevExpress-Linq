@@ -143,6 +143,8 @@ namespace OgrenciTakip.Common.Enums
 		[Description("Ödemesi Geciken Alacaklar Raporu")]
 		OdemesiGecikenAlacaklarRaporu = 69,
 		[Description("Gecikme Açıklamaları")]
-		GecikmeAciklamalari = 70
+		GecikmeAciklamalari = 70,
+		[Description("Kullanıcı Parametre")]
+		KullaniciParametre = 71
 	}
 }

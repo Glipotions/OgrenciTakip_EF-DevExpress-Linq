@@ -63,6 +63,26 @@ namespace OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap _3dfullstackedarea_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("3dfullstackedarea_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3dfullstackedarea_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("3dfullstackedarea_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap addfile_16x16 {
             get {
                 object obj = ResourceManager.GetObject("addfile_16x16", resourceCulture);
@@ -96,6 +116,26 @@ namespace OgrenciTakip.UI.Win.Properties {
         internal static System.Drawing.Bitmap addfooter_32x32 {
             get {
                 object obj = ResourceManager.GetObject("addfooter_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap addheader_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("addheader_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap addheader_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("addheader_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,6 +193,126 @@ namespace OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap bocontact2_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("bocontact2_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap bocontact2_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("bocontact2_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap bodepartment_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("bodepartment_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap bodepartment_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("bodepartment_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap bonote_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("bonote_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap bonote_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("bonote_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap boposition2_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("boposition2_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap boposition2_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("boposition2_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap boproductgroup_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("boproductgroup_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap boproductgroup_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("boproductgroup_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap calculatesheet_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("calculatesheet_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap calculatesheet_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("calculatesheet_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap cancel_16x16 {
             get {
                 object obj = ResourceManager.GetObject("cancel_16x16", resourceCulture);
@@ -173,6 +333,26 @@ namespace OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap changechartseriestype_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("changechartseriestype_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap changechartseriestype_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("changechartseriestype_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap clear_16x16 {
             get {
                 object obj = ResourceManager.GetObject("clear_16x16", resourceCulture);
@@ -186,6 +366,26 @@ namespace OgrenciTakip.UI.Win.Properties {
         internal static System.Drawing.Bitmap clear_32x32 {
             get {
                 object obj = ResourceManager.GetObject("clear_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap clip_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("clip_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap clip_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("clip_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,6 +453,26 @@ namespace OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap costanalysis_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("costanalysis_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap costanalysis_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("costanalysis_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap crossdatasourcefiltering__16x16 {
             get {
                 object obj = ResourceManager.GetObject("crossdatasourcefiltering _16x16", resourceCulture);
@@ -276,6 +496,26 @@ namespace OgrenciTakip.UI.Win.Properties {
         internal static System.Drawing.Bitmap currency_16x16 {
             get {
                 object obj = ResourceManager.GetObject("currency_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap defaultmap_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("defaultmap_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap defaultmap_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("defaultmap_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -343,9 +583,29 @@ namespace OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap documentmap_16x161 {
+            get {
+                object obj = ResourceManager.GetObject("documentmap_16x161", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap documentmap_32x32 {
             get {
                 object obj = ResourceManager.GetObject("documentmap_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap documentmap_32x321 {
+            get {
+                object obj = ResourceManager.GetObject("documentmap_32x321", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -366,6 +626,46 @@ namespace OgrenciTakip.UI.Win.Properties {
         internal static System.Drawing.Bitmap edit_32x32 {
             get {
                 object obj = ResourceManager.GetObject("edit_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap editcontact_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("editcontact_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap editcontact_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("editcontact_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap employee_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("employee_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap employee_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("employee_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -483,6 +783,46 @@ namespace OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap female_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("female_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap female_16x161 {
+            get {
+                object obj = ResourceManager.GetObject("female_16x161", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap female_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("female_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap female_32x321 {
+            get {
+                object obj = ResourceManager.GetObject("female_32x321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap filterbyargument_pie_16x16 {
             get {
                 object obj = ResourceManager.GetObject("filterbyargument_pie_16x16", resourceCulture);
@@ -496,6 +836,46 @@ namespace OgrenciTakip.UI.Win.Properties {
         internal static System.Drawing.Bitmap filterbyargument_pie_32x32 {
             get {
                 object obj = ResourceManager.GetObject("filterbyargument_pie_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap geopointmap_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("geopointmap_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap geopointmap_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("geopointmap_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap grandtotalspivottable_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("grandtotalspivottable_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap grandtotalspivottable_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("grandtotalspivottable_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -563,6 +943,26 @@ namespace OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap home_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("home_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap home_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("home_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap insertrangefilter_16x16 {
             get {
                 object obj = ResourceManager.GetObject("insertrangefilter_16x16", resourceCulture);
@@ -586,6 +986,46 @@ namespace OgrenciTakip.UI.Win.Properties {
         internal static System.Drawing.Bitmap mobilephone2_16x16 {
             get {
                 object obj = ResourceManager.GetObject("mobilephone2_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap newgroup_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("newgroup_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap newgroup_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("newgroup_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap newitem_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("newitem_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap newitem_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("newitem_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -633,9 +1073,69 @@ namespace OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap parameters_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("parameters_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap parameters_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("parameters_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap people_16x16 {
             get {
                 object obj = ResourceManager.GetObject("people_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap percentstyle__copy_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("percentstyle  copy_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap percentstyle__copy_32x321 {
+            get {
+                object obj = ResourceManager.GetObject("percentstyle  copy_32x321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap phone_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("phone_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap phone_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("phone_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -733,6 +1233,16 @@ namespace OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap removeitem_16x161 {
+            get {
+                object obj = ResourceManager.GetObject("removeitem_16x161", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap removeitem_32x32 {
             get {
                 object obj = ResourceManager.GetObject("removeitem_32x32", resourceCulture);
@@ -746,6 +1256,16 @@ namespace OgrenciTakip.UI.Win.Properties {
         internal static System.Drawing.Bitmap removeitem_32x321 {
             get {
                 object obj = ResourceManager.GetObject("removeitem_32x321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap removeitem_32x322 {
+            get {
+                object obj = ResourceManager.GetObject("removeitem_32x322", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -893,6 +1413,46 @@ namespace OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap team_16x161 {
+            get {
+                object obj = ResourceManager.GetObject("team_16x161", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap team_16x162 {
+            get {
+                object obj = ResourceManager.GetObject("team_16x162", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap team_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("team_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap team_32x321 {
+            get {
+                object obj = ResourceManager.GetObject("team_32x321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap textbox_16x16 {
             get {
                 object obj = ResourceManager.GetObject("textbox_16x16", resourceCulture);
@@ -923,6 +1483,46 @@ namespace OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap trackingchanges_trackchanges_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("trackingchanges_trackchanges_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap trackingchanges_trackchanges_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("trackingchanges_trackchanges_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap transit_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("transit_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap transit_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("transit_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap undo_16x16 {
             get {
                 object obj = ResourceManager.GetObject("undo_16x16", resourceCulture);
@@ -936,6 +1536,26 @@ namespace OgrenciTakip.UI.Win.Properties {
         internal static System.Drawing.Bitmap undo_32x32 {
             get {
                 object obj = ResourceManager.GetObject("undo_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap usergroup_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("usergroup_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap usergroup_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("usergroup_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

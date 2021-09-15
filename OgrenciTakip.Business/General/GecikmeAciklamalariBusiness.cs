@@ -29,7 +29,7 @@ namespace OgrenciTakip.Business.General
                 Id = x.Id,
                 Kod = x.Kod,
                 OdemeBilgileriId = x.OdemeBilgileriId,
-				KullaniciAdi = x.Kullanici.Kod,
+				KullaniciAdi = x.Kullanici.KullaniciAdi,
 				TarihSaat = x.TarihSaat,
                 Aciklama = x.Aciklama
             });
@@ -41,7 +41,7 @@ namespace OgrenciTakip.Business.General
             {
                 Id = x.Id,
                 Kod = x.Kod,
-				KullaniciAdi = x.Kullanici.Kod,
+				KullaniciAdi = x.Kullanici.KullaniciAdi,
 				TarihSaat = x.TarihSaat,
                 Aciklama = x.Aciklama
             }).OrderBy(x => x.Kod).ToList();

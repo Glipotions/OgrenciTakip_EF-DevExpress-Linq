@@ -1,5 +1,7 @@
 ﻿using DevExpress.XtraBars;
+using DevExpress.XtraBars.Ribbon.Gallery;
 using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Model.Dto;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.AileBilgiForms;
 using OgrenciTakip.UI.Win.Forms.AvukatForms;
@@ -34,6 +36,7 @@ using OgrenciTakip.UI.Win.Forms.TahakkukForms;
 using OgrenciTakip.UI.Win.Forms.TesvikForms;
 using OgrenciTakip.UI.Win.Forms.YabanciDilForms;
 using OgrenciTakip.UI.Win.Forms.YakinlikForms;
+using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.Reports.FormReports;
 using OgrenciTakip.UI.Win.Show;
 using System;
@@ -47,35 +50,12 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 		public static string DonemAdi = "Dönem Bilgisi Bekleniyor...";
 		public static long SubeId = 1;
 		public static string SubeAdi = "Şube Bilgisi Bekleniyor...";
-
-		public static DateTime EgitimBaslamaTarihi = new DateTime(2017, 09, 15);
-		public static DateTime DonemBaslamaTarihi = new DateTime(2018, 01, 15);
-		public static DateTime DonemBitisTarihi = new DateTime(2018, 6, 30);
-		public static bool GunTarihininOncesineHizmetBaslamaTarihiGirilebilir = true;
-		public static bool GunTarihininSonrasinaHizmetBaslamaTarihiGirilebilir = true;
-		public static bool GunTarihininOncesineIptalTarihiGirilebilir = true;
-		public static bool GunTarihininSonrasinaIptalTarihiGirilebilir = true;
-		public static bool GunTarihininOncesineMakbuzTarihiGirilebilir = true;
-		public static bool GunTarihininSonrasinaMakbuzTarihiGirilebilir = true;
-		public static bool HizmetTahakkukKurusKullan;
-		public static bool IndirimTahakkukKurusKullan;
-		public static bool OdemePlaniKurusKullan;
-		public static bool FaturaTahakkukKurusKullan;
-		public static bool GittigiOkulZorunlu = true;
+		public static List<long> YetkiliOlunanSubeler = new List<long> { 1 };
 		public static bool RaporlariOnayAlmadanKapat = false;
-		public static DateTime MaksimumTaksitTarihi = DateTime.Now.Date;
-		public static byte MaksimumTaksitSayisi = 12;
-		public static long? DefaultKasaHesapId;
-		public static long? DefaultBankaHesapId;
-		public static long? DefaultAvukatHesapId;
-		public static string DefaultKasaHesapAdi;
-		public static string DefaultBankaHesapAdi;
-		public static string DefaultAvukatHesapAdi;
 		public static long KullaniciId = 1;
-		public static List<long> YetkiliOlunanSubeler= new List<long> { 1};
 		public static string KullaniciAdi="Hamza";
-
-
+		public static DonemParametre DonemParametre;
+		public static KullaniciParametreS KullaniciParametreleri = new KullaniciParametreS();
 
 
 		public AnaForm()
@@ -90,11 +70,28 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			{
 				switch (item)
 				{
+					case SkinRibbonGalleryBarItem btn:
+						btn.GalleryItemClick += GalleryItem_GalleryItemClick;
+						break;
+					case SkinPaletteRibbonGalleryBarItem btn:
+						btn.GalleryItemClick += GalleryItem_GalleryItemClick;
+						break;
+
 					case BarButtonItem btn:
 						btn.ItemClick += Butonlar_ItemClick;
 						break;
+
 				}
 			}
+		}
+
+		private void GalleryItem_GalleryItemClick(object sender, DevExpress.XtraBars.Ribbon.GalleryItemClickEventArgs e)
+		{
+			var gallery = sender as InRibbonGallery;
+			if (gallery.OwnerItem.GetType() == typeof(SkinRibbonGalleryBarItem))
+				GeneralFunctions.AppSettingsWrite("Skin", e.Item.Caption);
+			else if(gallery.OwnerItem.GetType() == typeof(SkinPaletteRibbonGalleryBarItem))
+				GeneralFunctions.AppSettingsWrite("Palette", e.Item.Caption);
 		}
 
 		private void Butonlar_ItemClick(object sender, ItemClickEventArgs e)
@@ -161,8 +158,6 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 				ShowListForms<TahakkukListForm>.ShowListForm(KartTuru.Tahakkuk);
 			else if (e.Item == btnMakbuzKartlari)
 				ShowListForms<MakbuzListForm>.ShowListForm(KartTuru.Makbuz);
-			else if (e.Item == btnSubeKartlari)
-				ShowListForms<SubeListForm>.ShowListForm(KartTuru.Sube);
 			else if (e.Item == btnFaturaPlaniKartlari)
 				ShowListForms<FaturaPlaniListForm>.ShowListForm(KartTuru.Fatura);
 			else if (e.Item == btnFaturaTahakkukKartlari)
@@ -191,6 +186,15 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 				ShowEditReports<TahsilatRaporu>.ShowEditReport(KartTuru.TahsilatRaporu);
 			else if (e.Item == btnOdemesiGecikenRaporlar)
 				ShowEditReports<OdemesiGecikenAlacaklarRaporu>.ShowEditReport(KartTuru.OdemesiGecikenAlacaklarRaporu);
+			else if (e.Item == btnKullaniciParametreleri)
+			{
+				var entity=ShowEditForms<KullaniciParametreEditForm>.ShowDialogEditForm<KullaniciParametreS>(KullaniciId);
+				if (entity == null) return;
+				KullaniciParametreleri = entity;
+
+			}
+				
+
 
 		}
 	}

@@ -92,6 +92,7 @@
     <Compile Include="General\IndiriminUygulanacagiHizmetBilgileriBusiness.cs" />
     <Compile Include="General\KardesBilgileriBusiness.cs" />
     <Compile Include="General\KasaBusiness.cs" />
+    <Compile Include="General\KullaniciParametreBusiness.cs" />
     <Compile Include="General\MakbuzBusiness.cs" />
     <Compile Include="General\MakbuzHareketleriBusiness.cs" />
     <Compile Include="General\MesleklereGoreKayitRaporuBusiness.cs" />

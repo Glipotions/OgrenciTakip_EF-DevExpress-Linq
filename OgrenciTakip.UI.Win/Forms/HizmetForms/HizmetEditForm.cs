@@ -98,11 +98,11 @@ namespace OgrenciTakip.UI.Win.Forms.HizmetForms
 			base.Control_EditValueChanged(sender, e);
 
 			//başlangiç tarihi ve bitiş tarihi min max değer atama
-			txtBaslamaTarihi.Properties.MinValue = AnaForm.EgitimBaslamaTarihi;
-			txtBaslamaTarihi.Properties.MaxValue = AnaForm.DonemBitisTarihi;
+			txtBaslamaTarihi.Properties.MinValue = AnaForm.DonemParametre.EgitimBaslamaTarihi;
+			txtBaslamaTarihi.Properties.MaxValue = AnaForm.DonemParametre.DonemBitisTarihi;
 
 			txtBitisTarihi.Properties.MinValue = txtBaslamaTarihi.DateTime.Date;
-			txtBitisTarihi.Properties.MaxValue = AnaForm.DonemBitisTarihi;
+			txtBitisTarihi.Properties.MaxValue = AnaForm.DonemParametre.DonemBitisTarihi;
 		}
 	}
 }

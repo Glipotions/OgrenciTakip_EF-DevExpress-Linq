@@ -36,6 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Charts.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.CodeParser.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.Desktop.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -620,6 +621,12 @@
     <Compile Include="GeneralForms\AnaForm.Designer.cs">
       <DependentUpon>AnaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeneralForms\KullaniciParametreEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralForms\KullaniciParametreEditForm.Designer.cs">
+      <DependentUpon>KullaniciParametreEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeneralForms\RaporOnizleme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -843,6 +850,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UserControls\Controls\MyCodeTextEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\MyColorPickEdit.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UserControls\Controls\MyComboBoxEdit.cs">
@@ -1583,6 +1593,192 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\group_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usergroup_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usergroup_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grandtotalspivottable_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grandtotalspivottable_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boposition2_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boposition2_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transit_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transit_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\female_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\female_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\parameters_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\parameters_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clip_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clip_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addheader_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addheader_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\defaultmap_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\defaultmap_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\removeitem_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\removeitem_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newitem_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newitem_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bodepartment_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bodepartment_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newgroup_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newgroup_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\geopointmap_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\geopointmap_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bonote_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bonote_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boproductgroup_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boproductgroup_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3dfullstackedarea_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3dfullstackedarea_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percentstyle  copy_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percentstyle  copy_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\changechartseriestype_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\changechartseriestype_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\costanalysis_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\costanalysis_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\female_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\female_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documentmap_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documentmap_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculatesheet_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculatesheet_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trackingchanges_trackchanges_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trackingchanges_trackchanges_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editcontact_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editcontact_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bocontact2_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bocontact2_16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
