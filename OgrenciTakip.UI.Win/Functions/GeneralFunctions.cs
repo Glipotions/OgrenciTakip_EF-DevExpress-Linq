@@ -5,22 +5,26 @@ using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraLayout;
 using DevExpress.XtraReports.UI;
+using OgrenciTakip.Business.Function;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.Entities.Base;
 using OgrenciTakip.Model.Entities.Base.Interfaces;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
+using OgrenciTakip.UI.Win.Properties;
 using OgrenciTakip.UI.Win.UserControls.Controls;
 using OgrenciTakip.UI.Win.UserControls.UserControl.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
+using System.Security;
 using System.Windows.Forms;
 
 namespace OgrenciTakip.UI.Win.Functions
@@ -345,9 +349,48 @@ namespace OgrenciTakip.UI.Win.Functions
 			// Bu alan skin seçiminin kalıcı olması için yapılan bir fonksiyon, App.config dosyası içindeki appSettingse yazabilme işi görür.
 
 			var configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-			configuration.AppSettings.Settings[key].Value = value;	//atama işlemi
-			configuration.Save(ConfigurationSaveMode.Modified);		//kaydetme işlemi. modified diyerek değiştirmiş oluruz
-			ConfigurationManager.RefreshSection("appSettings");		//reflesh atma yani değişimi gösterme kısmı
+			configuration.AppSettings.Settings[key].Value = value;  //atama işlemi
+			configuration.Save(ConfigurationSaveMode.Modified);     //kaydetme işlemi. modified diyerek değiştirmiş oluruz
+			ConfigurationManager.RefreshSection("appSettings");     //reflesh atma yani değişimi gösterme kısmı
+		}
+
+		public static void CreateConnectionString(string initialCatalog, string server, SecureString kullaniciAdi,
+			SecureString sifre, YetkilendirmeTuru yetkilendirmeTuru)
+		{
+			SqlConnectionStringBuilder builder = null;
+
+			switch (yetkilendirmeTuru)
+			{
+				case YetkilendirmeTuru.SqlServer:
+					builder = new SqlConnectionStringBuilder
+					{
+						DataSource = server,
+						UserID = kullaniciAdi.ConvertToUnSecureString(),
+						Password = sifre.ConvertToUnSecureString(),
+						InitialCatalog = initialCatalog,
+						MultipleActiveResultSets = true //Aynı Connectiondan birden fazla sorgulama işlemi yapılır. Sürekli aç kapat yapmaya gerek yok.
+					};
+					break;
+
+				case YetkilendirmeTuru.Windows:
+					builder = new SqlConnectionStringBuilder
+					{
+						DataSource = server,
+						InitialCatalog = initialCatalog,
+						IntegratedSecurity = true,
+						MultipleActiveResultSets = true
+					};
+					break;
+			}
+
+			//BURAYI PROJEYE GÖRE DEĞİŞTİRMEK GEREKİYOR
+			var configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+			configuration.ConnectionStrings.ConnectionStrings["OgrenciTakipContext"].ConnectionString =
+				builder?.ConnectionString;
+			configuration.Save(ConfigurationSaveMode.Modified);
+			ConfigurationManager.RefreshSection("connectionStrings");
+			Settings.Default.Reset();
+			Settings.Default.Save();
 		}
 	}
 }

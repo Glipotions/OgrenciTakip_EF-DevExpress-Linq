@@ -329,7 +329,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		{
 			var type = sender.GetType();
 
-			if (type == typeof(MyButtonEdit) || type == typeof(MyGridView) || type == typeof(MyPictureEdit) || type == typeof(MyComboBoxEdit) || type == typeof(MyDateEdit) || type == typeof(MyCalcEdit))
+			if (type == typeof(MyButtonEdit) || type == typeof(MyGridView) || type == typeof(MyPictureEdit) || type == typeof(MyComboBoxEdit) || type == typeof(MyDateEdit) || type == typeof(MyCalcEdit) || type == typeof(MyColorPickEdit))
 			{
 				statusBarKisayol.Visibility = BarItemVisibility.Always;
 				statusBarKisayolAciklama.Visibility = BarItemVisibility.Always;

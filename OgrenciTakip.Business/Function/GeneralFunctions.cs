@@ -5,6 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.Entity;
+using System.Runtime.InteropServices;
+using System.Security;
 
 namespace OgrenciTakip.Business.Function
 {
@@ -48,6 +50,11 @@ namespace OgrenciTakip.Business.Function
 			uow = new UnitOfWork<T>(CreateContext<TContext>());
 		}
 
+		public static string ConvertToUnSecureString(this SecureString value)
+		{
+			var result = Marshal.SecureStringToBSTR(value);
+			return Marshal.PtrToStringAuto(result);
+		}
 
 	}
 }

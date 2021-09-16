@@ -1,6 +1,8 @@
 ﻿using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon.Gallery;
+using DevExpress.XtraTabbedMdi;
 using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.Dto;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.AileBilgiForms;
@@ -41,6 +43,8 @@ using OgrenciTakip.UI.Win.Reports.FormReports;
 using OgrenciTakip.UI.Win.Show;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
 {
@@ -51,9 +55,9 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 		public static long SubeId = 1;
 		public static string SubeAdi = "Şube Bilgisi Bekleniyor...";
 		public static List<long> YetkiliOlunanSubeler = new List<long> { 1 };
-		public static bool RaporlariOnayAlmadanKapat = false;
+
 		public static long KullaniciId = 1;
-		public static string KullaniciAdi="Hamza";
+		public static string KullaniciAdi = "Hamza";
 		public static DonemParametre DonemParametre;
 		public static KullaniciParametreS KullaniciParametreleri = new KullaniciParametreS();
 
@@ -62,10 +66,16 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 		{
 			InitializeComponent();
 			EventsLoad();
+
+			imgArkaPlanResmi.EditValue = KullaniciParametreleri.ArkaPlanResim;
 		}
 
 		private void EventsLoad()
 		{
+			Load += AnaForm_Load;
+			Closing += AnaForm_Closing;
+			KeyDown += Control_KeyDown;
+
 			foreach (var item in ribbonControl.Items)
 			{
 				switch (item)
@@ -83,6 +93,46 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
 				}
 			}
+
+			foreach (Control control in Controls)
+				control.KeyDown += Control_KeyDown;
+
+			
+			xtraTabbedMdiManager.PageAdded += XtraTabbedMdiManager_PageAdded;
+			xtraTabbedMdiManager.PageRemoved += XtraTabbedMdiManager_PageRemoved;
+		}
+
+		private void AnaForm_Load(object sender, System.EventArgs e)
+		{
+			//barKullanici.Caption = $@"{KullaniciAdi} ( {KullaniciRolAdi} )";
+			//barKurum.Caption = KurumAdi;
+			//SubeDonemSecimi(false); //daha ilk yüklenme aşamasında olduğu için
+
+			//if (DonemParametre == null)
+			//{
+			//	Messages.HataMesaji("Dönem Parametreleri Girilmemiş. Lütfen Sistem Yöneticinize Başvurunuz.");
+			//	Application.ExitThread();
+			//	return;
+			//}
+
+			//if (!DonemParametre.YetkiKontroluAnlikYapilacak)
+			//{
+			//	using (var Business = new RolYetkileriBusiness())
+			//	{
+			//		//Başka bir Kullanım
+			//		//Converts.EntityListConvert<RolYetkileriL>(Business.List(x => x.RolId == KullaniciRolId));
+
+			//		RolYetkileri = Business.List(x => x.RolId == KullaniciRolId).EntityListConvert<RolYetkileriL>();
+			//	}
+			//}
+		}
+
+		private void AnaForm_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+		{
+			if (Messages.HayirSeciliEvetHayir("Programdan Çıkmak İstiyor musunuz?", "Çıkış Onayı") == DialogResult.Yes)
+				Application.ExitThread();
+			else
+				e.Cancel = true;
 		}
 
 		private void GalleryItem_GalleryItemClick(object sender, DevExpress.XtraBars.Ribbon.GalleryItemClickEventArgs e)
@@ -191,11 +241,36 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 				var entity=ShowEditForms<KullaniciParametreEditForm>.ShowDialogEditForm<KullaniciParametreS>(KullaniciId);
 				if (entity == null) return;
 				KullaniciParametreleri = entity;
-
+				imgArkaPlanResmi.EditValue = entity.ArkaPlanResim;
 			}
-				
+			else if (e.Item == btnHesapMakinesi)
+				try
+				{
+					Process.Start("calc.exe");
+				}
+				catch
+				{
+					Messages.HataMesaji("Hesap Makinesi Bulunamadı");
+				}
 
 
+		}
+
+		private void Control_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Escape)
+				Close();
+		}
+
+		private void XtraTabbedMdiManager_PageAdded(object sender, MdiTabPageEventArgs e)
+		{
+			imgArkaPlanResmi.SendToBack();
+		}
+
+		private void XtraTabbedMdiManager_PageRemoved(object sender, MdiTabPageEventArgs e)
+		{
+			if (((XtraTabbedMdiManager)sender).Pages.Count == 0)
+				imgArkaPlanResmi.BringToFront();
 		}
 	}
 }

@@ -447,7 +447,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
 		private void BaseRapor_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			//Close() çalışmadan önce bu event çalışır
-			if (!AnaForm.RaporlariOnayAlmadanKapat)
+			if (!AnaForm.KullaniciParametreleri.RaporlariOnayAlmadanKapat)
 				if (Messages.RaporKapatmaMesaj() != DialogResult.Yes)
 					e.Cancel = true;
 		}

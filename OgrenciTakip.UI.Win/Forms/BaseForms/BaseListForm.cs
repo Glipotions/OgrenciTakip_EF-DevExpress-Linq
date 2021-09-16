@@ -12,8 +12,10 @@ using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.GeneralForms;
 using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.UI.Win.Show.Interfaces;
+using OgrenciTakip.UI.Win.UserControls.Grid;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace OgrenciTakip.UI.Win.Forms.BaseForms
@@ -214,7 +216,13 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			Listele();
 			Cursor.Current = DefaultCursor;
 
-			//Güncellenecek
+			//Tablonun Renklerini Değiştirme. Anaformdan gelen renkleri alır
+			Tablo.Appearance.ViewCaption.ForeColor = Color.FromArgb(AnaForm.KullaniciParametreleri.TableViewCaptionForeColor);
+			Tablo.Appearance.HeaderPanel.ForeColor = Color.FromArgb(AnaForm.KullaniciParametreleri.TableColumnHeaderForeColor);
+			// Banded grid ise ona göre renklendirme yapma kısmı
+			if(Tablo is MyBandedGridView bandedGrid)
+				bandedGrid.Appearance.HeaderPanel.ForeColor = Color.FromArgb(AnaForm.KullaniciParametreleri.TableBandPanelForeColor);
+
 		}
 		protected virtual void Duzelt() { }
 		protected virtual void BaskiOnizleme() { }

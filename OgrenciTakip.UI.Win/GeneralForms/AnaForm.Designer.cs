@@ -118,9 +118,11 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
 			this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-			this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+			this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+			this.imgArkaPlanResmi = new OgrenciTakip.UI.Win.UserControls.Controls.MyPictureEdit();
 			((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.imgArkaPlanResmi.Properties)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// ribbonControl
@@ -873,15 +875,38 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			this.ribbonPage2.Name = "ribbonPage2";
 			this.ribbonPage2.Text = "ribbonPage2";
 			// 
-			// xtraTabbedMdiManager1
+			// xtraTabbedMdiManager
 			// 
-			this.xtraTabbedMdiManager1.MdiParent = this;
+			this.xtraTabbedMdiManager.MdiParent = this;
+			// 
+			// imgArkaPlanResmi
+			// 
+			this.imgArkaPlanResmi.Cursor = System.Windows.Forms.Cursors.Default;
+			this.imgArkaPlanResmi.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.imgArkaPlanResmi.EnterMoveNextControl = true;
+			this.imgArkaPlanResmi.Location = new System.Drawing.Point(0, 158);
+			this.imgArkaPlanResmi.MenuManager = this.ribbonControl;
+			this.imgArkaPlanResmi.Name = "imgArkaPlanResmi";
+			this.imgArkaPlanResmi.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+			this.imgArkaPlanResmi.Properties.Appearance.ForeColor = System.Drawing.Color.Maroon;
+			this.imgArkaPlanResmi.Properties.Appearance.Options.UseBackColor = true;
+			this.imgArkaPlanResmi.Properties.Appearance.Options.UseForeColor = true;
+			this.imgArkaPlanResmi.Properties.NullText = " ";
+			this.imgArkaPlanResmi.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+			this.imgArkaPlanResmi.Properties.ShowMenu = false;
+			this.imgArkaPlanResmi.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+			this.imgArkaPlanResmi.Size = new System.Drawing.Size(1058, 386);
+			this.imgArkaPlanResmi.StatusBarAciklama = null;
+			this.imgArkaPlanResmi.StatusBarKisayol = "F4: ";
+			this.imgArkaPlanResmi.StatusBarKisayolAciklama = null;
+			this.imgArkaPlanResmi.TabIndex = 3;
 			// 
 			// AnaForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1058, 568);
+			this.Controls.Add(this.imgArkaPlanResmi);
 			this.Controls.Add(this.ribbonStatusBar1);
 			this.Controls.Add(this.ribbonControl);
 			this.IconOptions.ShowIcon = false;
@@ -892,7 +917,8 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			this.Text = "Glipotions Yazılım-Öğrenci Takip";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.imgArkaPlanResmi.Properties)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -906,7 +932,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 		private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
 		private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
 		private DevExpress.XtraBars.BarButtonItem btnOkulKartlari;
-		private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+		private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager;
 		private DevExpress.XtraBars.BarButtonItem btnIlKartlari;
 		private DevExpress.XtraBars.BarButtonItem btnAileBilgiKartlari;
 		private DevExpress.XtraBars.BarButtonItem btnIptalNedeniKartlari;
@@ -984,5 +1010,6 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 		private DevExpress.XtraBars.BarButtonItem btnHesapMakinesi;
 		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
 		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
+		private UserControls.Controls.MyPictureEdit imgArkaPlanResmi;
 	}
 }
