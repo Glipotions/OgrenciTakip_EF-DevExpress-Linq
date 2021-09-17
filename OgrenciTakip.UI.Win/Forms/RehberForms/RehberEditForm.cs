@@ -18,7 +18,7 @@ namespace OgrenciTakip.UI.Win.Forms.RehberForms
 			EventsLoad();
 		}
 
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ?
 			new Rehber() : ((RehberBusiness)Business).Single(FilterFunctions.Filter<Rehber>(Id));

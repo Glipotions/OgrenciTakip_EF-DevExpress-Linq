@@ -41,7 +41,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			HideItems = new BarItem[] { btnYeni, btnKaydet, btnFarkliKaydet, btnGeriAl, btnSil };
 		}
 
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			ControlEnableChange(OdemeTipi.Acik);
 			txtIlkTaksitTarihi.DateTime = _kayitTarihi;

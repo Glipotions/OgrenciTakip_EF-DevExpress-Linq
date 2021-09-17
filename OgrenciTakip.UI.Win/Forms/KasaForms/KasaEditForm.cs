@@ -21,7 +21,7 @@ namespace OgrenciTakip.UI.Win.Forms.KasaForms
 			EventsLoad();
 		}
 
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new KasaS() : ((KasaBusiness)Business).Single(FilterFunctions.Filter<Kasa>(Id));
 			NesneyiKontrollereBagla();

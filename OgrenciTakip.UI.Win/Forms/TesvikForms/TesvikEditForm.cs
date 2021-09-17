@@ -18,7 +18,7 @@ namespace OgrenciTakip.UI.Win.Forms.TesvikForms
 			EventsLoad();
 		}
 
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ?
 			new Tesvik() : ((TesvikBusiness)Business).Single(FilterFunctions.Filter<Tesvik>(Id));

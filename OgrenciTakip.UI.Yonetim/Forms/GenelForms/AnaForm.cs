@@ -8,8 +8,6 @@ using OgrenciTakip.Common.Message;
 using OgrenciTakip.Data.Context;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.Model.Entities.Base;
-using OgrenciTakip.UI.Win.Forms.DonemForms;
-using OgrenciTakip.UI.Win.Forms.KullaniciForms;
 using OgrenciTakip.UI.Win.Forms.SubeForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.GeneralForms;
@@ -35,7 +33,7 @@ namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
             _yetkilendirmeTuru = (YetkilendirmeTuru)prm[3];
             _Business = new KurumBusiness();
 
-            longNavigator1.Navigator.NavigatableControl = tablo.GridControl;  //navigator girde balğadık
+            longNavigator.Navigator.NavigatableControl = tablo.GridControl;  //navigator girde balğadık
             EventsLoad();
             ButonEnabledDurum();
         }
@@ -75,6 +73,7 @@ namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
 
         private void ButonEnabledDurum()
         {
+            //Eğer Tabloda hiç kayıt yoksa Yeni butonu dışındakileri aktif etme
             foreach (BarItem button in ribbonControl.Items)
             {
                 if (!(button is BarButtonItem item)) continue;
@@ -113,20 +112,20 @@ namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
 
                 if (e.Item == btnSil)
                     EntityDelete(entity);
-                else if (e.Item == btnEmailParametreleri)
-                    ShowEditForms<EmailParametreEditForm>.ShowDialogEditForm();
-                else if (e.Item == btnSubeKartlari)
-                    ShowListForms<SubeListForm>.ShowDialogListForm();
-                else if (e.Item == btnDonemKartlari)
-                    ShowListForms<DonemListForm>.ShowDialogListForm();
-                else if (e.Item == btnKurumBilgileri)
-                    ShowEditForms<KurumBilgileriEditForm>.ShowDialogEditForm(null, entity.Kod, entity.KurumAdi);
-                else if (e.Item == btnRolKartlari)
-                    ShowListForms<RolListForm>.ShowDialogListForm();
-                else if (e.Item == btnKullaniciKartlari)
-                    ShowListForms<KullaniciListForm>.ShowDialogListForm();
-                else if (e.Item == btnKullaniciBirimYetkileri)
-                    ShowEditForms<KullaniciBirimYetkileriEditForm>.ShowDialogEditForm();
+                //else if (e.Item == btnEmailParametreleri)
+                //    ShowEditForms<EmailParametreEditForm>.ShowDialogEditForm();
+                //else if (e.Item == btnSubeKartlari)
+                //    ShowListForms<SubeListForm>.ShowDialogListForm();
+                //else if (e.Item == btnDonemKartlari)
+                //    ShowListForms<DonemListForm>.ShowDialogListForm();
+                //else if (e.Item == btnKurumBilgileri)
+                //    ShowEditForms<KurumBilgileriEditForm>.ShowDialogEditForm(null, entity.Kod, entity.KurumAdi);
+                //else if (e.Item == btnRolKartlari)
+                //    ShowListForms<RolListForm>.ShowDialogListForm();
+                //else if (e.Item == btnKullaniciKartlari)
+                //    ShowListForms<KullaniciListForm>.ShowDialogListForm();
+                //else if (e.Item == btnKullaniciBirimYetkileri)
+                //    ShowEditForms<KullaniciBirimYetkileriEditForm>.ShowDialogEditForm();
             }
 
             Cursor.Current = DefaultCursor;
@@ -134,8 +133,8 @@ namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
 
         private void Tablo_DoubleClick(object sender, System.EventArgs e)
         {
-            if (tablo.FocusedRowHandle < 0) return;
-            ShowEditForm(tablo.GetRowId());
+            if (tablo.FocusedRowHandle < 0) return; // fokuslanan yer 0 dan küçükse( Filtreleme yeri olabilir) return.
+            ShowEditForm(tablo.GetRowId()); 
         }
 
         private void Tablo_KeyDown(object sender, KeyEventArgs e)

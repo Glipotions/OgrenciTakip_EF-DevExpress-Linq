@@ -41,7 +41,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
 			FarkliSubeIslemi = prm.Length > 2 && (bool)prm[2];
 		}
 
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new MakbuzS() : ((MakbuzBusiness)Business).Single(FilterFunctions.Filter<Makbuz>(Id));
 			AlanIslemleri();

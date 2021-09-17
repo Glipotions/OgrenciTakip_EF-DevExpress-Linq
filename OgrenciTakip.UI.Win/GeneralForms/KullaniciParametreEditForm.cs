@@ -28,7 +28,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             EventsLoad();
         }
 
-        protected internal override void Yukle()
+        public override void Yukle()
         {
             OldEntity = ((KullaniciParametreBusiness)Business).Single(x => x.KullaniciId == _kullaniciId) ?? new KullaniciParametreS();
             //kullanıci parametreleri vt de yoksa new KullaniciParametreS() yap

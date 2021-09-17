@@ -26,7 +26,7 @@ namespace OgrenciTakip.UI.Win.Forms.RaporForms
 			_dosya = (byte[])prm[2];
 		}
 
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new Rapor() : ((RaporBusiness)Business).Single(FilterFunctions.Filter<Rapor>(Id));
 			NesneyiKontrollereBagla();

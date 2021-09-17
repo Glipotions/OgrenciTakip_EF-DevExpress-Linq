@@ -22,7 +22,7 @@ namespace OgrenciTakip.UI.Win.Forms.SinifForms
 			EventsLoad();
 		}
 
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new SinifS() : ((SinifBusiness)Business).Single(FilterFunctions.Filter<Sinif>(Id));
 			NesneyiKontrollereBagla();

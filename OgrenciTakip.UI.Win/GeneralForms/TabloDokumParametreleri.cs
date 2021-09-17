@@ -30,7 +30,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
 
 
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			txtRaporBasligi.Text = _raporBaslik;
 			txtBaslikEkle.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<EvetHayir>());

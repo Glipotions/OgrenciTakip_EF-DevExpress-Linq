@@ -75,7 +75,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 			//	FarkliSubeIslemi = (bool)prm[0];
 		}
 
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new TahakkukS() : ((TahakkukBusiness)Business).Single(FilterFunctions.Filter<Tahakkuk>(Id));
 			NesneyiKontrollereBagla();

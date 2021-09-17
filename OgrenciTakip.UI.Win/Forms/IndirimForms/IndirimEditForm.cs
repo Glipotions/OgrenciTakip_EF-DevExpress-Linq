@@ -21,7 +21,7 @@ namespace OgrenciTakip.UI.Win.Forms.IndirimForms
 			EventsLoad();
 		}
 
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new IndirimS() : ((IndirimBusiness)Business).Single(FilterFunctions.Filter<Indirim>(Id));
 			NesneyiKontrollereBagla();

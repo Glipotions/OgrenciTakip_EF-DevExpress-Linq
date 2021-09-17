@@ -22,7 +22,7 @@ namespace OgrenciTakip.UI.Win.Forms.SubeForms
             EventsLoad();
         }
 
-        protected internal override void Yukle()
+        public override void Yukle()
         {
             OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new SubeS() : ((SubeBusiness)Business).Single(FilterFunctions.Filter<Sube>(Id));
             NesneyiKontrollereBagla();

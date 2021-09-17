@@ -145,6 +145,8 @@ namespace OgrenciTakip.Common.Enums
 		[Description("Gecikme Açıklamaları")]
 		GecikmeAciklamalari = 70,
 		[Description("Kullanıcı Parametre")]
-		KullaniciParametre = 71
+		KullaniciParametre = 71,
+		[Description("Kurum")]
+		Kurum = 72
 	}
 }

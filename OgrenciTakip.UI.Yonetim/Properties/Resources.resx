@@ -118,65 +118,41 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="removeitem_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\removeitem_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="usergroup_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usergroup_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="documentmap_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\documentmap_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="emailtemplate_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\emailtemplate_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="suggestion_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\suggestion_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="newgroup_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\newgroup_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="home_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="editpagehf_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\editpagehf_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="newgroup_16x161" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\newgroup_16x161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="suggestion_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\suggestion_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="documentmap_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\documentmap_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="newitem_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\newitem_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="usergroup_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usergroup_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="monthview_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\monthview_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="copy_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\copy_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="emailtemplate_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\emailtemplate_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="newgroup_16x162" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\newgroup_16x162.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="newgroup_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newgroup_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="newitem_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newitem_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="comment_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\comment_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="removeitem_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\removeitem_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="copy_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\copy_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1900851" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1900851.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="comment_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\comment_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="usergroup_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usergroup_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="editpagehf_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\editpagehf_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="monthview_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\monthview_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,16 +160,49 @@
   <data name="suggestion_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\suggestion_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="newgroup_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\newgroup_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="home_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="newgroup_16x161" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newgroup_16x161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="copy_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\copy_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="home_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="editpagehf_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\editpagehf_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="jVIhC3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jVIhC3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="removeitem_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\removeitem_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="newgroup_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newgroup_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comment_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\comment_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="documentmap_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\documentmap_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usergroup_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usergroup_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="newitem_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newitem_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="removeitem_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\removeitem_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="emailtemplate_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\emailtemplate_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="copy_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\copy_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="newgroup_16x162" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newgroup_16x162.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ekran görüntüsü 2021-09-16 1437542" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ekran görüntüsü 2021-09-16 1437542.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

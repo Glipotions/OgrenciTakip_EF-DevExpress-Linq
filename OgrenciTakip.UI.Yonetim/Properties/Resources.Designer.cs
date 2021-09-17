@@ -63,6 +63,16 @@ namespace OgrenciTakip.UI.Yonetim.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap _1900851 {
+            get {
+                object obj = ResourceManager.GetObject("1900851", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap comment_16x16 {
             get {
                 object obj = ResourceManager.GetObject("comment_16x16", resourceCulture);
@@ -143,6 +153,16 @@ namespace OgrenciTakip.UI.Yonetim.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap Ekran_görüntüsü_2021_09_16_1437542 {
+            get {
+                object obj = ResourceManager.GetObject("Ekran görüntüsü 2021-09-16 1437542", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap emailtemplate_16x16 {
             get {
                 object obj = ResourceManager.GetObject("emailtemplate_16x16", resourceCulture);
@@ -176,6 +196,16 @@ namespace OgrenciTakip.UI.Yonetim.Properties {
         internal static System.Drawing.Bitmap home_32x32 {
             get {
                 object obj = ResourceManager.GetObject("home_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap jVIhC3 {
+            get {
+                object obj = ResourceManager.GetObject("jVIhC3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

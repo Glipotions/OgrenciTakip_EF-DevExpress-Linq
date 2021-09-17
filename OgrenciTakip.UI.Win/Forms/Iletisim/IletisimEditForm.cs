@@ -22,7 +22,7 @@ namespace OgrenciTakip.UI.Win.Forms.IletisimForms
 			EventsLoad();
 		}
 
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new IletisimS() : ((IletisimBusiness)Business).Single(FilterFunctions.Filter<Iletisim>(Id));
 			NesneyiKontrollereBagla();

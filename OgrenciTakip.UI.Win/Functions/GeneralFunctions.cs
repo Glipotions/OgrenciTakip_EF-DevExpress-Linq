@@ -392,5 +392,41 @@ namespace OgrenciTakip.UI.Win.Functions
 			Settings.Default.Reset();
 			Settings.Default.Save();
 		}
+
+		public static bool BaglantiKontrolu(string server, SecureString kullaniciAdi, SecureString sifre, YetkilendirmeTuru yetkilendirmeTuru, bool genelMesajVer = false)
+        {
+            CreateConnectionString("", server, kullaniciAdi, sifre, yetkilendirmeTuru);
+
+            using (var con = new SqlConnection(Business.Function.GeneralFunctions.GetConnectionString()))
+            {
+                try
+                {
+                    if (con.ConnectionString == "") return false;
+                    con.Open();
+                    return true;
+                }
+                catch (SqlException exception)
+                {
+                    if (genelMesajVer)
+                    {
+                        Messages.HataMesaji("Server Bağlantı Ayarlarınız Hatalıdır. Lütfen Kontrol Ediniz.");
+                        return false;
+                    }
+
+                    switch (exception.Number)
+                    {
+                        case 18456:
+                            Messages.HataMesaji("Server Kullanıcı Adı veya Şifresi Hatalıdır.");
+                            break;
+
+                        default:
+                            Messages.HataMesaji(exception.Message);
+                            break;
+                    }
+                }
+
+                return false;
+            }
+        }
 	}
 }

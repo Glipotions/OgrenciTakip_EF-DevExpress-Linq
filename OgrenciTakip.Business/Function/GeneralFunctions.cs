@@ -1,5 +1,6 @@
 ﻿using DataAccess.Base;
 using DataAccess.Interfaces;
+using DevExpress.Utils.Extensions;
 using OgrenciTakip.Model.Entities.Base.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -25,7 +26,7 @@ namespace OgrenciTakip.Business.Function
 				{
 					if (string.IsNullOrEmpty(oldValue.ToString()))
 						oldValue = new byte[] { };
-					if (string.IsNullOrEmpty(currentEntity.ToString()))
+					if (string.IsNullOrEmpty(currentValue.ToString()))
 						currentValue = new byte[] { };
 					if (((byte[])oldValue).Length != ((byte[])currentValue).Length)
 						alanlar.Add(prop.Name);
@@ -48,6 +49,17 @@ namespace OgrenciTakip.Business.Function
 		{
 			uow?.Dispose();
 			uow = new UnitOfWork<T>(CreateContext<TContext>());
+		}
+
+		public static SecureString ConvertToSecureString(this string value)
+		{
+			var secureString = new SecureString();
+
+			if (value.Length > 0)
+				value.ToCharArray().ForEach(x => secureString.AppendChar(x));
+
+			secureString.MakeReadOnly();
+			return secureString;
 		}
 
 		public static string ConvertToUnSecureString(this SecureString value)

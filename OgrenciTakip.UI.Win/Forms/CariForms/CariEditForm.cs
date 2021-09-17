@@ -19,7 +19,7 @@ namespace OgrenciTakip.UI.Win.Forms.CariForms
 			EventsLoad();
 		}
 
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new CariS() : ((CariBusiness)Business).Single(FilterFunctions.Filter<Cari>(Id));
 			NesneyiKontrollereBagla();

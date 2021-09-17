@@ -25,7 +25,7 @@ namespace OgrenciTakip.UI.Win.Forms.GecikmeAciklamalariForms
             EventsLoad();
         }
 
-        protected internal override void Yukle()
+        public override void Yukle()
         {
             OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new GecikmeAciklamalariS() : ((GecikmeAciklamalariBusiness)Business).Single(FilterFunctions.Filter<GecikmeAciklamalari>(Id));
             NesneyiKontrollereBagla();

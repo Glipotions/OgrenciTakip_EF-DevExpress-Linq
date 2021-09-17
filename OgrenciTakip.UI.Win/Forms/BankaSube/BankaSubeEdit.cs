@@ -24,7 +24,7 @@ namespace OgrenciTakip.UI.Win.Forms.BankaSubeForms
 			EventsLoad();
 		}
 
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new BankaSube() : ((BankaSubeBusiness)Business).Single(FilterFunctions.Filter<BankaSube>(Id));
 			NesneyiKontrollereBagla();

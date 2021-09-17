@@ -19,7 +19,7 @@ namespace OgrenciTakip.UI.Win.Forms.YabanciDilForms
 			EventsLoad();
 		}
 
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ?
 			new YabanciDil() : ((YabanciDilBusiness)Business).Single(FilterFunctions.Filter<YabanciDil>(Id));

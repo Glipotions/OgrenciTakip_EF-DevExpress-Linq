@@ -33,7 +33,7 @@ namespace OgrenciTakip.UI.Win.Forms.FiltreForms
 			EventsLoad();
 		}
 
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			txtFiltreMetni.SourceControl = _filtreGrid;
 

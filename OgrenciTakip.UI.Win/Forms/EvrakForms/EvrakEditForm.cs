@@ -19,7 +19,7 @@ namespace OgrenciTakip.UI.Win.Forms.EvrakForms
 			EventsLoad();
 		}
 
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new Evrak() : ((EvrakBusiness)Business).Single(FilterFunctions.Filter<Evrak>(Id));
 			NesneyiKontrollereBagla();

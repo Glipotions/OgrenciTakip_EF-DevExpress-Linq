@@ -47,7 +47,7 @@ namespace OgrenciTakip.UI.Win.Forms.FaturaForms
             }
         }
 
-        protected internal override void Yukle()
+        public override void Yukle()
         {
             btnTaksitOlustur.Caption = "Plan Oluştur";
             txtIlkFaturaTarih.DateTime = DateTime.Now.Date;

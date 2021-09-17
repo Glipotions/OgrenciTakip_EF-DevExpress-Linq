@@ -30,7 +30,7 @@ namespace OgrenciTakip.UI.Win.Forms.FaturaForms
             KayitSonrasiFormuKapat = false;
         }
 
-        protected internal override void Yukle()
+        public override void Yukle()
         {
             txtKdvSekli.SelectedItem = KdvSekli.Dahil.ToName();   //seçili gelmesi için
             txtFaturaAdresi.SelectedItem = AdresTuru.EvAdresi.ToName();  //ev adresi seçili gelmesi için

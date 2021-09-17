@@ -24,7 +24,7 @@ namespace OgrenciTakip.UI.Win.Forms.OzelKodForms
 			EventsLoad();
 		}
 
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new OzelKod() : ((OzelKodBusiness)Business).Single(FilterFunctions.Filter<OzelKod>(Id));
 			NesneyiKontrollereBagla();

@@ -21,7 +21,7 @@ namespace OgrenciTakip.UI.Win.Forms.AvukatForms
 			EventsLoad();
 		}
 
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new AvukatS() : ((AvukatBusiness)Business).Single(FilterFunctions.Filter<Avukat>(Id));
 			NesneyiKontrollereBagla();

@@ -118,7 +118,7 @@ namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
 			this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
 			this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-			this.longNavigator1 = new OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
+			this.longNavigator = new OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
 			this.grid = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridControl();
 			this.tablo = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
 			this.colKod = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
@@ -628,13 +628,13 @@ namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
 			this.ribbonPage2.Name = "ribbonPage2";
 			this.ribbonPage2.Text = "ribbonPage2";
 			// 
-			// longNavigator1
+			// longNavigator
 			// 
-			this.longNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.longNavigator1.Location = new System.Drawing.Point(0, 602);
-			this.longNavigator1.Name = "longNavigator1";
-			this.longNavigator1.Size = new System.Drawing.Size(1225, 24);
-			this.longNavigator1.TabIndex = 2;
+			this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.longNavigator.Location = new System.Drawing.Point(0, 602);
+			this.longNavigator.Name = "longNavigator";
+			this.longNavigator.Size = new System.Drawing.Size(1225, 24);
+			this.longNavigator.TabIndex = 2;
 			// 
 			// grid
 			// 
@@ -750,7 +750,7 @@ namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1225, 650);
 			this.Controls.Add(this.grid);
-			this.Controls.Add(this.longNavigator1);
+			this.Controls.Add(this.longNavigator);
 			this.Controls.Add(this.ribbonStatusBar1);
 			this.Controls.Add(this.ribbonControl);
 			this.IconOptions.ShowIcon = false;
@@ -808,7 +808,7 @@ namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
         private DevExpress.XtraBars.BarStaticItem barStaticItem18;
         private DevExpress.XtraBars.BarStaticItem barStaticItem19;
         private DevExpress.XtraBars.BarStaticItem barStaticItem20;
-        private Win.UserControls.Navigators.LongNavigator longNavigator1;
+        private Win.UserControls.Navigators.LongNavigator longNavigator;
         private Win.UserControls.Grid.MyGridControl grid;
         private Win.UserControls.Grid.MyGridView tablo;
         private Win.UserControls.Grid.MyGridColumn colKod;

@@ -32,7 +32,7 @@ namespace OgrenciTakip.UI.Win.Forms.FaturaForms
 		//	_tahakkukId = (long)prm[0];
 		//}
 
-		protected internal override void Yukle()
+		public override void Yukle()
         {
             TabloYukle();
 

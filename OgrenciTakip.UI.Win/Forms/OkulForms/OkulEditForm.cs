@@ -20,7 +20,7 @@ namespace OgrenciTakip.UI.Win.Forms.OkulForms
 			BaseKartTuru = KartTuru.Okul;
 			EventsLoad();
 		}
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ?
 				new OkulS() : ((OkulBusiness)Business).Single(FilterFunctions.Filter<Okul>(Id));

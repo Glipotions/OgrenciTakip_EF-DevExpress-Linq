@@ -19,7 +19,7 @@ namespace OgrenciTakip.UI.Win.Forms.IptalNedeniForms
 			EventsLoad();
 		}
 
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ?
 			new IptalNedeni() : ((IptalNedeniBusiness)Business).Single(FilterFunctions.Filter<IptalNedeni>(Id));

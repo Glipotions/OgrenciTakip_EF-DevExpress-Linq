@@ -22,7 +22,7 @@ namespace OgrenciTakip.UI.Win.Forms.HizmetForms
 			EventsLoad();
 		}
 
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new HizmetS() : ((HizmetBusiness)Business).Single(FilterFunctions.Filter<Hizmet>(Id));
 			NesneyiKontrollereBagla();

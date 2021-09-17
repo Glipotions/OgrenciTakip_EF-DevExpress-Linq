@@ -19,7 +19,7 @@ namespace OgrenciTakip.UI.Win.Forms.ServisForms
 			EventsLoad();
 		}
 
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new Servis() : ((ServisBusiness)Business).Single(FilterFunctions.Filter<Servis>(Id));
 			NesneyiKontrollereBagla();

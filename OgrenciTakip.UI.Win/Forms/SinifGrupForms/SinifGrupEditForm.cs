@@ -18,7 +18,7 @@ namespace OgrenciTakip.UI.Win.Forms.SinifGrupForms
 			EventsLoad();
 		}
 
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ?
 			new SinifGrup() : ((SinifGrupBusiness)Business).Single(FilterFunctions.Filter<SinifGrup>(Id));

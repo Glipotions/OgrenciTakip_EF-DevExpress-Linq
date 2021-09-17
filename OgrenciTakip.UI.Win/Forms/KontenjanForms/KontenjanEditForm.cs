@@ -18,7 +18,7 @@ namespace OgrenciTakip.UI.Win.Forms.KontenjanForms
 			EventsLoad();
 		}
 
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ?
 			new Kontenjan() : ((KontenjanBusiness)Business).Single(FilterFunctions.Filter<Kontenjan>(Id));

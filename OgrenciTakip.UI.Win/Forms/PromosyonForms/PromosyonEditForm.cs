@@ -19,7 +19,7 @@ namespace OgrenciTakip.UI.Win.Forms.PromosyonForms
 			EventsLoad();
 		}
 
-		protected internal override void Yukle()
+		public override void Yukle()
 		{
 			OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new Promosyon() : ((PromosyonBusiness)Business).Single(FilterFunctions.Filter<Promosyon>(Id));
 			NesneyiKontrollereBagla();

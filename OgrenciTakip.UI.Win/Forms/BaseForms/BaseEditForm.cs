@@ -216,7 +216,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		protected virtual void NesneyiKontrollereBagla() { }
 		protected virtual void GuncelNesneOlustur() { }
 		protected virtual void TabloYukle() { }
-		protected internal virtual void Yukle() { }
+		public virtual void Yukle() { }
 		protected internal virtual IBaseEntity ReturnEntity() { return null; }
 		protected internal virtual void ButtonEnabledDurumu()
 		{
