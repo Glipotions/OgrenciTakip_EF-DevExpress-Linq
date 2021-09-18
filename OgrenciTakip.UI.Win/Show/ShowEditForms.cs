@@ -47,12 +47,30 @@ namespace OgrenciTakip.UI.Win.Show
 			}
 		}
 
+		public static void ShowDialogEditForm(long? id, params object[] prm)
+		{
+			using (var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm))
+			{
+				frm.Yukle();
+				frm.ShowDialog();
+			}
+		}
+
 		public static bool ShowDialogEditForm(params object[] prm)
 		{
 			using (var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm))
 			{
 				frm.Yukle();
 				return frm.DialogResult == DialogResult.OK;
+			}
+		}
+
+		public static void ShowDialogEditForm()
+		{
+			using (var frm = (TForm)Activator.CreateInstance(typeof(TForm)))
+			{
+				frm.Yukle();
+				frm.ShowDialog();
 			}
 		}
 

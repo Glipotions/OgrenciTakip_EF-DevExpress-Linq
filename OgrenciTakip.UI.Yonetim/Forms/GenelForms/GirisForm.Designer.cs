@@ -29,19 +29,19 @@ namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
         /// </summary>
         private void InitializeComponent()
         {
-			DevExpress.XtraLayout.ColumnDefinition columnDefinition7 = new DevExpress.XtraLayout.ColumnDefinition();
-			DevExpress.XtraLayout.ColumnDefinition columnDefinition8 = new DevExpress.XtraLayout.ColumnDefinition();
-			DevExpress.XtraLayout.ColumnDefinition columnDefinition9 = new DevExpress.XtraLayout.ColumnDefinition();
-			DevExpress.XtraLayout.ColumnDefinition columnDefinition10 = new DevExpress.XtraLayout.ColumnDefinition();
-			DevExpress.XtraLayout.ColumnDefinition columnDefinition11 = new DevExpress.XtraLayout.ColumnDefinition();
-			DevExpress.XtraLayout.ColumnDefinition columnDefinition12 = new DevExpress.XtraLayout.ColumnDefinition();
-			DevExpress.XtraLayout.RowDefinition rowDefinition8 = new DevExpress.XtraLayout.RowDefinition();
-			DevExpress.XtraLayout.RowDefinition rowDefinition9 = new DevExpress.XtraLayout.RowDefinition();
-			DevExpress.XtraLayout.RowDefinition rowDefinition10 = new DevExpress.XtraLayout.RowDefinition();
-			DevExpress.XtraLayout.RowDefinition rowDefinition11 = new DevExpress.XtraLayout.RowDefinition();
-			DevExpress.XtraLayout.RowDefinition rowDefinition12 = new DevExpress.XtraLayout.RowDefinition();
-			DevExpress.XtraLayout.RowDefinition rowDefinition13 = new DevExpress.XtraLayout.RowDefinition();
-			DevExpress.XtraLayout.RowDefinition rowDefinition14 = new DevExpress.XtraLayout.RowDefinition();
+			DevExpress.XtraLayout.ColumnDefinition columnDefinition1 = new DevExpress.XtraLayout.ColumnDefinition();
+			DevExpress.XtraLayout.ColumnDefinition columnDefinition2 = new DevExpress.XtraLayout.ColumnDefinition();
+			DevExpress.XtraLayout.ColumnDefinition columnDefinition3 = new DevExpress.XtraLayout.ColumnDefinition();
+			DevExpress.XtraLayout.ColumnDefinition columnDefinition4 = new DevExpress.XtraLayout.ColumnDefinition();
+			DevExpress.XtraLayout.ColumnDefinition columnDefinition5 = new DevExpress.XtraLayout.ColumnDefinition();
+			DevExpress.XtraLayout.ColumnDefinition columnDefinition6 = new DevExpress.XtraLayout.ColumnDefinition();
+			DevExpress.XtraLayout.RowDefinition rowDefinition1 = new DevExpress.XtraLayout.RowDefinition();
+			DevExpress.XtraLayout.RowDefinition rowDefinition2 = new DevExpress.XtraLayout.RowDefinition();
+			DevExpress.XtraLayout.RowDefinition rowDefinition3 = new DevExpress.XtraLayout.RowDefinition();
+			DevExpress.XtraLayout.RowDefinition rowDefinition4 = new DevExpress.XtraLayout.RowDefinition();
+			DevExpress.XtraLayout.RowDefinition rowDefinition5 = new DevExpress.XtraLayout.RowDefinition();
+			DevExpress.XtraLayout.RowDefinition rowDefinition6 = new DevExpress.XtraLayout.RowDefinition();
+			DevExpress.XtraLayout.RowDefinition rowDefinition7 = new DevExpress.XtraLayout.RowDefinition();
 			this.myDataLayoutControl1 = new OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
 			this.btnVazgec = new OgrenciTakip.UI.Win.UserControls.Controls.MySimpleButton();
 			this.btnGiris = new OgrenciTakip.UI.Win.UserControls.Controls.MySimpleButton();
@@ -122,13 +122,13 @@ namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
 			// txtSifre
 			// 
 			this.txtSifre.EnterMoveNextControl = true;
-			this.txtSifre.Location = new System.Drawing.Point(257, 127);
+			this.txtSifre.Location = new System.Drawing.Point(249, 127);
 			this.txtSifre.Name = "txtSifre";
 			this.txtSifre.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
 			this.txtSifre.Properties.AppearanceFocused.Options.UseBackColor = true;
 			this.txtSifre.Properties.MaxLength = 50;
 			this.txtSifre.Properties.UseSystemPasswordChar = true;
-			this.txtSifre.Size = new System.Drawing.Size(177, 20);
+			this.txtSifre.Size = new System.Drawing.Size(185, 20);
 			this.txtSifre.StatusBarAciklama = null;
 			this.txtSifre.StyleController = this.myDataLayoutControl1;
 			this.txtSifre.TabIndex = 7;
@@ -136,12 +136,12 @@ namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
 			// txtKullaniciAdi
 			// 
 			this.txtKullaniciAdi.EnterMoveNextControl = true;
-			this.txtKullaniciAdi.Location = new System.Drawing.Point(257, 103);
+			this.txtKullaniciAdi.Location = new System.Drawing.Point(249, 103);
 			this.txtKullaniciAdi.Name = "txtKullaniciAdi";
 			this.txtKullaniciAdi.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
 			this.txtKullaniciAdi.Properties.AppearanceFocused.Options.UseBackColor = true;
 			this.txtKullaniciAdi.Properties.MaxLength = 50;
-			this.txtKullaniciAdi.Size = new System.Drawing.Size(177, 20);
+			this.txtKullaniciAdi.Size = new System.Drawing.Size(185, 20);
 			this.txtKullaniciAdi.StatusBarAciklama = null;
 			this.txtKullaniciAdi.StyleController = this.myDataLayoutControl1;
 			this.txtKullaniciAdi.TabIndex = 6;
@@ -149,14 +149,14 @@ namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
 			// txtYetkilendirme
 			// 
 			this.txtYetkilendirme.EnterMoveNextControl = true;
-			this.txtYetkilendirme.Location = new System.Drawing.Point(257, 79);
+			this.txtYetkilendirme.Location = new System.Drawing.Point(249, 79);
 			this.txtYetkilendirme.Name = "txtYetkilendirme";
 			this.txtYetkilendirme.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
 			this.txtYetkilendirme.Properties.AppearanceFocused.Options.UseBackColor = true;
 			this.txtYetkilendirme.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
 			this.txtYetkilendirme.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-			this.txtYetkilendirme.Size = new System.Drawing.Size(177, 20);
+			this.txtYetkilendirme.Size = new System.Drawing.Size(185, 20);
 			this.txtYetkilendirme.StatusBarAciklama = null;
 			this.txtYetkilendirme.StatusBarKisayol = "F4 :";
 			this.txtYetkilendirme.StatusBarKisayolAciklama = null;
@@ -166,12 +166,12 @@ namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
 			// txtServer
 			// 
 			this.txtServer.EnterMoveNextControl = true;
-			this.txtServer.Location = new System.Drawing.Point(257, 55);
+			this.txtServer.Location = new System.Drawing.Point(249, 55);
 			this.txtServer.Name = "txtServer";
 			this.txtServer.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
 			this.txtServer.Properties.AppearanceFocused.Options.UseBackColor = true;
 			this.txtServer.Properties.MaxLength = 50;
-			this.txtServer.Size = new System.Drawing.Size(262, 20);
+			this.txtServer.Size = new System.Drawing.Size(270, 20);
 			this.txtServer.StatusBarAciklama = null;
 			this.txtServer.StyleController = this.myDataLayoutControl1;
 			this.txtServer.TabIndex = 4;
@@ -192,47 +192,47 @@ namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
             this.layoutControlItem6});
 			this.Root.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
 			this.Root.Name = "Root";
-			columnDefinition7.SizeType = System.Windows.Forms.SizeType.Absolute;
-			columnDefinition7.Width = 170D;
-			columnDefinition8.SizeType = System.Windows.Forms.SizeType.Absolute;
-			columnDefinition8.Width = 66D;
-			columnDefinition9.SizeType = System.Windows.Forms.SizeType.Absolute;
-			columnDefinition9.Width = 90D;
-			columnDefinition10.SizeType = System.Windows.Forms.SizeType.Absolute;
-			columnDefinition10.Width = 10D;
-			columnDefinition11.SizeType = System.Windows.Forms.SizeType.Absolute;
-			columnDefinition11.Width = 90D;
-			columnDefinition12.SizeType = System.Windows.Forms.SizeType.Absolute;
-			columnDefinition12.Width = 85D;
+			columnDefinition1.SizeType = System.Windows.Forms.SizeType.Absolute;
+			columnDefinition1.Width = 170D;
+			columnDefinition2.SizeType = System.Windows.Forms.SizeType.Absolute;
+			columnDefinition2.Width = 66D;
+			columnDefinition3.SizeType = System.Windows.Forms.SizeType.Absolute;
+			columnDefinition3.Width = 90D;
+			columnDefinition4.SizeType = System.Windows.Forms.SizeType.Absolute;
+			columnDefinition4.Width = 10D;
+			columnDefinition5.SizeType = System.Windows.Forms.SizeType.Absolute;
+			columnDefinition5.Width = 90D;
+			columnDefinition6.SizeType = System.Windows.Forms.SizeType.Absolute;
+			columnDefinition6.Width = 85D;
 			this.Root.OptionsTableLayoutGroup.ColumnDefinitions.AddRange(new DevExpress.XtraLayout.ColumnDefinition[] {
-            columnDefinition7,
-            columnDefinition8,
-            columnDefinition9,
-            columnDefinition10,
-            columnDefinition11,
-            columnDefinition12});
-			rowDefinition8.Height = 24D;
-			rowDefinition8.SizeType = System.Windows.Forms.SizeType.Absolute;
-			rowDefinition9.Height = 19D;
-			rowDefinition9.SizeType = System.Windows.Forms.SizeType.Absolute;
-			rowDefinition10.Height = 24D;
-			rowDefinition10.SizeType = System.Windows.Forms.SizeType.Absolute;
-			rowDefinition11.Height = 24D;
-			rowDefinition11.SizeType = System.Windows.Forms.SizeType.Absolute;
-			rowDefinition12.Height = 24D;
-			rowDefinition12.SizeType = System.Windows.Forms.SizeType.Absolute;
-			rowDefinition13.Height = 24D;
-			rowDefinition13.SizeType = System.Windows.Forms.SizeType.Absolute;
-			rowDefinition14.Height = 24D;
-			rowDefinition14.SizeType = System.Windows.Forms.SizeType.Absolute;
+            columnDefinition1,
+            columnDefinition2,
+            columnDefinition3,
+            columnDefinition4,
+            columnDefinition5,
+            columnDefinition6});
+			rowDefinition1.Height = 24D;
+			rowDefinition1.SizeType = System.Windows.Forms.SizeType.Absolute;
+			rowDefinition2.Height = 19D;
+			rowDefinition2.SizeType = System.Windows.Forms.SizeType.Absolute;
+			rowDefinition3.Height = 24D;
+			rowDefinition3.SizeType = System.Windows.Forms.SizeType.Absolute;
+			rowDefinition4.Height = 24D;
+			rowDefinition4.SizeType = System.Windows.Forms.SizeType.Absolute;
+			rowDefinition5.Height = 24D;
+			rowDefinition5.SizeType = System.Windows.Forms.SizeType.Absolute;
+			rowDefinition6.Height = 24D;
+			rowDefinition6.SizeType = System.Windows.Forms.SizeType.Absolute;
+			rowDefinition7.Height = 24D;
+			rowDefinition7.SizeType = System.Windows.Forms.SizeType.Absolute;
 			this.Root.OptionsTableLayoutGroup.RowDefinitions.AddRange(new DevExpress.XtraLayout.RowDefinition[] {
-            rowDefinition8,
-            rowDefinition9,
-            rowDefinition10,
-            rowDefinition11,
-            rowDefinition12,
-            rowDefinition13,
-            rowDefinition14});
+            rowDefinition1,
+            rowDefinition2,
+            rowDefinition3,
+            rowDefinition4,
+            rowDefinition5,
+            rowDefinition6,
+            rowDefinition7});
 			this.Root.Size = new System.Drawing.Size(531, 257);
 			this.Root.TextVisible = false;
 			// 
@@ -255,7 +255,7 @@ namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
 			// txtVersion
 			// 
 			this.txtVersion.AllowHotTrack = false;
-			this.txtVersion.AppearanceItemCaption.ForeColor = System.Drawing.Color.Moccasin;
+			this.txtVersion.AppearanceItemCaption.ForeColor = System.Drawing.Color.DarkGoldenrod;
 			this.txtVersion.AppearanceItemCaption.Options.UseForeColor = true;
 			this.txtVersion.AppearanceItemCaption.Options.UseTextOptions = true;
 			this.txtVersion.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -271,7 +271,7 @@ namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
 			// 
 			this.simpleLabelItem3.AllowHotTrack = false;
 			this.simpleLabelItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-			this.simpleLabelItem3.AppearanceItemCaption.ForeColor = System.Drawing.Color.Moccasin;
+			this.simpleLabelItem3.AppearanceItemCaption.ForeColor = System.Drawing.Color.DarkGoldenrod;
 			this.simpleLabelItem3.AppearanceItemCaption.Options.UseFont = true;
 			this.simpleLabelItem3.AppearanceItemCaption.Options.UseForeColor = true;
 			this.simpleLabelItem3.Location = new System.Drawing.Point(336, 24);
@@ -286,7 +286,7 @@ namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
 			// 
 			// layoutControlItem1
 			// 
-			this.layoutControlItem1.AppearanceItemCaption.ForeColor = System.Drawing.Color.White;
+			this.layoutControlItem1.AppearanceItemCaption.ForeColor = System.Drawing.Color.DarkRed;
 			this.layoutControlItem1.AppearanceItemCaption.Options.UseForeColor = true;
 			this.layoutControlItem1.Control = this.txtServer;
 			this.layoutControlItem1.Location = new System.Drawing.Point(170, 43);
@@ -296,11 +296,11 @@ namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
 			this.layoutControlItem1.OptionsTableLayoutItem.RowIndex = 2;
 			this.layoutControlItem1.Size = new System.Drawing.Size(341, 24);
 			this.layoutControlItem1.Text = "Server";
-			this.layoutControlItem1.TextSize = new System.Drawing.Size(63, 13);
+			this.layoutControlItem1.TextSize = new System.Drawing.Size(55, 13);
 			// 
 			// layoutControlItem2
 			// 
-			this.layoutControlItem2.AppearanceItemCaption.ForeColor = System.Drawing.Color.White;
+			this.layoutControlItem2.AppearanceItemCaption.ForeColor = System.Drawing.Color.DarkRed;
 			this.layoutControlItem2.AppearanceItemCaption.Options.UseForeColor = true;
 			this.layoutControlItem2.Control = this.txtYetkilendirme;
 			this.layoutControlItem2.Location = new System.Drawing.Point(170, 67);
@@ -309,12 +309,12 @@ namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
 			this.layoutControlItem2.OptionsTableLayoutItem.ColumnSpan = 4;
 			this.layoutControlItem2.OptionsTableLayoutItem.RowIndex = 3;
 			this.layoutControlItem2.Size = new System.Drawing.Size(256, 24);
-			this.layoutControlItem2.Text = "Yetkilendirme";
-			this.layoutControlItem2.TextSize = new System.Drawing.Size(63, 13);
+			this.layoutControlItem2.Text = "Yetki";
+			this.layoutControlItem2.TextSize = new System.Drawing.Size(55, 13);
 			// 
 			// layoutControlItem3
 			// 
-			this.layoutControlItem3.AppearanceItemCaption.ForeColor = System.Drawing.Color.White;
+			this.layoutControlItem3.AppearanceItemCaption.ForeColor = System.Drawing.Color.DarkRed;
 			this.layoutControlItem3.AppearanceItemCaption.Options.UseForeColor = true;
 			this.layoutControlItem3.Control = this.txtKullaniciAdi;
 			this.layoutControlItem3.Location = new System.Drawing.Point(170, 91);
@@ -324,11 +324,11 @@ namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
 			this.layoutControlItem3.OptionsTableLayoutItem.RowIndex = 4;
 			this.layoutControlItem3.Size = new System.Drawing.Size(256, 24);
 			this.layoutControlItem3.Text = "Kullanıcı Adı";
-			this.layoutControlItem3.TextSize = new System.Drawing.Size(63, 13);
+			this.layoutControlItem3.TextSize = new System.Drawing.Size(55, 13);
 			// 
 			// layoutControlItem4
 			// 
-			this.layoutControlItem4.AppearanceItemCaption.ForeColor = System.Drawing.Color.White;
+			this.layoutControlItem4.AppearanceItemCaption.ForeColor = System.Drawing.Color.DarkRed;
 			this.layoutControlItem4.AppearanceItemCaption.Options.UseForeColor = true;
 			this.layoutControlItem4.Control = this.txtSifre;
 			this.layoutControlItem4.Location = new System.Drawing.Point(170, 115);
@@ -338,7 +338,7 @@ namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
 			this.layoutControlItem4.OptionsTableLayoutItem.RowIndex = 5;
 			this.layoutControlItem4.Size = new System.Drawing.Size(256, 24);
 			this.layoutControlItem4.Text = "Şifre";
-			this.layoutControlItem4.TextSize = new System.Drawing.Size(63, 13);
+			this.layoutControlItem4.TextSize = new System.Drawing.Size(55, 13);
 			// 
 			// layoutControlItem5
 			// 
@@ -371,6 +371,7 @@ namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
+			this.BackgroundImageStore = global::OgrenciTakip.UI.Yonetim.Properties.Resources.Ekran_görüntüsü_2021_09_16_1437542;
 			this.ClientSize = new System.Drawing.Size(531, 257);
 			this.ControlBox = false;
 			this.Controls.Add(this.myDataLayoutControl1);

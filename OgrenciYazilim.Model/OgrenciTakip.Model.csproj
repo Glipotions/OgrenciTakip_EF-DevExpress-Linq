@@ -79,6 +79,7 @@
     <Compile Include="Dto\KardesBilgileriDto.cs" />
     <Compile Include="Dto\KasaDto.cs" />
     <Compile Include="Dto\KullaniciParametreDto.cs" />
+    <Compile Include="Dto\KurumBilgileriDto.cs" />
     <Compile Include="Dto\MakbuzDto.cs" />
     <Compile Include="Dto\MakbuzHareketDto.cs" />
     <Compile Include="Dto\OdemeBilgileriDto.cs" />
@@ -116,6 +117,8 @@
     <Compile Include="Entities\Kullanici.cs" />
     <Compile Include="Entities\KullaniciParametre.cs" />
     <Compile Include="Entities\Kurum.cs" />
+    <Compile Include="Entities\KurumBilgileri.cs" />
+    <Compile Include="Entities\MailParametre.cs" />
     <Compile Include="Entities\Makbuz.cs" />
     <Compile Include="Entities\MakbuzHareketleri.cs" />
     <Compile Include="Entities\OdemeBilgileri.cs" />

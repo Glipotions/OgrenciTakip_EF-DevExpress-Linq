@@ -15,8 +15,11 @@ namespace OgrenciTakip.Business.Base
 		private KartTuru _kartTuru;
 		#endregion
 
+		public BaseGenelBusiness() { }
+		public BaseGenelBusiness(Control ctrl) : base(ctrl) { }
 		public BaseGenelBusiness(KartTuru kartTuru) { _kartTuru = kartTuru; }
 		public BaseGenelBusiness(Control ctrl, KartTuru kartTuru) : base(ctrl) { _kartTuru = kartTuru; }
+
 
 		public virtual BaseEntity Single(Expression<Func<T, bool>> filter)
 		{

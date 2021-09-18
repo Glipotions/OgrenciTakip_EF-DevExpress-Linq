@@ -74,6 +74,8 @@
     <Compile Include="General\BelgeSecimBusiness.cs" />
     <Compile Include="General\BilgiNotlariBusiness.cs" />
     <Compile Include="General\CariBusiness.cs" />
+    <Compile Include="General\DonemBusiness.cs" />
+    <Compile Include="General\DonemParametreleriBusiness.cs" />
     <Compile Include="General\EposBilgileriBusiness.cs" />
     <Compile Include="General\EvrakBilgileriBusiness.cs" />
     <Compile Include="General\EvrakBusiness.cs" />
@@ -95,7 +97,9 @@
     <Compile Include="General\KardesBilgileriBusiness.cs" />
     <Compile Include="General\KasaBusiness.cs" />
     <Compile Include="General\KullaniciParametreBusiness.cs" />
+    <Compile Include="General\KurumBilgileriBusiness.cs" />
     <Compile Include="General\KurumBusiness.cs" />
+    <Compile Include="General\MailParametreBusiness.cs" />
     <Compile Include="General\MakbuzBusiness.cs" />
     <Compile Include="General\MakbuzHareketleriBusiness.cs" />
     <Compile Include="General\MesleklereGoreKayitRaporuBusiness.cs" />

@@ -90,6 +90,7 @@ namespace OgrenciTakip.Data.Context
 		public DbSet<Kullanici> Kullanici { get; set; }
 		public DbSet<DonemParametre> DonemParametre { get; set; }
 		public DbSet<KullaniciParametre> KullaniciParametre { get; set; }
-
+		public DbSet<MailParametre> MailParametre { get; set; }
+		public DbSet<KurumBilgileri> KurumBilgileri { get; set; }
 	}
 }

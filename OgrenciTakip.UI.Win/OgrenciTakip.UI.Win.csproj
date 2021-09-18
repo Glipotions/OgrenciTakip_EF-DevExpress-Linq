@@ -180,6 +180,18 @@
     <Compile Include="Forms\CariForms\CariListForm.Designer.cs">
       <DependentUpon>CariListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DonemForms\DonemEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DonemForms\DonemEditForm.Designer.cs">
+      <DependentUpon>DonemEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DonemForms\DonemListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DonemForms\DonemListForm.Designer.cs">
+      <DependentUpon>DonemListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EvrakForms\EvrakEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -621,11 +633,29 @@
     <Compile Include="GeneralForms\AnaForm.Designer.cs">
       <DependentUpon>AnaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeneralForms\DonemParametreEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralForms\DonemParametreEditForm.Designer.cs">
+      <DependentUpon>DonemParametreEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForms\EmailParametreEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralForms\EmailParametreEditForm.Designer.cs">
+      <DependentUpon>EmailParametreEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeneralForms\KullaniciParametreEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GeneralForms\KullaniciParametreEditForm.Designer.cs">
       <DependentUpon>KullaniciParametreEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForms\KurumBilgileriEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralForms\KurumBilgileriEditForm.Designer.cs">
+      <DependentUpon>KurumBilgileriEditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GeneralForms\RaporOnizleme.cs">
       <SubType>Form</SubType>
@@ -1046,6 +1076,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BaseForms\BaseListForm.resx">
       <DependentUpon>BaseListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DonemForms\DonemEditForm.resx">
+      <DependentUpon>DonemEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FaturaForms\FaturaPlaniEditForm.resx">
       <DependentUpon>FaturaPlaniEditForm.cs</DependentUpon>

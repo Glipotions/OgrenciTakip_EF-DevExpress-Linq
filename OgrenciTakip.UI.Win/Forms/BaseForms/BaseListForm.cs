@@ -278,6 +278,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			}
 			else if (e.Item == btnBagliKartlar)
 				BagliKartAc();
+			else if (e.Item == btnParametreler)
+				BagliKartAc();
 			else if (e.Item == btnYazdir)
 				Yazdir();
 			else if (e.Item == btnTabloYazdir)

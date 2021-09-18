@@ -3,6 +3,7 @@ using DevExpress.XtraBars;
 using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
+using DevExpress.XtraVerticalGrid;
 using OgrenciTakip.Business.Interfaces;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Message;
@@ -86,6 +87,10 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 					case TabPane tab:
 						tab.SelectedPageChanged += Control_SelectedPageChanged;
 						break;
+					case PropertyGridControl pGrd:
+						pGrd.CellValueChanged += Control_CellValueChanged;
+						pGrd.FocusedRowChanged += Control_FocusedRowChanged;
+						break;
 				}
 			}
 
@@ -101,7 +106,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 						ControlEvents(ctrl);
 
 		}
-
 
 
 		private void FarkliKaydet()
@@ -384,5 +388,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		protected virtual void Control_SelectedPageChanged(object sender, SelectedPageChangedEventArgs e)
 		{
 		}
+		protected virtual void Control_FocusedRowChanged(object sender, DevExpress.XtraVerticalGrid.Events.FocusedRowChangedEventArgs e){}
+		protected virtual void Control_CellValueChanged(object sender, DevExpress.XtraVerticalGrid.Events.CellValueChangedEventArgs e){}
 	}
 }

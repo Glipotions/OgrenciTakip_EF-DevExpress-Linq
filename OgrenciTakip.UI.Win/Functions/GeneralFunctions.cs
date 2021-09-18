@@ -5,6 +5,7 @@ using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraLayout;
 using DevExpress.XtraReports.UI;
+using DevExpress.XtraVerticalGrid;
 using OgrenciTakip.Business.Function;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Message;
@@ -179,11 +180,11 @@ namespace OgrenciTakip.UI.Win.Functions
 					edt.EditValue = null;
 					break;
 
-					//case PropertyGridControl propertyGridControl:
-					//	propertyGridControl.Enabled = baseEdit.Id.HasValue && baseEdit.Id > 0;
-					//	if (!propertyGridControl.Enabled)
-					//		propertyGridControl.SelectedObject = null;
-					//	break;
+				case PropertyGridControl propertyGridControl:
+					propertyGridControl.Enabled = baseEdit.Id.HasValue && baseEdit.Id > 0;
+					if (!propertyGridControl.Enabled) // enable durumu false ise null olarak ata
+						propertyGridControl.SelectedObject = null; 
+					break;
 			}
 		}
 

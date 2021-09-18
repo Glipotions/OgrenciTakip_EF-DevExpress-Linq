@@ -12,6 +12,7 @@ using OgrenciTakip.UI.Win.Forms.SubeForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.GeneralForms;
 using OgrenciTakip.UI.Win.Show;
+using OgrenciTakip.UI.Win.Forms.DonemForms;
 
 namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
 {
@@ -112,21 +113,21 @@ namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
 
                 if (e.Item == btnSil)
                     EntityDelete(entity);
-                //else if (e.Item == btnEmailParametreleri)
-                //    ShowEditForms<EmailParametreEditForm>.ShowDialogEditForm();
-                //else if (e.Item == btnSubeKartlari)
-                //    ShowListForms<SubeListForm>.ShowDialogListForm();
-                //else if (e.Item == btnDonemKartlari)
-                //    ShowListForms<DonemListForm>.ShowDialogListForm();
-                //else if (e.Item == btnKurumBilgileri)
-                //    ShowEditForms<KurumBilgileriEditForm>.ShowDialogEditForm(null, entity.Kod, entity.KurumAdi);
-                //else if (e.Item == btnRolKartlari)
-                //    ShowListForms<RolListForm>.ShowDialogListForm();
-                //else if (e.Item == btnKullaniciKartlari)
-                //    ShowListForms<KullaniciListForm>.ShowDialogListForm();
-                //else if (e.Item == btnKullaniciBirimYetkileri)
-                //    ShowEditForms<KullaniciBirimYetkileriEditForm>.ShowDialogEditForm();
-            }
+				else if (e.Item == btnEmailParametreleri)
+					ShowEditForms<EmailParametreEditForm>.ShowDialogEditForm();
+				else if (e.Item == btnSubeKartlari)
+					ShowListForms<SubeListForm>.ShowDialogListForm();
+				else if (e.Item == btnDonemKartlari)
+					ShowListForms<DonemListForm>.ShowDialogListForm();
+				//else if (e.Item == btnKurumBilgileri)
+				//    ShowEditForms<KurumBilgileriEditForm>.ShowDialogEditForm(null, entity.Kod, entity.KurumAdi);
+				//else if (e.Item == btnRolKartlari)
+				//    ShowListForms<RolListForm>.ShowDialogListForm();
+				//else if (e.Item == btnKullaniciKartlari)
+				//    ShowListForms<KullaniciListForm>.ShowDialogListForm();
+				//else if (e.Item == btnKullaniciBirimYetkileri)
+				//    ShowEditForms<KullaniciBirimYetkileriEditForm>.ShowDialogEditForm();
+			}
 
             Cursor.Current = DefaultCursor;
         }
