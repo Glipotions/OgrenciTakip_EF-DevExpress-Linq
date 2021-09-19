@@ -149,6 +149,10 @@ namespace OgrenciTakip.Common.Enums
 		[Description("Kurum")]
 		Kurum = 72,
 		[Description("Donem")]
-		Donem = 73
+		Donem = 73,
+		[Description("Rol")]
+		Rol = 74,
+		[Description("Yetki")]
+		Yetki = 75
 	}
 }
