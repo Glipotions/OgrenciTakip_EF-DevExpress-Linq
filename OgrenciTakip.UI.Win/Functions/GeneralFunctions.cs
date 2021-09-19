@@ -7,8 +7,11 @@ using DevExpress.XtraLayout;
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraVerticalGrid;
 using OgrenciTakip.Business.Function;
+using OgrenciTakip.Business.Functions;
+using OgrenciTakip.Business.General;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Message;
+using OgrenciTakip.Model.Entities;
 using OgrenciTakip.Model.Entities.Base;
 using OgrenciTakip.Model.Entities.Base.Interfaces;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
@@ -25,7 +28,11 @@ using System.Drawing.Imaging;
 using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Security;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows.Forms;
 
 namespace OgrenciTakip.UI.Win.Functions
@@ -429,5 +436,90 @@ namespace OgrenciTakip.UI.Win.Functions
                 return false;
             }
         }
+
+		public static string Md5Sifrele(this string value)
+		{
+			//geri getirilemeye bir şifreleme
+			var md5 = new MD5CryptoServiceProvider();
+			var byteDiziBuffer = Encoding.UTF8.GetBytes(value);
+			byteDiziBuffer = md5.ComputeHash(byteDiziBuffer);
+
+			var md5Sifre = BitConverter.ToString(byteDiziBuffer).Replace("-", ""); //- karakteri koymasını istemiyoruz
+
+			return md5Sifre;
+		}
+
+		public static (SecureString secureSifre, SecureString secureGizliKelime, string sifre, string gizliKelime) SifreUret()
+		{
+			string RandomDegerUret(int minValue, int count)
+			{
+				var random = new Random();
+				const string karakterTablosu = "0123456789ABCDEFGHIJKLMNOPRSTUVWXQZabcdefghijklmnoprstuvwxqz"; //sabit hiçbir zaman değişmeyecek (const)
+				string sonuc = null;
+
+				for (int i = 0; i < count; i++)
+					sonuc += karakterTablosu[random.Next(minValue, karakterTablosu.Length - 1)].ToString();
+
+				return sonuc;
+			}
+
+			var secureSifre = RandomDegerUret(0, 8).ConvertToSecureString();
+			var secureGizliKelime = RandomDegerUret(9, 10).ConvertToSecureString();
+			var sifre = secureSifre.ConvertToUnSecureString().Md5Sifrele();
+			var gizliKelime = secureGizliKelime.ConvertToUnSecureString().Md5Sifrele();
+
+			return (secureSifre, secureGizliKelime, sifre, gizliKelime);
+		}
+
+		public static bool SifreMailiGonder(this string kullaniciAdi, string rol, string email, SecureString secureSifre, SecureString secureGizliKelime)
+		{
+			using (var Business = new MailParametreBusiness())
+			{
+				var entity = (MailParametre)Business.Single(null);
+				if (entity == null)
+				{
+					Messages.HataMesaji("E-Mail Gönderilemedi Kurumun E-mail parametreleri Girilmemiş Olabilir. Lütfen Kontrol Edip Tekrar Deneyiniz.");
+					return false;
+				}
+
+				var client = new SmtpClient
+				{
+					Port = entity.PortNo,
+					Host = entity.Host,
+					EnableSsl = entity.SslKullan == EvetHayir.Evet,
+					UseDefaultCredentials = true,   //mail adresi ve şifresinin doğrulanmasını sağla
+					Credentials = new NetworkCredential(entity.Email, entity.Sifre.Decrypt(entity.Id + entity.Kod).ConvertToSecureString())
+				};
+
+				var message = new MailMessage
+				{
+					From = new MailAddress(entity.Email, "Öğrenci Takip Programı"),
+					To = { email },    //hangi mail adresine gidecek
+					Subject = "Öğrenci Takip Programı Kullanıcı Bilgileri",   //Konu
+					IsBodyHtml = true, //html tag kullanacağız o yüzden true  <br/> gibi
+					Body = "Öğrenci Takip Programına Giriş İçin Gereken Kullanıcı Adı, Şifre ve Gizli Kelime Bilgileri Aşağıdadır.<br/>" +
+						   "Lütfen Giriş Yaptıktan Sonra Bu Bilgileri Değiştiriniz.<br/><br/><br/>" +
+						   $"<b>Kullanıcı Adı :</b> {kullaniciAdi}<br/>" +
+						   $"<b>Yetki Türü    :</b> {rol}<br/>" +
+						   $"<b>Şifre         :</b> {secureSifre.ConvertToUnSecureString()}<br/>" +
+						   $"<b>Gizli Kelime  :</b> {secureGizliKelime.ConvertToUnSecureString()}"
+				};
+
+				try
+				{
+					Cursor.Current = Cursors.WaitCursor;
+
+					client.Send(message);
+
+					Cursor.Current = Cursors.Default;
+					return true;
+				}
+				catch (Exception exception)
+				{
+					Messages.HataMesaji(exception.Message);
+					return false;
+				}
+			}
+		}
 	}
 }

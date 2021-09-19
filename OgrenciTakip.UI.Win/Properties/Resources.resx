@@ -118,8 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cancel_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancel_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bocontact2_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bocontact2_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bodepartment_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bodepartment_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -391,6 +391,9 @@
   <data name="weekend_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\weekend_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="assigntome_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\assigntome_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="emptytablerowseparator_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\emptytablerowseparator_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -435,6 +438,9 @@
   </data>
   <data name="group_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\group_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cancel_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancel_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="comment_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\comment_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -481,11 +487,11 @@
   <data name="geopointmap_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\geopointmap_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bocontact2_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bocontact2_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="edit_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bocontact2_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bocontact2_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="design_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\design_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -571,7 +577,7 @@
   <data name="phone_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\phone_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bocontact2_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bocontact2_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="assigntome_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\assigntome_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

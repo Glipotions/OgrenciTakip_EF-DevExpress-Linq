@@ -396,6 +396,24 @@
     <Compile Include="Forms\KontenjanForms\KontenjanListForm.Designer.cs">
       <DependentUpon>KontenjanListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\KullaniciForms\KullaniciBirimYetkileriEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KullaniciForms\KullaniciBirimYetkileriEditForm.Designer.cs">
+      <DependentUpon>KullaniciBirimYetkileriEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KullaniciForms\KullaniciEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KullaniciForms\KullaniciEditForm.Designer.cs">
+      <DependentUpon>KullaniciEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KullaniciForms\KullaniciListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KullaniciForms\KullaniciListForm.Designer.cs">
+      <DependentUpon>KullaniciListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\KullaniciForms\RolEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1011,6 +1029,24 @@
     <Compile Include="UserControls\UserControl\IndirimEditFormTable\IndiriminUygulanacagiHizmetlerTable.Designer.cs">
       <DependentUpon>IndiriminUygulanacagiHizmetlerTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl\KullaniciBirimYetkileriEditFormTable\DonemTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\KullaniciBirimYetkileriEditFormTable\DonemTable.Designer.cs">
+      <DependentUpon>DonemTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl\KullaniciBirimYetkileriEditFormTable\KullaniciTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\KullaniciBirimYetkileriEditFormTable\KullaniciTable.Designer.cs">
+      <DependentUpon>KullaniciTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl\KullaniciBirimYetkileriEditFormTable\SubeTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\KullaniciBirimYetkileriEditFormTable\SubeTable.Designer.cs">
+      <DependentUpon>SubeTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl\TahakkukEditFormTable\AileBilgileriTable.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -1175,6 +1211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KontenjanForms\KontenjanListForm.resx">
       <DependentUpon>KontenjanListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KullaniciForms\KullaniciListForm.resx">
+      <DependentUpon>KullaniciListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KullaniciForms\RolYetkiKartlariListForm.resx">
       <DependentUpon>RolYetkiKartlariListForm.cs</DependentUpon>
@@ -1842,6 +1881,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bocontact2_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assigntome_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assigntome_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

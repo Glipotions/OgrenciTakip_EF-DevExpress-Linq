@@ -220,6 +220,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		protected virtual void NesneyiKontrollereBagla() { }
 		protected virtual void GuncelNesneOlustur() { }
 		protected virtual void TabloYukle() { }
+		protected virtual void SifreSifirla() { }
 		public virtual void Yukle() { }
 		protected internal virtual IBaseEntity ReturnEntity() { return null; }
 		protected internal virtual void ButtonEnabledDurumu()
@@ -280,6 +281,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
 			else if (e.Item == btnBaskiOnizleme)
 				BaskiOnizleme();
+			else if (e.Item == btnSifreSifirla)
+				SifreSifirla();
 
 			else if (e.Item == btnCikis)
 			{
@@ -288,8 +291,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
 			Cursor.Current = DefaultCursor;
 		}
-
-
 
 		private void BaseEditForm_LocationChanged(object sender, EventArgs e)
 		{

@@ -153,6 +153,8 @@ namespace OgrenciTakip.Common.Enums
 		[Description("Rol")]
 		Rol = 74,
 		[Description("Yetki")]
-		Yetki = 75
+		Yetki = 75,
+		[Description("Kullanici")]
+		Kullanici = 76
 	}
 }

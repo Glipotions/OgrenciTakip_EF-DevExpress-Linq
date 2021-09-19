@@ -124,10 +124,10 @@ namespace OgrenciTakip.UI.Yonetim.Forms.GenelForms
 					ShowEditForms<KurumBilgileriEditForm>.ShowDialogEditForm(null, entity.Kod, entity.KurumAdi);
 				else if (e.Item == btnRolKartlari)
 					ShowListForms<RolListForm>.ShowDialogListForm();
-				//else if (e.Item == btnKullaniciKartlari)
-				//    ShowListForms<KullaniciListForm>.ShowDialogListForm();
-				//else if (e.Item == btnKullaniciBirimYetkileri)
-				//    ShowEditForms<KullaniciBirimYetkileriEditForm>.ShowDialogEditForm();
+				else if (e.Item == btnKullaniciKartlari)
+					ShowListForms<KullaniciListForm>.ShowDialogListForm();
+				else if (e.Item == btnKullaniciBirimYetkileri)
+					ShowEditForms<KullaniciBirimYetkileriEditForm>.ShowDialogEditForm();
 			}
 
             Cursor.Current = DefaultCursor;

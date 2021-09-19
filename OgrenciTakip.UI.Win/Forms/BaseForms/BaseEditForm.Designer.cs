@@ -84,6 +84,11 @@
 			DevExpress.Utils.ToolTipItem toolTipItem11 = new DevExpress.Utils.ToolTipItem();
 			DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem11 = new DevExpress.Utils.ToolTipSeparatorItem();
 			DevExpress.Utils.ToolTipTitleItem toolTipTitleItem22 = new DevExpress.Utils.ToolTipTitleItem();
+			DevExpress.Utils.SuperToolTip superToolTip12 = new DevExpress.Utils.SuperToolTip();
+			DevExpress.Utils.ToolTipTitleItem toolTipTitleItem23 = new DevExpress.Utils.ToolTipTitleItem();
+			DevExpress.Utils.ToolTipItem toolTipItem12 = new DevExpress.Utils.ToolTipItem();
+			DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem12 = new DevExpress.Utils.ToolTipSeparatorItem();
+			DevExpress.Utils.ToolTipItem toolTipItem13 = new DevExpress.Utils.ToolTipItem();
 			this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
 			this.btnYeni = new DevExpress.XtraBars.BarButtonItem();
 			this.btnKaydet = new DevExpress.XtraBars.BarButtonItem();
@@ -101,6 +106,7 @@
 			this.btnResimSil = new DevExpress.XtraBars.BarButtonItem();
 			this.btnTaksitOlustur = new DevExpress.XtraBars.BarButtonItem();
 			this.btnGiris = new DevExpress.XtraBars.BarButtonItem();
+			this.btnSifreSifirla = new DevExpress.XtraBars.BarButtonItem();
 			this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -134,9 +140,10 @@
             this.btnResimEkle,
             this.btnResimSil,
             this.btnTaksitOlustur,
-            this.btnGiris});
+            this.btnGiris,
+            this.btnSifreSifirla});
 			this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-			this.ribbonControl.MaxItemId = 27;
+			this.ribbonControl.MaxItemId = 28;
 			this.ribbonControl.Name = "ribbonControl";
 			this.ribbonControl.OptionsPageCategories.ShowCaptions = false;
 			this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -435,6 +442,26 @@
 			this.btnGiris.SuperTip = superToolTip11;
 			this.btnGiris.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
 			// 
+			// btnSifreSifirla
+			// 
+			this.btnSifreSifirla.Caption = "Şifre Sıfırla";
+			this.btnSifreSifirla.Id = 27;
+			this.btnSifreSifirla.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.assigntome_16x16;
+			this.btnSifreSifirla.ImageOptions.LargeImage = global::OgrenciTakip.UI.Win.Properties.Resources.assigntome_32x32;
+			this.btnSifreSifirla.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L));
+			this.btnSifreSifirla.Name = "btnSifreSifirla";
+			toolTipTitleItem23.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+			toolTipTitleItem23.Text = "( Ctrl+L )";
+			toolTipItem12.Text = "Şifre Sıfırla";
+			toolTipItem13.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
+			toolTipItem13.Text = "Kullanıcı için Yeni Bir Şifre Oluşturulup Mail Olarak Gönderilir";
+			superToolTip12.Items.Add(toolTipTitleItem23);
+			superToolTip12.Items.Add(toolTipItem12);
+			superToolTip12.Items.Add(toolTipSeparatorItem12);
+			superToolTip12.Items.Add(toolTipItem13);
+			this.btnSifreSifirla.SuperTip = superToolTip12;
+			this.btnSifreSifirla.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+			// 
 			// ribbonPage1
 			// 
 			this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -455,6 +482,7 @@
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnYazdir);
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnBaskiOnizleme);
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnCikis);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnSifreSifirla);
 			this.ribbonPageGroup1.Name = "ribbonPageGroup1";
 			this.ribbonPageGroup1.Text = "ribbonPageGroup1";
 			// 
@@ -528,5 +556,6 @@
         protected DevExpress.XtraBars.BarButtonItem btnGiris;
         protected DevExpress.XtraBars.BarButtonItem btnCikis;
 		protected DevExpress.XtraBars.BarButtonItem btnGeriAl;
+		protected internal DevExpress.XtraBars.BarButtonItem btnSifreSifirla;
 	}
 }
