@@ -1,6 +1,8 @@
 ﻿using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon.Gallery;
 using DevExpress.XtraTabbedMdi;
+using OgrenciTakip.Business.Function;
+using OgrenciTakip.Business.General;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.Dto;
@@ -23,6 +25,7 @@ using OgrenciTakip.UI.Win.Forms.IptalNedeniForms;
 using OgrenciTakip.UI.Win.Forms.IsyeriForms;
 using OgrenciTakip.UI.Win.Forms.KasaForms;
 using OgrenciTakip.UI.Win.Forms.KontenjanForms;
+using OgrenciTakip.UI.Win.Forms.KullaniciForms;
 using OgrenciTakip.UI.Win.Forms.MakbuzForms;
 using OgrenciTakip.UI.Win.Forms.MeslekForms;
 using OgrenciTakip.UI.Win.Forms.OdemeTuruForms;
@@ -50,17 +53,21 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 {
 	public partial class AnaForm : DevExpress.XtraBars.Ribbon.RibbonForm
 	{
-		public static long DonemId = 1;
+		public static string KurumAdi;
+		public static long KullaniciId;
+		public static string KullaniciAdi;
+		public static long KullaniciRolId;
+		public static string KullaniciRolAdi;
+		public static long DonemId;
 		public static string DonemAdi = "Dönem Bilgisi Bekleniyor...";
-		public static long SubeId = 1;
+		public static long SubeId;
 		public static string SubeAdi = "Şube Bilgisi Bekleniyor...";
-		public static List<long> YetkiliOlunanSubeler = new List<long> { 1 };
+		public static List<long> YetkiliOlunanSubeler;
 
-		public static long KullaniciId = 1;
-		public static string KullaniciAdi = "Hamza";
+
 		public static DonemParametre DonemParametre;
 		public static KullaniciParametreS KullaniciParametreleri = new KullaniciParametreS();
-
+		public static IEnumerable<RolYetkileriL> RolYetkileri;
 
 		public AnaForm()
 		{
@@ -102,29 +109,38 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			xtraTabbedMdiManager.PageRemoved += XtraTabbedMdiManager_PageRemoved;
 		}
 
+		private void SubeDonemSecimi(bool subeSecimButonunaBasildi)
+		{
+			// Şubeyi seçme yeri, parametreleri gönderiyoruz.
+			ShowEditForms<SubeDonemSecimiEditForm>.ShowDialogEditForm(null, KullaniciId, subeSecimButonunaBasildi,
+				SubeId, DonemId);
+			barDonem.Caption = DonemAdi;
+			btnSube.Caption = SubeAdi;
+		}
+
 		private void AnaForm_Load(object sender, System.EventArgs e)
 		{
-			//barKullanici.Caption = $@"{KullaniciAdi} ( {KullaniciRolAdi} )";
-			//barKurum.Caption = KurumAdi;
-			//SubeDonemSecimi(false); //daha ilk yüklenme aşamasında olduğu için
+			barKullanici.Caption = $@"{KullaniciAdi} ( {KullaniciRolAdi} )";
+			barKurum.Caption = KurumAdi;
+			SubeDonemSecimi(false); //daha ilk yüklenme aşamasında olduğu için
 
-			//if (DonemParametre == null)
-			//{
-			//	Messages.HataMesaji("Dönem Parametreleri Girilmemiş. Lütfen Sistem Yöneticinize Başvurunuz.");
-			//	Application.ExitThread();
-			//	return;
-			//}
+			if (DonemParametre == null)
+			{
+				Messages.HataMesaji("Dönem Parametreleri Girilmemiş. Lütfen Sistem Yöneticinize Başvurunuz.");
+				Application.ExitThread();
+				return;
+			}
 
-			//if (!DonemParametre.YetkiKontroluAnlikYapilacak)
-			//{
-			//	using (var Business = new RolYetkileriBusiness())
-			//	{
-			//		//Başka bir Kullanım
-			//		//Converts.EntityListConvert<RolYetkileriL>(Business.List(x => x.RolId == KullaniciRolId));
+			if (!DonemParametre.YetkiKontroluAnlikYapilacak)
+			{
+				using (var Business = new RolYetkileriBusiness())
+				{
+					//Başka bir Kullanım
+					//Converts.EntityListConvert<RolYetkileriL>(Business.List(x => x.RolId == KullaniciRolId));
 
-			//		RolYetkileri = Business.List(x => x.RolId == KullaniciRolId).EntityListConvert<RolYetkileriL>();
-			//	}
-			//}
+					RolYetkileri = Business.List(x => x.RolId == KullaniciRolId).EntityListConvert<RolYetkileriL>();
+				}
+			}
 		}
 
 		private void AnaForm_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -139,13 +155,15 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 		{
 			var gallery = sender as InRibbonGallery;
 			if (gallery.OwnerItem.GetType() == typeof(SkinRibbonGalleryBarItem))
-				GeneralFunctions.AppSettingsWrite("Skin", e.Item.Caption);
+				Functions.GeneralFunctions.AppSettingsWrite("Skin", e.Item.Caption);
 			else if(gallery.OwnerItem.GetType() == typeof(SkinPaletteRibbonGalleryBarItem))
-				GeneralFunctions.AppSettingsWrite("Palette", e.Item.Caption);
+				Functions.GeneralFunctions.AppSettingsWrite("Palette", e.Item.Caption);
 		}
 
 		private void Butonlar_ItemClick(object sender, ItemClickEventArgs e)
 		{
+			Cursor.Current = Cursors.WaitCursor;
+
 			if (e.Item == btnOkulKartlari)
 				ShowListForms<OkulListForm>.ShowListForm(KartTuru.Okul);
 			else if (e.Item == btnIlKartlari)
@@ -252,8 +270,23 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 				{
 					Messages.HataMesaji("Hesap Makinesi Bulunamadı");
 				}
+			else if (e.Item == btnSube)
+			{
+				for (int i = 0; i < Application.OpenForms.Count; i++) //açık olan tüm formlar arasında dolaşır
+				{
+					if (Application.OpenForms[i] is GirisForm || Application.OpenForms[i] is AnaForm) continue; // bu 2 form gelirse bu for döngüsünden çıkar, çünkü bu formlar kapanınca program kapanır
 
+					Application.OpenForms[i].Close();
+					i--;
+					//her seferinde 1 açık formu kapattığımız için countda azalacak i-- yapmazsak program donar
+				}
 
+				SubeDonemSecimi(true);
+			}
+			else if (e.Item == btnSifreDegistir)
+				ShowEditForms<SifreDegistirEditForm>.ShowDialogEditForm(IslemTuru.EntityUpdate);
+
+			Cursor.Current = Cursors.Default;
 		}
 
 		private void Control_KeyDown(object sender, KeyEventArgs e)

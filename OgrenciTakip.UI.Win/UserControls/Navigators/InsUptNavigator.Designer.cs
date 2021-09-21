@@ -53,6 +53,7 @@ namespace OgrenciTakip.UI.Win.UserControls.Navigators
 			this.Navigator.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.Navigator.Location = new System.Drawing.Point(0, 0);
 			this.Navigator.Name = "Navigator";
+			this.Navigator.ShowToolTips = true;
 			this.Navigator.Size = new System.Drawing.Size(618, 24);
 			this.Navigator.TabIndex = 0;
 			this.Navigator.Text = "controlNavigator1";
@@ -71,12 +72,12 @@ namespace OgrenciTakip.UI.Win.UserControls.Navigators
 			this.imageCollection.InsertImage(global::OgrenciTakip.UI.Win.Properties.Resources.deletelist_16x16, "deletelist_16x16", typeof(global::OgrenciTakip.UI.Win.Properties.Resources), 7);
 			this.imageCollection.Images.SetKeyName(7, "deletelist_16x16");
 			// 
-			// controlNavigator1
+			// InsUptNavigator
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.Controls.Add(this.Navigator);
-			this.Name = "controlNavigator1";
+			this.Name = "InsUptNavigator";
 			this.Size = new System.Drawing.Size(618, 24);
 			((System.ComponentModel.ISupportInitialize)(this.imageCollection)).EndInit();
 			this.ResumeLayout(false);

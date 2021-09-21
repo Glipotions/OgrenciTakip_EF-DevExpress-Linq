@@ -15,6 +15,7 @@ using OgrenciTakip.Model.Entities;
 using OgrenciTakip.Model.Entities.Base;
 using OgrenciTakip.Model.Entities.Base.Interfaces;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
+using OgrenciTakip.UI.Win.GeneralForms;
 using OgrenciTakip.UI.Win.Properties;
 using OgrenciTakip.UI.Win.UserControls.Controls;
 using OgrenciTakip.UI.Win.UserControls.UserControl.Base;
@@ -88,6 +89,16 @@ namespace OgrenciTakip.UI.Win.Functions
 						return VeriDegisimYeri.Alan;
 
 				}
+
+				else if (prop.PropertyType == typeof(SecureString))
+				{
+					var oldStr = ((SecureString)oldValue).ConvertToUnSecureString();
+					var curStr = ((SecureString)currentValue).ConvertToUnSecureString();
+
+					if (!oldStr.Equals(curStr))
+						return VeriDegisimYeri.Alan;
+				}
+
 				else if (!currentValue.Equals(oldValue))
 					return VeriDegisimYeri.Alan;
 			}
@@ -519,6 +530,78 @@ namespace OgrenciTakip.UI.Win.Functions
 					Messages.HataMesaji(exception.Message);
 					return false;
 				}
+			}
+		}
+
+		public static bool YetkiKontrolu(this KartTuru kartTuru, YetkiTuru yetkiTuru)
+		{
+			if (AnaForm.KullaniciId == 0) return true; //yönetim modülünde tüm yetkiler olması için
+
+			RolYetkileri yetkiler;
+			using (var Business = new RolYetkileriBusiness())
+				yetkiler = AnaForm.DonemParametre.YetkiKontroluAnlikYapilacak
+					? Business.Single(x => x.RolId == AnaForm.KullaniciRolId && x.KartTuru == kartTuru)
+						.EntityConvert<RolYetkileri>()
+					: AnaForm.RolYetkileri.FirstOrDefault(x => x.KartTuru == kartTuru);
+
+			var result = false;
+
+			switch (yetkiTuru)
+			{
+				case YetkiTuru.Gorebilir:
+					result = yetkiler?.Gorebilir == 1;  //yetkiler null değilse ve görebilir 1 e eşitse true değişse false
+					break;
+
+				case YetkiTuru.Ekleyebilir:
+					result = yetkiler?.Ekleyebilir == 1;
+					break;
+
+				case YetkiTuru.Degistirebilir:
+					result = yetkiler?.Degistirebilir == 1;
+					break;
+
+				case YetkiTuru.Silebilir:
+					result = yetkiler?.Silebilir == 1;
+					break;
+			}
+
+			if (!result)
+				Messages.UyariMesaji("Bu İşlem İçin Yetkiniz Bulunmamaktadır.");
+
+			return result;
+		}
+
+		public static bool EditFormYetkiKontrolu(long id, KartTuru kartTuru)
+		{
+			var islemTuru = id > 0 ? IslemTuru.EntityUpdate : IslemTuru.EntityInsert;
+
+			switch (islemTuru)
+			{
+				case IslemTuru.EntityInsert when !kartTuru.YetkiKontrolu(YetkiTuru.Ekleyebilir): //ekleyebilir yetkisi yoksa
+					return false;
+
+				case IslemTuru.EntityUpdate when !kartTuru.YetkiKontrolu(YetkiTuru.Degistirebilir):
+					return false;
+			}
+
+			return true;
+		}
+
+		public static void EncryptConfigFile(string configFileName, params string[] sectionName)
+		{
+			var configuration = ConfigurationManager.OpenExeConfiguration(configFileName);
+
+			foreach (var item in sectionName)
+			{
+				var section = configuration.GetSection(item);
+
+				if (section.SectionInformation.IsProtected)
+					return;  //gelen section şifrelenmiş olarak geliyorsa return yap
+				else
+					section.SectionInformation.ProtectSection("DataProtectionConfigurationProvider");
+
+				section.SectionInformation.ForceSave = true;
+				configuration.Save();
 			}
 		}
 	}

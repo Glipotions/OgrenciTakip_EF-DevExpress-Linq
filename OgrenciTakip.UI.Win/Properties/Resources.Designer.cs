@@ -673,6 +673,16 @@ namespace OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap Ekran_görüntüsü_2021_09_16_143754 {
+            get {
+                object obj = ResourceManager.GetObject("Ekran görüntüsü 2021-09-16 143754", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap employee_16x16 {
             get {
                 object obj = ResourceManager.GetObject("employee_16x16", resourceCulture);
@@ -1236,6 +1246,16 @@ namespace OgrenciTakip.UI.Win.Properties {
         internal static System.Drawing.Bitmap productorderdetail_16x16 {
             get {
                 object obj = ResourceManager.GetObject("productorderdetail_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap refresh_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("refresh_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

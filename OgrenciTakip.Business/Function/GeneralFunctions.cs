@@ -32,6 +32,16 @@ namespace OgrenciTakip.Business.Function
 						alanlar.Add(prop.Name);
 
 				}
+
+				else if (prop.PropertyType == typeof(SecureString))
+				{
+					var oldStr = ((SecureString)oldValue).ConvertToUnSecureString();
+					var curStr = ((SecureString)currentValue).ConvertToUnSecureString();
+
+					if (!oldStr.Equals(curStr))
+						alanlar.Add(prop.Name);
+				}
+
 				else if (!currentValue.Equals(oldValue))
 					alanlar.Add(prop.Name);
 			}

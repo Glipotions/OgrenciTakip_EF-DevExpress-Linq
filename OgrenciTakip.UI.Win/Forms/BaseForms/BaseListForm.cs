@@ -140,6 +140,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		}
 		private void FiltreSec()
 		{
+			if (!KartTuru.Filtre.YetkiKontrolu(YetkiTuru.Gorebilir)) return;
+
 			var entity = (Filtre)ShowListForms<FiltreListForm>.ShowDialogListForm(KartTuru.Filtre, _filtreId, BaseKartTuru, Tablo.GridControl);
 			if (entity == null) return;
 
@@ -252,13 +254,14 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 				Tablo.TabloDisariAktar(DosyaTuru.TxtDosyasi, e.Item.Caption, Text);
 			else if (e.Item == btnYeni)
 			{
+				if (!BaseKartTuru.YetkiKontrolu(YetkiTuru.Ekleyebilir)) return;
 				ShowEditForm(-1);
 			}
 			else if (e.Item == btnDuzelt)
 				ShowEditForm(Tablo.GetRowId());
 			else if (e.Item == btnSil)
 			{
-				//Yetki Kontrolü
+				if (!BaseKartTuru.YetkiKontrolu(YetkiTuru.Silebilir)) return;
 				EntityDelete();
 			}
 			else if (e.Item == btnSec)
@@ -339,6 +342,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		}
 		private void Tablo_FilterEditorCreated(object sender, DevExpress.XtraGrid.Views.Base.FilterControlEventArgs e)
 		{
+			if (!KartTuru.Filtre.YetkiKontrolu(YetkiTuru.Degistirebilir)) return;
+
 			e.ShowFilterEditor = false;
 			ShowEditForms<FiltreEditForm>.ShowDialogEditForm(KartTuru.Filtre, _filtreId, BaseKartTuru, Tablo.GridControl);
 		}

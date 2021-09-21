@@ -10,9 +10,9 @@ namespace OgrenciTakip.UI.Win.Show
     {
         public static void ShowEditReport(KartTuru kartTuru)
         {
-            //if (!kartTuru.YetkiKontrolu(YetkiTuru.Gorebilir)) return;
+			if (!kartTuru.YetkiKontrolu(YetkiTuru.Gorebilir)) return;
 
-            var frm = (TForm)Activator.CreateInstance(typeof(TForm));
+			var frm = (TForm)Activator.CreateInstance(typeof(TForm));
             frm.MdiParent = Form.ActiveForm;
 
             frm.Yukle();

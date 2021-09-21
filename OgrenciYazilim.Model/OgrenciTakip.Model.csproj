@@ -98,6 +98,7 @@
     <Compile Include="Entities\AileBilgi.cs" />
     <Compile Include="Entities\AileBilgileri.cs" />
     <Compile Include="Entities\Avukat.cs" />
+    <Compile Include="Entities\BaglantiAyarlari.cs" />
     <Compile Include="Entities\Banka.cs" />
     <Compile Include="Entities\BankaHesap.cs" />
     <Compile Include="Entities\BankaSube.cs" />

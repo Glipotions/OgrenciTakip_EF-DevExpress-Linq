@@ -13,7 +13,7 @@ namespace OgrenciTakip.UI.Win.Show
 	{
 		public static void ShowListForm(KartTuru kartTuru)
 		{
-			//Yetki Kontrolü
+			if (!kartTuru.YetkiKontrolu(YetkiTuru.Gorebilir)) return;
 
 			var frm = (TForm)Activator.CreateInstance(typeof(TForm));
 			frm.MdiParent = Form.ActiveForm;
@@ -24,7 +24,7 @@ namespace OgrenciTakip.UI.Win.Show
 
 		public static void ShowListForm(KartTuru kartTuru, params object[] prm)
 		{
-			//Yetki Kontrolü
+			if (!kartTuru.YetkiKontrolu(YetkiTuru.Gorebilir)) return;
 
 			var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm);
 			frm.MdiParent = Form.ActiveForm;
@@ -35,7 +35,7 @@ namespace OgrenciTakip.UI.Win.Show
 
 		public static BaseEntity ShowDialogListForm(KartTuru kartTuru, long? seciliGelecekId, params object[] prm)
 		{
-			//Yetki Kontrolü
+			if (!kartTuru.YetkiKontrolu(YetkiTuru.Gorebilir)) return null;
 
 			using (var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm))
 			{
@@ -59,7 +59,7 @@ namespace OgrenciTakip.UI.Win.Show
 
 		public static IEnumerable<IBaseEntity> ShowDialogListForm(KartTuru kartTuru, IList<long> listeDisiTutulacakKayitlar, bool multiSelect, params object[] prm)
 		{
-			//if (!kartTuru.YetkiKontrolu(YetkiTuru.Gorebilir)) return null;
+			if (!kartTuru.YetkiKontrolu(YetkiTuru.Gorebilir)) return null;
 
 			using (var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm))
 			{
@@ -94,7 +94,7 @@ namespace OgrenciTakip.UI.Win.Show
 
 		public static IEnumerable<IBaseEntity> ShowDialogListForm(KartTuru kartTuru, bool multiSelect, params object[] prm)
 		{
-			//if (!kartTuru.YetkiKontrolu(YetkiTuru.Gorebilir)) return null;
+			if (!kartTuru.YetkiKontrolu(YetkiTuru.Gorebilir)) return null;
 
 			using (var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm))
 			{

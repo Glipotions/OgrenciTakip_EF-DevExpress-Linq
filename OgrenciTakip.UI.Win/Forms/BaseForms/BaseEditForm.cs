@@ -91,6 +91,9 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 						pGrd.CellValueChanged += Control_CellValueChanged;
 						pGrd.FocusedRowChanged += Control_FocusedRowChanged;
 						break;
+					case MyGridControl grd:
+						grd.MainView.GotFocus += Control_GotFocus;
+						break;
 				}
 			}
 
@@ -106,7 +109,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 						ControlEvents(ctrl);
 
 		}
-
 
 		private void FarkliKaydet()
 		{
@@ -193,7 +195,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		{
 			if (_formSablonKayitEdilecek)
 				Name.FormSablonKaydet(Left, Top, Width, Height, WindowState);
-
 		}
 		public virtual void Giris()
 		{
@@ -239,59 +240,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		{
 			return false;
 		}
-		private void Button_ItemClick(object sender, ItemClickEventArgs e)
-		{
-			Cursor.Current = Cursors.WaitCursor;
-
-			if (e.Item == btnYeni)
-			{
-				//Yetki kontrolü yapılacak
-
-				BaseIslemTuru = IslemTuru.EntityInsert;
-				Yukle();
-			}
-
-			else if (e.Item == btnKaydet)
-				Kaydet(false);
-			else if (e.Item == btnFarkliKaydet)
-			{
-				//YetkiKontrolü
-				FarkliKaydet();
-			}
-			else if (e.Item == btnGeriAl)
-				GeriAl();
-			else if (e.Item == btnSil)
-			{
-				//Yetki Kontrolü Yapılacak
-				EntityDelete();
-			}
-
-			else if (e.Item == btnSil)
-			{
-				EntityDelete();
-			}
-
-			else if (e.Item == btnUygula)
-				FiltreUygula();
-			else if (e.Item == btnTaksitOlustur)
-				TaksitOlustur();
-
-			else if (e.Item == btnYazdir)
-				Yazdir();
-
-			else if (e.Item == btnBaskiOnizleme)
-				BaskiOnizleme();
-			else if (e.Item == btnSifreSifirla)
-				SifreSifirla();
-
-			else if (e.Item == btnCikis)
-			{
-				Close();
-			}
-
-			Cursor.Current = DefaultCursor;
-		}
-
 		private void BaseEditForm_LocationChanged(object sender, EventArgs e)
 		{
 			_formSablonKayitEdilecek = true;
@@ -308,27 +256,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			ButtonGizleGoster();
 
 			//güncelleme yapılacak
-		}
-		private void Control_KeyDown(object sender, KeyEventArgs e)
-		{
-			if (e.KeyCode == Keys.Escape)
-				Close();
-
-			if (sender is MyButtonEdit edt)
-				switch (e.KeyCode)
-				{
-					case Keys.Delete when e.Control && e.Shift:
-						edt.Id = null;
-						edt.EditValue = null;
-						break;
-
-					case Keys.F4:
-					case Keys.Down when e.Modifiers == Keys.Alt:
-						SecimYap(edt);
-						break;
-
-
-				}
 		}
 		private void Control_GotFocus(object sender, EventArgs e)
 		{
@@ -360,6 +287,58 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 		{
 			SecimYap(sender);
 		}
+		protected virtual void Button_ItemClick(object sender, ItemClickEventArgs e)
+		{
+			Cursor.Current = Cursors.WaitCursor;
+
+			if (e.Item == btnYeni)
+			{
+				if (!BaseKartTuru.YetkiKontrolu(YetkiTuru.Ekleyebilir)) return;
+
+				BaseIslemTuru = IslemTuru.EntityInsert;
+				Yukle();
+			}
+
+			else if (e.Item == btnKaydet)
+				Kaydet(false);
+			else if (e.Item == btnFarkliKaydet)
+			{
+				if (!BaseKartTuru.YetkiKontrolu(YetkiTuru.Ekleyebilir)) return;
+				FarkliKaydet();
+			}
+			else if (e.Item == btnGeriAl)
+				GeriAl();
+			else if (e.Item == btnSil)
+			{
+				if (!BaseKartTuru.YetkiKontrolu(YetkiTuru.Silebilir)) return;
+				EntityDelete();
+			}
+
+			else if (e.Item == btnSil)
+			{
+				EntityDelete();
+			}
+
+			else if (e.Item == btnUygula)
+				FiltreUygula();
+			else if (e.Item == btnTaksitOlustur)
+				TaksitOlustur();
+
+			else if (e.Item == btnYazdir)
+				Yazdir();
+
+			else if (e.Item == btnBaskiOnizleme)
+				BaskiOnizleme();
+			else if (e.Item == btnSifreSifirla)
+				SifreSifirla();
+			else if (e.Item == btnGiris)
+				Giris();
+			else if (e.Item == btnCikis)
+				Close();
+
+
+			Cursor.Current = DefaultCursor;
+		}
 		protected virtual void Control_IdChanged(object sender, IdChangedEventArgs e)
 		{
 			if (!IsLoaded) return;
@@ -374,6 +353,25 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 			GuncelNesneOlustur();
 		}
 		protected virtual void Control_SelectedValueChanged(object sender, EventArgs e) { }
+		protected virtual void Control_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Escape)
+				Close();
+
+			if (sender is MyButtonEdit edt)
+				switch (e.KeyCode)
+				{
+					case Keys.Delete when e.Control && e.Shift:
+						edt.Id = null;
+						edt.EditValue = null;
+						break;
+
+					case Keys.F4:
+					case Keys.Down when e.Modifiers == Keys.Alt:
+						SecimYap(edt);
+						break;
+				}
+		}
 		protected virtual void BaseEditForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			SablonKaydet();
