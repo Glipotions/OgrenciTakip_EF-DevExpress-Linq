@@ -30,7 +30,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MakbuzListForm));
-            this.longNavigator1 = new OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
+            this.longNavigator = new OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
             this.grid = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridControl();
             this.tablo = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
             this.colMakbuzNo = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
@@ -73,11 +73,11 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
             // 
             // longNavigator1
             // 
-            this.longNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator1.Location = new System.Drawing.Point(0, 506);
-            this.longNavigator1.Name = "longNavigator1";
-            this.longNavigator1.Size = new System.Drawing.Size(1088, 24);
-            this.longNavigator1.TabIndex = 2;
+            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.longNavigator.Location = new System.Drawing.Point(0, 506);
+            this.longNavigator.Name = "longNavigator1";
+            this.longNavigator.Size = new System.Drawing.Size(1088, 24);
+            this.longNavigator.TabIndex = 2;
             // 
             // grid
             // 
@@ -263,11 +263,11 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1088, 561);
             this.Controls.Add(this.grid);
-            this.Controls.Add(this.longNavigator1);
+            this.Controls.Add(this.longNavigator);
             this.Name = "MakbuzListForm";
             this.Text = "Makbuz Kartları";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
-            this.Controls.SetChildIndex(this.longNavigator1, 0);
+            this.Controls.SetChildIndex(this.longNavigator, 0);
             this.Controls.SetChildIndex(this.grid, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
@@ -283,7 +283,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
 
         #endregion
 
-        private UserControls.Navigators.LongNavigator longNavigator1;
+        private UserControls.Navigators.LongNavigator longNavigator;
         private UserControls.Grid.MyGridControl grid;
         private UserControls.Grid.MyGridView tablo;
         private UserControls.Grid.MyGridColumn colMakbuzNo;

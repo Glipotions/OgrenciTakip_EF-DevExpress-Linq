@@ -94,7 +94,7 @@ namespace DataAccess.Base
 
 				}
 
-				return kod += "-0001";
+				return kod += "0001";
 
 			}
 

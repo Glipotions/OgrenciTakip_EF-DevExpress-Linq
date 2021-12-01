@@ -15,7 +15,5 @@ namespace OgrenciTakip.Model.Entities
 		[StringLength(500)]
 		public string Aciklama { get; set; }
 		public Il Il { get; set; }
-
-
 	}
 }

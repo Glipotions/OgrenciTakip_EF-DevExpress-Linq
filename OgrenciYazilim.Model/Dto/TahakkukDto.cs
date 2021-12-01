@@ -14,7 +14,6 @@ namespace OgrenciTakip.Model.Dto
 		public string Soyadi { get; set; }
 		public string BabaAdi { get; set; }
 		public string AnaAdi { get; set; }
-
 		public string SinifAdi { get; set; }
 		public string GeldigiOkulAdi { get; set; }
 		public string KontenjanAdi { get; set; }

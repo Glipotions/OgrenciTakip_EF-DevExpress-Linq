@@ -35,7 +35,7 @@ namespace OgrenciTakip.Business.General
 				Soyadi = x.Ogrenci.Soyadi,
 				BabaAdi = x.Ogrenci.BabaAdi,
 				AnaAdi = x.Ogrenci.AnaAdi,
-
+				
 				OkulNo = x.OkulNo,
 				KayitTarihi = x.KayitTarihi,
 				KayitSekli = x.KayitSekli,
@@ -212,13 +212,13 @@ namespace OgrenciTakip.Business.General
 				Id = x.Id,
 				Kod = x.Kod,
 				OgrenciId = x.OgrenciId,
-
+				
 				TcKimlikNo = x.Ogrenci.TcKimlikNo,
 				Adi = x.Ogrenci.Adi,
 				Soyadi = x.Ogrenci.Soyadi,
 				BabaAdi = x.Ogrenci.BabaAdi,
 				AnaAdi = x.Ogrenci.AnaAdi,
-
+				
 				OkulNo = x.OkulNo,
 				KayitTarihi = x.KayitTarihi,
 				KayitSekli = x.KayitSekli,

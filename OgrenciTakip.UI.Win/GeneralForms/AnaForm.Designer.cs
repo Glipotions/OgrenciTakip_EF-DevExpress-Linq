@@ -91,8 +91,8 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
 			this.btnSube = new DevExpress.XtraBars.BarButtonItem();
 			this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
-			this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
-			this.skinPaletteRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinPaletteRibbonGalleryBarItem();
+			this.skinRibbonGalleryBarItem = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
+			this.skinPaletteRibbonGalleryBarItem = new DevExpress.XtraBars.SkinPaletteRibbonGalleryBarItem();
 			this.btnSifreDegistir = new DevExpress.XtraBars.BarButtonItem();
 			this.btnKullaniciParametreleri = new DevExpress.XtraBars.BarButtonItem();
 			this.btnHesapMakinesi = new DevExpress.XtraBars.BarButtonItem();
@@ -187,8 +187,8 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             this.barStaticItem2,
             this.btnSube,
             this.skinDropDownButtonItem1,
-            this.skinRibbonGalleryBarItem1,
-            this.skinPaletteRibbonGalleryBarItem1,
+            this.skinRibbonGalleryBarItem,
+            this.skinPaletteRibbonGalleryBarItem,
             this.btnSifreDegistir,
             this.btnKullaniciParametreleri,
             this.btnHesapMakinesi});
@@ -649,17 +649,17 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			this.skinDropDownButtonItem1.Id = 59;
 			this.skinDropDownButtonItem1.Name = "skinDropDownButtonItem1";
 			// 
-			// skinRibbonGalleryBarItem1
+			// skinRibbonGalleryBarItem
 			// 
-			this.skinRibbonGalleryBarItem1.Caption = "skinRibbonGalleryBarItem1";
-			this.skinRibbonGalleryBarItem1.Id = 60;
-			this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
+			this.skinRibbonGalleryBarItem.Caption = "skinRibbonGalleryBarItem1";
+			this.skinRibbonGalleryBarItem.Id = 60;
+			this.skinRibbonGalleryBarItem.Name = "skinRibbonGalleryBarItem";
 			// 
-			// skinPaletteRibbonGalleryBarItem1
+			// skinPaletteRibbonGalleryBarItem
 			// 
-			this.skinPaletteRibbonGalleryBarItem1.Caption = "skinPaletteRibbonGalleryBarItem1";
-			this.skinPaletteRibbonGalleryBarItem1.Id = 61;
-			this.skinPaletteRibbonGalleryBarItem1.Name = "skinPaletteRibbonGalleryBarItem1";
+			this.skinPaletteRibbonGalleryBarItem.Caption = "skinPaletteRibbonGalleryBarItem1";
+			this.skinPaletteRibbonGalleryBarItem.Id = 61;
+			this.skinPaletteRibbonGalleryBarItem.Name = "skinPaletteRibbonGalleryBarItem";
 			// 
 			// btnSifreDegistir
 			// 
@@ -837,8 +837,8 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			// 
 			// ribbonPageGroup7
 			// 
-			this.ribbonPageGroup7.ItemLinks.Add(this.skinRibbonGalleryBarItem1);
-			this.ribbonPageGroup7.ItemLinks.Add(this.skinPaletteRibbonGalleryBarItem1);
+			this.ribbonPageGroup7.ItemLinks.Add(this.skinRibbonGalleryBarItem);
+			this.ribbonPageGroup7.ItemLinks.Add(this.skinPaletteRibbonGalleryBarItem);
 			this.ribbonPageGroup7.Name = "ribbonPageGroup7";
 			this.ribbonPageGroup7.Text = "Tema";
 			// 
@@ -1003,8 +1003,8 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 		private DevExpress.XtraBars.BarButtonItem btnSube;
 		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
 		private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem1;
-		private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
-		private DevExpress.XtraBars.SkinPaletteRibbonGalleryBarItem skinPaletteRibbonGalleryBarItem1;
+		private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem;
+		private DevExpress.XtraBars.SkinPaletteRibbonGalleryBarItem skinPaletteRibbonGalleryBarItem;
 		private DevExpress.XtraBars.BarButtonItem btnSifreDegistir;
 		private DevExpress.XtraBars.BarButtonItem btnKullaniciParametreleri;
 		private DevExpress.XtraBars.BarButtonItem btnHesapMakinesi;

@@ -144,16 +144,16 @@
     <Compile Include="Forms\BankaHesapForms\BankaHesapListForm.Designer.cs">
       <DependentUpon>BankaHesapListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\BankaSube\BankaSubeEdit.cs">
+    <Compile Include="Forms\BankaSubeForms\BankaSubeEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\BankaSube\BankaSubeEdit.Designer.cs">
+    <Compile Include="Forms\BankaSubeForms\BankaSubeEdit.Designer.cs">
       <DependentUpon>BankaSubeEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\BankaSube\BankaSubeList.cs">
+    <Compile Include="Forms\BankaSubeForms\BankaSubeList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\BankaSube\BankaSubeList.Designer.cs">
+    <Compile Include="Forms\BankaSubeForms\BankaSubeList.Designer.cs">
       <DependentUpon>BankaSubeList.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\BaseForms\BaseEditForm.cs">
@@ -1179,6 +1179,9 @@
     <EmbeddedResource Include="Forms\BaseForms\BaseListForm.resx">
       <DependentUpon>BaseListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CariForms\CariEditForm.resx">
+      <DependentUpon>CariEditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DonemForms\DonemEditForm.resx">
       <DependentUpon>DonemEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -1435,6 +1438,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\IndirimEditFormTable\IndiriminUygulanacagiHizmetlerTable.resx">
       <DependentUpon>IndiriminUygulanacagiHizmetlerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl\TahakkukEditFormTable\HizmetBilgileriTable.resx">
+      <DependentUpon>HizmetBilgileriTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\TahakkukEditFormTable\IndirimBilgileriTable.resx">
       <DependentUpon>IndirimBilgileriTable.cs</DependentUpon>

@@ -23,7 +23,5 @@ namespace OgrenciTakip.Model.Entities
 		public string Aciklama { get; set; }
 		public Il Il { get; set; }
 		public Ilce Ilce { get; set; }
-
-
 	}
 }

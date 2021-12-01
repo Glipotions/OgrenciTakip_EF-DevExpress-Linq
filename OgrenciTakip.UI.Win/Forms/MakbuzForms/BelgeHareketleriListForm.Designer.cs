@@ -168,6 +168,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
 			// ribbonControl
 			// 
 			this.ribbonControl.ExpandCollapseItem.Id = 0;
+			this.ribbonControl.OptionsPageCategories.ShowCaptions = false;
 			// 
 			// 
 			// 
@@ -181,6 +182,15 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
 			// btnExcelDosyalari
 			// 
 			this.btnExcelDosyalari.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExcelDosyalari.ImageOptions.Image")));
+			// 
+			// btnGonder
+			// 
+			this.btnGonder.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGonder.ImageOptions.Image")));
+			this.btnGonder.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnGonder.ImageOptions.LargeImage")));
+			// 
+			// barSubItem1
+			// 
+			this.barSubItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem1.ImageOptions.Image")));
 			// 
 			// barSubItem2
 			// 
@@ -197,6 +207,20 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
 			// barSubItem5
 			// 
 			this.barSubItem5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem5.ImageOptions.Image")));
+			// 
+			// btnYeniMakbuz
+			// 
+			this.btnYeniMakbuz.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnYeniMakbuz.ImageOptions.Image")));
+			this.btnYeniMakbuz.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnYeniMakbuz.ImageOptions.LargeImage")));
+			// 
+			// btnYeniRapor
+			// 
+			this.btnYeniRapor.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnYeniRapor.ImageOptions.Image")));
+			this.btnYeniRapor.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnYeniRapor.ImageOptions.LargeImage")));
+			// 
+			// barSubItem6
+			// 
+			this.barSubItem6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem6.ImageOptions.Image")));
 			// 
 			// myDataLayoutControl
 			// 

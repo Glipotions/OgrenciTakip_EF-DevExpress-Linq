@@ -26,7 +26,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
 			Tablo = tablo;
 			BaseKartTuru = KartTuru.Makbuz;
 			FormShow = new ShowEditForms<MakbuzEditForm>();
-			Navigator = longNavigator1.Navigator;
+			Navigator = longNavigator.Navigator;
 		}
 
 		protected override void Listele()

@@ -14,7 +14,6 @@ namespace OgrenciTakip.UI.Win.Forms.GorevForms
 			InitializeComponent();
 
 			Business = new GorevBusiness();
-
 		}
 
 		protected override void DegiskenleriDoldur()

@@ -395,6 +395,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 
 			if (hizmetBilgileriTable.TableValueChanged || indirimBilgileriTable.TableValueChanged || odemeBilgileriTable.TableValueChanged || geriOdemeBilgileriTable.TableValueChanged) Toplamlar();
 
+
 			if (FarkliSubeIslemi)
 				Functions.GeneralFunctions.ButtonEnabledDurum(btnYeni, btnKaydet, btnGeriAl, btnSil);
 			else
