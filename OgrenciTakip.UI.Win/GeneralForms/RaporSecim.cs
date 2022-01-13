@@ -40,7 +40,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			InitializeComponent();
 			Business = new RaporBusiness();
 
-			ShowItems = new BarItem[] { btnYeniRapor, btnBaskiOnizleme };
+			ShowItems = new BarItem[] { btnYeniRapor, btnBaskiOnizleme, btnPdfOlarakKaydet };
 			HideItems = new BarItem[] { btnYeni, btnSec, btnFiltrele, btnKolonlar, barFiltrele, barFiltreleAciklama, barKolonlar, barKolonlarAciklama };
 
 			btnDuzelt.CreateDropDownMenu(new BarItem[] { btnTasarimDegistir });
@@ -304,8 +304,14 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 			raporlar.ForEach(x => ShowRibbonForms<RaporOnizleme>.ShowForm(false, x.PrintingSystem, x.Baslik));
 		}
 
+  //      protected override void PdfOlarakKaydet()
+  //      {
+		//	var raporlar = RaporHazirla();
+		//	for (int i = 0; i < txtYazdirilacakAdet.Value; i++)
+		//		raporlar.ForEach(x => x.ExportToPdf($"/Output"));
+		//}
 
-		protected override void Button_ItemClick(object sender, ItemClickEventArgs e)
+        protected override void Button_ItemClick(object sender, ItemClickEventArgs e)
 		{
 			base.Button_ItemClick(sender, e);
 
