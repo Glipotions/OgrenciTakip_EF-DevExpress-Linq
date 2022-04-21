@@ -26,7 +26,8 @@ namespace OgrenciTakip.Business.General
                                                         p.BelgeDurumu == BelgeDurumu.MahsupEtme ||
                                                         p.BelgeDurumu == BelgeDurumu.OdenmisOlarakIsaretleme ||
                                                         p.BelgeDurumu == BelgeDurumu.TahsilEtmeKasa ||
-                                                        p.BelgeDurumu == BelgeDurumu.TahsilEtmeBanka).Select(c => c.IslemTutari).DefaultIfEmpty(0).Sum(),
+                                                        p.BelgeDurumu == BelgeDurumu.TahsilEtmeBanka)
+                .Select(c => c.IslemTutari).DefaultIfEmpty(0).Sum(),
 
                 Iade = x.MakbuzHareketleri.Where(c => c.BelgeDurumu == BelgeDurumu.MusteriyeGeriIade).Select(c => c.IslemTutari).DefaultIfEmpty(0).Sum(),
 

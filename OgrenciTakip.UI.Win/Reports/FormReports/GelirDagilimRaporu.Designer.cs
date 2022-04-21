@@ -44,6 +44,8 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
             DevExpress.XtraLayout.RowDefinition rowDefinition3 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition4 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition5 = new DevExpress.XtraLayout.RowDefinition();
+            this.colTahsilatOrani = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.repositoryYuzde = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
             this.myDataLayoutControl1 = new OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
             this.txtHesaplamaSekli = new OgrenciTakip.UI.Win.UserControls.Controls.MyComboBoxEdit();
             this.txtOdemeler = new OgrenciTakip.UI.Win.UserControls.Controls.MyCheckedComboBoxEdit();
@@ -69,9 +71,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
             this.colTahsilEdilen = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colTahsildeOlan = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colKalan = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.colTahsilatOrani = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.repositoryYuzde = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
-            this.longNavigator1 = new OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
+            this.longNavigator = new OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
             this.btnRaporHazirla = new OgrenciTakip.UI.Win.UserControls.Controls.MySimpleButton();
             this.txtIptalDurumu = new OgrenciTakip.UI.Win.UserControls.Controls.MyCheckedComboBoxEdit();
             this.txtKayitDurumu = new OgrenciTakip.UI.Win.UserControls.Controls.MyCheckedComboBoxEdit();
@@ -88,6 +88,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryYuzde)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl1)).BeginInit();
             this.myDataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtHesaplamaSekli.Properties)).BeginInit();
@@ -95,7 +96,6 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryDecimal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryYuzde)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIptalDurumu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKayitDurumu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKayitSekli.Properties)).BeginInit();
@@ -115,6 +115,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
+            this.ribbonControl.OptionsPageCategories.ShowCaptions = false;
             // 
             // 
             // 
@@ -122,22 +123,60 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
             this.ribbonControl.SearchEditItem.EditWidth = 150;
             this.ribbonControl.SearchEditItem.Id = -5000;
             this.ribbonControl.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.ribbonControl.Size = new System.Drawing.Size(1012, 102);
+            this.ribbonControl.Size = new System.Drawing.Size(1012, 109);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
+            // 
+            // btnGonder
+            // 
+            this.btnGonder.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGonder.ImageOptions.Image")));
+            this.btnGonder.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnGonder.ImageOptions.LargeImage")));
+            // 
+            // barSubItem1
+            // 
+            this.barSubItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem1.ImageOptions.Image")));
+            // 
+            // colTahsilatOrani
+            // 
+            this.colTahsilatOrani.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTahsilatOrani.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colTahsilatOrani.Caption = "Tahsilat Oranı (%)";
+            this.colTahsilatOrani.ColumnEdit = this.repositoryYuzde;
+            this.colTahsilatOrani.FieldName = "colTahsilatOrani";
+            this.colTahsilatOrani.Name = "colTahsilatOrani";
+            this.colTahsilatOrani.OptionsColumn.AllowEdit = false;
+            this.colTahsilatOrani.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Custom, "colTahsilatOrani", "{0:F} %")});
+            this.colTahsilatOrani.UnboundExpression = "Iif([ToplamOdeme] - [Iade] = 0, 0, [Tahsil] / ([ToplamOdeme] - [Iade]) * 100)";
+            this.colTahsilatOrani.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            this.colTahsilatOrani.Visible = true;
+            this.colTahsilatOrani.Width = 120;
+            // 
+            // repositoryYuzde
+            // 
+            this.repositoryYuzde.Appearance.Options.UseTextOptions = true;
+            this.repositoryYuzde.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.repositoryYuzde.AutoHeight = false;
+            this.repositoryYuzde.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryYuzde.DisplayFormat.FormatString = "{0:F} %";
+            this.repositoryYuzde.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryYuzde.EditFormat.FormatString = "{0:F} %";
+            this.repositoryYuzde.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryYuzde.Name = "repositoryYuzde";
             // 
             // myDataLayoutControl1
             // 
             this.myDataLayoutControl1.Controls.Add(this.txtHesaplamaSekli);
             this.myDataLayoutControl1.Controls.Add(this.txtOdemeler);
             this.myDataLayoutControl1.Controls.Add(this.grid);
-            this.myDataLayoutControl1.Controls.Add(this.longNavigator1);
+            this.myDataLayoutControl1.Controls.Add(this.longNavigator);
             this.myDataLayoutControl1.Controls.Add(this.btnRaporHazirla);
             this.myDataLayoutControl1.Controls.Add(this.txtIptalDurumu);
             this.myDataLayoutControl1.Controls.Add(this.txtKayitDurumu);
             this.myDataLayoutControl1.Controls.Add(this.txtKayitSekli);
             this.myDataLayoutControl1.Controls.Add(this.txtSubeler);
             this.myDataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.myDataLayoutControl1.Location = new System.Drawing.Point(0, 102);
+            this.myDataLayoutControl1.Location = new System.Drawing.Point(0, 109);
             this.myDataLayoutControl1.Name = "myDataLayoutControl1";
             this.myDataLayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1270, 236, 650, 400);
             this.myDataLayoutControl1.OptionsFocus.EnableAutoTabOrder = false;
@@ -149,7 +188,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
             // txtHesaplamaSekli
             // 
             this.txtHesaplamaSekli.EnterMoveNextControl = true;
-            this.txtHesaplamaSekli.Location = new System.Drawing.Point(704, 28);
+            this.txtHesaplamaSekli.Location = new System.Drawing.Point(713, 28);
             this.txtHesaplamaSekli.MenuManager = this.ribbonControl;
             this.txtHesaplamaSekli.Name = "txtHesaplamaSekli";
             this.txtHesaplamaSekli.Properties.Appearance.BackColor = System.Drawing.Color.LightCyan;
@@ -159,7 +198,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
             this.txtHesaplamaSekli.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtHesaplamaSekli.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtHesaplamaSekli.Size = new System.Drawing.Size(175, 20);
+            this.txtHesaplamaSekli.Size = new System.Drawing.Size(166, 20);
             this.txtHesaplamaSekli.StatusBarAciklama = null;
             this.txtHesaplamaSekli.StatusBarKisayol = "F4 :";
             this.txtHesaplamaSekli.StatusBarKisayolAciklama = null;
@@ -168,7 +207,8 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
             // 
             // txtOdemeler
             // 
-            this.txtOdemeler.Location = new System.Drawing.Point(704, 4);
+            this.txtOdemeler.EnterMoveNextControl = true;
+            this.txtOdemeler.Location = new System.Drawing.Point(713, 4);
             this.txtOdemeler.MenuManager = this.ribbonControl;
             this.txtOdemeler.Name = "txtOdemeler";
             this.txtOdemeler.Properties.Appearance.BackColor = System.Drawing.Color.LightCyan;
@@ -177,7 +217,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
             this.txtOdemeler.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtOdemeler.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtOdemeler.Size = new System.Drawing.Size(305, 20);
+            this.txtOdemeler.Size = new System.Drawing.Size(296, 20);
             this.txtOdemeler.StatusBarAciklama = null;
             this.txtOdemeler.StatusBarKisayol = "F4 :";
             this.txtOdemeler.StatusBarKisayolAciklama = null;
@@ -531,41 +571,12 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
             this.colKalan.Visible = true;
             this.colKalan.Width = 100;
             // 
-            // colTahsilatOrani
+            // longNavigator
             // 
-            this.colTahsilatOrani.AppearanceHeader.Options.UseTextOptions = true;
-            this.colTahsilatOrani.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colTahsilatOrani.Caption = "Tahsilat Oranı (%)";
-            this.colTahsilatOrani.ColumnEdit = this.repositoryYuzde;
-            this.colTahsilatOrani.FieldName = "colTahsilatOrani";
-            this.colTahsilatOrani.Name = "colTahsilatOrani";
-            this.colTahsilatOrani.OptionsColumn.AllowEdit = false;
-            this.colTahsilatOrani.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Custom, "colTahsilatOrani", "{0:F} %")});
-            this.colTahsilatOrani.UnboundExpression = "Iif([ToplamOdeme] - [Iade] = 0, 0, [Tahsil] / ([ToplamOdeme] - [Iade]) * 100)";
-            this.colTahsilatOrani.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
-            this.colTahsilatOrani.Visible = true;
-            this.colTahsilatOrani.Width = 120;
-            // 
-            // repositoryYuzde
-            // 
-            this.repositoryYuzde.Appearance.Options.UseTextOptions = true;
-            this.repositoryYuzde.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.repositoryYuzde.AutoHeight = false;
-            this.repositoryYuzde.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryYuzde.DisplayFormat.FormatString = "{0:F} %";
-            this.repositoryYuzde.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.repositoryYuzde.EditFormat.FormatString = "{0:F} %";
-            this.repositoryYuzde.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.repositoryYuzde.Name = "repositoryYuzde";
-            // 
-            // longNavigator1
-            // 
-            this.longNavigator1.Location = new System.Drawing.Point(2, 481);
-            this.longNavigator1.Name = "longNavigator1";
-            this.longNavigator1.Size = new System.Drawing.Size(1008, 22);
-            this.longNavigator1.TabIndex = 9;
+            this.longNavigator.Location = new System.Drawing.Point(107, 481);
+            this.longNavigator.Name = "longNavigator";
+            this.longNavigator.Size = new System.Drawing.Size(903, 22);
+            this.longNavigator.TabIndex = 9;
             // 
             // btnRaporHazirla
             // 
@@ -583,7 +594,8 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
             // 
             // txtIptalDurumu
             // 
-            this.txtIptalDurumu.Location = new System.Drawing.Point(98, 52);
+            this.txtIptalDurumu.EnterMoveNextControl = true;
+            this.txtIptalDurumu.Location = new System.Drawing.Point(107, 52);
             this.txtIptalDurumu.MenuManager = this.ribbonControl;
             this.txtIptalDurumu.Name = "txtIptalDurumu";
             this.txtIptalDurumu.Properties.Appearance.BackColor = System.Drawing.Color.LightCyan;
@@ -592,7 +604,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
             this.txtIptalDurumu.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtIptalDurumu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtIptalDurumu.Size = new System.Drawing.Size(476, 20);
+            this.txtIptalDurumu.Size = new System.Drawing.Size(467, 20);
             this.txtIptalDurumu.StatusBarAciklama = null;
             this.txtIptalDurumu.StatusBarKisayol = "F4 :";
             this.txtIptalDurumu.StatusBarKisayolAciklama = null;
@@ -601,7 +613,8 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
             // 
             // txtKayitDurumu
             // 
-            this.txtKayitDurumu.Location = new System.Drawing.Point(388, 28);
+            this.txtKayitDurumu.EnterMoveNextControl = true;
+            this.txtKayitDurumu.Location = new System.Drawing.Point(397, 28);
             this.txtKayitDurumu.MenuManager = this.ribbonControl;
             this.txtKayitDurumu.Name = "txtKayitDurumu";
             this.txtKayitDurumu.Properties.Appearance.BackColor = System.Drawing.Color.LightCyan;
@@ -610,7 +623,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
             this.txtKayitDurumu.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtKayitDurumu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtKayitDurumu.Size = new System.Drawing.Size(186, 20);
+            this.txtKayitDurumu.Size = new System.Drawing.Size(177, 20);
             this.txtKayitDurumu.StatusBarAciklama = null;
             this.txtKayitDurumu.StatusBarKisayol = "F4 :";
             this.txtKayitDurumu.StatusBarKisayolAciklama = null;
@@ -619,7 +632,8 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
             // 
             // txtKayitSekli
             // 
-            this.txtKayitSekli.Location = new System.Drawing.Point(98, 28);
+            this.txtKayitSekli.EnterMoveNextControl = true;
+            this.txtKayitSekli.Location = new System.Drawing.Point(107, 28);
             this.txtKayitSekli.MenuManager = this.ribbonControl;
             this.txtKayitSekli.Name = "txtKayitSekli";
             this.txtKayitSekli.Properties.Appearance.BackColor = System.Drawing.Color.LightCyan;
@@ -628,7 +642,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
             this.txtKayitSekli.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtKayitSekli.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtKayitSekli.Size = new System.Drawing.Size(190, 20);
+            this.txtKayitSekli.Size = new System.Drawing.Size(181, 20);
             this.txtKayitSekli.StatusBarAciklama = null;
             this.txtKayitSekli.StatusBarKisayol = "F4 :";
             this.txtKayitSekli.StatusBarKisayolAciklama = null;
@@ -637,7 +651,8 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
             // 
             // txtSubeler
             // 
-            this.txtSubeler.Location = new System.Drawing.Point(98, 4);
+            this.txtSubeler.EnterMoveNextControl = true;
+            this.txtSubeler.Location = new System.Drawing.Point(107, 4);
             this.txtSubeler.MenuManager = this.ribbonControl;
             this.txtSubeler.Name = "txtSubeler";
             this.txtSubeler.Properties.Appearance.BackColor = System.Drawing.Color.LightCyan;
@@ -646,7 +661,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
             this.txtSubeler.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtSubeler.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtSubeler.Size = new System.Drawing.Size(476, 20);
+            this.txtSubeler.Size = new System.Drawing.Size(467, 20);
             this.txtSubeler.StatusBarAciklama = null;
             this.txtSubeler.StatusBarKisayol = "F4 :";
             this.txtSubeler.StatusBarKisayolAciklama = null;
@@ -771,14 +786,13 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
             // 
             this.layoutControlItem6.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem6.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem6.Control = this.longNavigator1;
+            this.layoutControlItem6.Control = this.longNavigator;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 477);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.OptionsTableLayoutItem.ColumnSpan = 7;
             this.layoutControlItem6.OptionsTableLayoutItem.RowIndex = 4;
             this.layoutControlItem6.Size = new System.Drawing.Size(1012, 26);
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem6.TextVisible = false;
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(93, 13);
             // 
             // layoutControlItem7
             // 
@@ -844,11 +858,13 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1012, 638);
             this.Controls.Add(this.myDataLayoutControl1);
+            this.IconOptions.ShowIcon = false;
             this.Name = "GelirDagilimRaporu";
             this.Text = "Gelir Dağılım Raporu";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.myDataLayoutControl1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryYuzde)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl1)).EndInit();
             this.myDataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtHesaplamaSekli.Properties)).EndInit();
@@ -856,7 +872,6 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryDecimal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryYuzde)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIptalDurumu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKayitDurumu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKayitSekli.Properties)).EndInit();
@@ -900,7 +915,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colTahsilEdilen;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colTahsildeOlan;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colKalan;
-        private UserControls.Navigators.LongNavigator longNavigator1;
+        private UserControls.Navigators.LongNavigator longNavigator;
         private UserControls.Controls.MySimpleButton btnRaporHazirla;
         private UserControls.Controls.MyCheckedComboBoxEdit txtIptalDurumu;
         private UserControls.Controls.MyCheckedComboBoxEdit txtKayitDurumu;

@@ -1364,6 +1364,9 @@
     <EmbeddedResource Include="Reports\FormReports\Base\BaseRapor.resx">
       <DependentUpon>BaseRapor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FormReports\GelirDagilimRaporu.resx">
+      <DependentUpon>GelirDagilimRaporu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\FormReports\GenelAmacliRapor.resx">
       <DependentUpon>GenelAmacliRapor.cs</DependentUpon>
     </EmbeddedResource>

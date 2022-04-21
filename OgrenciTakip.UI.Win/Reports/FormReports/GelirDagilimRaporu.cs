@@ -24,7 +24,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
         {
             DataLayoutControl = myDataLayoutControl1;
             Tablo = tablo;
-            Navigator = longNavigator1.Navigator;
+            Navigator = longNavigator.Navigator;
             Subeler = txtSubeler;
             Odemeler = txtOdemeler;
             KayitSekilleri = txtKayitSekli;
