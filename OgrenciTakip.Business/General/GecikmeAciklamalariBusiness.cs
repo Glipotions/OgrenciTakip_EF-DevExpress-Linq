@@ -14,13 +14,9 @@ namespace OgrenciTakip.Business.General
 {
     public class GecikmeAciklamalariBusiness : BaseGenelBusiness<GecikmeAciklamalari>, IBaseCommonBusiness
     {
-        public GecikmeAciklamalariBusiness() : base(KartTuru.GecikmeAciklamalari)
-        {
-        }
+        public GecikmeAciklamalariBusiness() : base(KartTuru.GecikmeAciklamalari) { }
 
-        public GecikmeAciklamalariBusiness(Control control) : base(control, KartTuru.GecikmeAciklamalari)
-        {
-        }
+        public GecikmeAciklamalariBusiness(Control control) : base(control, KartTuru.GecikmeAciklamalari) { }
 
         public override BaseEntity Single(Expression<Func<GecikmeAciklamalari, bool>> filter)
         {
@@ -29,8 +25,8 @@ namespace OgrenciTakip.Business.General
                 Id = x.Id,
                 Kod = x.Kod,
                 OdemeBilgileriId = x.OdemeBilgileriId,
-				KullaniciAdi = x.Kullanici.Kod,
-				TarihSaat = x.TarihSaat,
+                KullaniciAdi = x.Kullanici.Kod,
+                TarihSaat = x.TarihSaat,
                 Aciklama = x.Aciklama
             });
         }
@@ -41,8 +37,8 @@ namespace OgrenciTakip.Business.General
             {
                 Id = x.Id,
                 Kod = x.Kod,
-				KullaniciAdi = x.Kullanici.Kod,
-				TarihSaat = x.TarihSaat,
+                KullaniciAdi = x.Kullanici.Kod,
+                TarihSaat = x.TarihSaat,
                 Aciklama = x.Aciklama
             }).OrderBy(x => x.Kod).ToList();
         }
